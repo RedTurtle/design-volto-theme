@@ -1,6 +1,7 @@
-@import 'bootstrap-override/bootstrap-italia-site.scss';
-@import 'cms-ui.scss';
+@import 'bootstrap-override/bootstrap-italia-site';
+@import 'cms-ui';
 
 /*** DesignTheme ***/
-@import 'DesignTheme/home.scss';
-@import 'DesignTheme/Blocks/alert.scss';
+@import 'DesignTheme/home';
+@import 'DesignTheme/Blocks/alert';
+@import 'DesignTheme/Blocks/newshome';
