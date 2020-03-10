@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import moment from 'moment';
@@ -21,31 +21,39 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
       {title && <h2>{title}</h2>}
       <Row className="items">
         {items.map((item, index) => (
-          <Col md="4" key={item['@id']}>
+          <Col md="4" key={item['@id']} className="col-item">
             <Card
               className={cx('listing-item card-bg', {
                 'card-img': index < 3 && item.image,
               })}
+              wrapperClassName="card-overlapping"
             >
               {index < 3 && item.image && (
                 <div className="img-responsive-wrapper">
                   <div className="img-responsive img-responsive-panoramic">
-                    <figure className="img-wrapper">
-                      <img
-                        className="listing-image"
-                        src={item.image.scales.preview.download}
-                        alt={item.title}
-                      />
-                    </figure>
+                    <Link
+                      to={flattenToAppURL(item['@id'])}
+                      className="img-link"
+                    >
+                      <figure className="img-wrapper">
+                        <img
+                          className="listing-image"
+                          src={item.image.scales.preview.download}
+                          alt={item.title}
+                        />
+                      </figure>
+                    </Link>
                   </div>
                 </div>
               )}
               <CardBody>
-                <CardCategory date={moment(item.effective).format('LLLL')}>
+                <CardCategory date={moment(item.effective).format('ll')}>
                   {item.subjects.join(', ')}
                 </CardCategory>
                 <CardTitle tag="h4">
-                  {item.title ? item.title : item.id}
+                  <Link to={flattenToAppURL(item['@id'])}>
+                    {item.title || item.id}
+                  </Link>
                 </CardTitle>
                 {item.description && <CardText>{item.description}</CardText>}
               </CardBody>
