@@ -172,7 +172,7 @@ const UOView = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.assessore_riferimento ? (
+            {content.assessore_riferimento?.length > 0 ? (
               <article
                 id="assessore-riferimento"
                 className="it-page-section anchor-offset mt-5"
@@ -197,7 +197,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content.responsabile ? (
+            {content.responsabile?.length > 0 ? (
               <article
                 id="responsabile"
                 className="it-page-section anchor-offset mt-5"
