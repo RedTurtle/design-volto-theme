@@ -12,6 +12,7 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const Body = ({ content, pathname }) => {
   return (
@@ -30,7 +31,9 @@ const Body = ({ content, pathname }) => {
         <Card>
           <CardBody className="pb-2">
             <CardCategory date="18 mag 2018">Notizie</CardCategory>
-            <CardTitle tag="h2">{content.title}</CardTitle>
+            <CardTitle tag="h2">
+              <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
+            </CardTitle>
             <CardText>{content.description}</CardText>
             <Chip simple color="primary">
               <Link to="#" className="chip-label">

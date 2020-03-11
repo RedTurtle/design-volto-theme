@@ -26,8 +26,8 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
               className={cx('listing-item card-bg', {
                 'card-img': index < 3 && item.image,
               })}
-              wrapperClassName="card-overlapping"
             >
+              {/* wrapperClassName="card-overlapping" */}
               {index < 3 && item.image && (
                 <div className="img-responsive-wrapper">
                   <div className="img-responsive img-responsive-panoramic">

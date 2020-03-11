@@ -10,4 +10,18 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .card-title {
+    a {
+      color: $body-color;
+      text-decoration: none;
+      transition: 0.2s color ease;
+
+      &:hover,
+      &:focus {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+  }
 }
