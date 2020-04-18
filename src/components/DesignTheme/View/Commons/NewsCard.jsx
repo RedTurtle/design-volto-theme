@@ -15,7 +15,7 @@ const NewsCard = ({ title, typology, effective, description, id }) => {
     <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded border">
       <div className="card-body">
         <div className="header text-uppercase"></div>
-        <div class="category-top">
+        <div className="category-top">
           {typology}
           {effective ? (
             <span className="data">{moment(effective).format('DD MMM Y')}</span>

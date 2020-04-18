@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 /**
  * RichTextArticle view component class.
@@ -8,11 +9,13 @@ import PropTypes from 'prop-types';
  * @returns {string} Markup of the component.
  */
 const RichTextArticle = params => {
+  let add_class = params.add_class;
+  let classes = add_class ? { [add_class]: true } : {};
   return (
     <article id={params.tag_id} className="it-page-section anchor-offset mt-5">
       {params.title && <h4>{params.title}</h4>}
       <div
-        className="text-serif"
+        className={cx('text-serif', classes)}
         dangerouslySetInnerHTML={{ __html: params.content }}
       />
     </article>
@@ -25,5 +28,6 @@ RichTextArticle.propTypes = {
     title: PropTypes.string,
     content: PropTypes.string,
     tag_id: PropTypes.string,
+    add_class: PropTypes.string,
   }),
 };
