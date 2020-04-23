@@ -87,6 +87,7 @@ h6 {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
       &:last-child:before {
         height: calc(100% + 2px);
+        padding-bottom: 20px;
       }
       &:before {
         content: counter(inst);
@@ -100,6 +101,10 @@ h6 {
         font-family: Roboto Mono Thin;
         border-right: 1px solid currentColor;
         line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 42px;
       }
       &:after {
         position: absolute;
