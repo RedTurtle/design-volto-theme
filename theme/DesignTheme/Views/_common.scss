@@ -91,13 +91,10 @@ h6 {
       &:before {
         content: counter(inst);
         position: absolute;
-        // display: flex;
-        // align-items: center;
         width: 50px;
         height: calc(100% + 22px);
         left: -70px;
         top: 0;
-        justify-content: center;
         color: #be2716;
         font-size: 40px;
         font-family: Roboto Mono Thin;
@@ -115,25 +112,5 @@ h6 {
         border-radius: 50%;
       }
     }
-    // li {
-    //   counter-increment: inst;
-    //   -webkit-box-align: center !important;
-    //   -ms-flex-align: center !important;
-    //   align-items: center !important;
-    //   -webkit-box-pack: center !important;
-    //   -ms-flex-pack: center !important;
-    //   display: -webkit-box !important;
-    //   display: -ms-flexbox !important;
-    //   display: flex !important;
-    //   &::before {
-    //     content: counter(inst);
-    //     color: #be2716;
-    //     font-size: 40px;
-    //     font-family: Roboto Mono Thin;
-    //     border-right: 1px solid;
-    //     padding: 20px;
-    //     margin-right: 10px;
-    //   }
-    // }
   }
 }

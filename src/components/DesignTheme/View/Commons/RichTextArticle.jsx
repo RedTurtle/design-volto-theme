@@ -8,15 +8,13 @@ import cx from 'classnames';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RichTextArticle = params => {
-  let add_class = params.add_class;
-  let classes = add_class ? { [add_class]: true } : {};
+const RichTextArticle = ({ title, content, tag_id, add_class }) => {
   return (
-    <article id={params.tag_id} className="it-page-section anchor-offset mt-5">
-      {params.title && <h4>{params.title}</h4>}
+    <article id={tag_id} className="it-page-section anchor-offset mt-5">
+      {title && <h4>{title}</h4>}
       <div
-        className={cx('text-serif', classes)}
-        dangerouslySetInnerHTML={{ __html: params.content }}
+        className={cx('text-serif', add_class)}
+        dangerouslySetInnerHTML={{ __html: content }}
       />
     </article>
   );
@@ -24,10 +22,8 @@ const RichTextArticle = params => {
 export default RichTextArticle;
 
 RichTextArticle.propTypes = {
-  params: PropTypes.shape({
-    title: PropTypes.string,
-    content: PropTypes.string,
-    tag_id: PropTypes.string,
-    add_class: PropTypes.string,
-  }),
+  title: PropTypes.string,
+  content: PropTypes.string,
+  tag_id: PropTypes.string,
+  add_class: PropTypes.string,
 };
