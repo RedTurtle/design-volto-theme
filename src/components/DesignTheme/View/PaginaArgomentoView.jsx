@@ -36,10 +36,13 @@ const PaginaArgomentoView = ({ content }) => {
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const intl = useIntl();
   const location = useLocation();
+  console.log(content);
+  console.log(blocksLayoutFieldname);
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       <Helmet title={content.title} />
       {map(content[blocksLayoutFieldname].items, block => {
+        console.log(blocks);
         const Block =
           blocks.blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.[
             'view'

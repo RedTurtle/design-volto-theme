@@ -27,6 +27,9 @@ import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@design/components/DesignTheme/Blocks/ArgomentoTitle/Edit';
 
+import ArgomentoSimpleTextCardView from '@design/components/DesignTheme/Blocks/ArgomentoText/SimpleCard/View';
+import ArgomentoSimpleTextCardEdit from '@design/components/DesignTheme/Blocks/ArgomentoText/SimpleCard/Edit';
+
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
@@ -129,6 +132,21 @@ const customBlocks = {
       view: [],
     },
   },
+  testo_riquadro_semplice: {
+    id: 'testo_riquadro_semplice',
+    title: 'Testo in riquadro semplice',
+    icon: titleSVG,
+    group: 'text',
+    view: ArgomentoSimpleTextCardView,
+    edit: ArgomentoSimpleTextCardEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
   listing: {
     ...defaultBlocks.blocksConfig.listing,
     templates: {
@@ -181,7 +199,7 @@ export const widgets = {
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
 const customInitialBlocks = {
-  'Pagina Argomento': ['pagina_argomento_title'],
+  'Pagina Argomento': ['pagina_argomento_title', 'testo_riquadro_semplice'],
 };
 
 export const blocks = {

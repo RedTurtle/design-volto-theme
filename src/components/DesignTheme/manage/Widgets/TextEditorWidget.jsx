@@ -124,6 +124,7 @@ class TextEditorWidget extends Component {
    * @returns {undefined}
    */
   onChange = editorState => {
+    console.log('textwidget', this.props.fieldName);
     if (
       !isEqual(
         convertToRaw(editorState.getCurrentContent()),
