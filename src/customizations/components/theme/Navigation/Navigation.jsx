@@ -40,8 +40,8 @@ const messages = defineMessages({
 });
 
 const argumentsItems = [
-  { title: 'Argomento 1', url: '/argomenti/argomento-1' },
-  { title: 'Argomento 2', url: '/argomenti/argomento-2' },
+  // { title: 'Argomento 1', url: '/argomenti/argomento-1' },
+  // { title: 'Argomento 2', url: '/argomenti/argomento-2' },
   { title: 'Tutti gli argomenti...', url: '/argomenti', type: 'all' },
 ];
 
