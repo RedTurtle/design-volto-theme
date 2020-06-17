@@ -108,7 +108,7 @@ const FooterInfos = () => {
           </Link>
         </h4>
         <p>
-          <strong>Nome del Comune</strong>
+          <strong>Comune di Modena</strong>
           <br />
           Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
         </p>

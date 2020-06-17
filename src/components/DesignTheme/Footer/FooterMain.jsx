@@ -30,9 +30,9 @@ const FooterMain = () => {
                 <Link to="/">
                   <Icon color="" icon="it-pa" padding={false} size="" />
                   <div className="it-brand-text">
-                    <h2 className="no_toc">Nome del Comune</h2>
+                    <h2 className="no_toc">Comune di Modena</h2>
                     <h3 className="no_toc d-none d-md-block">
-                      Uno dei tanti Comuni d'Italia
+                      Rete Civica Monet
                     </h3>
                   </div>
                 </Link>
