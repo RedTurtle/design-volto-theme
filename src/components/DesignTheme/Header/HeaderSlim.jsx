@@ -31,8 +31,13 @@ const HeaderSlim = () => {
   return (
     <Header small={false} theme="" type="slim">
       <HeaderContent>
-        <HeaderBrand responsive tag={Link} to="/">
-          Nome della Regione
+        <HeaderBrand
+          responsive
+          href="https://www.regione.emilia-romagna.it/"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          Regione Emilia-Romagna
         </HeaderBrand>
         <HeaderRightZone>
           <LanguageSelector />
