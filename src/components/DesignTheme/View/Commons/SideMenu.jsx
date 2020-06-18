@@ -47,7 +47,7 @@ const SideMenu = () => {
               <ul className="link-list">
                 <li className="nav-item active">
                   <a className="nav-link active" href="#text-body">
-                    <span>Notizia</span>
+                    <span>Contenuto</span>
                   </a>
                 </li>
                 <li className="nav-item">
