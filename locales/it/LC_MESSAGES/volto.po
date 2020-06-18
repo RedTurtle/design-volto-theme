@@ -73,15 +73,15 @@ msgstr "Image"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
 msgid "Link to"
-msgstr ""
+msgstr "Link a"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
-msgstr ""
+msgstr "Link ad altro"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
-msgstr ""
+msgstr "Titolo per il link ad altro"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
@@ -113,7 +113,7 @@ msgstr "Note legali"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Apri in un nuovo tab"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
@@ -161,7 +161,7 @@ msgstr "Template"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
-msgstr "Title"
+msgstr "Titolo"
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 msgid "Type description…"
