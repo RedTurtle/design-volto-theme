@@ -86,7 +86,7 @@ const FooterInfos = () => {
             {intl.formatMessage(messages.at_title)}
           </Link>
         </h4>
-        <p>{intl.formatMessage(messages.at_description)}</p>
+        {/*<p>{intl.formatMessage(messages.at_description)}</p>*/}
       </Col>
       <Col
         lg={3}
@@ -110,10 +110,21 @@ const FooterInfos = () => {
         <p>
           <strong>Comune di Modena</strong>
           <br />
-          Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
+          Piazza Grande 16 | 41121 Modena – Italia | P.I.00221940364
+          <br />
+          Centralino: +39-059-20311
+          <br />
+          <br />
+          Ufficio Relazioni con il Pubblico: 
+          <br/>+39-059-20312 &nbsp; 
+          <a href="mailto:piazzagrande@comune.modena.it">piazzagrande@comune.modena.it</a>
+          <br />
+          <br />Elenco delle PEC  del Comune
+          <br />Redazione www
+          <br />E-Mail: <a href="mailto:retecivica@comune.modena.it" >retecivica@comune.modena.it</a>
         </p>
 
-        <LinkList className="footer-list clearfix">
+        {/*<LinkList className="footer-list clearfix">
           <LinkListItem
             to="#"
             tag={Link}
@@ -136,7 +147,7 @@ const FooterInfos = () => {
           >
             {intl.formatMessage(messages.urp)}
           </LinkListItem>
-        </LinkList>
+        </LinkList>*/}
       </Col>
       <Col
         lg={3}
