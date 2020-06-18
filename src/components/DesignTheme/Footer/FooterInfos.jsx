@@ -124,7 +124,7 @@ const FooterInfos = () => {
           <br />E-Mail: <a href="mailto:retecivica@comune.modena.it" >retecivica@comune.modena.it</a>
         </p>
 
-        {false && <LinkList className="footer-list clearfix">
+        {/*<LinkList className="footer-list clearfix">
           <LinkListItem
             to="#"
             tag={Link}
