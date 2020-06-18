@@ -56,7 +56,7 @@ const HeaderSlim = () => {
               {intl.formatMessage(messages.arLogin)}
             </span>
           </Button>
-        </HeaderRightZone> }
+        </HeaderRightZone> */}
       </HeaderContent>
     </Header>
   );
