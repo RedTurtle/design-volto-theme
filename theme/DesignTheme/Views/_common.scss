@@ -132,3 +132,9 @@ h6 {
     }
   }
 }
+
+div.sticky-wrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}

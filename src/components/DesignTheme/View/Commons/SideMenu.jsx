@@ -13,8 +13,17 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
+
+const handleClick = (event) => {
+  event.preventDefault();
+  let itemName = event.currentTarget.getAttribute('href').split('#')[1];
+  let anchorTarget = document.getElementById(itemName);
+  anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
 const SideMenu = () => {
   const intl = useIntl();
+
   return (
     <div className="sticky-wrapper navbar-wrapper">
       <nav className="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg">
@@ -46,22 +55,38 @@ const SideMenu = () => {
               <h3 className="no_toc">Indice della pagina</h3>
               <ul className="link-list">
                 <li className="nav-item active">
-                  <a className="nav-link active" href="#text-body">
+                  <a
+                    className="nav-link active"
+                    href="#text-body"
+                    onClick={handleClick}
+                  >
                     <span>Contenuto</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#documenti">
+                  <a
+                    className="nav-link"
+                    href="#documenti"
+                    onClick={handleClick}
+                  >
                     <span>Allegati</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#a-cura-di">
+                  <a
+                    className="nav-link"
+                    href="#a-cura-di"
+                    onClick={handleClick}
+                  >
                     <span>A cura di</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#ulteriori-informazioni">
+                  <a
+                    className="nav-link"
+                    href="#ulteriori-informazioni"
+                    onClick={handleClick}
+                  >
                     <span>Altre informazioni</span>
                   </a>
                 </li>
