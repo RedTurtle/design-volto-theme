@@ -39,7 +39,7 @@ const HeaderSlim = () => {
         >
           Regione Emilia-Romagna
         </HeaderBrand>
-        <HeaderRightZone>
+        {false &&  <HeaderRightZone>
           <LanguageSelector />
           <Button
             className="btn-icon"
@@ -56,7 +56,7 @@ const HeaderSlim = () => {
               {intl.formatMessage(messages.arLogin)}
             </span>
           </Button>
-        </HeaderRightZone>
+        </HeaderRightZone> }
       </HeaderContent>
     </Header>
   );
