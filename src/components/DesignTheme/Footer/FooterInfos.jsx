@@ -86,7 +86,7 @@ const FooterInfos = () => {
             {intl.formatMessage(messages.at_title)}
           </Link>
         </h4>
-        {false && <p>{intl.formatMessage(messages.at_description)}</p>}
+        {/*<p>{intl.formatMessage(messages.at_description)}</p>*/}
       </Col>
       <Col
         lg={3}
