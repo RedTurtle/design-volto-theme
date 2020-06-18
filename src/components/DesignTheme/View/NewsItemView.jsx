@@ -106,7 +106,7 @@ const NewsItemView = ({ content, location }) => {
             ) : null}
             {content.dataset_correlati?.length > 0 ? (
               <article
-                id="related-items"
+                id="related-dataset"
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>Dataset</h4>

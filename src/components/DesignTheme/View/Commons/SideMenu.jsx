@@ -46,13 +46,13 @@ const SideMenu = () => {
               <h3 className="no_toc">Indice della pagina</h3>
               <ul className="link-list">
                 <li className="nav-item active">
-                  <a className="nav-link active" href="#descrizione">
-                    <span>Descrizione</span>
+                  <a className="nav-link active" href="#text-body">
+                    <span>Contenuto</span>
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#documenti">
-                    <span>Documenti</span>
+                    <span>Allegati</span>
                   </a>
                 </li>
                 <li className="nav-item">
@@ -62,7 +62,7 @@ const SideMenu = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#ulteriori-informazioni">
-                    <span>Ulteriori informazioni</span>
+                    <span>Altre informazioni</span>
                   </a>
                 </li>
               </ul>
