@@ -147,7 +147,7 @@ const FooterInfos = () => {
           >
             {intl.formatMessage(messages.urp)}
           </LinkListItem>
-        </LinkList>}
+        </LinkList>*/}
       </Col>
       <Col
         lg={3}
