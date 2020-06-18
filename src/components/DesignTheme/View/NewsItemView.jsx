@@ -101,24 +101,34 @@ const NewsItemView = ({ content, location }) => {
                 people={content.a_cura_di_persone}
               />
             )}
-            {content.luoghi_notizia?.length > 0 ? (
-              <Locations locations={content.luoghi_notizia} />
+            {content.luoghi_correlati?.length > 0 ? (
+              <Locations locations={content.luoghi_correlati} />
             ) : null}
-            {content.dataset?.data.replace(/(<([^>]+)>)/g, '') && (
-              <RichTextArticle
-                content={content.dataset.data}
-                tag_id="dataset"
-                title={'Dataset'}
-              />
-            )}
-            {content.related_news?.length > 0 ? (
+            {content.dataset_correlati?.length > 0 ? (
+              <article
+                id="related-items"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>Dataset</h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.dataset_correlati.map((item, i) => (
+                    <GenericCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
+                    />
+                  ))}
+                </div>
+              </article>
+            ) : null}
+            {content.notizie_correlate?.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.related_news.map((item, i) => (
+                  {content.notizie_correlate.map((item, i) => (
                     <RelatedNews
                       key={item['@id']}
                       item={item}
