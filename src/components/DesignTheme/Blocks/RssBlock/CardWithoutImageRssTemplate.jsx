@@ -8,7 +8,6 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  CardCategory,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
@@ -23,7 +22,7 @@ const messages = defineMessages({
 
 const CardWithoutImageRssTemplate = ({ items = [], isEditMode }) => {
   const intl = useIntl();
-
+  moment.locale(intl.locale);
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
       <div className="row">

@@ -117,7 +117,7 @@
     "typeface-titillium-web": "0.0.72",
     "volto-cookie-banner": "collective/volto-cookie-banner",
     "volto-multilingual-widget": "collective/volto-multilingual-widget",
-    "volto-rss-block": "redturtle/volto-rss-block"
+    "volto-rss-block": "redturtle/volto-rss-block#bug_10767_fix_templates"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",

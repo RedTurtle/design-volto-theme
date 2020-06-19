@@ -21,6 +21,7 @@ const messages = defineMessages({
 
 const CardWithImageRssTemplate = ({ items = [], isEditMode }) => {
   const intl = useIntl();
+  moment.locale(intl.locale);
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
       <div className="row">
@@ -51,7 +52,7 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode }) => {
                     ) : (
                       ''
                     )}
-                    <span>{moment(item.pubDate).format('DD-MMM-Y')}</span>
+                    <span>{moment(item.pubDate).format('DD-MMM-Y')}</span>{' '}
                   </div>
                   <CardTitle className="big-heading" tag="h6">
                     {item.title}
