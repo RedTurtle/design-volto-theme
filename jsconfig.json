@@ -9,6 +9,9 @@
             ],
             "volto-multilingual-widget": [
                 "addons/volto-multilingual-widget"
+            ],
+            "volto-geocoding": [
+                "addons/volto-geocoding"
             ]
         },
         "baseUrl": "src"

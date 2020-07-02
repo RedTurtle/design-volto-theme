@@ -7,12 +7,14 @@
   "workspaces": [
     "src/addons/volto-cookie-banner",
     "src/addons/volto-multilingual-widget",
-    "src/addons/volto-rss-block"
+    "src/addons/volto-rss-block",
+    "src/addons/volto-geocoding"
   ],
   "addons": [
     "volto-cookie-banner",
     "volto-multilingual-widget",
-    "volto-rss-block"
+    "volto-rss-block",
+    "volto-geocoding"
   ],
   "scripts": {
     "start": "razzle start",
@@ -45,12 +47,14 @@
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
-      "~/(.*)$": "<rootDir>/src/$1"
+      "~/(.*)$": "<rootDir>/src/$1",
+      "volto-geocoding/(.*)$": "<rootDir>/src/addons/volto-geocoding/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)",
-      "!**/src/addons/volto/**/*"
+      "!**/src/addons/volto/**/*",
+      "!**/src/addons/**/*"
     ],
     "coverageThreshold": {
       "global": {
@@ -117,7 +121,9 @@
     "typeface-titillium-web": "0.0.72",
     "volto-cookie-banner": "collective/volto-cookie-banner",
     "volto-multilingual-widget": "collective/volto-multilingual-widget",
-    "volto-rss-block": "redturtle/volto-rss-block"
+    "volto-rss-block": "redturtle/volto-rss-block",
+    "mrs-developer": "^1.1.6",
+    "volto-geocoding": "collective/volto-geocoding"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",
