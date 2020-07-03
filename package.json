@@ -44,10 +44,10 @@
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
       "@design/(.*)$": "<rootDir>/src/$1",
+      "~/(.*)$": "<rootDir>/src/$1",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
-      "~/(.*)$": "<rootDir>/src/$1",
       "volto-geocoding/(.*)$": "<rootDir>/src/addons/volto-geocoding/src/$1"
     },
     "testMatch": [
@@ -122,12 +122,11 @@
     "volto-cookie-banner": "collective/volto-cookie-banner",
     "volto-multilingual-widget": "collective/volto-multilingual-widget",
     "volto-rss-block": "redturtle/volto-rss-block",
-    "mrs-developer": "^1.1.6",
     "volto-geocoding": "collective/volto-geocoding"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",
-    "mrs-developer": "1.1.6",
+    "mrs-developer": "^1.1.6",
     "node-sass": "4.13.0",
     "prettier": "2.0.5",
     "sass-loader": "8.0.0",
