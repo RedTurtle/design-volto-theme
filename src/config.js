@@ -48,6 +48,8 @@ import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/R
 
 import MultilingualWidget from 'volto-multilingual-widget';
 
+import { GeoLocationWidget } from 'volto-geocoding';
+
 const rssBlock = {
   ...customRssBlock,
   templates: {
@@ -68,7 +70,7 @@ const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = (contentBlock) => {
+const blockStyleFn = contentBlock => {
   let r = defaultSettings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -213,6 +215,7 @@ export const widgets = {
     ...defaultWidgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
+    geolocation: GeoLocationWidget,
   },
 };
 
