@@ -19,6 +19,7 @@ import underlineSVG from '@plone/volto/icons/underline.svg';
 import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
+import newsSVG from '@plone/volto/icons/news.svg';
 import NewsHomeView from '@design/components/DesignTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
 
@@ -242,6 +243,7 @@ export const widgets = {
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
 const customInitialBlocks = {
   'Pagina Argomento': ['pagina_argomento_title'],
+  Document: ['title', 'listing'],
 };
 
 // BUG#10398
