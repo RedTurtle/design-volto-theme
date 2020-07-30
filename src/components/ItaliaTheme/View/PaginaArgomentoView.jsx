@@ -34,6 +34,8 @@ import { BodyClass } from '@plone/volto/helpers';
  * @returns {string} Markup of the component.
  */
 
+const MAX_CARD_NUMEBER = 2;
+
 const messages = defineMessages({
   unknownBlock: {
     id: 'Unknown Block',
@@ -73,7 +75,7 @@ const PaginaArgomentoView = ({ content }) => {
           <div className="col-lg-4 offset-lg-2">
             { 
               content?.unita_amministrativa_responsabile?.length > 0 ?
-                content?.unita_amministrativa_responsabile?.slice(0, 2)?.map((u, index) => {
+                content?.unita_amministrativa_responsabile?.slice(0, MAX_CARD_NUMEBER)?.map((u, index) => {
                   return (
                     <div className="row mb-3" key={index}>
                       <div className="w-100">
