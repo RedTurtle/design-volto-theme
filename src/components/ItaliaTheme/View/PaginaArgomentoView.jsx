@@ -34,7 +34,7 @@ import { BodyClass } from '@plone/volto/helpers';
  * @returns {string} Markup of the component.
  */
 
-const MAX_CARD_NUMEBER = 2;
+const MAX_CARD_NUMBER = 2;
 
 const messages = defineMessages({
   unknownBlock: {
