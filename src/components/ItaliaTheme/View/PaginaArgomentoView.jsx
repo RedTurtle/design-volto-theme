@@ -73,7 +73,7 @@ const PaginaArgomentoView = ({ content }) => {
           <div className="col-lg-4 offset-lg-2">
             { 
               content?.unita_amministrativa_responsabile?.length > 0 ?
-                content?.unita_amministrativa_responsabile?.map((u, index) => {
+                content?.unita_amministrativa_responsabile?.slice(0, 2)?.map((u, index) => {
                   return (
                     <div className="row mb-3" key={index}>
                       <div className="w-100">
