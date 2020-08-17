@@ -1,0 +1,15 @@
+.documentFirstHeading {
+  border: none;
+
+  &:before {
+    content: none;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: default;
+}
