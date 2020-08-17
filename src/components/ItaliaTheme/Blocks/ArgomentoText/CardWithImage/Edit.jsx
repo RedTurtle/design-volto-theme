@@ -18,17 +18,20 @@ import { defineMessages, injectIntl } from 'react-intl';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import { isEqual } from 'lodash';
 import { settings } from '@italia/config';
+import { SidebarPortal } from '@plone/volto/components';
+import Sidebar from './Sidebar.jsx';
+import BodyWrapper from './BodyWrapper.jsx';
 
 const messages = defineMessages({
-  simple_card_title: {
+  image_card_title: {
     id: 'Type the title…',
     defaultMessage: 'Type the title…',
   },
-  simple_card_content: {
+  image_card_content: {
     id: 'Type description…',
     defaultMessage: 'Digita la descrizione…',
   },
-  simple_card_click: {
+  image_card_click: {
     id: 'Type text…',
     defaultMessage: 'Digita il testo…',
   },
@@ -79,9 +82,9 @@ class Edit extends Component {
       let editorState;
 
       // Setup state for title
-      if (props.data && props.data.simple_card_title) {
+      if (props.data && props.data.image_card_title) {
         editorState = EditorState.createWithContent(
-          stateFromHTML(props.data.simple_card_title),
+          stateFromHTML(props.data.image_card_title),
         );
       } else {
         editorState = EditorState.createEmpty();
@@ -129,20 +132,18 @@ class Edit extends Component {
    * @returns {undefined}
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log(nextProps.properties.simple_card_title);
-    console.log(this.props.properties.simple_card_title);
+    console.log(nextProps.properties.image_card_title);
+    console.log(this.props.properties.image_card_title);
     if (
-      nextProps.properties.simple_card_title &&
-      this.props.properties.simple_card_title !==
-        nextProps.properties.simple_card_title &&
+      nextProps.properties.image_card_title &&
+      this.props.properties.image_card_title !==
+        nextProps.properties.image_card_title &&
       !this.state.focus_title
     ) {
-      const contentState = stateFromHTML(
-        nextProps.properties.simple_card_title,
-      );
-      debugger;
+      const contentState = stateFromHTML(nextProps.properties.image_card_title);
+
       this.setState({
-        editorState: nextProps.properties.simple_card_title
+        editorState: nextProps.properties.image_card_title
           ? EditorState.createWithContent(contentState)
           : EditorState.createEmpty(),
       });
@@ -170,7 +171,7 @@ class Edit extends Component {
     ) {
       this.props.onChangeBlock(this.props.block, {
         ...this.props.data,
-        simple_card_title: convertToRaw(editorState.getCurrentContent()),
+        image_card_title: convertToRaw(editorState.getCurrentContent()),
       });
       this.setState({ editorState });
     }
@@ -185,58 +186,69 @@ class Edit extends Component {
     if (__SERVER__) {
       return <div />;
     }
-
-    console.log(this.props.data.simple_card_title);
-    console.log(this.state);
     return (
       <div>
         <div>
-          <Editor
-            onChange={this.onChange}
-            editorState={this.state.editorState}
-            blockRenderMap={extendedBlockRenderMap}
-            handleReturn={() => {
-              this.props.onSelectBlock(
-                this.props.onAddBlock('text', this.props.index + 1),
-              );
-              return 'handled';
-            }}
-            placeholder={this.props.intl.formatMessage(
-              messages.simple_card_title,
-            )}
-            ref={(node) => {
-              this.node = node;
-            }}
-          />
-          {/* <TextEditorWidget
+          <div className="public-ui">
+            <BodyWrapper data={this.props.data} inEditMode={false}>
+              <Editor
+                onChange={this.onChange}
+                editorState={this.state.editorState}
+                blockRenderMap={extendedBlockRenderMap}
+                handleReturn={() => {
+                  this.props.onSelectBlock(
+                    this.props.onAddBlock('text', this.props.index + 1),
+                  );
+                  return 'handled';
+                }}
+                placeholder={this.props.intl.formatMessage(
+                  messages.image_card_title,
+                )}
+                ref={(node) => {
+                  this.node = node;
+                }}
+              />
+              {/* <TextEditorWidget
             data={this.props.data}
-            fieldName="simple_card_title"
+            fieldName="image_card_title"
             selected={true}
             block={this.props.block}
             onChangeBlock={(data) =>
               this.props.onChangeBlock(this.props.block, data)
             }
             placeholder={this.props.intl.formatMessage(
-              messages.simple_card_title,
+              messages.image_card_title,
             )}
             showToolbar={true}
             ref={(node) => (this.node = node)} */}
-          {/* /> */}
-        </div>
-        <div>
-          <TextEditorWidget
-            data={this.props.data}
-            fieldName="simple_card_content"
-            selected={false}
-            block={this.props.block}
-            onChangeBlock={(data) =>
-              this.props.onChangeBlock(this.props.block, data)
-            }
-            placeholder={this.props.intl.formatMessage(
-              messages.simple_card_content,
-            )}
-            showToolbar={true}
-          />
+              {/* /> */}
+
+              <div>
+                <TextEditorWidget
+                  data={this.props.data}
+                  fieldName="image_card_content"
+                  selected={false}
+                  block={this.props.block}
+                  onChangeBlock={(data) =>
+                    this.props.onChangeBlock(this.props.block, data)
+                  }
+                  placeholder={this.props.intl.formatMessage(
+                    messages.image_card_content,
+                  )}
+                  showToolbar={true}
+                />
+              </div>
+            </BodyWrapper>
+
+            <SidebarPortal selected={this.props.selected || false}>
+              <Sidebar
+                {...this.props}
+                data={this.props.data}
+                block={this.props.block}
+                onChangeBlock={this.props.onChangeBlock}
+              />
+            </SidebarPortal>
+          </div>
         </div>
       </div>
     );

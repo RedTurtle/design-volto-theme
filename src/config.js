@@ -22,6 +22,11 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
 import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
 
+import ArgomentoSimpleTextCardView from '@italia/components/ItaliaTheme/Blocks/ArgomentoText/SimpleCard/View';
+import ArgomentoSimpleTextCardEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoText/SimpleCard/Edit';
+import ArgomentoCardWithImageView from '@italia/components/ItaliaTheme/Blocks/ArgomentoText/CardWithImage/View';
+import ArgomentoCardWithImageEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoText/CardWithImage/Edit';
+
 import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
 import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
 import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
@@ -184,6 +189,21 @@ const customBlocks = {
     group: 'text',
     view: ArgomentoSimpleTextCardView,
     edit: ArgomentoSimpleTextCardEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
+  testo_riquadro_immagine: {
+    id: 'testo_riquadro_immagine',
+    title: 'Testo in riquadro immagine',
+    icon: titleSVG,
+    group: 'text',
+    view: ArgomentoCardWithImageView,
+    edit: ArgomentoCardWithImageEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
