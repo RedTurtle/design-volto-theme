@@ -59,6 +59,7 @@ const ArgomentoSimpleTextCardView = ({ data, properties }) => {
         title={data?.simple_card_title?.blocks[0]?.text}
         content={data?.simple_card_content?.blocks}
         entityMap={data?.simple_card_content?.entityMap}
+        inEditMode={false}
       />
     </>
   );

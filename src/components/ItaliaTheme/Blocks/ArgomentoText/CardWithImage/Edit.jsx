@@ -149,11 +149,11 @@ class Edit extends Component {
       });
     }
 
-    if (!this.props.selected && nextProps.selected) {
-      console.log('focus', this.props.selected, nextProps.selected);
-      this.node.focus();
-      this.setState({ focus_title: true });
-    }
+    // if (!this.props.selected && nextProps.selected) {
+    //   console.log('focus', this.props.selected, nextProps.selected);
+    //   this.node.focus();
+    //   this.setState({ focus_title: true });
+    // }
   }
 
   /**
@@ -186,12 +186,13 @@ class Edit extends Component {
     if (__SERVER__) {
       return <div />;
     }
+    console.log('loggami l editorstate', this.state.editorState);
     return (
       <div>
         <div>
           <div className="public-ui">
             <BodyWrapper data={this.props.data} inEditMode={false}>
-              <Editor
+              {/* <Editor
                 onChange={this.onChange}
                 editorState={this.state.editorState}
                 blockRenderMap={extendedBlockRenderMap}
@@ -207,21 +208,20 @@ class Edit extends Component {
                 ref={(node) => {
                   this.node = node;
                 }}
+              /> */}
+              <TextEditorWidget
+                data={this.props.data}
+                fieldName="image_card_title"
+                selected={true}
+                block={this.props.block}
+                onChangeBlock={(data) =>
+                  this.props.onChangeBlock(this.props.block, data)
+                }
+                placeholder={this.props.intl.formatMessage(
+                  messages.image_card_title,
+                )}
+                showToolbar={true}
               />
-              {/* <TextEditorWidget
-            data={this.props.data}
-            fieldName="image_card_title"
-            selected={true}
-            block={this.props.block}
-            onChangeBlock={(data) =>
-              this.props.onChangeBlock(this.props.block, data)
-            }
-            placeholder={this.props.intl.formatMessage(
-              messages.image_card_title,
-            )}
-            showToolbar={true}
-            ref={(node) => (this.node = node)} */}
-              {/* /> */}
 
               <div>
                 <TextEditorWidget
