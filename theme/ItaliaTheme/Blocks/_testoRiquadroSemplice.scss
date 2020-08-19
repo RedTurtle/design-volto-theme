@@ -1,0 +1,59 @@
+.simple-text-card-wrapper {
+  margin-bottom: 20px;
+}
+.simple-text-card {
+  p {
+    .card-text {
+      margin: 2px;
+    }
+  }
+  .text.card-text {
+    padding: 0px;
+  }
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.image-text-card-wrapper {
+  .public-ui & {
+    > h3.title {
+      margin-bottom: 15px;
+    }
+  }
+
+  margin-top: 15px;
+}
+
+.simple-text-block,
+.image-text-block {
+  .card {
+    .card-body {
+      padding: 0px;
+      .card-text {
+        font-family: 'Titillium Web';
+        font-size: 18px;
+        margin-bottom: 5px;
+        padding: 0;
+      }
+    }
+    .card-bg {
+      :after {
+        background: transparent;
+        margin: 0;
+      }
+    }
+  }
+  //rm!
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .card:after {
+    margin-top: 0;
+  }
+}
+
+.external-link {
+  margin-left: 10px;
+  vertical-align: bottom !important;
+}
