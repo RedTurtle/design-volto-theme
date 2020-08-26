@@ -79,7 +79,6 @@ const Block = ({ inEditMode, data, block, onChange }) => {
                     showToolbar={false}
                   />
                 </CardTitle>
-                {/* fai  un componente a parte, non ci sono i css */}
                 <Divider />
                 <TextEditorWidget
                   data={data}
@@ -96,12 +95,11 @@ const Block = ({ inEditMode, data, block, onChange }) => {
             ) : (
               <>
                 <CardTitle tag="h4">{title}</CardTitle>
-                {/* fai  un componente a parte, non ci sono i css */}
                 <Divider />
                 <div>
                   {content?.map((ct, i) => {
                     return (
-                      <CardText>
+                      <CardText key={i}>
                         {styler(
                           ct,
                           entityMap[

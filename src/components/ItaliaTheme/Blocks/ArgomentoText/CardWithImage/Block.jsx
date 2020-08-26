@@ -93,12 +93,18 @@ const Block = ({ data, block, inEditMode, onChange }) => {
         <CardBody>
           {inEditMode ? (
             <Container tag="div">
-              <Row tag="div">
-                <Col tag="div" className="p-0">
-                  {renderImage(data?.image, hasImage)}
-                </Col>
-
-                <Col tag="div" xs={hasImage ? '8' : '12'} className="p-4 mb-2">
+              <Row tag="div" className={`${hasImage ? '' : 'no-image'}`}>
+                {hasImage && (
+                  <Col tag="div" className="p-0" key={'col-0'}>
+                    {renderImage(data?.image, hasImage)}
+                  </Col>
+                )}
+                <Col
+                  key={'col-1'}
+                  tag="div"
+                  xs={hasImage ? '8' : '12'}
+                  className=" p-4 mb-2"
+                >
                   <CardText
                     className="simple-text-card text"
                     style={{ padding: 0 }}
@@ -123,10 +129,11 @@ const Block = ({ data, block, inEditMode, onChange }) => {
           ) : (
             <Container tag="div">
               <Row tag="div">
-                <Col tag="div" className="p-0">
+                <Col tag="div" className="p-0" key={'col-0'}>
                   {renderImage(data?.image, hasImage)}
                 </Col>
                 <Col
+                  key={'col-1'}
                   tag="div"
                   xs={hasImage ? '8' : '12'}
                   className="p-4 mb-2 ml-3"

@@ -35,6 +35,10 @@
         margin-bottom: 5px;
         padding: 0;
       }
+      .no-image {
+        border-left: 0.35rem solid #d9d9d9;
+        border-radius: 5px;
+      }
     }
     .card-bg {
       :after {
