@@ -12,8 +12,12 @@
     background-color: $primary;
   }
 
-  .darker {
-    color: darken($primary, 10%)!important;
+  .card {
+    .card-body {
+      .darker {
+        color: darken($primary, 5%);
+      }
+    }
   }
 
   .grid {
