@@ -12,6 +12,10 @@
     background-color: $primary;
   }
 
+  .darker {
+    color: darken($primary, 10%)!important;
+  }
+
   .grid {
     display: grid;
     gap: 24px;

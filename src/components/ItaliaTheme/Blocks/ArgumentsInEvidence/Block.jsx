@@ -75,6 +75,7 @@ const Block = ({
         )}
         {argument && (
           <CardReadMore
+            className="darker"
             iconName="it-arrow-right"
             tag="a"
             text={intl.formatMessage(messages.exploreArgument)}
