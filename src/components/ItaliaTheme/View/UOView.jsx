@@ -13,6 +13,7 @@ import {
   SideMenu,
   PageHeader,
   RichTextArticle,
+  RichText,
   OfficeCard,
   Attachments,
   Metadata,
@@ -45,7 +46,10 @@ const messages = defineMessages({
     id: 'persone_struttura',
     defaultMessage: 'Persone che compongono la struttura',
   },
-
+  persone_contatto: {
+    id: 'persone_contatto',
+    defaultMessage: 'Persone da contattare:',
+  },
   uo_related_news: {
     id: 'uo_related_news',
     defaultMessage: 'Notizie in evidenza',
@@ -122,6 +126,70 @@ const UOView = ({ content }) => {
             ) : (
               ''
             )}
+            {content.orario_pubblico_sede?.data.replace(/(<([^>]+)>)/g, '') && (
+              <RichText
+                content={content.orario_pubblico_sede?.data}
+                tag_id={'orario_pubblico_sede'}
+                add_class={'orario-pubblico'}
+              />
+            )}
+            {content.riferimento_telefonico_sede ? (
+              <>
+                {content.riferimento_telefonico_sede ? (
+                  <p className="text-serif contatti">
+                    <a href={`tel:${content.riferimento_telefonico_sede}`}>
+                      {content.riferimento_telefonico_sede}
+                    </a>
+                  </p>
+                ) : (
+                  ''
+                )}
+                {content.riferimento_email_sede ? (
+                  <p className="text-serif contatti">
+                    <a href={`mailto:${content.riferimento_email_sede}`}>
+                      {content.riferimento_email_sede}
+                    </a>
+                  </p>
+                ) : (
+                  ''
+                )}
+                {content.riferimento_pec_sede ? (
+                  <p className="text-serif contatti">
+                    <a href={`mailto:${content.riferimento_pec_sede}`}>
+                      {content.riferimento_pec_sede}
+                    </a>
+                  </p>
+                ) : (
+                  ''
+                )}
+                {content.persone_contatto?.length > 0 && (
+                  <>
+                    <h6>{intl.formatMessage(messages.persone_contatto)}</h6>
+                    {content.persone_contatto?.map((item, i) => (
+                      <Link
+                        to={flattenToAppURL(item['@id'])}
+                        key={item['@id']}
+                        title={item.title}
+                        className="text-decoration-none mr-2"
+                      >
+                        <Chip
+                          color="primary"
+                          disabled={false}
+                          large={false}
+                          simple
+                          tag="div"
+                        >
+                          <ChipLabel tag="span">{item.title}</ChipLabel>
+                        </Chip>
+                      </Link>
+                    ))}
+                  </>
+                )}
+              </>
+            ) : (
+              ''
+            )}
+
             {content.tipologia_organizzazione && (
               <article
                 id="organizzazione"

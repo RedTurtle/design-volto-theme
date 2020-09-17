@@ -15,4 +15,11 @@ body.contenttype-unitaorganizzativa {
   #geocoded-result {
     height: 300px !important;
   }
+
+  .orario-pubblico {
+    margin-top: 1rem;
+  }
+  p.contatti:not(:last-of-type) {
+    margin: 0;
+  }
 }
