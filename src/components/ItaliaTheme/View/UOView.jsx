@@ -48,7 +48,7 @@ const messages = defineMessages({
   },
   persone_contatto: {
     id: 'persone_contatto',
-    defaultMessage: 'Persone da contattare:',
+    defaultMessage: 'Persone da contattare',
   },
   uo_related_news: {
     id: 'uo_related_news',
@@ -61,6 +61,22 @@ const messages = defineMessages({
   related_items: {
     id: 'related_items',
     defaultMessage: 'Contenuti correlati',
+  },
+  orario_pubblico: {
+    id: 'orario_pubblico',
+    defaultMessage: 'Orario per il pubblico',
+  },
+  email_sede: {
+    id: 'email_sede',
+    defaultMessage: 'Email:',
+  },
+  pec_sede: {
+    id: 'pec_sede',
+    defaultMessage: 'PEC:',
+  },
+  telefono_sede: {
+    id: 'telefono_sede',
+    defaultMessage: 'Telefono:',
   },
 });
 
@@ -131,12 +147,15 @@ const UOView = ({ content }) => {
                 content={content.orario_pubblico_sede?.data}
                 tag_id={'orario_pubblico_sede'}
                 add_class={'orario-pubblico'}
+                title_size={'h6'}
+                title={intl.formatMessage(messages.orario_pubblico)}
               />
             )}
             {content.riferimento_telefonico_sede ? (
               <>
                 {content.riferimento_telefonico_sede ? (
                   <p className="text-serif contatti">
+                    {intl.formatMessage(messages.telefono_sede)}
                     <a href={`tel:${content.riferimento_telefonico_sede}`}>
                       {content.riferimento_telefonico_sede}
                     </a>
@@ -146,6 +165,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.riferimento_email_sede ? (
                   <p className="text-serif contatti">
+                    {intl.formatMessage(messages.email_sede)}
                     <a href={`mailto:${content.riferimento_email_sede}`}>
                       {content.riferimento_email_sede}
                     </a>
@@ -155,6 +175,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.riferimento_pec_sede ? (
                   <p className="text-serif contatti">
+                    {intl.formatMessage(messages.pec_sede)}
                     <a href={`mailto:${content.riferimento_pec_sede}`}>
                       {content.riferimento_pec_sede}
                     </a>
@@ -164,7 +185,9 @@ const UOView = ({ content }) => {
                 )}
                 {content.persone_contatto?.length > 0 && (
                   <>
-                    <h6>{intl.formatMessage(messages.persone_contatto)}</h6>
+                    <h6 className="text-serif font-weight-bold mt-4">
+                      {intl.formatMessage(messages.persone_contatto)}
+                    </h6>
                     {content.persone_contatto?.map((item, i) => (
                       <Link
                         to={flattenToAppURL(item['@id'])}
