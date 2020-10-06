@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const WideImage = params => {
+const WideImage = (params) => {
   return (
     <div className="row row-full-width my-3">
       <figure className="figure">

@@ -16,7 +16,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const UOLocation = ({
-  sedi,
+  sedi_secondarie,
   contact_info,
   geolocation,
   street,
@@ -47,11 +47,11 @@ const UOLocation = ({
       ) : (
         ''
       )}
-      {sedi.length > 0 && (
+      {sedi_secondarie?.length > 0 && (
         <>
           <h5 className="mt-3">Altre sedi</h5>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-            {sedi.map((item, i) => (
+            {sedi_secondarie?.map((item, i) => (
               <GenericCard key={item['@id']} item={item} showimage={false} />
             ))}
           </div>
@@ -63,7 +63,7 @@ const UOLocation = ({
 export default UOLocation;
 
 UOLocation.propTypes = {
-  sedi: PropTypes.array,
+  sedi_secondarie: PropTypes.array,
   geolocation: PropTypes.shape({
     latitude: PropTypes.number,
     longitude: PropTypes.number,

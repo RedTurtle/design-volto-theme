@@ -131,7 +131,7 @@ const UOView = ({ content }) => {
             content?.geolocation?.latitude ||
             content?.geolocation?.longitude ? (
               <UOLocation
-                sedi={content?.sedi}
+                sedi_secondarie={content?.sedi_secondarie}
                 contact_info={content?.contact_info}
                 geolocation={content.geolocation}
                 street={content.street}
@@ -151,34 +151,28 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.orario_pubblico)}
               />
             )}
-            {content.riferimento_telefonico_sede ? (
+            {content.telefono ? (
               <>
-                {content.riferimento_telefonico_sede ? (
+                {content.telefono ? (
                   <p className="text-serif contatti">
                     {intl.formatMessage(messages.telefono_sede)}
-                    <a href={`tel:${content.riferimento_telefonico_sede}`}>
-                      {content.riferimento_telefonico_sede}
-                    </a>
+                    <a href={`tel:${content.telefono}`}>{content.telefono}</a>
                   </p>
                 ) : (
                   ''
                 )}
-                {content.riferimento_email_sede ? (
+                {content.email ? (
                   <p className="text-serif contatti">
                     {intl.formatMessage(messages.email_sede)}
-                    <a href={`mailto:${content.riferimento_email_sede}`}>
-                      {content.riferimento_email_sede}
-                    </a>
+                    <a href={`mailto:${content.email}`}>{content.email}</a>
                   </p>
                 ) : (
                   ''
                 )}
-                {content.riferimento_pec_sede ? (
+                {content.pec ? (
                   <p className="text-serif contatti">
                     {intl.formatMessage(messages.pec_sede)}
-                    <a href={`mailto:${content.riferimento_pec_sede}`}>
-                      {content.riferimento_pec_sede}
-                    </a>
+                    <a href={`mailto:${content.pec}`}>{content.pec}</a>
                   </p>
                 ) : (
                   ''
