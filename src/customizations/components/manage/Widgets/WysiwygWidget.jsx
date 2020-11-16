@@ -238,6 +238,10 @@ class WysiwygWidget extends Component {
                       "classes": "callout"
                     }
                   },
+                  init_instance_callback : function(editor) {
+                    var freeTiny = document.querySelector('.tox .tox-notification--in');
+                   freeTiny.style.display = 'none';
+                  },
                   block_formats: 'callout=callout',
                   forced_root_block : 'p',
                   table_header_type: 'cells',
