@@ -206,7 +206,6 @@ class TinymceWidget extends Component {
         </Form.Field>
       );
     }
-    // const { InlineToolbar } = this.state.inlineToolbarPlugin;
 
     return (
       <FormFieldWrapper {...this.props} className="wysiwyg">
