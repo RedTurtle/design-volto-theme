@@ -1,6 +1,6 @@
 /**
- * WysiwygWidget container.
- * @module components/manage/WysiwygWidget/WysiwygWidget
+ * TinymceWidget container.
+ * @module components/manage/Widgets/TinymceWidget
  */
 
 import React, { Component } from 'react';
@@ -45,11 +45,11 @@ const messages = defineMessages({
 });
 
 /**
- * WysiwygWidget container class.
- * @class WysiwygWidget
+ * TinymceWidget container class.
+ * @class TinymceWidget
  * @extends Component
  */
-class WysiwygWidget extends Component {
+class TinymceWidget extends Component {
   /**
    * Property types.
    * @property {Object} propTypes Property types.
@@ -116,7 +116,7 @@ class WysiwygWidget extends Component {
    * Constructor
    * @method constructor
    * @param {Object} props Component properties
-   * @constructs WysiwygWidget
+   * @constructs TinymceWidget
    */
   constructor(props) {
     super(props);
@@ -266,4 +266,4 @@ export default compose(
     }),
     {},
   ),
-)(WysiwygWidget);
+)(TinymceWidget);
