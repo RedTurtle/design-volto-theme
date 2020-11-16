@@ -20,8 +20,8 @@ const RichText = ({
   let content_to_display = content ? content?.replace(/(<([^>]+)>)/g, '') : '';
   content_to_display =
     content_to_display.length > 0 ? content_to_display : null;
-  console.log(content)
-  return content_to_display || children ? (
+
+    return content_to_display || children ? (
     <>
       {title &&
         (title_size === 'h6' ? (

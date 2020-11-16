@@ -97,18 +97,6 @@ class WysiwygWidget extends Component {
      * On change handler
      */
     onChange: PropTypes.func,
-    /**
-     * On delete handler
-     */
-    onDelete: PropTypes.func,
-    /**
-     * On edit handler
-     */
-    onEdit: PropTypes.func,
-    /**
-     * Wrapped form component
-     */
-    wrapped: PropTypes.bool,
   };
 
   /**
@@ -121,8 +109,6 @@ class WysiwygWidget extends Component {
     required: false,
     value: null,
     error: [],
-    onEdit: null,
-    onDelete: null,
     onChange: null,
   };
 
