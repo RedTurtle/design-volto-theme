@@ -243,7 +243,7 @@ class TinymceWidget extends Component {
                     'searchreplace visualblocks code fullscreen',
                     'insertdatetime media table paste code help wordcount'
                   ],
-                  toolbar: 'underline bold italic link | h2 h3 bullist numlist blockquote formatselect callout | removeformat | table'
+                  toolbar: ['underline bold italic link h2 h3 bullist numlist blockquote', 'formatselect callout | removeformat | table']
                 }}
                 onEditorChange={this.onChange}
               />
