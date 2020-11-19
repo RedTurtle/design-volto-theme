@@ -160,7 +160,7 @@ const getSearchParamsURL = (
       {
         ...(text ?? {}),
         ...(pathQuery ?? {}),
-        argomenti: activeTopics,
+        tassonomia_argomenti: activeTopics,
         ...optionsQuery,
         ...sortOn,
       },
