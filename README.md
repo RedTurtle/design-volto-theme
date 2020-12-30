@@ -1,8 +1,8 @@
-# design-volto-theme
+# design-volto-theme !
 
 Volto Theme for Italia design guidelines
 
-[bootstrap-italia](https://italia.github.io/bootstrap-italia/)  
+[bootstrap-italia](https://italia.github.io/bootstrap-italia/)
 [Linee guida](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html)
 
 ## Documentation
@@ -15,7 +15,7 @@ Below is a list of commands you will probably find useful.
 
 ### `yarn start`
 
-Runs the project in development mode.  
+Runs the project in development mode.
 You can view your application at `http://localhost:3000`
 
 The page will reload if you make edits.
@@ -42,7 +42,6 @@ By default, runs tests related to files changed since the last commit.
 
 Runs the test i18n runner which extracts all the translation strings and
 generates the needed files.
-
 
 ### mr_developer
 
