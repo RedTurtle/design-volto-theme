@@ -73,6 +73,7 @@ const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                   <CardReadMore
                     iconName="it-arrow-right"
                     className="ml-4"
+                    target="_blank"
                     tag="a"
                     href={item?.link}
                     text={intl.formatMessage(messages.readMore)}
