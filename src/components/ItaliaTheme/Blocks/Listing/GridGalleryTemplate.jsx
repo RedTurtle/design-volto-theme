@@ -64,8 +64,7 @@ const GridGalleryTemplate = ({
                 className={cx('grid-gallery-item', `item-${index % 7}`)}
               >
                 <UniversalLink
-                  item={!isEditMode ? item : null}
-                  href={isEditMode ? '#' : null}
+                  {...(isEditMode ? { href: '#' } : { item })}
                 >
                   {item.image && (
                     <Image
