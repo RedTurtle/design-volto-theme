@@ -75,6 +75,7 @@ const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                     className="ml-4"
                     tag="a"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href={item?.link}
                     text={intl.formatMessage(messages.readMore)}
                   />
