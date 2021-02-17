@@ -1671,14 +1671,6 @@
     "@octokit/types" "^5.5.0"
     deprecation "^2.3.1"
 
-"@octokit/plugin-rest-endpoint-methods@4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-4.2.1.tgz#8224833a45c3394836dc6e86f1e6c49269a2c350"
-  integrity sha512-QyFr4Bv807Pt1DXZOC5a7L5aFdrwz71UHTYoHVajYV5hsqffWm8FUl9+O7nxRu5PDMtB/IKrhFqTmdBTK5cx+A==
-  dependencies:
-    "@octokit/types" "^5.5.0"
-    deprecation "^2.3.1"
-
 "@octokit/request-error@^2.0.0":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-2.0.4.tgz#07dd5c0521d2ee975201274c472a127917741262"
@@ -1712,16 +1704,6 @@
     "@octokit/plugin-request-log" "^1.0.0"
     "@octokit/plugin-rest-endpoint-methods" "4.2.0"
 
-"@octokit/rest@18.0.9":
-  version "18.0.9"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-18.0.9.tgz#964d707d914eb34b1787895fdcacff96de47844d"
-  integrity sha512-CC5+cIx974Ygx9lQNfUn7/oXDQ9kqGiKUC6j1A9bAVZZ7aoTF8K6yxu0pQhQrLBwSl92J6Z3iVDhGhGFgISCZg==
-  dependencies:
-    "@octokit/core" "^3.0.0"
-    "@octokit/plugin-paginate-rest" "^2.2.0"
-    "@octokit/plugin-request-log" "^1.0.0"
-    "@octokit/plugin-rest-endpoint-methods" "4.2.1"
-
 "@octokit/types@^5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@octokit/types/-/types-5.5.0.tgz#e5f06e8db21246ca102aa28444cdb13ae17a139b"
@@ -1739,7 +1721,7 @@
 
 "@plone/volto@plone/volto#rt_development":
   version "11.1.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/47ce3aa5919b87896014038ab9d4dc22bead3ad3"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/c313bd2e7f0a2c0e7f3beb24470042e65446dccc"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -5431,7 +5413,7 @@ debug@2.6.9, debug@^2.1.3, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@4.3.1, debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
+debug@4, debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
@@ -9972,7 +9954,7 @@ last-call-webpack-plugin@^3.0.0:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
 
-latest-version@^5.0.0, latest-version@^5.1.0:
+latest-version@^5.0.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-5.1.0.tgz#119dfe908fe38d15dfa43ecd13fa12ec8832face"
   integrity sha512-weT+r0kTkRQdCdYCNtkMwWXQTMEswKrFBkm4ckQOMVhhqhIMI1UT2hMj+1iigIhgSZm5gTmrRXBNoGUgaTY1xA==
@@ -13401,7 +13383,7 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-pupa@^2.0.1, pupa@^2.1.1:
+pupa@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/pupa/-/pupa-2.1.1.tgz#f5e8fd4afc2c5d97828faa523549ed8744a20d62"
   integrity sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==
@@ -14570,40 +14552,6 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
-
-release-it@*:
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-14.2.2.tgz#ec01be53b04c5aa251a45c7a0b29cceace7827b3"
-  integrity sha512-rnJOzDIXErrwCD9cRMtDgmOZlcLQiL0z0dVyN95G2T1FQVBQNr7AD5EiH3U+K6X7s+EVoK90lF96NXe5QuvG1A==
-  dependencies:
-    "@iarna/toml" "2.2.5"
-    "@octokit/rest" "18.0.9"
-    async-retry "1.3.1"
-    chalk "4.1.0"
-    cosmiconfig "7.0.0"
-    debug "4.3.1"
-    deprecated-obj "2.0.0"
-    execa "4.1.0"
-    find-up "5.0.0"
-    form-data "3.0.0"
-    git-url-parse "11.4.0"
-    globby "11.0.1"
-    got "11.8.0"
-    import-cwd "3.0.0"
-    inquirer "7.3.3"
-    is-ci "2.0.0"
-    lodash "4.17.20"
-    mime-types "2.1.27"
-    ora "5.1.0"
-    os-name "4.0.0"
-    parse-json "5.1.0"
-    semver "7.3.2"
-    shelljs "0.8.4"
-    update-notifier "5.0.1"
-    url-join "4.0.1"
-    uuid "8.3.1"
-    yaml "1.10.0"
-    yargs-parser "20.2.4"
 
 release-it@14.2.1:
   version "14.2.1"
@@ -16978,26 +16926,6 @@ update-notifier@5.0.0:
     semver-diff "^3.1.1"
     xdg-basedir "^4.0.0"
 
-update-notifier@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-5.0.1.tgz#1f92d45fb1f70b9e33880a72dd262bc12d22c20d"
-  integrity sha512-BuVpRdlwxeIOvmc32AGYvO1KVdPlsmqSh8KDDBxS6kDE5VR7R8OMP1d8MdhaVBvxl4H3551k9akXr0Y1iIB2Wg==
-  dependencies:
-    boxen "^4.2.0"
-    chalk "^4.1.0"
-    configstore "^5.0.1"
-    has-yarn "^2.1.0"
-    import-lazy "^2.1.0"
-    is-ci "^2.0.0"
-    is-installed-globally "^0.3.2"
-    is-npm "^5.0.0"
-    is-yarn-global "^0.3.0"
-    latest-version "^5.1.0"
-    pupa "^2.1.1"
-    semver "^7.3.2"
-    semver-diff "^3.1.1"
-    xdg-basedir "^4.0.0"
-
 uri-js@^4.2.2:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.0.tgz#aa714261de793e8a82347a7bcc9ce74e86f28602"
@@ -17211,15 +17139,15 @@ volto-cookie-banner@collective/volto-cookie-banner#v1.0.2:
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v1.2.1:
-  version "1.2.1"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/b6c793e4345a26f9a1bcee88b4461452fe42ea0d"
+volto-dropdownmenu@collective/volto-dropdownmenu#ssr_google_index:
+  version "1.2.4"
+  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/f58b68caad13198654f4f7ffa1d02dbe943bcd91"
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v2.0.1:
+volto-editablefooter@RedTurtle/volto-editablefooter#ssr_google_index:
   version "2.0.1"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/177ff6cc2ae9c1ef3829c81eecb4daf6c76ced67"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/f93d66a2c9f311170e9591d88b378a66a8b8f1b9"
   dependencies:
     react-outside-click-handler "1.3.0"
 
@@ -17241,9 +17169,9 @@ volto-rss-block@redturtle/volto-rss-block#v1.2.0:
   dependencies:
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v1.0.0:
+volto-secondarymenu@collective/volto-secondarymenu#ssr_google_index:
   version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/3b2ece1a9bf599678be65514683d5066d458379d"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/53ac86ecaf6b7298738e8af8444a1ee21bb6e9d6"
 
 volto-social-settings@collective/volto-social-settings#v2.0.0:
   version "2.0.0"
@@ -17256,9 +17184,9 @@ volto-subblocks@collective/volto-subblocks#v1.0.1:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
 
-volto-subsites@collective/volto-subsites#v1.0.2:
+volto-subsites@collective/volto-subsites#ssr_google_index:
   version "1.0.2"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/5066279dafc48ff2a2410a48291182caf557ef81"
+  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/deed2f9e26737df2b891defcba3d2ebf930977a6"
 
 volto-venue@collective/volto-venue#v2.0.1:
   version "2.0.1"
@@ -17883,11 +17811,6 @@ yargs-parser@20.2.3:
   version "20.2.3"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.3.tgz#92419ba867b858c868acf8bae9bf74af0dd0ce26"
   integrity sha512-emOFRT9WVHw03QSvN5qor9QQT9+sw5vwxfYweivSMHTcAXPefwVae2FjO7JJjj8hCE4CzPOPeFM83VwT29HCww==
-
-yargs-parser@20.2.4:
-  version "20.2.4"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.4.tgz#b42890f14566796f85ae8e3a25290d205f154a54"
-  integrity sha512-WOkpgNhPTlE73h4VFAFsOnomJVaovO8VqLDzy5saChRBFQFBoMYirowyW+Q9HB4HFF4Z7VZTiG3iSzJJA29yRA==
 
 yargs-parser@5.0.0-security.0:
   version "5.0.0-security.0"
