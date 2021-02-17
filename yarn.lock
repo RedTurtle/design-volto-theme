@@ -17141,13 +17141,13 @@ volto-cookie-banner@collective/volto-cookie-banner#v1.0.2:
 
 volto-dropdownmenu@collective/volto-dropdownmenu#ssr_google_index:
   version "1.2.4"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/f58b68caad13198654f4f7ffa1d02dbe943bcd91"
+  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/abb4791d3b35eb599fe5cad2667dee48a5dede70"
   dependencies:
     react-outside-click-handler "1.3.0"
 
 volto-editablefooter@RedTurtle/volto-editablefooter#ssr_google_index:
   version "2.0.1"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/f93d66a2c9f311170e9591d88b378a66a8b8f1b9"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/21babe7b51e56c274b35bb72ff850009915d6846"
   dependencies:
     react-outside-click-handler "1.3.0"
 
@@ -17171,7 +17171,7 @@ volto-rss-block@redturtle/volto-rss-block#v1.2.0:
 
 volto-secondarymenu@collective/volto-secondarymenu#ssr_google_index:
   version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/53ac86ecaf6b7298738e8af8444a1ee21bb6e9d6"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/9098935df7ec42071cdb38ec78dec772af6036ec"
 
 volto-social-settings@collective/volto-social-settings#v2.0.0:
   version "2.0.0"
@@ -17186,7 +17186,7 @@ volto-subblocks@collective/volto-subblocks#v1.0.1:
 
 volto-subsites@collective/volto-subsites#ssr_google_index:
   version "1.0.2"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/deed2f9e26737df2b891defcba3d2ebf930977a6"
+  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/06d5d82a2ca35de3d7db580d26fb5d8588d1f93e"
 
 volto-venue@collective/volto-venue#v2.0.1:
   version "2.0.1"
