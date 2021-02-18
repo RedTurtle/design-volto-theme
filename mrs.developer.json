@@ -34,14 +34,14 @@
     "path": "src",
     "https": "https://github.com/collective/volto-dropdownmenu.git",
     "url": "git@github.com:collective/volto-dropdownmenu.git",
-    "branch":"ssr_google_index"
+    "branch": "ssr_google_index"
   },
   "volto-subsites": {
     "package": "@italia/addons/volto-subsites",
     "path": "src",
     "https": "https://github.com/collective/volto-subsites.git",
     "url": "git@github.com:collective/volto-subsites.git",
-    "branch":"ssr_google_index"
+    "branch": "ssr_google_index"
   },
   "volto-social-settings": {
     "package": "@italia/addons/volto-social-settings",
@@ -54,7 +54,7 @@
     "path": "src",
     "https": "https://github.com/RedTurtle/volto-editablefooter.git",
     "url": "git@github.com:RedTurtle/volto-editablefooter.git",
-    "branch":"ssr_google_index"
+    "branch": "ssr_google_index"
   },
   "volto-google-analytics": {
     "package": "@italia/addons/volto-google-analytics",
@@ -67,6 +67,12 @@
     "path": "src",
     "https": "https://github.com/collective/volto-secondarymenu.git",
     "url": "git@github.com:collective/volto-secondarymenu.git",
-    "branch":"ssr_google_index"
+    "branch": "ssr_google_index"
+  },
+  "volto-staticrender-bots": {
+    "package": "@italia/addons/volto-staticrender-bots",
+    "path": "src",
+    "https": "https://github.com/nzambello/volto-staticrender-bots.git",
+    "url": "git@github.com:nzambello/volto-staticrender-bots.git"
   }
 }

@@ -15,7 +15,8 @@
     "src/addons/volto-social-settings",
     "src/addons/volto-editablefooter",
     "src/addons/volto-google-analytics",
-    "src/addons/volto-secondarymenu"
+    "src/addons/volto-secondarymenu",
+    "src/addons/volto-staticrender-bots"
   ],
   "addons": [
     "volto-cookie-banner",
@@ -28,7 +29,8 @@
     "volto-social-settings",
     "volto-editablefooter",
     "volto-google-analytics",
-    "volto-secondarymenu"
+    "volto-secondarymenu",
+    "volto-staticrender-bots"
   ],
   "scripts": {
     "start": "razzle start",
@@ -68,7 +70,8 @@
       "volto-social-settings/(.*)$": "<rootDir>/src/addons/volto-social-settings/src/$1",
       "volto-editablefooter/(.*)$": "<rootDir>/src/addons/volto-editablefooter/src/$1",
       "volto-google-analytics/(.*)$": "<rootDir>/src/addons/volto-google-analytics/src/$1",
-      "volto-secondarymenu/(.*)$": "<rootDir>/src/addons/volto-secondarymenu/src/$1"
+      "volto-secondarymenu/(.*)$": "<rootDir>/src/addons/volto-secondarymenu/src/$1",
+      "volto-staticrender-bots/(.*)$": "<rootDir>/src/addons/volto-staticrender-bots/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
@@ -183,7 +186,8 @@
     "volto-social-settings": "collective/volto-social-settings#v2.0.0",
     "volto-subblocks": "collective/volto-subblocks#v1.0.1",
     "volto-subsites": "collective/volto-subsites#ssr_google_index",
-    "volto-venue": "collective/volto-venue#v2.0.1"
+    "volto-venue": "collective/volto-venue#v2.0.1",
+    "volto-staticrender-bots": "nzambello/volto-staticrender-bots"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
