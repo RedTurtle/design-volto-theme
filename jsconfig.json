@@ -34,8 +34,8 @@
             "@italia/addons/volto-secondarymenu": [
                 "addons/volto-secondarymenu/src"
             ],
-            "@italia/volto-staticrender-bots": [
-                "addons/volto-staticrender-bots"
+            "@italia/addons/volto-staticrender-bots": [
+                "addons/volto-staticrender-bots/src"
             ]
         },
         "baseUrl": "src"

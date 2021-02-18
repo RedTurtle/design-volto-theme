@@ -184,10 +184,10 @@
     "volto-rss-block": "redturtle/volto-rss-block#v1.2.0",
     "volto-secondarymenu": "collective/volto-secondarymenu#ssr_google_index",
     "volto-social-settings": "collective/volto-social-settings#v2.0.0",
+    "volto-staticrender-bots": "nzambello/volto-staticrender-bots",
     "volto-subblocks": "collective/volto-subblocks#v1.0.1",
     "volto-subsites": "collective/volto-subsites#ssr_google_index",
-    "volto-venue": "collective/volto-venue#v2.0.1",
-    "volto-staticrender-bots": "nzambello/volto-staticrender-bots"
+    "volto-venue": "collective/volto-venue#v2.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
