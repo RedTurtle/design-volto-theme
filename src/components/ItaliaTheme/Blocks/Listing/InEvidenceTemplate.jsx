@@ -77,7 +77,8 @@ const InEvidenceTemplate = ({
                             <Image
                               className="listing-image"
                               image={item.image}
-                              alt={item.title}
+                              alt=""
+                              aria-hidden="true"
                             />
                           </figure>
                         </UniversalLink>
@@ -94,7 +95,7 @@ const InEvidenceTemplate = ({
                         item={item}
                       />
                     </CardCategory>
-                    <CardTitle tag="h4">
+                    <CardTitle tag="h3">
                       <UniversalLink
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}

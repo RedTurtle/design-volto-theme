@@ -85,7 +85,8 @@ const CardWithImageTemplate = ({
                               <Image
                                 className="listing-image"
                                 image={item.image}
-                                alt={item.title}
+                                aria-hidden="true"
+                                alt=""
                               />
                             </figure>
                           </UniversalLink>
@@ -102,7 +103,7 @@ const CardWithImageTemplate = ({
                           item={item}
                         />
                       </CardCategory>
-                      <CardTitle tag="h4">
+                      <CardTitle tag="h3">
                         <UniversalLink
                           item={!isEditMode ? item : null}
                           href={isEditMode ? '#' : ''}
