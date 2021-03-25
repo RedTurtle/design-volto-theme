@@ -37,7 +37,7 @@ const FooterInfos = () => {
 
   useEffect(() => {
     dispatch(getEditableFooterColumns());
-  }, [dispatch]);
+  }, [dispatch, location]);
 
   //filter rootpaths
   const footerColumns = getItemsByPath(
