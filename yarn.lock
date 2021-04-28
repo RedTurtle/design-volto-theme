@@ -1921,7 +1921,7 @@
   dependencies:
     "@octokit/openapi-types" "^6.0.0"
 
-"@plone/volto@plone/volto#rt_dev_12_new":
+"@plone/volto@plone/volto#rt_dev_12":
   version "12.10.1"
   resolved "https://codeload.github.com/plone/volto/tar.gz/4bbf3db2e07aa2f76388aad742e53be259820fce"
   dependencies:
