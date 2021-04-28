@@ -607,6 +607,7 @@ msgstr ""
 msgid "chiama_il_numero_fax"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "chiusura_procedimento_bando"
@@ -1208,6 +1209,10 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+msgid "natural_image_size"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NewsHome/Body
 msgid "newsHome-news"
 msgstr ""
@@ -1483,10 +1488,12 @@ msgstr ""
 msgid "ruolo"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_bando"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_domande_bando"
 msgstr ""

@@ -65,6 +65,8 @@ import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/Traspa
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
+import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions';
+
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
@@ -83,8 +85,10 @@ import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/G
 import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
+import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
 import MapTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/MapTemplate';
 import MapTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
+import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions';
 
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
@@ -183,7 +187,6 @@ export default function applyConfig(voltoConfig) {
       edit: SearchSectionsEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
@@ -199,7 +202,6 @@ export default function applyConfig(voltoConfig) {
       edit: CalendarEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
@@ -215,7 +217,6 @@ export default function applyConfig(voltoConfig) {
       edit: EventSearchEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
@@ -231,7 +232,6 @@ export default function applyConfig(voltoConfig) {
       edit: ArgumentsInEvidenceEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
@@ -374,6 +374,7 @@ export default function applyConfig(voltoConfig) {
           label: 'Card con immagine',
           template: CardWithImageTemplate,
           skeleton: CardWithImageTemplateSkeleton,
+          templateOptions: CardWithImageTemplateOptions,
         },
         inEvidenceTemplate: {
           label: 'In evidenza',
@@ -389,11 +390,13 @@ export default function applyConfig(voltoConfig) {
           label: 'Card con nastro',
           template: RibbonCardTemplate,
           skeleton: RibbonCardTemplateSkeleton,
+          templateOptions: RibbonCardTemplateOptions,
         },
         mapTemplate: {
           label: 'Mappa',
           template: MapTemplate,
           skeleton: MapTemplateSkeleton,
+          templateOptions: MapTemplateOptions,
         },
         smallBlockLinksTemplate: {
           label: 'Blocco link solo immagini',
@@ -430,6 +433,14 @@ export default function applyConfig(voltoConfig) {
           template: AmministrazioneTrasparenteTablesTemplate,
           skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
         },
+
+        // ****** Example: ******
+        //template_name: {
+        //   label: 'Template label',
+        //   template: TemplateComponent,
+        //   skeleton: TemplateSkeletonComponent,
+        //   templateOptions: TemplateSidebarOptionsComponent
+        // },
       },
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
       listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
