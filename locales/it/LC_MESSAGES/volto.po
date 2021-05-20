@@ -29,6 +29,7 @@ msgid "Alert"
 msgstr "Alert"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Aspetto"
 msgstr "Aspetto"
 
@@ -113,7 +114,7 @@ msgstr "Description"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 msgid "Dimensione della mappa"
-msgstr "Dimensione della mappa"
+msgstr "Dimensione della mappa<<<<<<< HEAD"
 
 #: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
@@ -129,7 +130,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Etichetta path filter"
 msgstr "Etichetta"
 
@@ -187,14 +188,13 @@ msgstr "Listing"
 msgid "Menu selezionato"
 msgstr "Menu selezionato"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Mostra i filtri per percorso"
 msgstr "Mostra i filtri per percorso"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Mostra lo sfondo del blocco"
 msgstr "Mostra lo sfondo del blocco"
 
@@ -222,7 +222,7 @@ msgstr "Non ci sono punti da mostrare sulla mappa"
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Path filter filtro"
 msgstr "Filtro"
 
@@ -231,7 +231,7 @@ msgstr "Filtro"
 msgid "Pause slider"
 msgstr "Metti in pausa"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Percorso path filter"
 msgstr "Percorso"
 
@@ -331,8 +331,8 @@ msgstr "Title..."
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Titolo"
 msgstr "Titolo"
 
@@ -770,8 +770,7 @@ msgstr "Descrizione"
 msgid "descrizione_estesa"
 msgstr "Descrizione estesa"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "detail_link_label"
 msgstr "Testo per il link al dettaglio"
 
@@ -1114,9 +1113,7 @@ msgstr "Video URL"
 msgid "grid-gallery-max-items-exceeded"
 msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni."
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "hide_dates"
 msgstr "Nascondi le date"
 
@@ -1748,16 +1745,15 @@ msgstr "Servizi"
 msgid "share"
 msgstr "Condividi"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_description"
 msgstr "Mostra la descrizione"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_detail_link"
 msgstr "Mostra il link al dettaglio"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_icon"
 msgstr "Mostra l'icona"
 
@@ -1769,19 +1765,30 @@ msgstr "Mostra la mappa a tutta larghezza"
 msgid "show_only_first_ribbon"
 msgstr "Mostra il nastro solo sulla prima card"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_section"
 msgstr "Mostra la sezione"
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
+msgid "show_topics"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+msgid "show_type"
+msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"
 msgstr "Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "simplecard_listing_appearance_compact"
 msgstr "Compatto"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "simplecard_listing_appearance_description"
 msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default."
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-20T09:39:23.754Z\n"
+"POT-Creation-Date: 2021-05-20T10:15:26.723Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,7 @@ msgid "Alert"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Aspetto
 msgid "Aspetto"
 msgstr ""
@@ -158,7 +159,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Etichetta
 msgid "Etichetta path filter"
 msgstr ""
@@ -230,15 +231,14 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra i filtri per percorso
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra lo sfondo del blocco
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
@@ -273,7 +273,7 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Filtro
 msgid "Path filter filtro"
 msgstr ""
@@ -284,7 +284,7 @@ msgstr ""
 msgid "Pause slider"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Percorso
 msgid "Percorso path filter"
 msgstr ""
@@ -405,8 +405,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""
@@ -940,8 +940,7 @@ msgstr ""
 msgid "descrizione_estesa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Testo per il link al dettaglio
 msgid "detail_link_label"
 msgstr ""
@@ -1368,9 +1367,7 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
 msgstr ""
@@ -2149,18 +2146,17 @@ msgstr ""
 msgid "share"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra la descrizione
 msgid "show_description"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra il link al dettaglio
 msgid "show_detail_link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
 msgstr ""
@@ -2175,9 +2171,20 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra la sezione
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
+# defaultMessage: Mostra gli argomenti
+msgid "show_topics"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+# defaultMessage: Mostra il tipo
+msgid "show_type"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -2186,11 +2193,13 @@ msgid "silenzio_assenso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Compatto
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default.
 msgid "simplecard_listing_appearance_description"
 msgstr ""
