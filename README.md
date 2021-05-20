@@ -15,6 +15,7 @@ It is built on guidelines' version 2020.1 and it's the successor on Volto of Plo
 - [ASP Comuni Modenesi Area Nord](https://www.aspareanord.it/)
 
 
+
 ## Documentation
 
 A training on how to create your own website using Volto is available as part of the Plone training at [https://training.plone.org/5/volto/index.html](https://training.plone.org/5/volto/index.html).
