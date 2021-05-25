@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "3.5.1",
+  "version": "3.5.5",
   "private": true,
   "workspaces": [
     "src/addons/volto-cookie-banner",
@@ -135,6 +135,12 @@
     },
     "ignoreFiles": "theme/themes/default/**/*.overrides"
   },
+  "browserslist": [
+    ">1%",
+    "last 2 versions",
+    "not ie 11",
+    "not dead"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -214,5 +220,9 @@
     "stylelint-prettier": "1.1.2",
     "svg-inline-loader": "0.8.0",
     "svg-inline-react": "3.2.0"
+  },
+  "volta": {
+    "node": "12.22.1",
+    "yarn": "1.19.1"
   }
 }
