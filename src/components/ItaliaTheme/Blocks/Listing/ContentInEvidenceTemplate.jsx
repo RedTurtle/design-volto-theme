@@ -19,6 +19,7 @@ import {
   ListingText,
   CardCategory,
   getItemIcon,
+  ListingLinkMore,
 } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -27,7 +28,8 @@ const ContentInEvidenceTemplate = ({
   title,
   isEditMode,
   show_block_bg,
-  linkMore,
+  linkTitle,
+  linkHref,
 }) => {
   return (
     <div
@@ -90,7 +92,12 @@ const ContentInEvidenceTemplate = ({
                       item.tassonomia_argomenti.length > 0 && (
                         <>
                           {item.tassonomia_argomenti.map((argomento) => (
-                            <Chip simple color="primary" key={argomento['@id']}>
+                            <Chip
+                              simple
+                              color="primary"
+                              key={argomento['@id']}
+                              className="mr-2"
+                            >
                               <UniversalLink
                                 href={flattenToAppURL(argomento['@id'])}
                                 className="chip-label text-decoration-none"
@@ -109,6 +116,8 @@ const ContentInEvidenceTemplate = ({
             </Row>
           );
         })}
+
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -116,7 +125,8 @@ const ContentInEvidenceTemplate = ({
 
 ContentInEvidenceTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
