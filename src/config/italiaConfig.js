@@ -178,6 +178,7 @@ export default function applyConfig(voltoConfig) {
       ],
       showRestricted: false,
     },
+    showTrasparenzaFields: false,
   };
 
   /******************************************************************************
@@ -238,6 +239,10 @@ export default function applyConfig(voltoConfig) {
       ],
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
       listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+    },
+    hero: {
+      ...config.blocks.blocksConfig.hero,
+      sidebarTab: 1,
     },
     rssBlock,
   };

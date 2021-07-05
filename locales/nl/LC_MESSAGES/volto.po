@@ -45,8 +45,6 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "Aspetto"
 msgstr ""
@@ -151,10 +149,17 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SkipToMainContent
+msgid "Go to content"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "Hero"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
@@ -215,15 +220,13 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: config/Blocks/ListingOptions/defaultOptions
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra lo sfondo del blocco"
@@ -265,7 +268,6 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Path filter filtro"
@@ -276,7 +278,6 @@ msgstr ""
 msgid "Pause slider"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Percorso path filter"
@@ -384,9 +385,6 @@ msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "Titolo"
 msgstr ""
@@ -408,6 +406,7 @@ msgid "Twitter Posts"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
@@ -422,6 +421,7 @@ msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
@@ -457,10 +457,8 @@ msgstr ""
 msgid "Vedi l'immagine"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
-#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
@@ -516,6 +514,10 @@ msgstr ""
 msgid "altre_cariche"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "altre_modalita_invio"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "altri_documenti"
 msgstr ""
@@ -527,6 +529,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "appStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
@@ -568,6 +574,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Attachments
 msgid "attachments"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "atti_documenti_corredo"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -647,7 +657,6 @@ msgstr ""
 msgid "biografia"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BgColor
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "block_bg_color"
 msgstr ""
@@ -770,6 +779,22 @@ msgstr ""
 msgid "costi_e_vincoli"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLinkTitle"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
 msgstr ""
@@ -780,6 +805,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "curriculum_vitae"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "customer_satisfaction"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -802,12 +831,14 @@ msgstr ""
 msgid "date_e_orari"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -823,6 +854,7 @@ msgid "desc"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
 #: helpers/amministrazioneTrasparenteHelper
@@ -837,7 +869,6 @@ msgstr ""
 msgid "deselectSearchSection"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "detail_link_label"
 msgstr ""
@@ -855,6 +886,7 @@ msgstr ""
 msgid "dichiarazione_dei_redditi"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "dirigente"
 msgstr ""
@@ -964,16 +996,8 @@ msgstr ""
 msgid "event_documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_endDate"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 msgid "event_search_no_filters"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_startDate"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
@@ -1024,6 +1048,7 @@ msgstr ""
 msgid "fax_sede"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "file_correlato"
 msgstr ""
@@ -1041,6 +1066,7 @@ msgstr ""
 msgid "find"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
 msgstr ""
@@ -1078,7 +1104,6 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "hide_dates"
 msgstr ""
@@ -1110,6 +1135,7 @@ msgstr ""
 msgid "insert_filter"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "iter_del_procedimento"
 msgstr ""
@@ -1142,7 +1168,6 @@ msgstr ""
 msgid "listing_event_recurrence_label"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/ItemsColor
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "listing_items_color"
 msgstr ""
@@ -1191,12 +1216,17 @@ msgstr ""
 msgid "modalita_accesso"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_di_avvio"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_richiedere_informazioni_procedimentodali"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "modalita_richiesta_informazioni"
 msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
@@ -1226,6 +1256,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
 msgstr ""
@@ -1238,6 +1269,7 @@ msgstr ""
 msgid "news_item_contenuto"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr ""
@@ -1271,6 +1303,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Block
+msgid "openLinkInNewTab"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
@@ -1331,6 +1367,7 @@ msgstr ""
 msgid "organizzazione_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "organo_competente_provvedimento_finale"
 msgstr ""
@@ -1345,6 +1382,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "other_info"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "pagamenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -1375,6 +1416,10 @@ msgstr ""
 msgid "placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "playStoreLink"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
 msgstr ""
@@ -1387,10 +1432,15 @@ msgstr ""
 msgid "print"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "procedura_online"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "provvedimento_finale"
 msgstr ""
@@ -1440,10 +1490,15 @@ msgstr ""
 msgid "removeTopic"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "reperimento_modulistica"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "responsabile"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "responsabile_del_procedimento"
 msgstr ""
@@ -1456,6 +1511,11 @@ msgstr ""
 msgid "responsabile_di"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "responsabile_procedimento"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "riferimenti_normativi"
 msgstr ""
@@ -1803,12 +1863,10 @@ msgstr ""
 msgid "share"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_description"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_detail_link"
 msgstr ""
@@ -1818,7 +1876,6 @@ msgstr ""
 msgid "show_ente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
 msgstr ""
@@ -1833,7 +1890,6 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr ""
@@ -1850,23 +1906,19 @@ msgstr ""
 msgid "show_topics"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "simplecard_listing_appearance_description"
 msgstr ""
@@ -1885,6 +1937,10 @@ msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-navigation"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "soggetti_esterni"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -1913,6 +1969,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "strumenti_di_tutela"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "strumenti_tutela"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
@@ -1945,6 +2005,7 @@ msgstr ""
 msgid "tempi_e_scadenze"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "tempo_medio"
 msgstr ""
@@ -1953,12 +2014,12 @@ msgstr ""
 msgid "termine"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "termini_del_procedimento"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 msgid "text_filter_placeholder"
 msgstr ""
 
@@ -1981,6 +2042,7 @@ msgstr ""
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "titolare_potere_sostitutivo"
 msgstr ""
@@ -1998,6 +2060,10 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "trasparenza"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
@@ -2021,6 +2087,7 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -2034,6 +2101,7 @@ msgstr ""
 msgid "unita_operativa"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "unita_organizzativa_competente"
 msgstr ""
@@ -2077,6 +2145,7 @@ msgstr ""
 msgid "website"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "yes"
 msgstr ""

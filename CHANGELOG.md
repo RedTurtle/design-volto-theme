@@ -1,3 +1,120 @@
+### [4.0.3](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.2...v4.0.3) (2021-07-01)
+
+
+### Maintenance
+
+* added extendable ListingHelper ([b587941](https://github.com/RedTurtle/design-volto-theme/commit/b5879419f2e2775b63fcbbaf7055348f4263428f))
+
+### [4.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.1...v4.0.2) (2021-07-01)
+
+
+### Bug Fixes
+
+* fix listing mismatched layout client-server ([1fd098d](https://github.com/RedTurtle/design-volto-theme/commit/1fd098da072f14498993830a128230f390f31284))
+* fixed squaresTemplate overflow ([2ea8d54](https://github.com/RedTurtle/design-volto-theme/commit/2ea8d54afafdd1aa90c6b2a456ec19ac891289f1))
+
+
+### Maintenance
+
+* added option 'show block bg' in hero block ([d54fd40](https://github.com/RedTurtle/design-volto-theme/commit/d54fd40d63a2dddef294c2796b6b52c70286e03c))
+* changed HeroImageLeft block to have store links ([df2131f](https://github.com/RedTurtle/design-volto-theme/commit/df2131f39ea99a719d06611f5767a36bb03e3c46))
+* update to volto 13.5 ([728fcff](https://github.com/RedTurtle/design-volto-theme/commit/728fcffbdb9a450f6ea74dc450bfe9294ec641c1))
+
+### [4.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.0...v4.0.1) (2021-06-29)
+
+
+### Bug Fixes
+
+* querystring loading ([ec32631](https://github.com/RedTurtle/design-volto-theme/commit/ec32631c9ae1eb12310b07029c1bd2978a321e0e))
+
+## [4.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.10.0...v4.0.0) (2021-06-29)
+
+
+### Features
+
+* added volto 13 ([4cbe50b](https://github.com/RedTurtle/design-volto-theme/commit/4cbe50bd01d9d6d439c26a206e963918542a7499))
+
+
+### Bug Fixes
+
+* default template ([59170c5](https://github.com/RedTurtle/design-volto-theme/commit/59170c50de68ff6815e8a305dfac3b7d3b92f815))
+* fixed header image sizes and others to upgrade to volto13 ([25bccb2](https://github.com/RedTurtle/design-volto-theme/commit/25bccb2f1248a38cae57e8028f826bc7b1cd59bc))
+* fixed linkMore in listing templates ([d23a858](https://github.com/RedTurtle/design-volto-theme/commit/d23a8589b833d6cacd48287ea79985eadc1320e7))
+* fixed withqueryStringREsults ([1d186c7](https://github.com/RedTurtle/design-volto-theme/commit/1d186c7e80ee02e5d5e472cf1cd3b50fec87ef9c))
+* test ([71570d0](https://github.com/RedTurtle/design-volto-theme/commit/71570d080ce111c88a63806813e01351363feee9))
+
+
+### Changes
+
+* refactored listingStyle options into schemaEnhancer ([335c484](https://github.com/RedTurtle/design-volto-theme/commit/335c48489d7fee2daa3f238139645a0152f99f9a))
+* remove amministrazioneTrasparenteTablesTemplate ([13972f3](https://github.com/RedTurtle/design-volto-theme/commit/13972f36fd2ef9a1fefe33c884d708604c30627e))
+* remove amministrazioneTrasparenteTablesTemplate ([5c27d22](https://github.com/RedTurtle/design-volto-theme/commit/5c27d222e66e4bfc58f4b2323194f6c19522b73c))
+
+
+### Maintenance
+
+* added customizations for ListingBody and withQuerystringResults and updated volto13 ([877a7c8](https://github.com/RedTurtle/design-volto-theme/commit/877a7c88e8b5bf235bc91b32376ac470c3231a88))
+* fix config for IconsBlock and SquareImagesTemplate ([46e2cc8](https://github.com/RedTurtle/design-volto-theme/commit/46e2cc879948b8074d7e4e8a0db58f1064f2ebbf))
+* refactored italiaConfig.js ([69f7c30](https://github.com/RedTurtle/design-volto-theme/commit/69f7c30a9cee7641ca2c102fc9976abf7f581f34))
+* translations ([671dd0b](https://github.com/RedTurtle/design-volto-theme/commit/671dd0b91e0b50ac85e683eac5b7d2dfc6a02172))
+* update volto ([1ceeb6a](https://github.com/RedTurtle/design-volto-theme/commit/1ceeb6a54aae27d362ba34440fe4e800db432393))
+* updated customization ([1020bc1](https://github.com/RedTurtle/design-volto-theme/commit/1020bc1521950853c95779ebc635ba7251ecfa89))
+* updated version of volto ([05f8d89](https://github.com/RedTurtle/design-volto-theme/commit/05f8d89a53d6df9ee17fa173a28514347aa49984))
+* updated volto ([a6335cd](https://github.com/RedTurtle/design-volto-theme/commit/a6335cd3aefbc6153554c94dfa043e61e2fe6ecd))
+* updated volto ([55080cb](https://github.com/RedTurtle/design-volto-theme/commit/55080cbc5415bf81891f24fbeeaadd59d970078c))
+* updated volto 13 ([691a8b4](https://github.com/RedTurtle/design-volto-theme/commit/691a8b4fc53570c7262db4276fccf84739b84993))
+* updated volto#rt_dev_13 ([03681ac](https://github.com/RedTurtle/design-volto-theme/commit/03681ac87205aa11f8dfde9c4726bd8c1c3b6dd6)), closes [volto#rt_dev_13](https://github.com/RedTurtle/volto/issues/rt_dev_13)
+* updated volto13 ([488a63f](https://github.com/RedTurtle/design-volto-theme/commit/488a63f93e5b7fffeee3a5b0d1d9ff913504de51))
+* updated volto13 commitid ([e0f7ce5](https://github.com/RedTurtle/design-volto-theme/commit/e0f7ce5543e79807fb03462da2b8401d0927c105))
+
+## [3.10.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.9.1...v3.10.0) (2021-06-29)
+
+
+### Features
+
+* add Trasparenza fields in Servizio View (with config) ([0644b72](https://github.com/RedTurtle/design-volto-theme/commit/0644b726e8b3bcc0487a524f9b0f4a73328528b6))
+
+
+### Maintenance
+
+* **i18n:** update translations ([b086a13](https://github.com/RedTurtle/design-volto-theme/commit/b086a13da3782b703b4c8c2d9eca4188bd474d83))
+* viewed share buttons in content-type Document ([3efbd26](https://github.com/RedTurtle/design-volto-theme/commit/3efbd26e6dddd9b15e7b9ba73de323290250b730))
+
+### [3.9.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.9.0...v3.9.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* fix VideoGallery editing video url ([1e1ce8e](https://github.com/RedTurtle/design-volto-theme/commit/1e1ce8ed081034f92e4282f1c137a1c587197eae))
+
+## [3.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.6...v3.9.0) (2021-06-23)
+
+
+### Features
+
+* add opt for natural img size for newshome block ([d3df8e6](https://github.com/RedTurtle/design-volto-theme/commit/d3df8e6bf5e53fdff4bb4f0299a78e29798d0900))
+* **a11y:** add skiplink in main content area ([78fada8](https://github.com/RedTurtle/design-volto-theme/commit/78fada84e8d4ed31d6bd1b12415e105d02c849cb))
+
+
+### Bug Fixes
+
+* ay11 fixes ([46e24f4](https://github.com/RedTurtle/design-volto-theme/commit/46e24f47fddb1b3ddbf4796a439380464173a79f))
+* ay11 searchResults ([910f1b0](https://github.com/RedTurtle/design-volto-theme/commit/910f1b0867f09fe1ebdf4f0a9cf932104f688863))
+* **a11y:** add aria-hidden to design icon ([1052419](https://github.com/RedTurtle/design-volto-theme/commit/1052419ec42a1f0bc5b6f70da26ea000fdb20bda))
+* fixed ay11 for search modal ([3932fe4](https://github.com/RedTurtle/design-volto-theme/commit/3932fe4b4958851f5ee84de5e7445e3428482051))
+
+
+### Changes
+
+* moved as common SkipToMainContent ([823e94b](https://github.com/RedTurtle/design-volto-theme/commit/823e94b91c1f71c9de766cdf485c5d4a75aef2dd))
+* skip to main content ([ee1a97f](https://github.com/RedTurtle/design-volto-theme/commit/ee1a97f0341b7cde787bea278ca41c3b364a6fe5))
+
+
+### Maintenance
+
+* updated translations ([b7f6186](https://github.com/RedTurtle/design-volto-theme/commit/b7f6186d5a97e839dd8768572d8a931282f252ad))
+* viewed related items in Argomento ([3e8acb5](https://github.com/RedTurtle/design-volto-theme/commit/3e8acb5dfd111bd39fad3679678ea743e52111fa))
+
 ### [3.8.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.5...v3.8.6) (2021-06-16)
 
 
