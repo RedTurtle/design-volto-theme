@@ -1,3 +1,183 @@
+### [5.2.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.12...v5.2.13) (2021-08-05)
+
+
+### Bug Fixes
+
+* lockfile ([20dd644](https://github.com/RedTurtle/design-volto-theme/commit/20dd6440416525c257e753c44bce3c0c465c761d))
+* lockfile ([660357b](https://github.com/RedTurtle/design-volto-theme/commit/660357b3c356a299950f801e5d226b8e9dc14afb))
+
+
+### Changes
+
+* adapt form block field for additionalFields ([73348d5](https://github.com/RedTurtle/design-volto-theme/commit/73348d51cdb3fa7196dfcfc7b24f305d4a6c4c7a))
+* adapt form block field for additionalFields ([5fe8da8](https://github.com/RedTurtle/design-volto-theme/commit/5fe8da8ad6acb9210a24d0f055ec7460e502ea04))
+
+
+### Maintenance
+
+* update translations ([0f6b63d](https://github.com/RedTurtle/design-volto-theme/commit/0f6b63d5e59e3277aa6e86845bd62b2ec5c58741))
+* update volto-form-block 1.7.0 ([dc12b05](https://github.com/RedTurtle/design-volto-theme/commit/dc12b05590e3f83607ad4ce87045596234445564))
+
+### [5.2.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.11...v5.2.12) (2021-08-04)
+
+
+### Bug Fixes
+
+* fix FaqFolder search in multilingual sites ([c2c6414](https://github.com/RedTurtle/design-volto-theme/commit/c2c641460042a474bb2840668569a1e4b55bfdd6))
+
+### [5.2.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.10...v5.2.11) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([d254bb2](https://github.com/RedTurtle/design-volto-theme/commit/d254bb258d8be195667ce1c0c1199adfef333196))
+
+### [5.2.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.9...v5.2.10) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([4306f06](https://github.com/RedTurtle/design-volto-theme/commit/4306f0670a21d5a0225de063fc375f1f7b0bf93c))
+
+### [5.2.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.8...v5.2.9) (2021-07-30)
+
+
+### Bug Fixes
+
+* fixed some styles ([6dbbae5](https://github.com/RedTurtle/design-volto-theme/commit/6dbbae549ea8f2044d892407fcc0993606d67ba9))
+
+
+### Maintenance
+
+* updated volto ([abc0303](https://github.com/RedTurtle/design-volto-theme/commit/abc0303b3e2656efb2a70ae27564ec29188c92e3))
+* **upd8:** update dvt v5.2.8 ([8adf552](https://github.com/RedTurtle/design-volto-theme/commit/8adf55254bbc991f6cc3b0da05151cfe5880ae3b))
+
+### [5.2.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.7...v5.2.8) (2021-07-29)
+
+
+### Bug Fixes
+
+* fix contact block styles ([96d861a](https://github.com/RedTurtle/design-volto-theme/commit/96d861ac2b1ae4d699ade2d1f3c6e9928f2c3644))
+
+### [5.2.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.6...v5.2.7) (2021-07-29)
+
+
+### Bug Fixes
+
+* fixed styles for contacts block ([13bcd59](https://github.com/RedTurtle/design-volto-theme/commit/13bcd598999e7c7fbb44de791a5a665f6e7814ff))
+
+### [5.2.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.5...v5.2.6) (2021-07-29)
+
+
+### Maintenance
+
+* fixed argument icon styles ([ebab34e](https://github.com/RedTurtle/design-volto-theme/commit/ebab34ea029887c654ffdd69567291452a1f3051))
+
+### [5.2.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.4...v5.2.5) (2021-07-29)
+
+
+### Maintenance
+
+* added placeholder After Related Items in content types view ([a1d800b](https://github.com/RedTurtle/design-volto-theme/commit/a1d800b57fd89ddd41424181dc0c858b9f2e8524))
+
+### [5.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.3...v5.2.4) (2021-07-28)
+
+
+### Maintenance
+
+* added slidesToShow prop to sliderTemplate Listing ([5411e93](https://github.com/RedTurtle/design-volto-theme/commit/5411e932f043857a7502d1aaf8dabac785787f06))
+
+### [5.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.2...v5.2.3) (2021-07-27)
+
+
+### Maintenance
+
+* updated locales ([28c667e](https://github.com/RedTurtle/design-volto-theme/commit/28c667e41376d01a2e9de83188851b30e8da3370))
+* updated volto to fix BlockChooser ([0133ea1](https://github.com/RedTurtle/design-volto-theme/commit/0133ea1ff4ad51c48b383d79104fe7d0946a30d5))
+
+### [5.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.1...v5.2.2) (2021-07-27)
+
+
+### Maintenance
+
+* added cartellaModulistica placeholder aftercontent ([02f739b](https://github.com/RedTurtle/design-volto-theme/commit/02f739bae0317737d94380e3cf9a84fd035d8bc6))
+
+### [5.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.0...v5.2.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* fixed styles for Contacts block on mobile ([1ae385d](https://github.com/RedTurtle/design-volto-theme/commit/1ae385d7a9a09a40a1733000202f8e0cfb25b50a))
+
+## [5.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.2...v5.2.0) (2021-07-27)
+
+
+### Features
+
+* added Contacts block ([cdc0c3c](https://github.com/RedTurtle/design-volto-theme/commit/cdc0c3c3856a3494b29c0e73a4d0c46cc370dd73))
+
+### [5.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.1...v5.1.2) (2021-07-26)
+
+
+### Maintenance
+
+* new customizable components 'BrandText' and 'BrandTextFooter' ([e7991a7](https://github.com/RedTurtle/design-volto-theme/commit/e7991a7e70eef9b4f59ad94dc001da479faff661))
+
+### [5.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.0...v5.1.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* fixed pagination in ContentPaginationChange listing block ([24e4c44](https://github.com/RedTurtle/design-volto-theme/commit/24e4c44647e41fe6ce506113b627519da4abb5c1))
+
+## [5.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.0.1...v5.1.0) (2021-07-23)
+
+
+### Features
+
+* added Faq view ([62d72e8](https://github.com/RedTurtle/design-volto-theme/commit/62d72e8cd15b609210f4887371b6a3215cb86d14))
+* support for external sources in video block + gallery ([696fb06](https://github.com/RedTurtle/design-volto-theme/commit/696fb06eadf9ae0036a2d15e6aa59c6ab81d4d82))
+* view FaqFolder ([ed825d0](https://github.com/RedTurtle/design-volto-theme/commit/ed825d0387880526f23610092c8d803e7db5d918))
+* view icon in PageHeader component, if content has fields 'icon' or 'icona' ([6fda3db](https://github.com/RedTurtle/design-volto-theme/commit/6fda3dbb772336aa205625fe1bebe77255a7a0ef))
+
+
+### Bug Fixes
+
+* ay11 close megamenu on Enter on close button ([4a5c480](https://github.com/RedTurtle/design-volto-theme/commit/4a5c4804c7ae04f04d252e82f6c66efda673f6ad))
+* **a11y:** remove img role w/o alt ([72bd4ce](https://github.com/RedTurtle/design-volto-theme/commit/72bd4ce0ccb19297cb6eae99ad25cb2b16fb028d))
+* ay11 fix search select order focus ([5dea723](https://github.com/RedTurtle/design-volto-theme/commit/5dea723e50797e23699599d8010ecd0d88d3bd63))
+* fixed id in FaqView ([6791e6f](https://github.com/RedTurtle/design-volto-theme/commit/6791e6f40249e19ce8615bfa12be60b42a645905))
+* **a11y:** navigation collapse relation aria-controls + fix z-index ([80433f3](https://github.com/RedTurtle/design-volto-theme/commit/80433f3d55f9582f7b302d7873dcfdcfadfca3a3))
+* breadcrumbs section valid attrs ([05fe216](https://github.com/RedTurtle/design-volto-theme/commit/05fe2161f08095271fe71432c2e97043e5f56079))
+* **a11y:** navigation lndmk roles and html validation ([462fa5f](https://github.com/RedTurtle/design-volto-theme/commit/462fa5f6c743c821abfe5397ff95ae533118c3a5))
+* **a11y:** twitter block title contrast ([a5a81d4](https://github.com/RedTurtle/design-volto-theme/commit/a5a81d4c7f327f01297fc4764936dd06a54a6a8e))
+* ay11 search modal fixes ([1009885](https://github.com/RedTurtle/design-volto-theme/commit/100988584730c60ee6315612d403f5bb7b5b19fc))
+* fix ay11 buttons contrast ([efe4526](https://github.com/RedTurtle/design-volto-theme/commit/efe45268385bc480b63fc56b2cb0c66a21021ec2))
+* language selector invalid col prop ([6a0c5cc](https://github.com/RedTurtle/design-volto-theme/commit/6a0c5cc8a98fdb5627bc5d30bc2669b0bae36fee))
+* **a11y:** header slim landmark ([f8dab19](https://github.com/RedTurtle/design-volto-theme/commit/f8dab199572de84fefd4b003e8018a154873cb2f))
+* fixed chip link focus and hover styles ([aa2bd74](https://github.com/RedTurtle/design-volto-theme/commit/aa2bd74e7093342ae946586b331f547fb5d60b78))
+* fixed PaginaArgomentoView Header and unified View and Edit ArgomentoTitle component ([3f945c2](https://github.com/RedTurtle/design-volto-theme/commit/3f945c21a62131d9586ab23e1513c522ed4e4e5b))
+* fixed unuseful -text-hover variable ([155201f](https://github.com/RedTurtle/design-volto-theme/commit/155201f7266dff9cc9198a2e98e1df152981a889))
+* megamenu close button outline ([86d2dc0](https://github.com/RedTurtle/design-volto-theme/commit/86d2dc0ec6656767d726445f2b574ffacfa132a5))
+* remove img alt if not significant ([5c41b3a](https://github.com/RedTurtle/design-volto-theme/commit/5c41b3a4fcfcd004fa99c13051562781308539ce))
+* removed unused style ([e07f365](https://github.com/RedTurtle/design-volto-theme/commit/e07f3654738986692bc9f475e71292ffcdd4453d))
+* search kebab aria-expanded ([bedd09e](https://github.com/RedTurtle/design-volto-theme/commit/bedd09efd1bc2efba5abf82b21fa669aa223d49c))
+
+
+### Maintenance
+
+* added Faq ct icon and fix FaqFolder style ([644b75e](https://github.com/RedTurtle/design-volto-theme/commit/644b75e5111da2454fc2f1666ae5d9ab083c8ff7))
+* added Faq PlaceholderAfterContent ([40d4a38](https://github.com/RedTurtle/design-volto-theme/commit/40d4a385fdb93ec9091e4297afd524ff14993645))
+* changed FaqFolder endpoint to view children ([15c1d27](https://github.com/RedTurtle/design-volto-theme/commit/15c1d271ed892ee969af30205816696b8286314e))
+* expand Argument header if right header is empty ([2eca08b](https://github.com/RedTurtle/design-volto-theme/commit/2eca08b86da7df3b52ce492758d9cf2e4d098dda))
+* faq i18n ([9e1da79](https://github.com/RedTurtle/design-volto-theme/commit/9e1da79e583bd82a92ee78a7062efca792a151aa))
+* moved breadcrumbs in TitleWrapper for Pagina Argomento ([07fdf1a](https://github.com/RedTurtle/design-volto-theme/commit/07fdf1aa6cbbf45550fce8641bcb3651cabdeaba))
+* moved search blocks to 'search' group ([73396d0](https://github.com/RedTurtle/design-volto-theme/commit/73396d03976a6b69ffff86414247b5f4250d3798))
+* removed ArgomentoTitle block because unused ([98f4974](https://github.com/RedTurtle/design-volto-theme/commit/98f4974eb5d87b5c75a8707b7ed154ea48d24495))
+* update volto ([a2ead51](https://github.com/RedTurtle/design-volto-theme/commit/a2ead51391a7fc83e12481da38503e976f2ba42e))
+* update volto ([6059e84](https://github.com/RedTurtle/design-volto-theme/commit/6059e84c9ca23b02719503f2c00de78642027f78))
+* **i18n:** add translations ([34500dc](https://github.com/RedTurtle/design-volto-theme/commit/34500dcbdd563c187c2488f94be377c172c3a38c))
+
 ### [5.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.0.0...v5.0.1) (2021-07-13)
 
 

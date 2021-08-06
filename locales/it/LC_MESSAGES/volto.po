@@ -16,6 +16,7 @@ msgid "Accedi all'area personale"
 msgstr "Accedi all'area personale"
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
+#: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
@@ -123,6 +124,7 @@ msgstr "Default"
 msgid "Delete"
 msgstr "Elimina"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -243,11 +245,11 @@ msgstr "Nessun risultato ottenuto"
 
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "News"
-msgstr "News"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "NewsHome"
-msgstr "News con immagine in primo piano"
+msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
@@ -369,10 +371,12 @@ msgid "Subscribe"
 msgstr "Iscriviti"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr "Testo..."
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -381,6 +385,7 @@ msgid "Title"
 msgstr "Titolo"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Title placeholder"
 msgstr "Titolo..."
@@ -413,7 +418,9 @@ msgstr "Twitter Posts"
 msgid "Type description…"
 msgstr "Digita la descrizione…"
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
@@ -426,10 +433,6 @@ msgstr "Digita testo…"
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
 msgstr "Digita il titolo…"
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
-msgid "Ulteriori informazioni placeholder"
-msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
@@ -449,6 +452,7 @@ msgstr "Vai alla pagina"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
@@ -589,6 +593,18 @@ msgstr "Atto di nomina"
 msgid "autenticazione"
 msgstr "Autenticazione"
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay_speed"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay_speed_description"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "back"
 msgstr "indietro"
@@ -654,6 +670,7 @@ msgstr "Tipo"
 msgid "bando_vedi"
 msgstr "Vedi"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
@@ -726,6 +743,7 @@ msgstr "chiudi"
 msgid "closeSearch"
 msgstr "Chiudi ricerca"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
@@ -858,6 +876,7 @@ msgstr "Decorrenza termine"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
@@ -1176,12 +1195,14 @@ msgid "link"
 msgstr "Collegamento"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMore"
 msgstr "Link ad altro"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMoreTitle"
@@ -1288,7 +1309,7 @@ msgstr "Non alterare le dimensioni naturali dell'immagine"
 
 #: components/ItaliaTheme/Blocks/NewsHome/Body
 msgid "newsHome-news"
-msgstr "Notizie"
+msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "news_item_contenuto"
@@ -1447,7 +1468,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
-msgstr "A PORTATA DI CLICK"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 msgid "previewIconSelected"
@@ -1863,6 +1884,18 @@ msgstr ""
 msgid "select_argument_sidebar"
 msgstr "Seleziona un argomento nella barra a lato"
 
+#: components/SelectInput/SelectInput
+msgid "select_noOptionsMessage"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "select_risultati"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "select_risultato"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
@@ -1896,13 +1929,25 @@ msgstr "Mostra la descrizione"
 msgid "show_detail_link"
 msgstr "Mostra il link al dettaglio"
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_dots"
+msgstr ""
+
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_full_width"
 msgstr ""
 
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
 msgstr "Mostra l'icona"
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_image_title"
+msgstr ""
 
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "show_map_full_width"
@@ -1961,6 +2006,10 @@ msgstr "Vai al contenuto"
 #: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-navigation"
 msgstr "Vai alla navigazione"
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "slidesToShow"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 msgid "soggetti_esterni"
