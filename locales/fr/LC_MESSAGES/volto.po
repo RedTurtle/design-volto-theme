@@ -624,71 +624,71 @@ msgstr ""
 
 #: components/SelectInput/SelectInput
 msgid "ay11_Use Up and Down to choose options"
-msgstr ""
+msgstr "Utilisez Haut et Bas pour choisir les options"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select deselected"
-msgstr ""
+msgstr "désélectionné"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select disabled"
-msgstr ""
+msgstr "désactivé"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select focused"
-msgstr ""
+msgstr "souligné"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select for search term"
-msgstr ""
+msgstr "pour le terme de recherche"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select is disabled. Select another option."
-msgstr ""
+msgstr "est désactivé. Sélectionnez une autre option."
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select option"
-msgstr ""
+msgstr "option"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select selected"
-msgstr ""
+msgstr "sélectionnée"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select value"
-msgstr ""
+msgstr "valeur"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
-msgstr ""
+msgstr "Utilisez la gauche et la droite pour basculer entre les valeurs focalisées, appuyez sur Retour arrière pour supprimer la valeur actuellement focalisée"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select__press Tab to select the option and exit the menu"
-msgstr ""
+msgstr "appuyez sur Tab pour sélectionner l'option et quitter le menu"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select__type to refine list"
-msgstr ""
+msgstr "tapez pour affiner la liste"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_is_focused"
-msgstr ""
+msgstr "est surligné"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press Down to open the menu"
-msgstr ""
+msgstr "appuyez sur Bas pour ouvrir le menu"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press Enter to select the currently focused option"
-msgstr ""
+msgstr "appuyez sur Entrée pour sélectionner l'option actuellement ciblée"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press Escape to exit the menu"
-msgstr ""
+msgstr "appuyez sur Echap pour quitter le menu"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press left to focus selected values"
-msgstr ""
+msgstr "appuyez sur la gauche pour mettre au point les valeurs sélectionnées"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "back"
@@ -949,6 +949,118 @@ msgstr "Dataset"
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr "Date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_calendarLabel"
+msgstr "Calendrier"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_choose"
+msgstr "Choisir"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDate"
+msgstr "Effacer la date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDates"
+msgstr "Effacer les dates"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_closeDatePicker"
+msgstr "Fermer le sélecteur de date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_enterKey"
+msgstr "Enter key"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_escape"
+msgstr "Touche d'échappement"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_focusStartDate"
+msgstr "Interagissez avec le calendrier et ajoutez la date d'arrivée pour votre voyage."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_hideKeyboardShortcutsPanel"
+msgstr "Fermer le panneau des raccourcis"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_homeEnd"
+msgstr "Touches d'accueil et de fin"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToNextMonth"
+msgstr "Avancez pour passer au mois suivant."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToPrevMonth"
+msgstr "Revenir en arrière pour passer au mois précédent."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardBackwardNavigationInstructions"
+msgstr "Naviguez en arrière pour interagir avec le calendrier et sélectionnez une date. Appuyez sur la touche point d'interrogation pour obtenir les raccourcis clavier permettant de modifier les dates."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardForwardNavigationInstructions"
+msgstr "Naviguez vers l'avant pour interagir avec le calendrier et sélectionnez une date. Appuyez sur la touche point d'interrogation pour obtenir les raccourcis clavier permettant de modifier les dates."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardShortcuts"
+msgstr "Raccourcis clavier"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_leftArrowRightArrow"
+msgstr "Touches fléchées droite et gauche"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneDay"
+msgstr "Reculez (gauche) et avancez (droite) d'un jour."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneMonth"
+msgstr "Changez de mois."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneWeek"
+msgstr "Reculez (vers le haut) et vers l'avant (vers le bas) d'une semaine."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocustoStartAndEndOfWeek"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_openThisPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_pageUpPageDown"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_questionMark"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_returnFocusToInput"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_roleDescription"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_selectFocusedDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_showKeyboardShortcutsPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_upArrowDownArrow"
+msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "date_e_orari"
