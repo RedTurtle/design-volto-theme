@@ -1,3 +1,58 @@
+### [5.2.17](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.16...v5.2.17) (2021-08-12)
+
+
+### Bug Fixes
+
+* form validation prop ([3be1be5](https://github.com/RedTurtle/design-volto-theme/commit/3be1be56c5f1bdffcee0bbde33606bb5467128a9))
+* video src ([0143dd5](https://github.com/RedTurtle/design-volto-theme/commit/0143dd5990661b9ffbbf67fcbe2ff97c5a44e5fe))
+
+
+### Changes
+
+* change search modal labels ([71cf430](https://github.com/RedTurtle/design-volto-theme/commit/71cf4304aadcca2c4b5d039734d3f66af1a7b681))
+* remove unused translation ([1f08a76](https://github.com/RedTurtle/design-volto-theme/commit/1f08a768657b6a06d2a5d1385f0799b74ff201d3))
+* video block + default ([af66e7d](https://github.com/RedTurtle/design-volto-theme/commit/af66e7d82b56fd34572e00f47859eb6726b65084))
+
+
+### Maintenance
+
+* update locales ([569a760](https://github.com/RedTurtle/design-volto-theme/commit/569a760c1700e63f53365b1430b7027a7f992d5f))
+* update volto ([d12b234](https://github.com/RedTurtle/design-volto-theme/commit/d12b2345ac8b015f1a402d2fb9b90848bea3c102))
+
+### [5.2.16](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.15...v5.2.16) (2021-08-10)
+
+
+### Bug Fixes
+
+* searchSections block chooser style ([3c5c1ff](https://github.com/RedTurtle/design-volto-theme/commit/3c5c1ffbc14a28d68b3f4406ab1cf8bd5bf8703e))
+
+
+### Maintenance
+
+* update volto-form-block ([c609475](https://github.com/RedTurtle/design-volto-theme/commit/c609475386ca6ce03c13ba2cd5f6bcc43268021f))
+
+### [5.2.15](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.14...v5.2.15) (2021-08-09)
+
+
+### Maintenance
+
+* ay11 for react-select and datepicker ([9406d43](https://github.com/RedTurtle/design-volto-theme/commit/9406d43a47d7b53138b04115f0196f307cb25bc8))
+* ay11 selectInput ([739e4f6](https://github.com/RedTurtle/design-volto-theme/commit/739e4f6927baffcea28db8bcedc705e1708abe9d))
+* dateFilter accessibility ([094419a](https://github.com/RedTurtle/design-volto-theme/commit/094419af2746981eb77db5e7a49cd9a06ee591b8))
+* update form block ([f156b94](https://github.com/RedTurtle/design-volto-theme/commit/f156b94f0b1e8a418603f3388c2a5a397efd88c0))
+
+### [5.2.14](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.13...v5.2.14) (2021-08-06)
+
+
+### Bug Fixes
+
+* fix styles for full-width slider template ([88a42e0](https://github.com/RedTurtle/design-volto-theme/commit/88a42e01497038c5a8d40304430413261424f387))
+
+
+### Maintenance
+
+* added listing SliderTemplate features ([c4c7d17](https://github.com/RedTurtle/design-volto-theme/commit/c4c7d1719aef5dd8fc211046b5a330444cbe02e4))
+
 ### [5.2.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.12...v5.2.13) (2021-08-05)
 
 

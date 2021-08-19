@@ -69,6 +69,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "Cerca per parola chiave"
 msgstr "Cerca per parola chiave"
 
@@ -101,7 +102,6 @@ msgstr "Contatti"
 msgid "Content"
 msgstr "Contenuto"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
 msgstr "Contenuto in evidenza"
@@ -202,15 +202,11 @@ msgstr "Link ad altro"
 msgid "Link to"
 msgstr "Link a"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr "Link ad altro"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr "Titolo per il link ad altro"
 
@@ -242,14 +238,6 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "Nessun risultato ottenuto"
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "News"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "NewsHome"
-msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
@@ -411,14 +399,12 @@ msgstr "Trascina qui un file per sostituire quello esistente"
 msgid "Twitter Posts"
 msgstr "Twitter Posts"
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr "Digita la descrizione…"
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -427,7 +413,6 @@ msgstr "Digita la descrizione…"
 msgid "Type text…"
 msgstr "Digita testo…"
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -739,7 +724,6 @@ msgid "bando_vedi"
 msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
 msgstr "Colore di sfondo"
@@ -812,12 +796,10 @@ msgid "closeSearch"
 msgstr "Chiudi ricerca"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
 msgstr "Colore primario"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
 msgstr "Trasparente"
@@ -834,10 +816,6 @@ msgstr "Compensi"
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "competenze"
 msgstr "Competenze"
-
-#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-msgid "confirmSearch"
-msgstr "Conferma"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "contacts"
@@ -856,10 +834,6 @@ msgstr "Contatti esterni"
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_interni"
 msgstr "Contatti interni"
-
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Body
-msgid "content-in-evidence-news"
-msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
@@ -1191,9 +1165,7 @@ msgstr "E-mail"
 msgid "email_sede"
 msgstr "E-mail"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
-#: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
 
@@ -1218,6 +1190,7 @@ msgid "event_documenti"
 msgstr "Documenti"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
+#: components/ItaliaTheme/Blocks/UOSearch/Edit
 msgid "event_search_no_filters"
 msgstr "Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale."
 
@@ -1261,7 +1234,6 @@ msgstr "Esplora"
 msgid "exploreArgument"
 msgstr "Esplora argomento"
 
-#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 msgid "faq_search"
 msgstr "Digita una parola chiave per trovare le risposte"
@@ -1289,6 +1261,7 @@ msgstr "Filtri"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
+#: components/ItaliaTheme/Blocks/UOSearch/Body
 msgid "find"
 msgstr "Cerca"
 
@@ -1358,6 +1331,7 @@ msgstr "Indice della pagina"
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/Calendar/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
+#: components/ItaliaTheme/Blocks/UOSearch/Body
 msgid "insert_filter"
 msgstr "Inserire un filtro dal menù laterale per visualizzare i relativi risultati"
 
@@ -1402,6 +1376,7 @@ msgstr "Colore dell'elemento"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "location_to_search"
 msgstr "Posizione in cui cercare"
 
@@ -1480,16 +1455,10 @@ msgstr "File principale"
 msgid "modulo_formati_alternativi"
 msgstr "Formati alternativi"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
 msgstr "Non alterare le dimensioni naturali dell'immagine"
-
-#: components/ItaliaTheme/Blocks/NewsHome/Body
-msgid "newsHome-news"
-msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "news_item_contenuto"
@@ -1502,6 +1471,7 @@ msgstr "No"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
+#: components/ItaliaTheme/Blocks/UOSearch/Body
 msgid "noResult"
 msgstr "Nessun risultato trovato"
 
@@ -1644,10 +1614,6 @@ msgstr "Testo di aiuto"
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 msgid "playStoreLink"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/View
-msgid "portata_di_click"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
@@ -1846,16 +1812,19 @@ msgid "searchAllTopics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_bg_color"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_button_color"
 msgstr ""
 
@@ -1866,6 +1835,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_date_filter"
 msgstr ""
 
@@ -1875,26 +1845,31 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_filter_one"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_filter_three"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_filter_two"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_help"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_primarycolor"
 msgstr ""
 
@@ -1912,16 +1887,19 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_secondaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_tertiaryColor"
 msgstr ""
 
@@ -1929,6 +1907,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_text_filter"
 msgstr ""
 
@@ -1940,9 +1920,15 @@ msgstr ""
 msgid "searchBlock_ufficio_responsabile_filter"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+msgid "searchBlock_uo_type_filter"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_venue_filter"
 msgstr ""
 
@@ -2137,7 +2123,6 @@ msgstr "Mostra la mappa a tutta larghezza"
 msgid "show_only_first_ribbon"
 msgstr "Mostra il nastro solo sulla prima card"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
@@ -2152,7 +2137,6 @@ msgstr ""
 msgid "show_topics"
 msgstr "Mostra gli argomenti"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
@@ -2375,6 +2359,10 @@ msgstr "Documenti"
 msgid "uo_related_news"
 msgstr "Notizie in evidenza"
 
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+msgid "uo_type"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "variazione_situazione_patrimoniale"
 msgstr "Variazione situazione patrimoniale"
@@ -2382,6 +2370,8 @@ msgstr "Variazione situazione patrimoniale"
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/UOSearch/Body
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "venues"
 msgstr "Luoghi"
 
