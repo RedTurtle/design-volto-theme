@@ -86,7 +86,6 @@ msgstr "Recherche par sujet"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "Cerca per parola chiave"
 msgstr "Recherche par mots-clés"
 
@@ -1820,6 +1819,10 @@ msgstr "Ecrire à l'adresse"
 msgid "search"
 msgstr "Rechercher"
 
+#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
+msgid "search-block-uo"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchAllSections"
 msgstr "Rechercher dans toutes les sections"
@@ -1829,7 +1832,6 @@ msgid "searchAllTopics"
 msgstr "Rechercher tous les sujets"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock"
 msgstr ""
 
@@ -2377,8 +2379,12 @@ msgid "uo_related_news"
 msgstr "Nouvelles en vedette"
 
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+msgid "uo_search_keyword"
+msgstr "Chercher une structure"
+
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "uo_type"
-msgstr ""
+msgstr "Typologie"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "variazione_situazione_patrimoniale"
