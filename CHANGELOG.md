@@ -1,3 +1,45 @@
+### [5.3.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.5...v5.3.6) (2021-08-23)
+
+
+### Bug Fixes
+
+* form imports ([ec6453c](https://github.com/RedTurtle/design-volto-theme/commit/ec6453c4daef6de2fd667ca671e0698cfa0ca83d))
+* form imports ([4b73ee9](https://github.com/RedTurtle/design-volto-theme/commit/4b73ee9df204acbda0438d03d54c881187c1b9e3))
+
+### [5.3.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.4...v5.3.5) (2021-08-23)
+
+
+### Bug Fixes
+
+* search uo sidebar label ([d92d32c](https://github.com/RedTurtle/design-volto-theme/commit/d92d32ca80ba4515f2ddc7553a1b9c31ac0d6e48))
+
+
+### Maintenance
+
+* changed UO Search placeholder and translations ([1c29af6](https://github.com/RedTurtle/design-volto-theme/commit/1c29af6a281c5c0c5f13dd4704889589e79a834a))
+* update volto-form-block ([57d1a50](https://github.com/RedTurtle/design-volto-theme/commit/57d1a50c09a3aba79cd783d7763ccf9cb2ff3252))
+
+### [5.3.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.3...v5.3.4) (2021-08-20)
+
+
+### Bug Fixes
+
+* mrs dev ([48d3f27](https://github.com/RedTurtle/design-volto-theme/commit/48d3f27137dcbf72dbb54c36cdebd01332ce797e))
+
+### [5.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.2...v5.3.3) (2021-08-20)
+
+
+### Bug Fixes
+
+* fix volto-form-block version ([a39a921](https://github.com/RedTurtle/design-volto-theme/commit/a39a9219158feed782ce61519602f780201b0717))
+
+### [5.3.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.1...v5.3.2) (2021-08-20)
+
+
+### Bug Fixes
+
+* fixed volto-form-block imports ([40a13a4](https://github.com/RedTurtle/design-volto-theme/commit/40a13a4a6954419e4f60034c15443cd392cab876))
+
 ### [5.3.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.0...v5.3.1) (2021-08-19)
 
 
