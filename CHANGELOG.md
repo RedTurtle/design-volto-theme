@@ -1,3 +1,48 @@
+### [5.4.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.4.0...v5.4.1) (2021-08-25)
+
+
+### Bug Fixes
+
+* fix form validation description color ([4fa3ae8](https://github.com/RedTurtle/design-volto-theme/commit/4fa3ae8c991c32c122c925302ab873e7dc8b28d2))
+* fix get field name of volto-form-block ([6a38b29](https://github.com/RedTurtle/design-volto-theme/commit/6a38b29266e8b5f57ca274fa93e42611b4b0b24c))
+
+
+### Changes
+
+* uo seach with vocabularies for venues ([4643ce9](https://github.com/RedTurtle/design-volto-theme/commit/4643ce9a4e321089bc3893a9c2df5724877ced43))
+
+
+### Maintenance
+
+* added form validation styles ([d3550aa](https://github.com/RedTurtle/design-volto-theme/commit/d3550aad113cc797cb0fbccdb7fbdb325f02e624))
+* updated volto-form-block ([a5125b2](https://github.com/RedTurtle/design-volto-theme/commit/a5125b293a90b250a305c253836d2f9f7dde83a5))
+
+## [5.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.6...v5.4.0) (2021-08-24)
+
+
+### Features
+
+* add title in metadata ([d5b694b](https://github.com/RedTurtle/design-volto-theme/commit/d5b694bd07953214b39106a68b9a1c50efe8da41))
+
+
+### Bug Fixes
+
+* fix image in template Quadratoni ([50243da](https://github.com/RedTurtle/design-volto-theme/commit/50243da3176287db28601ce084a131b3615b5e4c))
+* fixed locales ([bcce2ef](https://github.com/RedTurtle/design-volto-theme/commit/bcce2ef27810da4d9de181848fc9e302d7f23d26))
+
+
+### Maintenance
+
+* update volto-form-block ([da57475](https://github.com/RedTurtle/design-volto-theme/commit/da57475c2216dca965ec264d77aece59b421f462))
+
+### [5.3.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.5...v5.3.6) (2021-08-23)
+
+
+### Bug Fixes
+
+* form imports ([ec6453c](https://github.com/RedTurtle/design-volto-theme/commit/ec6453c4daef6de2fd667ca671e0698cfa0ca83d))
+* form imports ([4b73ee9](https://github.com/RedTurtle/design-volto-theme/commit/4b73ee9df204acbda0438d03d54c881187c1b9e3))
+
 ### [5.3.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.4...v5.3.5) (2021-08-23)
 
 
