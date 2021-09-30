@@ -86,7 +86,10 @@ const CustomerSatisfaction = () => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [satisfaction]);
-
+  console.log(
+    'process.env.RAZZLE_RECAPTCHA_KEY',
+    process.env.RAZZLE_RECAPTCHA_KEY,
+  );
   const onVerifyCaptcha = useCallback(
     (token) => {
       console.log('onVerifyCaptcha', satisfaction, validToken, token);
