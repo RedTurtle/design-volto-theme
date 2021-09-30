@@ -89,6 +89,7 @@ const CustomerSatisfaction = () => {
 
   const onVerifyCaptcha = useCallback(
     (token) => {
+      console.log('onVerifyCaptcha', satisfaction, validToken, token);
       if (satisfaction != null && !validToken) {
         setValidToken(token);
       }
