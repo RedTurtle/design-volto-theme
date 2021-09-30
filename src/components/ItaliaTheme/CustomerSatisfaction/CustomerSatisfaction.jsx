@@ -205,6 +205,7 @@ const CustomerSatisfaction = () => {
                 onVerify={onVerifyCaptcha}
                 action={action}
               />
+              {validToken}
               <div className="submit-wrapper">
                 <Button type="submit" color="primary" disabled={!validToken}>
                   {intl.formatMessage(messages.submit)}
