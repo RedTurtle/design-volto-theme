@@ -180,6 +180,10 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
@@ -356,6 +360,10 @@ msgstr ""
 msgid "Show all content types"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Site Administration"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr ""
@@ -368,6 +376,10 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -425,6 +437,10 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Unauthorized"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
 msgstr ""
@@ -473,6 +489,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "VideoGalleryBlock"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "You are trying to access a protected resource, please {login} first."
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -752,6 +772,11 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "cardImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate
+#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton
+msgid "card_vedi"
 msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
@@ -1317,6 +1342,10 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_close_preview"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
 msgstr ""
@@ -1327,6 +1356,18 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_url"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Gallery
+msgid "gallery_viewPreview"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_next"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_prev"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
@@ -1420,6 +1461,22 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "log in"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_admin_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_spid_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_with_spid"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -2164,6 +2221,10 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: config/Blocks/ListingOptions/simpleListTemplate
+msgid "show_pointer_list"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
@@ -2269,11 +2330,11 @@ msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOTelephones
 msgid "telefono_sede"
 msgstr ""
 

@@ -36,6 +36,12 @@ import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Bloc
 import SquaresImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
 import SquaresImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
 
+import SimpleListTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleListTemplate';
+import SimpleListTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SimpleListTemplateSkeleton';
+
+import CardWithSlideUpTextTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate';
+import CardWithSlideUpTextTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton';
+
 // import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 // import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
@@ -49,6 +55,8 @@ import {
   addBandiInEvidenceTemplateOptions,
   addDefaultOptions,
   addSliderTemplateOptions,
+  addSimpleListTemplateOptions,
+  addCardWithSlideUpTextTemplateOption,
 } from '@italia/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
@@ -106,6 +114,18 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addDefaultOptions(schema, formData, intl);
       addRibbonCardTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
+  },
+  {
+    id: 'cardSlideUpTextTemplate',
+    isDefault: false,
+    title: 'Card con testo animato',
+    template: CardWithSlideUpTextTemplate,
+    skeleton: CardWithSlideUpTextTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addCardWithSlideUpTextTemplateOption(schema, formData, intl, pos);
       return schema;
     },
   },
@@ -198,6 +218,18 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addDefaultOptions(schema, formData, intl);
       addBandiInEvidenceTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
+  },
+  {
+    id: 'simpleListTemplate',
+    isDefault: false,
+    title: 'Lista semplice',
+    template: SimpleListTemplate,
+    skeleton: SimpleListTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addSimpleListTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
   },
