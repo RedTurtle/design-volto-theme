@@ -14,12 +14,21 @@ import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { useIntl, defineMessages } from 'react-intl';
 import { viewDate } from '@italia/helpers';
 import useDeepCompareEffect from 'use-deep-compare-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const messages = defineMessages({
   insert_filter: {
     id: 'insert_filter',
     defaultMessage:
       'Inserire un filtro dal menù laterale per visualizzare i relativi risultati',
+  },
+  calendar_next_arrow: {
+    id: 'calendar_next_arrow',
+    defaultMessage: 'Prossimo',
+  },
+  calendar_prev_arrow: {
+    id: 'calendar_prev_arrow',
+    defaultMessage: 'Precedente',
   },
 });
 
@@ -101,7 +110,19 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
 
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
+    nextArrow: (
+      <FontAwesomeIcon
+        title={intl.formatMessage(messages.calendar_next_arrow)}
+        icon={['fas', 'chevron-right']}
+      />
+    ),
+    prevArrow: (
+      <FontAwesomeIcon
+        title={intl.formatMessage(messages.calendar_prev_arrow)}
+        icon={['fas', 'chevron-left']}
+      />
+    ),
     speed: 500,
     slidesToShow: data.b_size || 4,
     slidesToScroll: data.b_size || 4,

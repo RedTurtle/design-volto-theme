@@ -33,6 +33,25 @@
     }
   }
 
+  .slick-arrow {
+    width: 1.2rem;
+    height: auto;
+    color: transparentize($secondary, 0.5);
+
+    &:hover,
+    &:focus {
+      color: transparentize($secondary, 0.3);
+    }
+
+    &.slick-next {
+      right: -2.5rem;
+    }
+
+    &.slick-prev {
+      left: -2.5rem;
+    }
+  }
+
   .calendar-body {
     height: 368px;
     padding: 0rem 1rem;
