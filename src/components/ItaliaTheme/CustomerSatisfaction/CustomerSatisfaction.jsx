@@ -16,6 +16,7 @@ import {
   resetSubmitCustomerSatisfaction,
   GoogleReCaptchaWidget,
 } from 'volto-customer-satisfaction';
+
 import { isCmsUi } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -86,11 +87,28 @@ const CustomerSatisfaction = () => {
     }
   };
 
+  const cleanGoogleRecaptcha = () => {
+    // remove badge
+    const nodeBadge = document.querySelector('.grecaptcha-badge');
+
+    if (nodeBadge && nodeBadge.parentNode) {
+      document.body.removeChild(nodeBadge.parentNode);
+    }
+
+    // remove script
+    const script = document.querySelector(`#google-recaptcha-v3`);
+
+    if (script) {
+      script.remove();
+    }
+  };
+
   useEffect(() => {
     setSatisfaction(null);
     setValidToken(null);
     return () => {
       dispatch(resetSubmitCustomerSatisfaction());
+      cleanGoogleRecaptcha();
     };
   }, [path]);
 
@@ -166,71 +184,73 @@ const CustomerSatisfaction = () => {
       {!submitResults.error &&
         !submitResults?.loading &&
         !submitResults.loaded && (
-          <form
-            onSubmit={() => {
-              sendFormData();
-            }}
-          >
-            <div className="buttons" aria-labelledby="cs-radiogroup-label">
-              <Button
-                color="success"
-                icon
-                outline={satisfaction !== true}
-                onClick={(e) => {
-                  changeSatisfaction(e, true);
-                }}
-                aria-controls="cs-more"
-                active={satisfaction === true}
-                title={intl.formatMessage(messages.yes)}
-              >
-                <FontAwesomeIcon icon={['far', 'thumbs-up']} />
-              </Button>
-
-              <Button
-                color="danger"
-                icon
-                outline={satisfaction !== false}
-                onClick={(e) => {
-                  changeSatisfaction(e, false);
-                }}
-                aria-controls="cs-more"
-                active={satisfaction === false}
-                title={intl.formatMessage(messages.no)}
-              >
-                <FontAwesomeIcon icon={['far', 'thumbs-down']} />
-              </Button>
-            </div>
-
-            <div
-              id="cs-more"
-              role="region"
-              aria-expanded={satisfaction !== null}
-              aria-hidden={satisfaction != null}
+          <>
+            <form
+              onSubmit={() => {
+                sendFormData();
+              }}
             >
-              <div className="comment">
-                <Input
-                  id="cs-comment"
-                  label={intl.formatMessage(messages.suggestions_placeholder)}
-                  onChange={(e) => {
-                    setFormData({ ...formData, comment: e.target.value });
+              <div className="buttons" aria-labelledby="cs-radiogroup-label">
+                <Button
+                  color="success"
+                  icon
+                  outline={satisfaction !== true}
+                  onClick={(e) => {
+                    changeSatisfaction(e, true);
                   }}
-                  rows="3"
-                  type="textarea"
-                />
-              </div>
+                  aria-controls="cs-more"
+                  active={satisfaction === true}
+                  title={intl.formatMessage(messages.yes)}
+                >
+                  <FontAwesomeIcon icon={['far', 'thumbs-up']} />
+                </Button>
 
-              <GoogleReCaptchaWidget
-                key={action}
-                onVerify={onVerifyCaptcha}
-                action={action}
-              />
-              <div className="submit-wrapper">
-                <Button type="submit" color="primary" disabled={!validToken}>
-                  {intl.formatMessage(messages.submit)}
+                <Button
+                  color="danger"
+                  icon
+                  outline={satisfaction !== false}
+                  onClick={(e) => {
+                    changeSatisfaction(e, false);
+                  }}
+                  aria-controls="cs-more"
+                  active={satisfaction === false}
+                  title={intl.formatMessage(messages.no)}
+                >
+                  <FontAwesomeIcon icon={['far', 'thumbs-down']} />
                 </Button>
               </div>
-            </div>
-          </form>
+
+              <div
+                id="cs-more"
+                role="region"
+                aria-expanded={satisfaction !== null}
+                aria-hidden={satisfaction != null}
+              >
+                <div className="comment">
+                  <Input
+                    id="cs-comment"
+                    label={intl.formatMessage(messages.suggestions_placeholder)}
+                    onChange={(e) => {
+                      setFormData({ ...formData, comment: e.target.value });
+                    }}
+                    rows="3"
+                    type="textarea"
+                  />
+                </div>
+
+                <GoogleReCaptchaWidget
+                  key={action}
+                  onVerify={onVerifyCaptcha}
+                  action={action}
+                />
+                <div className="submit-wrapper">
+                  <Button type="submit" color="primary" disabled={!validToken}>
+                    {intl.formatMessage(messages.submit)}
+                  </Button>
+                </div>
+              </div>
+            </form>
+          </>
         )}
       {submitResults?.loading && (
         <Progress
