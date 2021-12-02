@@ -9,6 +9,24 @@
     margin: 0;
   }
 
+  .template-header {
+    &.with-filters {
+      // border-bottom: 1px solid $neutral-1-a2;
+      margin-bottom: 1em;
+
+      .path-filter-buttons {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      h2,
+      .path-filter-buttons-wrapper {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
   .calendar-header {
     padding: 0.35rem;
     background: $primary;
@@ -62,6 +80,12 @@
       box-shadow: 10px 0 17px -10px $neutral-1-a2;
       overflow-y: auto;
     }
+  }
+
+  .no-results {
+    display: block;
+    padding: 1rem;
+    text-align: center;
   }
 
   .card.card-bg {
