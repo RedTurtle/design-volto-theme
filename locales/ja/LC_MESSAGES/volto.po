@@ -920,6 +920,10 @@ msgid "costi_e_vincoli"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaImage"
 msgstr ""
 
@@ -2208,6 +2212,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "setMoreSearchOptions"
+msgstr ""
+
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+msgid "set_four_columns"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing

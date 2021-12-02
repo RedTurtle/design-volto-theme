@@ -913,6 +913,10 @@ msgid "costi_e_vincoli"
 msgstr "Costi e vincoli"
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaFullWidth"
+msgstr "Mostra a pieno schermo"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaImage"
 msgstr "Seleziona l'immagine da mostrare"
 
@@ -2202,6 +2206,10 @@ msgstr "Servizi"
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "setMoreSearchOptions"
 msgstr ""
+
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+msgid "set_four_columns"
+msgstr "Disponi su 4 colonne"
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"

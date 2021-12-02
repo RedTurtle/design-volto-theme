@@ -1122,6 +1122,11 @@ msgid "costi_e_vincoli"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Mostra a pieno schermo
+msgid "ctaFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "ctaImage"
 msgstr ""
@@ -2707,6 +2712,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alle altre opzioni di ricerca
 msgid "setMoreSearchOptions"
+msgstr ""
+
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+# defaultMessage: Disponi su 4 colonne
+msgid "set_four_columns"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing

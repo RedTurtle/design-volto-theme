@@ -1,3 +1,46 @@
+## [5.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.11...v5.9.0) (2021-12-01)
+
+
+### Features
+
+* added sentry ignoreErrors ([02734a5](https://github.com/RedTurtle/design-volto-theme/commit/02734a510b302c78530c32f30ecfc31c37a27fd8))
+
+### [5.8.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.10...v5.8.11) (2021-11-30)
+
+
+### Bug Fixes
+
+* fixed HeroImageLeft edit to have this https://github.com/plone/volto/pull/2873/ fixes ([204908e](https://github.com/RedTurtle/design-volto-theme/commit/204908eac7ce252e76c1bf3bb4736f2e37e67628))
+* variation of listing templates props ([39fd820](https://github.com/RedTurtle/design-volto-theme/commit/39fd8207c5970336a2b17e6a0ae546179fbad354))
+
+
+### Maintenance
+
+* added custom size of CTA block ([4a6cc0f](https://github.com/RedTurtle/design-volto-theme/commit/4a6cc0f5b54363019ad25283478e78140323c9cc))
+* added other props in listing category ([4f9acbc](https://github.com/RedTurtle/design-volto-theme/commit/4f9acbc341a189d06fd29224ec34a5b14248258f))
+* updated locales ([3a12ae7](https://github.com/RedTurtle/design-volto-theme/commit/3a12ae7d1902db09c6aa5b9074d2bdad3545b024))
+* updated volto to fix heroImageBlock loking ([6dfb3b7](https://github.com/RedTurtle/design-volto-theme/commit/6dfb3b777e1059c6e8a1e78c496ab4ca0c0bed54))
+
+### [5.8.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.9...v5.8.10) (2021-11-26)
+
+
+### Bug Fixes
+
+* removed arLoginUrl default ([1f6537d](https://github.com/RedTurtle/design-volto-theme/commit/1f6537d9a1e921de069d3cdd2e815c5b40484a03))
+
+
+### Maintenance
+
+* added four columns variation ([f0cbad7](https://github.com/RedTurtle/design-volto-theme/commit/f0cbad77f8cd3e4f569d6ac13142e072a7041959))
+* updated locales ([2d8f2b9](https://github.com/RedTurtle/design-volto-theme/commit/2d8f2b9d0d79bf1840528c65d566cdae017b3ebc))
+
+### [5.8.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.8...v5.8.9) (2021-11-24)
+
+
+### Bug Fixes
+
+* fixed imports ([1a4ab96](https://github.com/RedTurtle/design-volto-theme/commit/1a4ab9637fea3762b632dd0e3bc090ec909d123b))
+
 ### [5.8.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.7...v5.8.8) (2021-11-23)
 
 
