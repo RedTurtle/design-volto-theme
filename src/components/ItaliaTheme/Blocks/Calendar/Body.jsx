@@ -209,6 +209,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
       {
         breakpoint: 600,
         settings: {
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -282,7 +283,6 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
                       size="xs"
                       icon={false}
                       tag="button"
-                      className="ml-3"
                       onClick={(e) => {
                         addLocationFilter(button.location['UID']);
                       }}
@@ -295,8 +295,8 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
             )}
           </Row>
         )}
-        <Card className="card-bg">
-          <div className="text-center calendar-header">
+        <Card className="card-bg rounded">
+          <div className="text-center calendar-header rounded-top">
             <h3>{monthName || <span>&nbsp;</span>}</h3>
           </div>
           <div className="calendar-body">
