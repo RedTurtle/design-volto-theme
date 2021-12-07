@@ -1,3 +1,64 @@
+### [5.9.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.1...v5.9.2) (2021-12-05)
+
+
+### Bug Fixes
+
+* add new calendar block now works properly ([ecc1710](https://github.com/RedTurtle/design-volto-theme/commit/ecc1710b8b22b5598bfa9d57c9995d5590fb2702))
+
+### [5.9.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.0...v5.9.1) (2021-12-03)
+
+
+### Bug Fixes
+
+* bugfix Etichetta layout of listing ribbon cards ([052c9cb](https://github.com/RedTurtle/design-volto-theme/commit/052c9cbd9a872fcc5113c79dd775cc80ed3da024))
+* change SideMenu basing useEffect reload on content uid; change consequentially other views ([f869e04](https://github.com/RedTurtle/design-volto-theme/commit/f869e049e15e04ad6c445da70171804f6d50edc2))
+* fix Header image in Argument view on page change ([300de68](https://github.com/RedTurtle/design-volto-theme/commit/300de688b81a012fb17be6394f688ce89df83d71))
+* fixed header-image in Pages ([672db8f](https://github.com/RedTurtle/design-volto-theme/commit/672db8f3f232d4ce1b9395ae193d21706b144a02))
+* fixed topics in search ([0abb174](https://github.com/RedTurtle/design-volto-theme/commit/0abb174760f1fc39f824be16134bbc4ded1511c3))
+* fixed WideImage on route change ([fe37bdb](https://github.com/RedTurtle/design-volto-theme/commit/fe37bdb32cde4021bef2c0339230dc99d2096475))
+* removed expiration date from news ([3ec6d88](https://github.com/RedTurtle/design-volto-theme/commit/3ec6d88f4c0569958621203982e8ed99544f8d66))
+
+
+### Maintenance
+
+* update photogallery with popup function and general codereview ([d421755](https://github.com/RedTurtle/design-volto-theme/commit/d4217559dd2e30b9b9ddebc48dec7c90cc93f670))
+
+## [5.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.11...v5.9.0) (2021-12-01)
+
+
+### Features
+
+* added sentry ignoreErrors ([02734a5](https://github.com/RedTurtle/design-volto-theme/commit/02734a510b302c78530c32f30ecfc31c37a27fd8))
+
+### [5.8.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.10...v5.8.11) (2021-11-30)
+
+
+### Bug Fixes
+
+* fixed HeroImageLeft edit to have this https://github.com/plone/volto/pull/2873/ fixes ([204908e](https://github.com/RedTurtle/design-volto-theme/commit/204908eac7ce252e76c1bf3bb4736f2e37e67628))
+* variation of listing templates props ([39fd820](https://github.com/RedTurtle/design-volto-theme/commit/39fd8207c5970336a2b17e6a0ae546179fbad354))
+
+
+### Maintenance
+
+* added custom size of CTA block ([4a6cc0f](https://github.com/RedTurtle/design-volto-theme/commit/4a6cc0f5b54363019ad25283478e78140323c9cc))
+* added other props in listing category ([4f9acbc](https://github.com/RedTurtle/design-volto-theme/commit/4f9acbc341a189d06fd29224ec34a5b14248258f))
+* updated locales ([3a12ae7](https://github.com/RedTurtle/design-volto-theme/commit/3a12ae7d1902db09c6aa5b9074d2bdad3545b024))
+* updated volto to fix heroImageBlock loking ([6dfb3b7](https://github.com/RedTurtle/design-volto-theme/commit/6dfb3b777e1059c6e8a1e78c496ab4ca0c0bed54))
+
+### [5.8.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.9...v5.8.10) (2021-11-26)
+
+
+### Bug Fixes
+
+* removed arLoginUrl default ([1f6537d](https://github.com/RedTurtle/design-volto-theme/commit/1f6537d9a1e921de069d3cdd2e815c5b40484a03))
+
+
+### Maintenance
+
+* added four columns variation ([f0cbad7](https://github.com/RedTurtle/design-volto-theme/commit/f0cbad77f8cd3e4f569d6ac13142e072a7041959))
+* updated locales ([2d8f2b9](https://github.com/RedTurtle/design-volto-theme/commit/2d8f2b9d0d79bf1840528c65d566cdae017b3ebc))
+
 ### [5.8.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.8...v5.8.9) (2021-11-24)
 
 

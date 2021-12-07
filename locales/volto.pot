@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-11-26T08:02:03.914Z\n"
+"POT-Creation-Date: 2021-12-07T14:57:26.702Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -170,6 +170,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Etichetta
+msgid "Etichetta location filter"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
@@ -179,6 +184,11 @@ msgstr ""
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 # defaultMessage: Non ho trovato la risposta che cercavi
 msgid "Faq Folder: Nessun risultato trovato"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Filtro
+msgid "Filtro location filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
@@ -262,15 +272,21 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-# defaultMessage: Listing
-msgid "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Luogo
+msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Mostra i filtri per luogo
+msgid "Mostra i filtri per luogo"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
@@ -929,6 +945,26 @@ msgstr ""
 msgid "block_bg_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+# defaultMessage: Calendario
+msgid "calendarBlockSidebarTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Prossimo
+msgid "calendar_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Nessun evento disponibile al momento
+msgid "calendar_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Precedente
+msgid "calendar_prev_arrow"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Canale digitale
 msgid "canale_digitale"
@@ -1085,6 +1121,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Costi e vincoli
 msgid "costi_e_vincoli"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Mostra a pieno schermo
+msgid "ctaFullWidth"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
@@ -1667,6 +1708,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 #: components/ItaliaTheme/View/Commons/Gallery
 # defaultMessage: Vedi l'anteprima di
 msgid "gallery_viewPreview"
@@ -2713,6 +2755,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/PhotogalleryTemplate
+# defaultMessage: Apri l'immagine in popup
+msgid "show_image_popup"
 msgstr ""
 
 #: config/Blocks/ListingOptions/sliderTemplate

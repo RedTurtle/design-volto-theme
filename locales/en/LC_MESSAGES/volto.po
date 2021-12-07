@@ -139,6 +139,10 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Etichetta location filter"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
@@ -147,6 +151,10 @@ msgstr ""
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 msgid "Faq Folder: Nessun risultato trovato"
 msgstr "No answers found for your question"
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Filtro location filter"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 msgid "Go to content"
@@ -213,14 +221,19 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-msgid "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
 msgstr "Menu selected"
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Mostra i filtri per luogo"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
@@ -757,6 +770,22 @@ msgstr "Biography"
 msgid "block_bg_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+msgid "calendarBlockSidebarTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_prev_arrow"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "canale_digitale"
 msgstr "Digital channel"
@@ -884,6 +913,10 @@ msgstr "Costs"
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "costi_e_vincoli"
 msgstr "Costs and constraints"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaFullWidth"
+msgstr "Show full width"
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaImage"
@@ -1353,6 +1386,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery_viewPreview"
 msgstr "View preview of "
@@ -2206,6 +2240,10 @@ msgstr ""
 
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/PhotogalleryTemplate
+msgid "show_image_popup"
 msgstr ""
 
 #: config/Blocks/ListingOptions/sliderTemplate
