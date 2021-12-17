@@ -1,3 +1,23 @@
+### [5.9.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.3...v5.9.4) (2021-12-14)
+
+
+### Maintenance
+
+* removed contacts from uo parent and children in UOView to avoid citizens misurunderstanding ([fa96670](https://github.com/RedTurtle/design-volto-theme/commit/fa96670e4da4db8b9f50300f4da08ed53e10cf02))
+
+### [5.9.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.2...v5.9.3) (2021-12-09)
+
+
+### Bug Fixes
+
+* fixed print styles ([ba2f8e4](https://github.com/RedTurtle/design-volto-theme/commit/ba2f8e48be2fa2dfb42aac690f5354ff33a90093))
+* fixed standard size for photogallery images ([25725f8](https://github.com/RedTurtle/design-volto-theme/commit/25725f8226e849867e8f48edf8987c31dcdfacd6))
+
+
+### Maintenance
+
+* updated locales ([0074991](https://github.com/RedTurtle/design-volto-theme/commit/0074991bd4c83fbe37fcdd1e3351145de469bb86))
+
 ### [5.9.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.1...v5.9.2) (2021-12-05)
 
 
