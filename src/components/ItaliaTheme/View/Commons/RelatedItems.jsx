@@ -52,7 +52,6 @@ const RelatedItems = ({
   const intl = useIntl();
 
   let sections = {};
-
   const related_items_content =
     content?.relatedItems?.length > 0 ? [...content.relatedItems] : [];
 
