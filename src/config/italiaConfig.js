@@ -140,6 +140,7 @@ export default function applyConfig(voltoConfig) {
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
+
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },
