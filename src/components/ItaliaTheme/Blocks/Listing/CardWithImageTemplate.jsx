@@ -16,7 +16,6 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory, ListingLinkMore } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
@@ -26,6 +25,7 @@ import {
   getItemIcon,
   CardCalendar,
   ListingCategory,
+  ListingImage,
   ListingText,
   CardPersona,
 } from '@italia/components/ItaliaTheme';
@@ -52,6 +52,8 @@ const CardWithImageTemplate = (props) => {
     natural_image_size = false,
   } = props;
 
+  const imagesToShow = set_four_columns ? 4 : 3;
+
   return (
     <div className="card-with-image-template">
       <Container className="px-4">
@@ -74,9 +76,9 @@ const CardWithImageTemplate = (props) => {
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;
-            const image =
-              item.image || item.immagine_testata || item.foto_persona;
-            const showImage = (index < 3 || always_show_image) && image;
+            const image = ListingImage({ item });
+            const showImage =
+              (index < imagesToShow || always_show_image) && image != null;
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
@@ -113,16 +115,7 @@ const CardWithImageTemplate = (props) => {
                         })}
                       >
                         <div className="img-responsive img-responsive-panoramic">
-                          <figure className="img-wrapper">
-                            <Image
-                              className="listing-image"
-                              image={image}
-                              aria-hidden="true"
-                              alt=""
-                              useOriginal={false}
-                              maxSize={400}
-                            />
-                          </figure>
+                          <figure className="img-wrapper">{image}</figure>
                           {item['@type'] === 'Event' && (
                             <CardCalendar start={item.start} end={item.end} />
                           )}
