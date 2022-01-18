@@ -954,7 +954,7 @@ msgstr "A cura di"
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by_people"
-msgstr "Persone"
+msgstr "Persone citate"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "curriculum_vitae"

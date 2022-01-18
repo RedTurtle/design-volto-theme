@@ -17,7 +17,7 @@ const messages = defineMessages({
   },
   cured_by_people: {
     id: 'cured_by_people',
-    defaultMessage: 'Persone',
+    defaultMessage: 'Persone citate',
   },
 });
 
