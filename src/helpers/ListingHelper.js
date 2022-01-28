@@ -32,9 +32,11 @@ const Intl = () => {
 
 export const getCalendarDate = (item) => {
   const intl = Intl();
-  const effective = item.effective && (
-    <span>{viewDate(intl.locale, item.effective, 'll')}</span>
-  );
+
+  const effective =
+    item.EffectiveDate === 'None' ? null : (
+      <span>{viewDate(intl.locale, item.effective, 'll')}</span>
+    );
 
   let ret = null;
   switch (item['@type']) {
