@@ -1,3 +1,53 @@
+### [5.12.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.8...v5.12.9) (2022-01-28)
+
+
+### Bug Fixes
+
+* fix gallery preview image ([6e1c46e](https://github.com/RedTurtle/design-volto-theme/commit/6e1c46ef5c9935bc41d0fc3363d63f2d802c2399))
+
+### [5.12.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.7...v5.12.8) (2022-01-28)
+
+
+### Maintenance
+
+* added icon for application/x-zip-compressed ([0a2023a](https://github.com/RedTurtle/design-volto-theme/commit/0a2023ab2259941e84fe2a7cb565dded94491f8b))
+
+### [5.12.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.6...v5.12.7) (2022-01-27)
+
+
+### Maintenance
+
+* updated volto and added new image scale ([1cd7c99](https://github.com/RedTurtle/design-volto-theme/commit/1cd7c993a116c05bc2e0019cb5354833873cc71e))
+
+### [5.12.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.5...v5.12.6) (2022-01-27)
+
+
+### Bug Fixes
+
+* fix image resolution in listing ([f7b76f8](https://github.com/RedTurtle/design-volto-theme/commit/f7b76f8f16f637af5b438740ae51a61e269e9369))
+
+### [5.12.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.4...v5.12.5) (2022-01-27)
+
+
+### Bug Fixes
+
+* small block links template responsive fix for safari ([41f2a7f](https://github.com/RedTurtle/design-volto-theme/commit/41f2a7ffaa5b750607998dcc9fe734715d14060d))
+
+### [5.12.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.3...v5.12.4) (2022-01-27)
+
+
+### Bug Fixes
+
+* fix ssr getcontent ([a17808b](https://github.com/RedTurtle/design-volto-theme/commit/a17808bf19bc7a5b30373eb3deacc035f4293597))
+* pagina argomento view getContent subrequests ([bea51ac](https://github.com/RedTurtle/design-volto-theme/commit/bea51ac36f08d344b73721f86d6b56e80ec6e5ce))
+
+### [5.12.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.2...v5.12.3) (2022-01-26)
+
+
+### Bug Fixes
+
+* le references ora funzionano correttamente nelle viste dei contenuti ([c806db6](https://github.com/RedTurtle/design-volto-theme/commit/c806db6adfc3177ff2f24eea33d7ee7c480b967b))
+
 ### [5.12.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.1...v5.12.2) (2022-01-26)
 
 
