@@ -9,19 +9,24 @@ import PropTypes from 'prop-types';
 import {
   SideMenu,
   PageHeader,
-  Metadata,
-  HelpBox,
   RelatedItems,
+  PersonaRuolo,
+  PersonaContatti,
+  PersonaDocumenti,
+  PersonaUlterioriInformazioni,
   PersonaPlaceholderAfterContent,
   PersonaPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
-  richTextHasContent,
   SkipToMainContent,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
 
-import PersonaRuolo from '@italia/components/ItaliaTheme/View/PersonaView/PersonaRuolo';
-import PersonaContatti from '@italia/components/ItaliaTheme/View/PersonaView/PersonaContatti';
-import PersonaDocumenti from '@italia/components/ItaliaTheme/View/PersonaView/PersonaDocumenti';
+export const PersonaViewSectionsOrder = [
+  { /* RUOLO */ component: PersonaRuolo },
+  { /* CONTATTI */ component: PersonaContatti },
+  { /* DOCUMENTI */ component: PersonaDocumenti },
+  { /* ULTERIORI INFORMAZIONI */ component: PersonaUlterioriInformazioni },
+];
 
 /**
  * PersonaView view component class.
@@ -63,17 +68,11 @@ const PersonaView = ({ content }) => {
             id="main-content-section"
             ref={documentBody}
           >
-            <PersonaRuolo content={content} />
-
-            <PersonaContatti content={content} />
-
-            <PersonaDocumenti content={content} />
-
-            <Metadata content={content}>
-              {richTextHasContent(content?.ulteriori_informazioni) && (
-                <HelpBox text={content?.ulteriori_informazioni} />
-              )}
-            </Metadata>
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={PersonaViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

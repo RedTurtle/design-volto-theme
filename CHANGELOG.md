@@ -1,3 +1,24 @@
+### [5.16.1](https://github.com/redturtle/design-volto-theme/compare/v5.16.0...v5.16.1) (2022-02-22)
+
+
+### Bug Fixes
+
+* add image and title on ListingImage component ([d0da2bd](https://github.com/redturtle/design-volto-theme/commit/d0da2bd46004d5e68e888d1a563793fe7b9d0608))
+
+## [5.16.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.3...v5.16.0) (2022-02-22)
+
+
+### Features
+
+* added show_default_results in EventsSearch block ([050e25a](https://github.com/RedTurtle/design-volto-theme/commit/050e25a4c6851d84f727789016fa93668c5dec10))
+
+### [5.15.3](https://github.com/redturtle/design-volto-theme/compare/v5.15.2...v5.15.3) (2022-02-21)
+
+
+### Bug Fixes
+
+* reading fullobjects from variation config ([31e88d6](https://github.com/redturtle/design-volto-theme/commit/31e88d63a9f9cc7cd231a8a98b7441d9a25bb296))
+
 ### [5.15.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.1...v5.15.2) (2022-02-18)
 
 
