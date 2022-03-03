@@ -1,3 +1,24 @@
+### [5.18.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.0...v5.18.1) (2022-03-03)
+
+
+### Maintenance
+
+* updatd last_updated date for cookie consent ([0d354fe](https://github.com/RedTurtle/design-volto-theme/commit/0d354feb5c0d19ea1011a4d6f94f9bd67fbc5113))
+
+## [5.18.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.2...v5.18.0) (2022-03-03)
+
+
+### Features
+
+* updated volto, volto-gdpr-privacy and volto-google-analytics for cookie expiration ([1f706b8](https://github.com/RedTurtle/design-volto-theme/commit/1f706b8ccbfc9da4ea37655f9b14df0e8dcf2dbc))
+
+### [5.17.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.1...v5.17.2) (2022-03-02)
+
+
+### Bug Fixes
+
+* hotfix: removed broken search block ([50af391](https://github.com/RedTurtle/design-volto-theme/commit/50af39155d01df4511a79373e6050a2bc0adaa25))
+
 ### [5.17.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.0...v5.17.1) (2022-02-28)
 
 
