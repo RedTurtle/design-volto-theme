@@ -1,3 +1,50 @@
+### [5.18.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.5...v5.18.6) (2022-03-16)
+
+
+### Bug Fixes
+
+* added placeholder background in slider template ([f388643](https://github.com/RedTurtle/design-volto-theme/commit/f388643a248e00ce15d8edc28a62dcce695482a5))
+
+
+### Maintenance
+
+* updated volto-form-block ([1ae2368](https://github.com/RedTurtle/design-volto-theme/commit/1ae2368a22523d0412e501f45df4b000e7b7f2b6))
+
+### [5.18.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.4...v5.18.5) (2022-03-11)
+
+
+### Bug Fixes
+
+* fixed customer satisfaction description ([841f467](https://github.com/RedTurtle/design-volto-theme/commit/841f4673a9853941a8249151398e21390a960650))
+
+### [5.18.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.3...v5.18.4) (2022-03-09)
+
+
+### Maintenance
+
+* added fullwidth and center countdown option, layout changed ([afca656](https://github.com/RedTurtle/design-volto-theme/commit/afca656ab57a726b1dfd2cd7dbcfb7fb4738f1d1))
+
+### [5.18.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.2...v5.18.3) (2022-03-08)
+
+
+### Bug Fixes
+
+* added condition of document attachment in bando view ([9d126b5](https://github.com/RedTurtle/design-volto-theme/commit/9d126b54a487e73bd3de026ee14779a6eb6b82a5))
+* added universal link of item tertiary menu ([4fa8eb4](https://github.com/RedTurtle/design-volto-theme/commit/4fa8eb4a0454edb15fdc1bb099926fdec5694a9a))
+
+
+### Maintenance
+
+* scrub data for sentry (example) ([eaca96a](https://github.com/RedTurtle/design-volto-theme/commit/eaca96a4c8a789612a2fee0099923d8d3bf51755))
+* update nvmrc ([e22aa73](https://github.com/RedTurtle/design-volto-theme/commit/e22aa73198bef4b62f54439d933a79a576ad35b8))
+
+### [5.18.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.1...v5.18.2) (2022-03-03)
+
+
+### Maintenance
+
+* added countdown block and updated block-chooser icons ([8225e64](https://github.com/RedTurtle/design-volto-theme/commit/8225e646e3adaa7cb2000d3ed8a63cae754ef70d))
+
 ### [5.18.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.0...v5.18.1) (2022-03-03)
 
 
