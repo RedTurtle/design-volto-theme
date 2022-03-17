@@ -47,6 +47,7 @@ import faSitemapSVG from '@italia/icons/sitemap.svg';
 import faBuildingSVG from '@italia/icons/building.svg';
 import faFileDownloadSVG from '@italia/icons/file-download.svg';
 import faQuestionSVG from '@italia/icons/question-solid.svg';
+import bandoSVG from '@italia/icons/bando.svg';
 
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
@@ -75,7 +76,6 @@ export default function applyConfig(voltoConfig) {
 
   config.settings = {
     ...config.settings,
-    devProxyToApiPath: 'http://localhost:8080/Plone',
     sentryOptions: {
       ...(config.settings.sentryOptions ?? {}),
       ignoreErrors: [
@@ -93,6 +93,7 @@ export default function applyConfig(voltoConfig) {
     showTags: false,
     showSelfRegistration: false,
     defaultPageSize: 24,
+    cookieExpires: 15552000, //6 month
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {
@@ -104,6 +105,7 @@ export default function applyConfig(voltoConfig) {
     contentIcons: {
       ...config.settings.contentIcons,
       Document: faFileInvoiceSVG,
+      Bando: bandoSVG,
       Folder: faFolderOpenSVG,
       'News Item': faNewspaperSVG,
       Event: faCalendarAltSVG,
@@ -128,6 +130,7 @@ export default function applyConfig(voltoConfig) {
       tile: 64,
       thumb: 128,
       mini: 200,
+      midi: 300,
       preview: 400,
       teaser: 600,
       large: 800,
@@ -150,6 +153,11 @@ export default function applyConfig(voltoConfig) {
 
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
+      // Venue: {
+      //   sections: [
+      //     //sections order for Venue content-type view. See components/ItaliaTheme/View/VenueView/VenueView.jsx for default VenueViewSectionsOrder
+      //   ],
+      // },
     },
     siteProperties: {
       siteTitle: 'Nome del Comune', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome del Comune', 'en':'Site name'}. Se multilingua il default è comunque la stringa.
@@ -161,6 +169,16 @@ export default function applyConfig(voltoConfig) {
       //arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
       // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
       //spidLogin: true, //se true, nella pagina di errore Unauthorized, mostra il pulsante per il login a Spid.
+      headerslimTertiaryMenu: {
+        it: [
+          //{ title: 'Contatti', url: '/it/contatti' },
+          //{ title: 'Novità', url: '/it/novita' },
+        ],
+        en: [
+          //{ title: 'Contacts', url: '/en/contacts' },
+          //{ title: 'News', url: '/en/news' },
+        ],
+      },
       smallFooterLinks: {
         default: [
           // { title: 'Media policy', url: '/media-policy' },
@@ -185,6 +203,7 @@ export default function applyConfig(voltoConfig) {
         ],
       },
       enableCustomerSatisfaction: true,
+      splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
     },
     'volto-blocks-widget': {
       allowedBlocks: [
@@ -207,6 +226,11 @@ export default function applyConfig(voltoConfig) {
     'volto-gdpr-privacy': {
       ...config.settings['volto-gdpr-privacy'],
       defaultPanelConfig: gdprPrivacyPanelConfig,
+    },
+
+    'volto-editablefooter': {
+      ...config.settings['volto-editablefooter'],
+      options: { socials: true, newsletterSubscribe: true },
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,

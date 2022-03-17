@@ -7,9 +7,9 @@ const ListingImage = ({
   item,
   showDefault = false,
   useOriginal = false,
-  maxSize = 400,
+  maxSize,
   className = 'listing-image',
-  loading,
+  ...imageProps
 }) => {
   if (!item.image_field) {
     if (showDefault) {
@@ -22,12 +22,13 @@ const ListingImage = ({
         className={className}
         image={item['@id']}
         aria-hidden="true"
-        alt=""
+        alt={item.title}
+        title={item.title}
         role="presentation"
         imageField={item.image_field}
         useOriginal={useOriginal}
-        loading={loading}
         maxSize={maxSize}
+        {...imageProps}
       />
     );
   }

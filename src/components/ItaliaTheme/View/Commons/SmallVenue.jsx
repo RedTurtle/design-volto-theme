@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { getContent, resetContent } from '@plone/volto/actions';
+import { getContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import { ContactLink } from '@italia/components/ItaliaTheme/View';
@@ -13,19 +13,21 @@ import { UniversalLink } from '@plone/volto/components';
  * @returns {string} Markup of the component.
  */
 const SmallVenue = ({ venue }) => {
-  const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
+  const key = `${url}_venue`;
+
   const venueContent = useSelector((state) => state.content.subrequests?.[key]);
-  const loaded = venueContent?.loaded || venueContent?.loading;
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const loaded = venueContent?.loaded || venueContent?.loading;
+
     if (!loaded) {
       dispatch(getContent(url, null, key));
     }
-    return () => dispatch(resetContent(key));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [venue]);
+  }, [key]);
 
   let venue_fo = venueContent?.data;
 

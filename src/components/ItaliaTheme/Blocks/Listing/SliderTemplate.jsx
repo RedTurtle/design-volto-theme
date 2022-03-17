@@ -148,7 +148,11 @@ const SliderTemplate = ({
 
             <Slider {...settings} ref={slider}>
               {items.map((item, index) => {
-                const image = ListingImage({ item, loading: 'lazy' });
+                const image = ListingImage({
+                  item,
+                  loading: 'lazy',
+                  maxSize: 1600,
+                });
                 if (!image) return null;
                 return (
                   <div
@@ -163,7 +167,15 @@ const SliderTemplate = ({
                           title={intl.formatMessage(messages.viewImage)}
                         >
                           <div className="slide-title">
-                            {item.title} <Icon icon="arrow-right" />
+                            {full_width ? (
+                              <Container>
+                                {item.title} <Icon icon="arrow-right" />
+                              </Container>
+                            ) : (
+                              <>
+                                {item.title} <Icon icon="arrow-right" />
+                              </>
+                            )}
                           </div>
                         </UniversalLink>
                       )}

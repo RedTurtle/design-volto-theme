@@ -58,6 +58,7 @@ button.custom-navbar-toggler svg.icon {
 }
 
 iframe {
+  max-width: 100%;
   border: none;
 }
 
@@ -160,4 +161,9 @@ iframe {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+picture.volto-image {
+  display: block;
+  width: 100%;
 }

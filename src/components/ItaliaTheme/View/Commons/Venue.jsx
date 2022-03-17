@@ -11,8 +11,9 @@ import { RichText } from '@italia/components/ItaliaTheme/View';
  * @returns {string} Markup of the component.
  */
 const Venue = ({ venue, display_title = true }) => {
-  const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
+  const key = `${url}_venue`;
+
   const venueContent = useSelector((state) => state.content.subrequests?.[key]);
   const loaded = venueContent?.loaded || venueContent?.loading;
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ const Venue = ({ venue, display_title = true }) => {
     }
     return () => dispatch(resetContent(key));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [venue]);
+  }, [key]);
 
   let venue_fo = venueContent?.data;
   return venue_fo ? (
