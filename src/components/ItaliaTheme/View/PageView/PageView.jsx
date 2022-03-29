@@ -95,7 +95,7 @@ const PageView = ({ content, token, location, history }) => {
                       <Image
                         image={content.image}
                         alt={content.title}
-                        maxSize={300}
+                        maxSize={500}
                         key={content.image?.download}
                       />
                     </div>
