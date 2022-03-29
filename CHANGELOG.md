@@ -1,3 +1,40 @@
+### [5.19.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.0...v5.19.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* fix map template for items without coordinates ([8cbe61b](https://github.com/RedTurtle/design-volto-theme/commit/8cbe61bdaf47c16fa636841fdf7c86916c7c23d7))
+
+## [5.19.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.10...v5.19.0) (2022-03-25)
+
+
+### Features
+
+* updated volto-form-block to have use_as_bcc flag in email field ([2231ac1](https://github.com/RedTurtle/design-volto-theme/commit/2231ac17f9d5473a6d064dc4152cd141ed997d5a))
+
+
+### Bug Fixes
+
+* fixed onChangeFormData to sent fields defined in schema ([1813bbf](https://github.com/RedTurtle/design-volto-theme/commit/1813bbf2d9dae897f6234aea7fb7f9bfa41fd111))
+
+
+### Maintenance
+
+* updated volto-form-block ([7884433](https://github.com/RedTurtle/design-volto-theme/commit/788443336e0c485811c6e95d259a5fac6ef79ac4))
+
+### [5.18.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.9...v5.18.10) (2022-03-25)
+
+
+### Bug Fixes
+
+* codeview ([1c98ae3](https://github.com/RedTurtle/design-volto-theme/commit/1c98ae3c6a9225dbf0cfcf09e4b748bc48fb491f))
+* fix megamenu empty blocks ([73bb446](https://github.com/RedTurtle/design-volto-theme/commit/73bb44682cb704b7869fab87a6caf8297c708276))
+
+
+### Maintenance
+
+* added update note in bando listing template ([adc7bc5](https://github.com/RedTurtle/design-volto-theme/commit/adc7bc5ac1f64dacc2008df9bda0942e606cccec))
+
 ### [5.18.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.8...v5.18.9) (2022-03-23)
 
 
