@@ -1,3 +1,31 @@
+### [5.19.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.4...v5.19.5) (2022-03-31)
+
+
+### Bug Fixes
+
+* fix megamenu keyboard navigation ([f01047b](https://github.com/RedTurtle/design-volto-theme/commit/f01047b2cca62ef67c8a69fa022e2870136170a7))
+
+### [5.19.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.3...v5.19.4) (2022-03-31)
+
+
+### Maintenance
+
+* improve srcset image quality ([1fd154a](https://github.com/RedTurtle/design-volto-theme/commit/1fd154a4a7c2222d4ee069946cfac3be5d4251e9))
+
+### [5.19.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.2...v5.19.3) (2022-03-30)
+
+
+### Bug Fixes
+
+* avoid unload attachments navigating from UO to UO ([0e94c08](https://github.com/RedTurtle/design-volto-theme/commit/0e94c082a7de2fae98cd90635823a978b8b15631))
+
+### [5.19.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.1...v5.19.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* attachments component view all attachments, no limit to 25 ([cbe9096](https://github.com/RedTurtle/design-volto-theme/commit/cbe9096d2f849424b0b6d33a3178d638001c87b8))
+
 ### [5.19.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.0...v5.19.1) (2022-03-28)
 
 
