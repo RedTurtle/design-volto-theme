@@ -1,3 +1,10 @@
+### [5.21.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.3...v5.21.4) (2022-04-28)
+
+
+### Bug Fixes
+
+* fix handle add new block in TextCard blocks ([da17820](https://github.com/RedTurtle/design-volto-theme/commit/da17820a19bffef430e6e51a9e9276565d065112))
+
 ### [5.21.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.2...v5.21.3) (2022-04-28)
 
 
@@ -9,12 +16,6 @@
 
 ### Maintenance
 
-* debug ([6a4f478](https://github.com/RedTurtle/design-volto-theme/commit/6a4f4789bd77946a3eb04a575dd57e85fceda43c))
-* debug recaptch ([d933db1](https://github.com/RedTurtle/design-volto-theme/commit/d933db1c13e76aecce3dc8009a7fd8e26fdf7c01))
-* debug recaptch ([c42622d](https://github.com/RedTurtle/design-volto-theme/commit/c42622d654dc9f2c08d01bf5d51cb6e7cb817028))
-* test ([b16d39a](https://github.com/RedTurtle/design-volto-theme/commit/b16d39ab8b1eceac5adeab0dc7b7b7497815dca9))
-* update yarn.lock ([136b9c0](https://github.com/RedTurtle/design-volto-theme/commit/136b9c0f26c7eda7dd79b0848a8345495e24b35f))
-* updated volto img srcset ([2368e65](https://github.com/RedTurtle/design-volto-theme/commit/2368e65028569838f065b4b2f26e43853e138ee3))
 * updated volto-gdpr-privacy to prevent SSR undesired embed ([abbc13f](https://github.com/RedTurtle/design-volto-theme/commit/abbc13f5e9dfccfe99f42446cbaac6b9fb30c346))
 * updated volto-multilingual widget to fix onchange bug ([7d25ad1](https://github.com/RedTurtle/design-volto-theme/commit/7d25ad1f88021642826163e9abf5261d921b044a))
 
