@@ -1,15 +1,9 @@
 import config from '@plone/volto/registry';
 
 export const getCookieOptions = (options = {}) => {
-  const { path = '/', secure = false, ...otherOptions } = options;
+  const { path = '/', secure, ...otherOptions } = options;
   let secureOption = secure;
 
-  console.log(
-    options,
-    secureOption,
-    window?.location?.protocol,
-    window?.location?.protocol?.startsWith('https'),
-  );
   try {
     if (secureOption === undefined || secureOption === null) {
       const protocol = window?.location?.protocol ?? 'http';
@@ -17,6 +11,7 @@ export const getCookieOptions = (options = {}) => {
     }
   } catch (e) {
     //window is not defined. It's ssr and we use 'secure' option passed from param
+    secureOption = false;
   }
 
   return {
