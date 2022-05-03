@@ -4,7 +4,12 @@ export const getCookieOptions = (options = {}) => {
   const { path = '/', secure = false, ...otherOptions } = options;
   let secureOption = secure;
 
-  debugger;
+  console.log(
+    options,
+    secureOption,
+    window?.location?.protocol,
+    window?.location?.protocol?.startsWith('https'),
+  );
   try {
     if (secureOption === undefined || secureOption === null) {
       const protocol = window?.location?.protocol ?? 'http';
