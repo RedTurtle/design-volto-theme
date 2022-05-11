@@ -44,9 +44,11 @@ const Metadata = ({
       id="metadata"
       className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
     >
-      <h4 id="header-metadata" className="mb-3">
-        {title || intl.formatMessage(messages.other_info)}
-      </h4>
+      {children && (
+        <h4 id="header-metadata" className="mb-3">
+          {title || intl.formatMessage(messages.other_info)}
+        </h4>
+      )}
       {children}
       <p className="text-serif mb-0 mt-4">
         {intl.formatMessage(messages.modified)}
