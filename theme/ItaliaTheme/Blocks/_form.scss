@@ -1,3 +1,42 @@
+.public-ui {
+  .block.form {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        @extend .active;
+        position: relative;
+
+        order: 1;
+        line-height: 1.3rem;
+        transform: none;
+        white-space: normal;
+
+        &.active {
+          transform: none;
+        }
+      }
+
+      input,
+      textarea,
+      .form-input-file {
+        order: 2;
+      }
+
+      input[type='date'] ~ label {
+        font-size: 0.777rem;
+        transform: none;
+      }
+
+      small.form-text {
+        position: relative;
+        order: 3;
+      }
+    }
+  }
+}
+
 .block.form {
   .block-description {
     margin-bottom: 1rem;
@@ -32,7 +71,6 @@
     > label {
       position: unset;
       margin-bottom: 0;
-      line-height: 1rem;
       line-height: 1.3rem;
       transform: unset;
       white-space: normal;
@@ -125,6 +163,10 @@
       margin: 0;
     }
 
+    .dropzone-placeholder {
+      margin-top: 0;
+    }
+
     .image-preview {
       max-width: 250px;
       max-height: 150px;
@@ -160,6 +202,11 @@
   fieldset[disabled] {
     margin-bottom: 2rem;
   }
+}
+
+.public-ui .form-control:disabled + label,
+.public-ui .form-control[readonly] + label {
+  @extend .active;
 }
 
 .grecaptcha-badge {
