@@ -7,7 +7,7 @@ import { Icon } from '@italia/components/ItaliaTheme';
  * If you have a jpg/png, do like this:
  *
  * <figure className="icon">
- *  <img src={logo} alt="" />
+ *  <img src={logo} alt="" width="" height="" />
  * </figure>
  *
  * Note the icon class.

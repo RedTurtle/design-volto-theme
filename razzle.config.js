@@ -58,7 +58,53 @@ module.exports = Object.assign({}, volto_config, {
       ],
     };
 
+    const TO_WEBP_LOADER = {
+      test: /\.(gif|png|jpe?g)$/i,
+      use: [
+        'file-loader',
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            //bypassOnDebug: true, // webpack@1.x
+            //disable: true, // webpack@2.x and newer //
+
+            //Compress JPEG images
+            mozjpeg: {
+              progressive: true,
+              enabled: false,
+            },
+            //Compress PNG images
+            optipng: {
+              enabled: false,
+            },
+            //Compress PNG images
+            pngquant: {
+              quality: [0.65, 0.9],
+              speed: 4,
+              enabled: false,
+            },
+            //Compress SVG images
+            svgo: {
+              enabled: false,
+            },
+            //Compress GIF images
+            gifsicle: {
+              interlaced: false,
+              enabled: false,
+            },
+            //Compress JPG & PNG images into WEBP. The webp option will enable WEBP
+            webp: {
+              quality: 85,
+              enabled: true,
+            },
+          },
+        },
+      ],
+    };
+
     base_config.module.rules.push(SVG_LOADER);
+
+    base_config.module.rules.push(TO_WEBP_LOADER);
 
     webpackConfig.resolve.alias = {
       ...webpackConfig.resolve.alias,
@@ -76,6 +122,7 @@ module.exports = Object.assign({}, volto_config, {
   },
   plugins: [
     ...(volto_config.plugins || {}),
+
     {
       name: 'scss',
       options: {
