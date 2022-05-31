@@ -4,9 +4,10 @@
  */
 import React from 'react';
 import classNames from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import DesignIcon from './DesignIcon';
 import TelegramSVG from './svg/TelegramSVG';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 const Icon = (props) => {
   const { icon, className, color, size, padding } = props;
@@ -23,18 +24,16 @@ const Icon = (props) => {
     );
 
     const parts = icon.split(' ');
-    return icon.indexOf('it-') === 0 ? (
-      <DesignIcon {...props} className={classes} />
-    ) : icon === 'telegram' ? (
-      <TelegramSVG className={classes} />
-    ) : parts.length > 1 ? (
-      <FontAwesomeIcon
-        icon={[parts[0], parts[1]]}
-        className={`fal ${classes}`}
-      />
-    ) : (
-      <FontAwesomeIcon icon={icon} className={`fal ${classes}`} />
-    );
+
+    if (icon.indexOf('it-') === 0) {
+      return <DesignIcon {...props} className={classes} />;
+    } else if (icon === 'telegram') {
+      return <TelegramSVG className={classes} />;
+    } else if (parts.length > 1) {
+      return <FontAwesomeIcon icon={parts} className={`fal ${classes}`} />;
+    } else {
+      return <FontAwesomeIcon icon={icon} className={`fal ${classes}`} />;
+    }
   }
   return null;
 };
