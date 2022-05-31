@@ -32,13 +32,15 @@ const FontAwesomeIcon = (props) => {
     <svg
       xmlns={loadedIcon.attributes && loadedIcon.attributes.xmlns}
       viewBox={loadedIcon.attributes && loadedIcon.attributes.viewBox}
-      className={className ? `icon fa-icon ${className}` : 'icon fa-icon '}
+      className={`icon fa-icon ${className ?? ''}`}
       dangerouslySetInnerHTML={{
         __html: title
           ? `<title>${title}</title>${loadedIcon.content}`
           : loadedIcon.content,
       }}
     />
+  ) : icon ? (
+    <span className={`icon fa-icon placeholder ${className ?? ''}`}></span>
   ) : (
     <></>
   );

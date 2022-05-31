@@ -251,4 +251,12 @@ iframe {
     width: 1em;
     fill: currentColor;
   }
+
+  .icon.fa-icon.placeholder {
+    //to prevent layout shift
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
 }
