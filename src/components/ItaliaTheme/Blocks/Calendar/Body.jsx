@@ -1,13 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
-import {
-  Card,
-  Row,
-  Col,
-  Container,
-  Button,
-} from 'design-react-kit/dist/design-react-kit';
+import useDeepCompareEffect from 'use-deep-compare-effect';
+
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -15,7 +10,6 @@ import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getCalendarResults, setOriginalQuery } from '@italia/actions';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { viewDate } from '@italia/helpers';
-import useDeepCompareEffect from 'use-deep-compare-effect';
 import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -48,11 +42,13 @@ const Body = ({
   onChangeBlock,
   moment: Moment,
   reactSlick,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const moment = Moment.default;
 
   const Slider = reactSlick.default;
+  const { Card, Row, Col, Container, Button } = designReactKit;
 
   const [activePage, setActivePage] = useState(0);
   const [additionalFilters, setAdditionalFilters] = useState([]);
@@ -340,4 +336,4 @@ const Body = ({
     </div>
   );
 };
-export default injectLazyLibs(['moment', 'reactSlick'])(Body);
+export default injectLazyLibs(['moment', 'reactSlick', 'designReactKit'])(Body);
