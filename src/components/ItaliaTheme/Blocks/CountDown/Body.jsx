@@ -58,11 +58,12 @@ const Body = ({ block, sections, moment: Moment, designReactKit }) => {
               onKeyDown={(e) =>
                 e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
               }
+              aria-label={block.placeholder}
             ></input>
             <button
               className="rounded-right"
               onClick={(e) => navigate(inputText, searchFilters())}
-              title={intl.formatMessage(messages.doSearch)}
+              aria-label={intl.formatMessage(messages.doSearch)}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>
