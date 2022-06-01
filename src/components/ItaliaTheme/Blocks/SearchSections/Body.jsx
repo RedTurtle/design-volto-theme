@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
+import { useIntl, defineMessages } from 'react-intl';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -14,8 +15,16 @@ const navigate = (text, sections) => {
     `/search?SearchableText=${text}&path.query=${sections}`;
 };
 
+const messages = defineMessages({
+  doSearch: {
+    id: 'Search',
+    defaultMessage: 'Cerca',
+  },
+});
+
 const Body = ({ block, sections, designReactKit }) => {
   const history = useHistory();
+  const intl = useIntl();
 
   const [inputText, setInputText] = useState('');
 
@@ -51,6 +60,7 @@ const Body = ({ block, sections, designReactKit }) => {
             <button
               className="rounded-right"
               onClick={(e) => navigate(inputText, searchFilters())}
+              title={intl.formatMessage(messages.doSearch)}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>
