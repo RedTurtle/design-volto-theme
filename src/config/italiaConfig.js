@@ -52,6 +52,7 @@ import bandoSVG from '@italia/icons/bando.svg';
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
 import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
+import { loadables } from '@italia/config/loadables';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
@@ -62,7 +63,7 @@ const iconListBrands = Object.keys(IconsBrands.fab).map(
   (icon) => IconsBrands[icon],
 );
 
-//fontawessome config
+//fontawesome config
 faConfig.autoAddCss = false;
 faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
@@ -131,6 +132,7 @@ export default function applyConfig(voltoConfig) {
       Modulo: faFileDownloadSVG,
       Faq: faQuestionSVG,
     },
+    loadables: { ...config.settings.loadables, ...loadables },
     imageScales: {
       listing: 16,
       icon: 32,
