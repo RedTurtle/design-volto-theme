@@ -1,8 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
-import useDeepCompareEffect from 'use-deep-compare-effect';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Card,
   Row,
@@ -17,6 +15,8 @@ import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getCalendarResults, setOriginalQuery } from '@italia/actions';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { viewDate } from '@italia/helpers';
+import useDeepCompareEffect from 'use-deep-compare-effect';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   insert_filter: {
