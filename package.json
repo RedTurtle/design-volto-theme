@@ -241,7 +241,7 @@
       }
     ],
     "ci": {
-      "trackBranches": ["master", "develop"]
+      "trackBranches": ["master", "develop", "bundlesize"]
     }
   },
   "resolutions": {

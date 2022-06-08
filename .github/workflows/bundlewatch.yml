@@ -15,15 +15,9 @@ jobs:
       with:
         node-version: 14
     - name: Install dependencies
-      run: yarn --frozen-lockfile
+      run: yarn install
       env:
         NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
-
-    - name: Dev requirements
-      run: yarn develop
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
-
     - uses: jackyef/bundlewatch-gh-action@0.2.0
       with:
         build-script: yarn run build
