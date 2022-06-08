@@ -245,7 +245,7 @@
     }
   },
   "resolutions": {
-    "moment": "2.24.0",
+    "moment": "2.29.3",
     "luxon": "1.22.0",
     "lodash": "4.17.21"
   }
