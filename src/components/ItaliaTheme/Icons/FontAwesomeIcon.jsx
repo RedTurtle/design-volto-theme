@@ -17,27 +17,30 @@ const FontAwesomeIcon = (props) => {
 
   const prefixFolder =
     prefixKey === 'fab' ? 'brands' : prefixKey === 'far' ? 'regular' : 'solid';
+
   React.useEffect(() => {
     if (iconName && !loadedIcon) {
       import(
-        `@italia/icons/fontawesome-free-6.1.1-web/svgs/${prefixFolder}/${iconName}.svg`
+        `@italia/icons/fontawesome-free-5.15.4-web/svgs/${prefixFolder}/${iconName}.svg`
       ).then((_loadedIcon) => {
         setLoadedIcon(_loadedIcon);
       });
     }
-  }, []);
+  }, [iconName, loadedIcon, prefixFolder]);
 
   return loadedIcon ? (
     <svg
       xmlns={loadedIcon.attributes && loadedIcon.attributes.xmlns}
       viewBox={loadedIcon.attributes && loadedIcon.attributes.viewBox}
-      className={className ? `icon fa-icon ${className}` : 'icon'}
+      className={`icon fa-icon ${className ?? ''}`}
       dangerouslySetInnerHTML={{
         __html: title
           ? `<title>${title}</title>${loadedIcon.content}`
           : loadedIcon.content,
       }}
     />
+  ) : icon ? (
+    <span className={`icon fa-icon placeholder ${className ?? ''}`}></span>
   ) : (
     <></>
   );
