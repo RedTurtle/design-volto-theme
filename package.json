@@ -230,5 +230,8 @@
   "volta": {
     "node": "12.22.1",
     "yarn": "1.19.1"
+  },
+  "resolutions": {
+    "moment": "2.24.0"
   }
 }
