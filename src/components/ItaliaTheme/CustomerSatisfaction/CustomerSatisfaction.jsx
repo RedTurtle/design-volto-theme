@@ -3,19 +3,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
-import {
-  Button,
-  Input,
-  Progress,
-  Alert,
-} from 'design-react-kit/dist/design-react-kit';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import {
   submitCustomerSatisfaction,
   resetSubmitCustomerSatisfaction,
   GoogleReCaptchaWidget,
 } from 'volto-customer-satisfaction';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { isCmsUi } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -62,7 +57,7 @@ const hashFnv32a = (str, seed) => {
   return ('0000000' + (hval >>> 0).toString(16)).substr(-8);
 };
 
-const CustomerSatisfaction = () => {
+const CustomerSatisfaction = ({ designReactKit }) => {
   const intl = useIntl();
   const location = useLocation();
   const path = location.pathname ?? '/';
@@ -151,6 +146,7 @@ const CustomerSatisfaction = () => {
     unmountOnExit: true,
   };
 
+  const { Button, Input, Progress, Alert } = designReactKit;
   return (
     <div className="customer-satisfaction">
       <h2 id="cs-radiogroup-label">{intl.formatMessage(messages.title)}</h2>
@@ -261,4 +257,4 @@ const CustomerSatisfaction = () => {
   );
 };
 
-export default CustomerSatisfaction;
+export default injectLazyLibs(['designReactKit'])(CustomerSatisfaction);

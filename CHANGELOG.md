@@ -1,3 +1,30 @@
+### [5.22.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.12...v5.22.13) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix image width for documentBody image ([6f54fc2](https://github.com/RedTurtle/design-volto-theme/commit/6f54fc217aa1cf53b5bbf41979aa230b164b79a7))
+
+### [5.22.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.11...v5.22.12) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix slider image width ([6d85bc5](https://github.com/RedTurtle/design-volto-theme/commit/6d85bc5f545bd4231b96880e356aaa9409e5ff48))
+
+### [5.22.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.10...v5.22.11) (2022-05-31)
+
+
+### Bug Fixes
+
+* fixed closing mobile menu from logo ([2e0cfc5](https://github.com/RedTurtle/design-volto-theme/commit/2e0cfc557ac7c643450d82501a4286e5a1f7e780))
+
+
+### Maintenance
+
+* add error 503 page ([b64b5e2](https://github.com/RedTurtle/design-volto-theme/commit/b64b5e2149d7451793f7c3e942aa5177e41aefac))
+* added scheduled bando ([39af85c](https://github.com/RedTurtle/design-volto-theme/commit/39af85c1b1bb0a40362c7d91d8316402f4f4fe83))
+
 ### [5.22.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.9...v5.22.10) (2022-05-24)
 
 

@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
@@ -15,7 +15,14 @@ const navigate = (text, sections) => {
     `/search?SearchableText=${text}&path.query=${sections}`;
 };
 
-const Body = ({ block, sections, moment: Moment }) => {
+const messages = defineMessages({
+  doSearch: {
+    id: 'Search',
+    defaultMessage: 'Cerca',
+  },
+});
+
+const Body = ({ block, sections, moment: Moment, designReactKit }) => {
   const history = useHistory();
   const [inputText, setInputText] = useState('');
 
@@ -34,6 +41,8 @@ const Body = ({ block, sections, moment: Moment }) => {
   const moment = Moment.default;
   moment.locale(intl.locale);
 
+  const { Button } = designReactKit;
+
   return (
     <div className="public-ui searchSections">
       <SearchSectionsBackground />
@@ -49,10 +58,12 @@ const Body = ({ block, sections, moment: Moment }) => {
               onKeyDown={(e) =>
                 e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
               }
+              aria-label={block.placeholder}
             ></input>
             <button
               className="rounded-right"
               onClick={(e) => navigate(inputText, searchFilters())}
+              aria-label={intl.formatMessage(messages.doSearch)}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>
@@ -87,4 +98,4 @@ Body.propTypes = {
   block: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['moment'])(Body);
+export default injectLazyLibs(['moment', 'designReactKit'])(Body);

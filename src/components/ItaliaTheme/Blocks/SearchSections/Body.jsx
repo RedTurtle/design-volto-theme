@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+import { useIntl, defineMessages } from 'react-intl';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
 
@@ -13,8 +15,16 @@ const navigate = (text, sections) => {
     `/search?SearchableText=${text}&path.query=${sections}`;
 };
 
-const Body = ({ block, sections }) => {
+const messages = defineMessages({
+  doSearch: {
+    id: 'Search',
+    defaultMessage: 'Cerca',
+  },
+});
+
+const Body = ({ block, sections, designReactKit }) => {
   const history = useHistory();
+  const intl = useIntl();
 
   const [inputText, setInputText] = useState('');
 
@@ -28,6 +38,8 @@ const Body = ({ block, sections }) => {
   const handleClick = (link) => {
     history.push(flattenToAppURL(link['@id']));
   };
+
+  const { Button } = designReactKit;
 
   return (
     <div className="public-ui searchSections">
@@ -44,10 +56,12 @@ const Body = ({ block, sections }) => {
               onKeyDown={(e) =>
                 e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
               }
+              aria-label={block.placeholder}
             ></input>
             <button
               className="rounded-right"
               onClick={(e) => navigate(inputText, searchFilters())}
+              aria-label={intl.formatMessage(messages.doSearch)}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>
@@ -82,4 +96,4 @@ Body.propTypes = {
   block: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default Body;
+export default injectLazyLibs(['designReactKit'])(Body);
