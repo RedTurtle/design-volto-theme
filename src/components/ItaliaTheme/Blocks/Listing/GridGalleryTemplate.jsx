@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl, defineMessages } from 'react-intl';
 import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 import {
@@ -10,7 +11,6 @@ import {
   Col,
   Alert,
 } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   maxItemsExceeded: {
@@ -50,22 +50,36 @@ const GridGalleryTemplate = ({
           {items.map((item, index) => {
             let image = ListingImage({
               item,
-              useOriginal: true,
+              useOriginal: false,
               className: '',
             });
 
-            if (item[item.image_field]?.scales?.large) {
-              let src = item[item.image_field].scales.large.download;
+            let scale = null;
+            if (index % 7 === 0 || index % 7 === 6) {
+              scale = 'great';
+            }
+            if (index % 7 === 1 || index % 7 === 5) {
+              scale = 'teaser';
+            }
+            if (index % 7 === 2 || index % 7 === 4) {
+              scale = 'large';
+            }
 
+            if (scale) {
               image = (
-                <picture className="volto-image">
+                <picture class="volto-image responsive">
                   <img
-                    src={flattenToAppURL(src)}
-                    alt=""
+                    src={flattenToAppURL(
+                      item['@id'] +
+                        '/@@images/' +
+                        (item.image_field ?? 'image') +
+                        '/' +
+                        scale,
+                    )}
+                    alt={item.title}
                     role="presentation"
-                    loading="lazy"
                     aria-hidden="true"
-                    style={{ width: '100%', 'object-fit': 'cover' }}
+                    title={item.title}
                   />
                 </picture>
               );

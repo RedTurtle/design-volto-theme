@@ -10,6 +10,7 @@ import redraft from 'redraft';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import config from '@plone/volto/registry';
+import { checkRedraftHasContent } from '@italia/helpers';
 
 /**
  * ViewBlock class.
@@ -25,26 +26,26 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
       tag="div"
     >
       <CardBody tag="div">
-        {data.title && (
+        {checkRedraftHasContent(data.title) && (
           <div className="contact-title">
             {redraft(
               data.title,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </div>
         )}
-        {data.text && (
+        {checkRedraftHasContent(data.text) && (
           <div className="contact-text">
             {redraft(
               data.text,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </div>
         )}
 
-        {data.tel && (
+        {checkRedraftHasContent(data.tel) && (
           <div className="contact-info">
             <div className="icon-wrapper">
               <Icon icon="phone-alt" />
@@ -52,14 +53,14 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             <div className="tel">
               {redraft(
                 data.tel,
-                config.settings.ToHTMLRenderers,
-                config.settings.ToHTMLOptions,
+                config.settings.richtextViewSettings.ToHTMLRenderers,
+                config.settings.richtextViewSettings.ToHTMLOptions,
               )}
             </div>
           </div>
         )}
 
-        {data.email && (
+        {checkRedraftHasContent(data.email) && (
           <div className="contact-info">
             <div className="icon-wrapper">
               <Icon icon="envelope" />
@@ -67,8 +68,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             <div className="email">
               {redraft(
                 data.email,
-                config.settings.ToHTMLRenderers,
-                config.settings.ToHTMLOptions,
+                config.settings.richtextViewSettings.ToHTMLRenderers,
+                config.settings.richtextViewSettings.ToHTMLOptions,
               )}
             </div>
           </div>

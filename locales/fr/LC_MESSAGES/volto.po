@@ -222,7 +222,7 @@ msgid "Go to content"
 msgstr "Aller au contenu"
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Grande
 msgid "Grande"
 msgstr ""
 
@@ -272,6 +272,11 @@ msgstr "Paramètres des cookies"
 msgid "In this section"
 msgstr "Dans cette section"
 
+#: components/ItaliaTheme/Blocks/CountDown/Edit
+# defaultMessage: Inserisci il testo…
+msgid "Inserisci il testo…"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Break/Edit
 # defaultMessage: Interruzione di pagina
 msgid "Interruzione di pagina"
@@ -315,7 +320,7 @@ msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Medio
 msgid "Medio"
 msgstr ""
 
@@ -399,7 +404,7 @@ msgid "Percorso path filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Piccolo
 msgid "Piccolo"
 msgstr ""
 
@@ -429,6 +434,12 @@ msgstr "Supprimer le fichier"
 # defaultMessage: Torna su
 msgid "Scroll to top"
 msgstr "Reviens en haut"
+
+#: components/ItaliaTheme/Blocks/CountDown/Body
+#: components/ItaliaTheme/Blocks/SearchSections/Body
+# defaultMessage: Cerca
+msgid "Search"
+msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Risultati della ricerca
@@ -564,7 +575,6 @@ msgid "Type description…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
-#: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
@@ -717,6 +727,11 @@ msgstr ""
 # defaultMessage: Amministrazione
 msgid "amministrazione"
 msgstr "Administration"
+
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Apertura del bando
+msgid "apertura_bando"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 # defaultMessage: APPStore Link
@@ -904,6 +919,7 @@ msgstr "retourner"
 msgid "backToSearch"
 msgstr "Retour à la recherche"
 
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 # defaultMessage: Immagine di sfondo
@@ -958,6 +974,12 @@ msgstr "Actif"
 # defaultMessage: Scadenza partecipazione
 msgid "bando_scadenza"
 msgstr "Date d'expiration"
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+# defaultMessage: Programmato
+msgid "bando_scheduled"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 # defaultMessage: Stato:
@@ -1172,6 +1194,61 @@ msgstr "Coûts"
 # defaultMessage: Costi e vincoli
 msgid "costi_e_vincoli"
 msgstr "Coûts et contraintes"
+
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
+# defaultMessage: Posizione del contatore
+msgid "countDown_countDownPosition"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
+# defaultMessage: Scadenza
+msgid "countDown_endDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
+# defaultMessage: Mostra le ore
+msgid "countDown_showHours"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
+# defaultMessage: Mostra i minuti
+msgid "countDown_showMinutes"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
+# defaultMessage: Mostra i secondi
+msgid "countDown_showSeconds"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
+# defaultMessage: Count down
+msgid "count_down_block"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/CountDown
+# defaultMessage: giorni
+msgid "countdown_days"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/CountDown
+# defaultMessage: Scaduto il
+msgid "countdown_expired"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/CountDown
+# defaultMessage: ore
+msgid "countdown_hours"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/CountDown
+# defaultMessage: minuti
+msgid "countdown_minutes"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CountDown/CountDown
+# defaultMessage: secondi
+msgid "countdown_seconds"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 # defaultMessage: Mostra a pieno schermo
@@ -1863,6 +1940,12 @@ msgstr "Cet événement a plusieurs dates: tout voir"
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore dell'elemento
 msgid "listing_items_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
+# defaultMessage: Premi Invio per caricare il video, poi premi Tab per navigare sul video.
+msgid "loadVideo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
@@ -2799,6 +2882,7 @@ msgstr ""
 msgid "show_ente"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: A tutta larghezza
 msgid "show_full_width"

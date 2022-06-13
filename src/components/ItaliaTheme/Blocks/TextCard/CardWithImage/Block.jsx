@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Card,
   CardBody,
@@ -59,6 +59,7 @@ const Block = ({
   onSelectBlock,
   onAddBlock,
   index,
+  blockIsSelected,
 }) => {
   const intl = useIntl();
   const title = data?.image_card_title?.blocks[0]?.text;
@@ -66,21 +67,36 @@ const Block = ({
   const content = data?.image_card_content;
 
   const [selected, setSelected] = useState('title');
+
   const titleRef = useRef();
   const contentRef = useRef();
+  const wrapperRef = useRef();
+
+  const handleKeydownNothingSelected = (e) => {
+    if (inEditMode) {
+      if (e.key === 'Enter' && !e.shiftKey && !selected && blockIsSelected) {
+        onAddBlock('text', index + 1);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeydownNothingSelected);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeydownNothingSelected);
+    };
+  });
 
   return (
     <div
       className="image-text-card-wrapper"
+      ref={wrapperRef}
       onKeyDown={(e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
-          if (
-            !titleRef.current.contains(e.target) &&
-            !contentRef.current.contains(e.target)
-          ) {
-            this.props.onAddBlock('text', index + 1);
+          if (!selected) {
+            onAddBlock('text', index + 1);
           }
-
           if (titleRef.current.contains(e.target)) {
             setSelected('content');
           }
@@ -109,6 +125,10 @@ const Block = ({
               onSelectBlock={() => {}}
               onAddBlock={() => {
                 setSelected('content');
+              }}
+              nextFocus="content"
+              setFocus={(f) => {
+                setSelected(f);
               }}
               disableMoveToNearest={true}
             />
@@ -168,7 +188,11 @@ const Block = ({
                         showToolbar={true}
                         onSelectBlock={onSelectBlock}
                         onAddBlock={onAddBlock}
+                        prevFocus="title"
                         index={index}
+                        setFocus={(f) => {
+                          setSelected(f);
+                        }}
                         disableMoveToNearest={true}
                       />
                     </CardText>
@@ -200,8 +224,8 @@ const Block = ({
                   <CardText>
                     {redraft(
                       content,
-                      config.settings.ToHTMLRenderers,
-                      config.settings.ToHTMLOptions,
+                      config.settings.richtextViewSettings.ToHTMLRenderers,
+                      config.settings.richtextViewSettings.ToHTMLOptions,
                     )}
                   </CardText>
                 </div>

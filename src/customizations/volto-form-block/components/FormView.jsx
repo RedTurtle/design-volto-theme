@@ -17,6 +17,7 @@ import Field from 'volto-form-block/components/Field';
 import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
 // eslint-disable-next-line import/no-unresolved
 import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   default_submit_label: {
@@ -82,10 +83,23 @@ const FormView = ({
     return formErrors?.indexOf(field) < 0;
   };
 
+  var FieldSchema = config.blocks.blocksConfig.form.fieldSchema;
+  var fieldSchemaProperties = FieldSchema()?.properties;
+  var fields_to_send = [];
+  for (var key in fieldSchemaProperties) {
+    if (fieldSchemaProperties[key].send_to_backend) {
+      fields_to_send.push(key);
+    }
+  }
+
   return (
     <div className="block form">
       <div className="public-ui">
         <div className="p-4">
+          {data?.title && <h2>{data.title}</h2>}
+          {data?.description && (
+            <div className="block-description">{data.description}</div>
+          )}
           <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
             <CardBody tag="div">
               {formState.error ? (
@@ -131,7 +145,11 @@ const FormView = ({
                             <Field
                               {...field}
                               field_type={field.field_type || 'text'}
-                              name={field.label}
+                              name={
+                                'static_field_' +
+                                (field.field_id ??
+                                  field.name?.toLowerCase()?.replace(' ', ''))
+                              }
                               value={field.value}
                               onChange={() => {}}
                               valid
@@ -145,6 +163,14 @@ const FormView = ({
                   )}
                   {data.subblocks.map((subblock, index) => {
                     let name = getFieldName(subblock.label, subblock.id);
+                    var fields_to_send_with_value = Object.assign(
+                      {},
+                      ...fields_to_send.map((field) => {
+                        return {
+                          [field]: subblock[field],
+                        };
+                      }),
+                    );
 
                     return (
                       <Row key={'row' + index}>
@@ -157,7 +183,7 @@ const FormView = ({
                                 subblock.id,
                                 field,
                                 value,
-                                subblock.label,
+                                fields_to_send_with_value,
                               )
                             }
                             value={

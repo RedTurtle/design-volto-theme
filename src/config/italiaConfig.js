@@ -68,7 +68,6 @@ faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
-  // const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
 
   /******************************************************************************
    * SETTINGS
@@ -84,15 +83,24 @@ export default function applyConfig(voltoConfig) {
         'Timeout (n)', //errori di recaptcha nella customer satisfaction
         'Uncaught (in promise) Timeout (n)', //errori di recaptcha nella customer satisfaction
       ],
+      // https://docs.sentry.io/platforms/javascript/data-management/sensitive-data/
+      // beforeSend(event) {
+      //   // Modify the event here (e.g.)
+      //   // if (event.user) {
+      //   //   delete event.user.email;
+      //   // }
+      //  return event;
+      // },
     },
-    // listBlockTypes: listBlockTypes,
     isMultilingual: false,
     supportedLanguages: ['it'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
     showTags: false,
     showSelfRegistration: false,
+    useEmailAsLogin: false,
     defaultPageSize: 24,
+    cookieExpires: 15552000, //6 month
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {

@@ -116,6 +116,9 @@
           img {
             min-width: 100%;
             min-height: 400px;
+            margin-left: 50%;
+            //width: auto;
+            transform: translateX(-50%);
           }
 
           figcaption {
@@ -124,6 +127,11 @@
             font-size: 0.8em;
             text-align: center;
           }
+        }
+
+        .img-placeholder {
+          height: 400px;
+          background-color: rgba(0, 0, 0, 0.15);
         }
 
         .slide-title {
@@ -167,6 +175,7 @@
         margin-left: 0.65rem;
 
         .slide-wrapper {
+          .img-placeholder,
           figure.img-wrapper {
             height: 300px;
 
@@ -222,6 +231,7 @@
 
       .slick-slide {
         .slide-wrapper {
+          .img-placeholder,
           figure.img-wrapper {
             height: 150px;
 

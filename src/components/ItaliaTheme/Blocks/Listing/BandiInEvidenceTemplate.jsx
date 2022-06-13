@@ -40,6 +40,10 @@ const messages = defineMessages({
     id: 'bando_open',
     defaultMessage: 'Attivo',
   },
+  scheduled: {
+    id: 'bando_scheduled',
+    defaultMessage: 'Programmato',
+  },
   closed: {
     id: 'bando_closed',
     defaultMessage: 'Scaduto',
@@ -191,6 +195,9 @@ const BandiInEvidenceTemplate = ({
                             className={cx('bando-state', {
                               open: item.bando_state?.includes('open'),
                               closed: item.bando_state?.includes('closed'),
+                              scheduled: item.bando_state?.includes(
+                                'scheduled',
+                              ),
                               'in-progress': item.bando_state?.includes(
                                 'inProgress',
                               ),
@@ -201,6 +208,15 @@ const BandiInEvidenceTemplate = ({
                         </span>
                       </span>
                     )}
+
+                    {/* Note aggiornamenti */}
+                    {item.update_note &&
+                      (item.bando_state?.includes('open') ||
+                        item.bando_state?.includes('inProgress')) && (
+                        <span className="d-flex bando-note">
+                          <strong>{item.update_note}</strong>
+                        </span>
+                      )}
                   </div>
                   <div className="read-more">
                     <CardReadMore

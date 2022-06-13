@@ -25,7 +25,8 @@
       .description h3,
       .description h4,
       .description h5,
-      .description h6 {
+      .description h6,
+      .description a {
         color: $primary-text;
       }
     }
@@ -122,13 +123,21 @@
 
     .contact-info {
       display: flex;
-      align-items: center;
+
+      &:first-of-type {
+        align-items: center;
+
+        .icon-wrapper {
+          margin-top: 0;
+        }
+      }
 
       &:not(:last-of-type) {
         margin-bottom: 1rem;
       }
 
       .icon-wrapper {
+        margin-top: 0.2rem;
         margin-right: 1rem;
       }
 
@@ -143,6 +152,7 @@
       .tel,
       .email {
         flex: 1 1 auto;
+        word-break: break-word;
 
         .DraftEditor-editorContainer {
           line-height: 1.48em;

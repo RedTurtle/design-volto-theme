@@ -139,6 +139,19 @@ iframe {
       }
     }
   }
+
+  div[class^='draftJsToolbar__toolbar__'] {
+    line-height: 1rem;
+
+    .icon {
+      font-size: 1rem;
+    }
+
+    .ui.input > input {
+      height: auto;
+      font-size: 0.8rem;
+    }
+  }
 }
 
 #text-body {
@@ -161,9 +174,4 @@ iframe {
     margin-right: auto;
     margin-left: auto;
   }
-}
-
-picture.volto-image {
-  display: block;
-  width: 100%;
 }

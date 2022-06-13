@@ -40,8 +40,13 @@ const MapTemplate = ({
     let points = items
       .filter(
         (item) =>
-          (item.latitude !== 0 && item.longitude !== 0) ||
+          (item.latitude &&
+            item.longitude &&
+            item.latitude !== 0 &&
+            item.longitude !== 0) ||
           (item.geolocation && //for backward compatibility. To remove on next release.
+            item.geolocation?.latitude &&
+            item.geolocation?.longitude &&
             item.geolocation?.latitude !== 0 &&
             item.geolocation?.longitude !== 0),
       )
@@ -78,7 +83,15 @@ const MapTemplate = ({
               ['size_' + map_size]: map_size,
             })}
           >
-            <OSMMap markers={markers} showTooltip />
+            <OSMMap
+              markers={markers}
+              showTooltip
+              mapOptions={{
+                scrollWheelZoom: false,
+                // tap: false,
+                // dragging: false,
+              }}
+            />
           </Row>
         ) : (
           intl.formatMessage(messages.no_markers)
