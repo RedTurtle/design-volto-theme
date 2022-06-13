@@ -63,9 +63,9 @@ const PageView = ({ content, token, location, history }) => {
 
     return (
       <>
-        <div id="page-document" className="ui container">
+        <div id="page-document" className="ui container px-4">
           {/*-----Testata-----*/}
-          <Container className="PageHeaderWrapper px-3 px-md-4 mb-4">
+          <Container className="PageHeaderWrapper mb-4">
             <div className="row">
               <div
                 className={cx('title-description-wrapper', {
