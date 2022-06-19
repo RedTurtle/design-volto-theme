@@ -435,6 +435,12 @@ msgstr "Supprimer le fichier"
 msgid "Scroll to top"
 msgstr "Reviens en haut"
 
+#: components/ItaliaTheme/Blocks/CountDown/Body
+#: components/ItaliaTheme/Blocks/SearchSections/Body
+# defaultMessage: Cerca
+msgid "Search"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Risultati della ricerca
 msgid "Search results"
@@ -918,6 +924,11 @@ msgstr "Retour à la recherche"
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 # defaultMessage: Immagine di sfondo
 msgid "backgroundImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Sfondo del blocco
+msgid "background_section"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
@@ -1852,6 +1863,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Immagine per lo sfondo
+msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti

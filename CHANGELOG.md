@@ -1,3 +1,77 @@
+## [5.24.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.4...v5.24.0) (2022-06-17)
+
+
+### Features
+
+* inject HTML in volto-dropdownmenu item title ([35a72fb](https://github.com/RedTurtle/design-volto-theme/commit/35a72fb1a10c763ba08461177d0a5cd0905d9bae))
+
+### [5.23.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.3...v5.23.4) (2022-06-17)
+
+
+### Bug Fixes
+
+* fixed subsite header menu styles ([30d262f](https://github.com/RedTurtle/design-volto-theme/commit/30d262f6d6fb10c0dee12be4eca0eeffca528153))
+
+### [5.23.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.2...v5.23.3) (2022-06-17)
+
+
+### Features
+
+* lobo mobile subsite - headerCenter + Navigation ([9b96030](https://github.com/RedTurtle/design-volto-theme/commit/9b96030cb37da732fc85b1752eee529b785f01a1))
+
+
+### Bug Fixes
+
+* fixed vertical alignment logo ([28ae12a](https://github.com/RedTurtle/design-volto-theme/commit/28ae12a3b80f5574249c5dba9a6c27e7ee97ac06))
+* logo on menu mobile on subsite fixed ([2f32971](https://github.com/RedTurtle/design-volto-theme/commit/2f32971d7774827cfb522e1453b026274b60f0ee))
+* new solution to logo menu mobile subsite ([fab5d34](https://github.com/RedTurtle/design-volto-theme/commit/fab5d34784c21b7aaf043deb1888abe4a06a1c5b))
+
+### [5.23.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.1...v5.23.2) (2022-06-16)
+
+
+### Bug Fixes
+
+* fix video view ([38d23df](https://github.com/RedTurtle/design-volto-theme/commit/38d23dfe17307978bd315fa7fa8571a653cb74ba))
+* small changes on logo sizes, footer links and title ([0e21e7f](https://github.com/RedTurtle/design-volto-theme/commit/0e21e7ff4211c54b2e1eac94f95bcefdcd4261bd))
+
+### [5.23.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.0...v5.23.1) (2022-06-15)
+
+
+### Bug Fixes
+
+* conditional fixed ([0799ca6](https://github.com/RedTurtle/design-volto-theme/commit/0799ca64b0afe730fe3ede29fae703e9b2aacdd2))
+* iconBlock background image path fixed, scales.huge added to components edit/view ([ed2bbba](https://github.com/RedTurtle/design-volto-theme/commit/ed2bbba6d5002e705009c76810ed541ca270a239))
+
+## [5.23.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.13...v5.23.0) (2022-06-15)
+
+
+### Features
+
+* new background option on searchBlock ([9cdc917](https://github.com/RedTurtle/design-volto-theme/commit/9cdc91799f85791238c3e66f05cf3be9adc44f14))
+* new component for background image ([162699e](https://github.com/RedTurtle/design-volto-theme/commit/162699e8dbaaafce653b390e65bd27405c01ac04))
+* searchSections block with image background selection ([9e3e0c1](https://github.com/RedTurtle/design-volto-theme/commit/9e3e0c144e381ee2c03c2b68916ea8f7551d35c9))
+
+
+### Bug Fixes
+
+* ay11 styles ([d6f25e5](https://github.com/RedTurtle/design-volto-theme/commit/d6f25e52722d864ce61d728c83d838f2ab26d504))
+* fix ay11 search ([3098ac3](https://github.com/RedTurtle/design-volto-theme/commit/3098ac32bb8e19e9e41498b0bc1931c6c71141a9))
+* fix searchSeactions bg ([2d9cec6](https://github.com/RedTurtle/design-volto-theme/commit/2d9cec6c8270d83c140e0510f2fd2f25ee5912f2))
+
+### [5.22.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.12...v5.22.13) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix image width for documentBody image ([6f54fc2](https://github.com/RedTurtle/design-volto-theme/commit/6f54fc217aa1cf53b5bbf41979aa230b164b79a7))
+
+### [5.22.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.11...v5.22.12) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix slider image width ([6d85bc5](https://github.com/RedTurtle/design-volto-theme/commit/6d85bc5f545bd4231b96880e356aaa9409e5ff48))
+
 ### [5.22.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.10...v5.22.11) (2022-05-31)
 
 
