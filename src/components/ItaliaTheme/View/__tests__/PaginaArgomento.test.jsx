@@ -1,16 +1,18 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen, waitForElement } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import PaginaArgomentoView from '../PaginaArgomentoView/PaginaArgomentoView';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
+import thunk from 'redux-thunk';
 
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
 jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
 
-const mockStore = configureStore();
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
 
 const mock_mandatory = {
   '@id': 'http://loremipsum.it/cultura',
@@ -230,7 +232,7 @@ const store = mockStore({
       'http://loremipsum.it/siet_office': {
         data: {
           '@id': 'http://office_link.it',
-          title: 'Test 1',
+          title: 'Nome area di appartenenza',
           description: 'office description',
           city: 'office city',
           zipcode: 'office zip code',
@@ -240,7 +242,7 @@ const store = mockStore({
       'http://loremipsum.it/collegamenti_organizzazione_l1_office': {
         data: {
           '@id': 'http://office_link.it',
-          title: 'Test 2',
+          title: 'Assessorato di riferimento',
           description: 'office description',
           city: 'office city',
           zipcode: 'office zip code',
@@ -291,64 +293,49 @@ test('expect to have all mandatory fields in page', async () => {
   expect(getByText(/Cultura e spettacolo/i)).toBeInTheDocument();
   // description
   expect(getByText(/Lorem descrizione ipsum/i)).toBeInTheDocument();
-  // box aiuto
   expect(getByText(/BoxUlterioriInfo/i)).toBeInTheDocument();
-
-  // area_appartenenza
-
-  // var evt = document.createEvent('Event');
-  // TypeError: Cannot read property 'createEvent' of null
-  // const area_appartenenza = await waitForElement(() => getByText(/Test 1/i));
-  // expect(area_appartenenza).toBeInTheDocument();
-
-  // // assessorati_riferimento
-  // const assessorati_riferimento = await waitForElement(() =>
-  //   getByText(/Test 2/i),
-  // );
-  // expect(assessorati_riferimento).toBeInTheDocument();
-
-  // // related uo
-  // const related_uo = await waitForElement(() => getByText(/Amministrazione/i));
-  // expect(related_uo).toBeInTheDocument();
+  expect(
+    await screen.findByText('Nome area di appartenenza'),
+  ).toBeInTheDocument();
+  expect(
+    await screen.findByText('Assessorato di riferimento'),
+  ).toBeInTheDocument();
+  // related uo
+  expect(await screen.findByText('Amministrazione')).toBeInTheDocument();
 });
 
-// TypeError: Cannot read property 'imagePosition' of undefined
-// 13 |   const view =
-// 14 |     (content?.image || content?.image_caption) &&
-// > 15 |     config.settings.italiaThemeViewsConfig.imagePosition === position;
+test('expect to have all fields in page', async () => {
+  const { getByText, getByAltText } = render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <PaginaArgomentoView content={mock_allfields} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  // image
+  expect(getByAltText(/Caption immagine/i)).toBeInTheDocument();
+  // image_caption
+  expect(getByText(/Caption immagine/i)).toBeInTheDocument();
 
-// test('expect to have all fields in page', async () => {
-//   const { getByText, getByAltText } = render(
-//     <Provider store={store}>
-//       <MemoryRouter>
-//         <PaginaArgomentoView content={mock_allfields} />
-//       </MemoryRouter>
-//     </Provider>,
-//   );
-//   // image
-//   expect(getByAltText(/Caption immagine/i)).toBeInTheDocument();
-//   // image_caption
-//   expect(getByText(/Caption immagine/i)).toBeInTheDocument();
+  // relatedItems
+  // const related_items = await waitForElement(() =>
+  //   getByText(/Pagina Related/i),
+  // );
+  // expect(related_items).toBeInTheDocument();
 
-//   // relatedItems
-//   const related_items = await waitForElement(() =>
-//     getByText(/Pagina Related/i),
-//   );
-//   expect(related_items).toBeInTheDocument();
+  // related news
+  expect(getByText(/Novità/i)).toBeInTheDocument();
 
-//   // related news
-//   expect(getByText(/Novità/i)).toBeInTheDocument();
+  // related doc
+  // const related_doc = await waitForElement(() => getByText(/Pagina doc/i));
+  // expect(related_doc).toBeInTheDocument();
 
-//   // // related doc
-//   const related_doc = await waitForElement(() => getByText(/Pagina doc/i));
-//   expect(related_doc).toBeInTheDocument();
-
-//   // related service
-//   const related_service = await waitForElement(() =>
-//     getByText(/Pagina Servizio/i),
-//   );
-//   expect(related_service).toBeInTheDocument();
-// });
+  // related service
+  // const related_service = await waitForElement(() =>
+  //   getByText(/Pagina Servizio/i),
+  // );
+  // expect(related_service).toBeInTheDocument();
+});
 
 // TypeError: Cannot read property 'items' of undefined
 // 32 |   const dispatch = useDispatch();
