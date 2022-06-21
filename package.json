@@ -46,7 +46,9 @@
     "postinstall": "yarn omelette",
     "omelette": "ln -sf node_modules/@plone/volto/ omelette",
     "build": "razzle build",
-    "test": "razzle test --env=jsdom --passWithNoTests",
+    "test": "razzle test --env=jest-environment-jsdom-sixteen --maxWorkers=1",
+    "test:ci": "CI=true NODE_ICU_DATA=node_modules/full-icu razzle test --env=jest-environment-jsdom-sixteen",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
     "start:prod": "NODE_ENV=production node build/server.js",
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n",
     "release": "release-it --disable-metrics",
@@ -55,7 +57,7 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.js(x)?$": "babel-jest",
+      "\\.[jt]sx?$": "babel-jest",
       "^.+\\.css$": "jest-css-modules",
       "^.+\\.scss$": "jest-css-modules",
       "^.+\\.(png)$": "jest-file",
@@ -63,17 +65,14 @@
       "^.+\\.(svg)$": "./node_modules/@plone/volto/jest-svgsystem-transform.js"
     },
     "transformIgnorePatterns": [
-      "/node_modules/(?!@plone/volto).+\\.js$"
     ],
     "moduleNameMapper": {
-      "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
-      "@italia/(.*)$": "<rootDir>/src/$1",
+      "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@package/config": "<rootDir>/jest-addons-loader.js",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
       "volto-dropdownmenu/(.*)$": "<rootDir>/src/addons/volto-dropdownmenu/src/$1",
-      "~/(.*)$": "<rootDir>/src/$1",
       "volto-subsites/(.*)$": "<rootDir>/src/addons/volto-subsites/src/$1",
       "volto-social-settings/(.*)$": "<rootDir>/src/addons/volto-social-settings/src/$1",
       "volto-editablefooter/(.*)$": "<rootDir>/src/addons/volto-editablefooter/src/$1",
@@ -83,7 +82,11 @@
       "volto-form-block/(.*)$": "<rootDir>/src/addons/volto-form-block/src/$1",
       "volto-subfooter/(.*)$": "<rootDir>/src/addons/volto-subfooter/src/$1",
       "volto-customer-satisfaction/(.*)$": "<rootDir>/src/addons/volto-customer-satisfaction/src/$1",
-      "volto-gdpr-privacy/(.*)$": "<rootDir>/src/addons/volto-gdpr-privacy/src/$1"
+      "volto-gdpr-privacy/(.*)$": "<rootDir>/src/addons/volto-gdpr-privacy/src/$1",
+      "@italia/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
+      "~/(.*)$": "<rootDir>/src/$1",
+      "@root/(.*)$": "<rootDir>/src/$1",
+      "@italia/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
@@ -101,8 +104,10 @@
     },
     "setupFiles": [
       "@plone/volto/test-setup-globals.js",
-      "@plone/volto/test-setup-config.js"
+      "@plone/volto/test-setup-config.js",
+      "./test-setup-config.js"
     ],
+    "globalSetup": "@plone/volto/global-test-setup.js",
     "globals": {
       "__DEV__": true
     }
@@ -232,16 +237,20 @@
     "node": "12.22.1",
     "yarn": "1.19.1"
   },
-  "bundlewatch" : {
+  "bundlewatch": {
     "files": [
       {
         "path": "build/public/static/js/*.js",
-	"normalizeFilenames": "^.+?(\\..+?)\\.\\w+$",
+        "normalizeFilenames": "^.+?(\\..+?)\\.\\w+$",
         "maxSize": "2000kB"
       }
     ],
     "ci": {
-      "trackBranches": ["master", "develop", "bundlesize"]
+      "trackBranches": [
+        "master",
+        "develop",
+        "bundlesize"
+      ]
     }
   },
   "resolutions": {
