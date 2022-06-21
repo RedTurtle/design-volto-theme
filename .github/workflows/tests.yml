@@ -7,7 +7,8 @@ jobs:
     timeout-minutes: 45
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [14.x]
+        # node-version: [14.x, 16.x]
     steps:
       - uses: actions/checkout@v2
 
