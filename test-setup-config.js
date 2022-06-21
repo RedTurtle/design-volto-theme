@@ -1,6 +1,7 @@
 import config from '@plone/volto/registry';
 
 config.set('settings', {
+  ...config.settings,
   publicURL: 'http://localhost:3000',
   italiaThemeViewsConfig: {
     imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
@@ -19,5 +20,4 @@ config.set('settings', {
     great: 1200,
     huge: 1600,
   },
-  ...config.settings,
 });

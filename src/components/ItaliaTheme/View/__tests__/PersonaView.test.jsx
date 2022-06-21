@@ -1,12 +1,18 @@
-// import React from 'react';
-// import { render, waitForElement } from '@testing-library/react';
+import React from 'react';
+import { render, screen, waitForElement } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-// import PersonaView from '../PersonaView/PersonaView';
+import PersonaView from '../PersonaView/PersonaView';
 import configureStore from 'redux-mock-store';
-// import { Provider } from 'react-intl-redux';
-// import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-intl-redux';
+import { MemoryRouter } from 'react-router-dom';
+import thunk from 'redux-thunk';
 
-const mockStore = configureStore();
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
+
+// Warning: An update to Icon inside a test was not wrapped in act(...).
+// When testing, code that causes React state updates should be wrapped into act(...):
+jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
 
 const mock_mandatory = {
   '@type': 'Persona',
@@ -15,7 +21,10 @@ const mock_mandatory = {
     token: 'politica',
   },
   title: 'Aguzzoli Claudia Dana',
-  ruolo: 'Consigliere comunale',
+  ruolo: {
+    title: 'Consigliere comunale',
+  },
+  items: [],
   organizzazione_riferimento: [
     {
       '@id': 'http://loremipsum.it/siet',
@@ -81,7 +90,7 @@ const mock_allfields = {
   },
   description: 'Lorem ipsum description',
   effective: '2020-02-16T11:49:00',
-  email: 'lucabel@redturtle.it',
+  email: ['lucabel@redturtle.it'],
   exclude_from_nav: false,
   expires: null,
   foto_persona: {
@@ -151,7 +160,7 @@ const mock_allfields = {
       title: 'Unità organizzativa di riferimento',
     },
   ],
-  telefono: '3459988767',
+  telefono: ['3459988767'],
   ulteriori_informazioni: {
     'content-type': 'text/html',
     data: '<p>Ulteriori informazioni text</p>',
@@ -166,15 +175,18 @@ const mock_allfields = {
     {
       '@id': 'http://loremipsum.it/aguzzoli-claudia-dana/compensi',
       id: 'compensi',
+      has_children: true,
     },
     {
       '@id':
         'http://loremipsum.it/aguzzoli-claudia-dana/importi-di-viaggio-e-o-servizi',
       id: 'importi-di-viaggio-e-o-servizi',
+      has_children: true,
     },
     {
       '@id': 'http://loremipsum.it/aguzzoli-claudia-dana/altre-cariche',
       id: 'altre-cariche',
+      has_children: true,
     },
     {
       '@id':
@@ -343,186 +355,172 @@ const store = mockStore({
   },
 });
 
-// test('expect to have all mandatory fields in page', async () => {
-//   const { getByText } = render(
-//     <Provider store={store}>
-//       <MemoryRouter>
-//         <PersonaView content={mock_mandatory} />
-//       </MemoryRouter>
-//     </Provider>,
-//   );
-//   // title
-//   expect(getByText(/Aguzzoli Claudia Dana/i)).toBeInTheDocument();
+test('expect to have all mandatory fields in page', async () => {
+  const { getByText } = render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <PersonaView content={mock_mandatory} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  // title
+  expect(getByText(/Aguzzoli Claudia Dana/i)).toBeInTheDocument();
 
-//   // role
-//   expect(getByText(/Consigliere comunale/i)).toBeInTheDocument();
+  // role
+  // expect(getByText(/Consigliere comunale/i)).toBeInTheDocument();
 
-//   // tipologia persona
-//   expect(getByText(/Tipologia di persona: Politica/i)).toBeInTheDocument();
+  // tipologia persona
+  // expect(getByText(/Tipologia di persona: Politica/i)).toBeInTheDocument();
 
-//   // organizzazione di riferimento
-//   const organizzazione_riferimento = await waitForElement(() =>
-//     getByText(/SIET/i),
-//   );
-//   expect(organizzazione_riferimento).toBeInTheDocument();
+  // organizzazione di riferimento
+  const organizzazione_riferimento = await waitForElement(() =>
+    getByText(/SIET/i),
+  );
+  expect(organizzazione_riferimento).toBeInTheDocument();
 
-//   // collegamenti_organizzazione_l1
-//   const collegamenti_organizzazione_l1 = await waitForElement(() =>
-//     getByText(/Unità organizzativa di primo livello/i),
-//   );
-//   expect(collegamenti_organizzazione_l1).toBeInTheDocument();
+  // expect(
+  //   await screen.findByText('Unità organizzativa di primo livello'),
+  // ).toBeInTheDocument();
 
-//   // collegamenti_organizzazione_l2
-//   const collegamenti_organizzazione_l2 = await waitForElement(() =>
-//     getByText(/Unità organizzativa di secondo livello/i),
-//   );
-//   expect(collegamenti_organizzazione_l2).toBeInTheDocument();
-// });
+  // expect(
+  //   await screen.findByText('Unità organizzativa di secondo livello'),
+  // ).toBeInTheDocument();
+});
 
-// test('Checks all field when we have filled up mock', async () => {
-//   const { getByText, getByAltText } = render(
-//     <Provider store={store}>
-//       <MemoryRouter>
-//         <PersonaView content={mock_allfields} />
-//       </MemoryRouter>
-//     </Provider>,
-//   );
+test('Checks all field when we have filled up mock', async () => {
+  const { getByText, getByAltText } = render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <PersonaView content={mock_allfields} />
+      </MemoryRouter>
+    </Provider>,
+  );
 
-//   // atto_nomina
-//   expect(getByText(/Atto di nomina/i)).toBeInTheDocument();
+  // atto_nomina
+  expect(getByText(/Atto di nomina/i)).toBeInTheDocument();
 
-//   // biografia
-//   expect(getByText(/Ruolo\/Biografia/i)).toBeInTheDocument();
+  // biografia
+  // expect(getByText(/Ruolo\/Biografia/i)).toBeInTheDocument();
 
-//   // competenze
-//   expect(getByText(/Competenze/i)).toBeInTheDocument();
+  // competenze
+  expect(getByText(/Competenze/i)).toBeInTheDocument();
 
-//   // curriculum_vitae
-//   expect(getByText(/Curriculum vitae/i)).toBeInTheDocument();
+  // curriculum_vitae
+  expect(getByText(/Curriculum vitae/i)).toBeInTheDocument();
 
-//   // data_insediamento
-//   expect(getByText(/Data di insediamento/i)).toBeInTheDocument();
-//   expect(getByText(/12-03-2020/i)).toBeInTheDocument();
+  // data_insediamento
+  expect(getByText(/Data di insediamento/i)).toBeInTheDocument();
+  expect(getByText(/12-03-2020/i)).toBeInTheDocument();
 
-//   // deleghe
-//   expect(getByText(/Deleghe/i)).toBeInTheDocument();
+  // deleghe
+  expect(getByText(/Deleghe/i)).toBeInTheDocument();
 
-//   // description
-//   expect(getByText(/Lorem ipsum description/i)).toBeInTheDocument();
+  // description
+  expect(getByText(/Lorem ipsum description/i)).toBeInTheDocument();
 
-//   // contatti: email, telefono, Contatti, informazioni_di_contatto
-//   expect(getByText(/Contatti/i)).toBeInTheDocument();
-//   expect(getByText(/lucabel@redturtle.it/i)).toBeInTheDocument();
-//   expect(getByText(/3459988767/i)).toBeInTheDocument();
-//   expect(getByText(/Altre informazioni di contatto/i)).toBeInTheDocument();
+  // contatti: email, telefono, Contatti, informazioni_di_contatto
+  // expect(getByText(/Contatti/i)).toBeInTheDocument();
+  expect(getByText(/lucabel@redturtle.it/i)).toBeInTheDocument();
+  expect(getByText(/3459988767/i)).toBeInTheDocument();
+  // expect(getByText(/Altre informazioni di contatto/i)).toBeInTheDocument();
 
-//   // foto_persona
-//   expect(getByAltText(/Aguzzoli Claudia Dana/i)).toBeInTheDocument();
+  // foto_persona
+  expect(getByAltText(/Aguzzoli Claudia Dana/i)).toBeInTheDocument();
 
-//   // responsabile_di
-//   expect(getByText(/Responsabile di/i)).toBeInTheDocument();
+  //   // responsabile_di
+  //   expect(getByText(/Responsabile di/i)).toBeInTheDocument();
 
-//   // ulteriori_informazioni
-//   expect(getByText(/Ulteriori informazioni text/i)).toBeInTheDocument();
-// });
+  // ulteriori_informazioni
+  expect(getByText(/Ulteriori informazioni text/i)).toBeInTheDocument();
+});
 
-// test('Specific fields not in page if data_conclusione_incarico compiled', async () => {
-//   const { getByText, queryByText } = render(
-//     <Provider store={store}>
-//       <MemoryRouter>
-//         <PersonaView content={mock_allfields_and_fine_rapporto} />
-//       </MemoryRouter>
-//     </Provider>,
-//   );
+test('Specific fields not in page if data_conclusione_incarico compiled', async () => {
+  const { getByText, queryByText } = render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <PersonaView content={mock_allfields_and_fine_rapporto} />
+      </MemoryRouter>
+    </Provider>,
+  );
 
-//   // data_insediamento
-//   expect(queryByText('Data di insediamento:')).toBeNull();
+  // data_insediamento
+  expect(queryByText('Data di insediamento:')).toBeNull();
+  // biografia
+  expect(queryByText('Ruolo/Biografia')).toBeNull();
+  // organizzazione_riferimento
+  // Come può andare bene un test del genere? come verifico un elemento che non
+  // comparirà?
+  expect(queryByText('SIET')).toBeNull();
+  //responsabile_di
+  expect(queryByText('Responsabile di')).toBeNull();
+  // collegamenti_organizzazione_l1
+  // Come può andare bene un test del genere? come verifico un elemento che non
+  // comparirà?
+  expect(queryByText('Unità organizzativa di primo livello')).toBeNull();
+  // collegamenti_organizzazione_l2
+  // Come può andare bene un test del genere? come verifico un elemento che non
+  // comparirà?
+  expect(queryByText('Unità organizzativa di secondo livello')).toBeNull();
 
-//   // biografia
-//   expect(queryByText('Ruolo/Biografia')).toBeNull();
+  // competenze
+  expect(queryByText('Competenze')).toBeNull();
+  // deleghe
+  expect(queryByText('Deleghe')).toBeNull();
+  // data_conclusione_incarico
+  expect(
+    getByText(/Ha fatto parte dell'organizzazione comunale fino al/i),
+  ).toBeInTheDocument();
+});
 
-//   // organizzazione_riferimento
-//   // Come può andare bene un test del genere? come verifico un elemento che non
-//   // comparirà?
-//   expect(queryByText('SIET')).toBeNull();
+test('Check parts loaded from child folders', async () => {
+  render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <PersonaView content={mock_allfields} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  // Gallery
+  // const gallery = await waitForElement(() =>
+  //   getByText(/Galleria di immagini/i),
+  // );
+  // expect(gallery).toBeInTheDocument();
 
-//   //responsabile_di
-//   expect(queryByText('Responsabile di')).toBeNull();
+  // compensi
+  expect(await screen.findByText('Compensi')).toBeInTheDocument();
 
-//   // collegamenti_organizzazione_l1
-//   // Come può andare bene un test del genere? come verifico un elemento che non
-//   // comparirà?
-//   expect(queryByText('Unità organizzativa di primo livello')).toBeNull();
+  // importi_di_viaggio_e_o_servizi
+  expect(
+    await screen.findByText('Importi di viaggio e/o servizi'),
+  ).toBeInTheDocument();
 
-//   // collegamenti_organizzazione_l2
-//   // Come può andare bene un test del genere? come verifico un elemento che non
-//   // comparirà?
-//   expect(queryByText('Unità organizzativa di secondo livello')).toBeNull();
+  // altre-cariche
+  expect(await screen.findByText('Altre cariche')).toBeInTheDocument();
 
-//   // competenze
-//   expect(queryByText('Competenze')).toBeNull();
+  // situazione-patrimoniale
+  // const situazione_patrimoniale = await waitForElement(() =>
+  //   getByText(/Situazione patrimoniale/),
+  // );
+  // expect(situazione_patrimoniale).toBeInTheDocument();
 
-//   // deleghe
-//   expect(queryByText('Deleghe')).toBeNull();
+  // dichiarazione-dei-redditi
+  // const dichiarazione_dei_redditi = await waitForElement(() =>
+  //   getByText(/Dichiarazione dei redditi/i),
+  // );
+  // expect(dichiarazione_dei_redditi).toBeInTheDocument();
 
-//   // data_conclusione_incarico
-//   expect(
-//     getByText(/Ha fatto parte dell'organizzazione comunale fino al/i),
-//   ).toBeInTheDocument();
-// });
+  // spese-elettorali
+  // const spese_elettorali = await waitForElement(() =>
+  //   getByText(/Spese elettorali/i),
+  // );
+  // expect(spese_elettorali).toBeInTheDocument();
 
-// test('Check parts loaded from child folders', async () => {
-//   const { getByText } = render(
-//     <Provider store={store}>
-//       <MemoryRouter>
-//         <PersonaView content={mock_allfields} />
-//       </MemoryRouter>
-//     </Provider>,
-//   );
-//   // Gallery
-//   const gallery = await waitForElement(() =>
-//     getByText(/Galleria di immagini/i),
-//   );
-//   expect(gallery).toBeInTheDocument();
-
-//   // compensi
-//   const compensi = await waitForElement(() => getByText(/Compensi/i));
-//   expect(compensi).toBeInTheDocument();
-
-//   // importi_di_viaggio_e_o_servizi
-//   const importi = await waitForElement(() =>
-//     getByText(/Importi di viaggio e\/o servizi/i),
-//   );
-//   expect(importi).toBeInTheDocument();
-
-//   // altre-cariche
-//   const altre_cariche = await waitForElement(() => getByText(/Altre cariche/i));
-//   expect(altre_cariche).toBeInTheDocument();
-
-//   // situazione-patrimoniale
-//   const situazione_patrimoniale = await waitForElement(() =>
-//     getByText(/Situazione patrimoniale/),
-//   );
-//   expect(situazione_patrimoniale).toBeInTheDocument();
-
-//   // dichiarazione-dei-redditi
-//   const dichiarazione_dei_redditi = await waitForElement(() =>
-//     getByText(/Dichiarazione dei redditi/i),
-//   );
-//   expect(dichiarazione_dei_redditi).toBeInTheDocument();
-
-//   // spese-elettorali
-//   const spese_elettorali = await waitForElement(() =>
-//     getByText(/Spese elettorali/i),
-//   );
-//   expect(spese_elettorali).toBeInTheDocument();
-
-//   // situazione-patrimoniale
-//   const valutazione_situazione_patrimoniale = await waitForElement(() =>
-//     getByText(/Valutazione situazione patrimoniale/i),
-//   );
-//   expect(valutazione_situazione_patrimoniale).toBeInTheDocument();
-// });
+  // situazione-patrimoniale
+  // const valutazione_situazione_patrimoniale = await waitForElement(() =>
+  //   getByText(/Valutazione situazione patrimoniale/i),
+  // );
+  // expect(valutazione_situazione_patrimoniale).toBeInTheDocument();
+});
 
 test('todo', () => {
   expect(store).toBeDefined();

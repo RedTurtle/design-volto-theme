@@ -48,6 +48,7 @@
     "build": "razzle build",
     "test": "razzle test --env=jest-environment-jsdom-sixteen --maxWorkers=1",
     "test:ci": "CI=true NODE_ICU_DATA=node_modules/full-icu razzle test --env=jest-environment-jsdom-sixteen",
+    "test:coverage": "razzle test --env=jest-environment-jsdom-sixteen --coverage",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
     "start:prod": "NODE_ENV=production node build/server.js",
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n",
@@ -93,6 +94,11 @@
       "**/__tests__/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)",
       "!**/src/addons/volto/**/*",
+      "!**/src/addons/**/*"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "./src/**",
       "!**/src/addons/**/*"
     ],
     "coverageThreshold": {

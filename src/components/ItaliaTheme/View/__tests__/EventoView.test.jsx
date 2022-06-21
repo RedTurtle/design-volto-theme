@@ -5,8 +5,10 @@ import '@testing-library/jest-dom/extend-expect';
 import configureStore from 'redux-mock-store';
 // import { Provider } from 'react-intl-redux';
 // import { MemoryRouter } from 'react-router-dom';
+import thunk from 'redux-thunk';
 
-const mockStore = configureStore();
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
 
 const mock_mandatory = {
   '@id': 'http://loremipsum.com/events/altro-eventone',
