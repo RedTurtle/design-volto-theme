@@ -1,4 +1,3 @@
-import React from 'react';
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
@@ -43,6 +42,7 @@ import bandoSVG from '@italia/icons/bando.svg';
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
 import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
+import { loadables } from '@italia/config/loadables';
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -109,6 +109,7 @@ export default function applyConfig(voltoConfig) {
       Modulo: faFileDownloadSVG,
       Faq: faQuestionSVG,
     },
+    loadables: { ...config.settings.loadables, ...loadables },
     imageScales: {
       listing: 16,
       icon: 32,
@@ -189,6 +190,7 @@ export default function applyConfig(voltoConfig) {
       },
       enableCustomerSatisfaction: true,
       splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
+      footerNavigationDepth: 2, //valori possibili: [1,2]. Se impostato ad 1 non verranno mostrati nel footer i link agli elementi contenuti nelle sezioni di primo livello.
     },
     'volto-blocks-widget': {
       allowedBlocks: [
@@ -283,6 +285,10 @@ export default function applyConfig(voltoConfig) {
     },
     hero: {
       ...config.blocks.blocksConfig.hero,
+      sidebarTab: 1,
+    },
+    html: {
+      ...config.blocks.blocksConfig.html,
       sidebarTab: 1,
     },
     rssBlock,

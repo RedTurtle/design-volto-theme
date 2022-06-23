@@ -1936,9 +1936,9 @@
     pofile "1.0.10"
     razzle "3.4.5"
 
-"@plone/volto@plone/volto#12cb285c20bd23568cc0f778a84d685d0504e719":
+"@plone/volto@plone/volto#f4cfbd09f7c653a03acdb3f43dca5ff386c25a29":
   version "15.10.1"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/12cb285c20bd23568cc0f778a84d685d0504e719"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/f4cfbd09f7c653a03acdb3f43dca5ff386c25a29"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -17808,9 +17808,9 @@ volto-blocks-widget@collective/volto-blocks-widget#v2.1.0:
   dependencies:
     "@plone/scripts" "*"
 
-volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.9:
-  version "0.2.9"
-  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/2cbff2a8ea063f5780174e9896f17f45627f01f8"
+volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.11:
+  version "0.2.11"
+  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/f47bf0e68097be07f61555d9f83f8bdad572eda1"
   dependencies:
     "@plone/scripts" "*"
     react-google-recaptcha-v3 "1.9.5"
@@ -17829,15 +17829,15 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v4.1.1:
     "@plone/scripts" "^1.0.3"
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v2.3.2:
-  version "2.3.2"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/c6c0ce357c91a29e6fb1d45707cf63779aff309c"
+volto-form-block@collective/volto-form-block#v2.3.6:
+  version "2.3.6"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/2fb44ee2de12d1aba24cb2e9302e42d9b9128076"
   dependencies:
     "@hcaptcha/react-hcaptcha" "^0.3.6"
     "@plone/scripts" "^1.0.3"
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
-    volto-subblocks collective/volto-subblocks#v1.0.1
+    volto-subblocks collective/volto-subblocks#v1.2.3
 
 volto-gdpr-privacy@collective/volto-gdpr-privacy#v1.3.8:
   version "1.3.8"
@@ -17856,9 +17856,9 @@ volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.4:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-rss-block@redturtle/volto-rss-block#v2.3.0:
-  version "2.3.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/34df7c269aca433618f94aa45e790bd589de850b"
+volto-rss-block@redturtle/volto-rss-block#v2.3.2:
+  version "2.3.2"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/162d11bcb85089468ea55e1f85769dbef628c1a7"
   dependencies:
     "@plone/scripts" "*"
     rss-parser "3.7.5"
@@ -17875,16 +17875,9 @@ volto-social-settings@collective/volto-social-settings#v2.2.0:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-subblocks@collective/volto-subblocks#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
-  dependencies:
-    react-dnd "^5.0.0"
-    react-dnd-html5-backend "^5.0.1"
-
-volto-subblocks@collective/volto-subblocks#v1.2.0:
-  version "1.2.0"
-  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/e2968416c5a94db09c26e0851247c8913d3cc801"
+volto-subblocks@collective/volto-subblocks#v1.2.3:
+  version "1.2.3"
+  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/a57c83c54678ee6423945a5247dfa5cc9e53ca3d"
   dependencies:
     "@plone/scripts" "^1.0.3"
     react-dnd "^5.0.0"
