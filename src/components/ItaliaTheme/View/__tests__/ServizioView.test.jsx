@@ -114,7 +114,12 @@ const mock_other_fields = {
     data: "<p>Indicazioni d'uso del servizio</p>",
     encoding: 'utf-8',
   },
-  canale_digitale: 'https://www.loremipsum.com/canale_digitale',
+  canale_digitale: {
+    'content-type': 'text/html',
+    data:
+      "<p><a href='https://www.loremipsum.com/canale_digitale'>https://www.loremipsum.com/canale_digitale</a></p>",
+    encoding: 'utf-8',
+  },
   canale_fisico_prenotazione: 'Canale fisicio di prenotazione del servizio',
   casi_particolari: {
     'content-type': 'text/html',
@@ -304,7 +309,7 @@ const store = mockStore({
 });
 
 test('expect to have all mandatory fields in page', async () => {
-  const { getByText, queryAllByText } = render(
+  const { getByText /*, queryAllByText*/ } = render(
     <Provider store={store}>
       <MemoryRouter>
         <ServizioView content={mock_mandatory} />
@@ -425,19 +430,19 @@ test('expect to have all fields in page', async () => {
   ).toBeInTheDocument();
 });
 
-test('Check parts loaded from child folders', async () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <MemoryRouter>
-        <ServizioView content={mock_other_fields} />
-      </MemoryRouter>
-    </Provider>,
-  );
-  // const modulistica = await waitForElement(() => getByText(/Modulistica/i));
-  // expect(modulistica).toBeInTheDocument();
-  // const allegati = await waitForElement(() => getByText(/Allegati/i));
-  // expect(allegati).toBeInTheDocument();
-});
+// test('Check parts loaded from child folders', async () => {
+//   const { getByText } = render(
+//     <Provider store={store}>
+//       <MemoryRouter>
+//         <ServizioView content={mock_other_fields} />
+//       </MemoryRouter>
+//     </Provider>,
+//   );
+//   // const modulistica = await waitForElement(() => getByText(/Modulistica/i));
+//   // expect(modulistica).toBeInTheDocument();
+//   // const allegati = await waitForElement(() => getByText(/Allegati/i));
+//   // expect(allegati).toBeInTheDocument();
+// });
 
 test('Check servizio sospeso', async () => {
   const { getByText } = render(

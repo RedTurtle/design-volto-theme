@@ -52,6 +52,11 @@ const mock_mandatory = {
       title: 'Unità organizzativa di secondo livello',
     },
   ],
+  ulteriori_informazioni: {
+    'content-type': 'text/html',
+    data: '<p>Ulteriori informazioni text</p>',
+    encoding: 'utf-8',
+  },
 };
 const mock_allfields = {
   ...mock_mandatory,
@@ -161,11 +166,6 @@ const mock_allfields = {
     },
   ],
   telefono: ['3459988767'],
-  ulteriori_informazioni: {
-    'content-type': 'text/html',
-    data: '<p>Ulteriori informazioni text</p>',
-    encoding: 'utf-8',
-  },
   items: [
     {
       '@id':
