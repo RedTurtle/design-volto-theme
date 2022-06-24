@@ -20,6 +20,7 @@ export LocationFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
 export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
+export FontAwesomeIcon from '@italia/components/ItaliaTheme/Icons/FontAwesomeIcon';
 export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 /********* COMMONS ********* */
@@ -45,6 +46,7 @@ export SearchModal from '@italia/components/ItaliaTheme/Header/HeaderSearch/Sear
 export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
 export SearchCTs from '@italia/components/ItaliaTheme/Search/SearchCTs';
+export SearchResultItem from '@italia/components/ItaliaTheme/Search/ResultItem';
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
@@ -69,6 +71,7 @@ export BlockSearchSectionsSidebar from '@italia/components/ItaliaTheme/Blocks/Se
 export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
 export SearchSectionsBackground from '@italia/components/ItaliaTheme/Blocks/SearchSections/Background';
+export BackgroundUser from '@italia/components/ItaliaTheme/Blocks/SearchSections/BackgroundUser';
 export Skeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/Skeleton';
 export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';

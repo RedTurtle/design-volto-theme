@@ -909,6 +909,11 @@ msgstr "Back to search"
 msgid "backgroundImage"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Sfondo del blocco
+msgid "background_section"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
 msgid "bandi_search_no_filters"
@@ -978,6 +983,11 @@ msgstr "Type"
 # defaultMessage: Vedi
 msgid "bando_vedi"
 msgstr "View"
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
@@ -1828,6 +1838,16 @@ msgstr ""
 msgid "hide_dates"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"
@@ -1841,6 +1861,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Immagine per lo sfondo
+msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti

@@ -19,7 +19,7 @@ import {
   flattenToAppURL,
 } from '@plone/volto/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 /**
@@ -126,7 +126,11 @@ const Body = ({ data, isEditMode }) => {
                               '',
                             ),
                           )
-                            ? `${data.url}/@@download/file`
+                            ? `${data.url}${
+                                data.url.indexOf('@@download/file') < 0
+                                  ? '/@@download/file'
+                                  : ''
+                              }`
                             : data.url
                         }
                         controls

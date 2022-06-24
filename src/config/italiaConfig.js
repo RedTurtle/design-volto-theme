@@ -1,4 +1,3 @@
-import React from 'react';
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
@@ -19,15 +18,6 @@ import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssB
 import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
-
-import {
-  config as faConfig,
-  dom as faDom,
-  library as faLibrary,
-} from '@fortawesome/fontawesome-svg-core';
-import * as Icons from '@fortawesome/free-solid-svg-icons';
-import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
-import * as IconsBrands from '@fortawesome/free-brands-svg-icons';
 
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
@@ -52,19 +42,7 @@ import bandoSVG from '@italia/icons/bando.svg';
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
 import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
-
-const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
-const iconListRegular = Object.keys(IconsRegular.far).map(
-  (icon) => IconsRegular[icon],
-);
-
-const iconListBrands = Object.keys(IconsBrands.fab).map(
-  (icon) => IconsBrands[icon],
-);
-
-//fontawessome config
-faConfig.autoAddCss = false;
-faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
+import { loadables } from '@italia/config/loadables';
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -131,6 +109,7 @@ export default function applyConfig(voltoConfig) {
       Modulo: faFileDownloadSVG,
       Faq: faQuestionSVG,
     },
+    loadables: { ...config.settings.loadables, ...loadables },
     imageScales: {
       listing: 16,
       icon: 32,
@@ -211,6 +190,7 @@ export default function applyConfig(voltoConfig) {
       },
       enableCustomerSatisfaction: true,
       splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
+      footerNavigationDepth: 2, //valori possibili: [1,2]. Se impostato ad 1 non verranno mostrati nel footer i link agli elementi contenuti nelle sezioni di primo livello.
     },
     'volto-blocks-widget': {
       allowedBlocks: [
@@ -241,14 +221,6 @@ export default function applyConfig(voltoConfig) {
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
-
-    appExtras: [
-      ...config.settings.appExtras,
-      {
-        match: '',
-        component: () => <style type="text/css">{faDom.css()}</style>, //load fontawesom dom css
-      },
-    ],
   };
 
   /******************************************************************************
@@ -313,6 +285,10 @@ export default function applyConfig(voltoConfig) {
     },
     hero: {
       ...config.blocks.blocksConfig.hero,
+      sidebarTab: 1,
+    },
+    html: {
+      ...config.blocks.blocksConfig.html,
       sidebarTab: 1,
     },
     rssBlock,

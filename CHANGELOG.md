@@ -1,3 +1,145 @@
+## [6.0.0-alpha.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.3...v6.0.0-alpha.0) (2022-06-22)
+
+
+### Features
+
+* added babel-plugin-transform-imports ([ce5c738](https://github.com/RedTurtle/design-volto-theme/commit/ce5c738c48764f189a6cdfd2236b4a734c5adbcb))
+* added lazy loading of moment ([0a571d3](https://github.com/RedTurtle/design-volto-theme/commit/0a571d3195a670be7f20054774225024704c7341))
+* replaced moment-with-locales with lazyloaded moment ([c66aac5](https://github.com/RedTurtle/design-volto-theme/commit/c66aac533ce66cfb0a5f3bf966457b9c527eee4b))
+
+
+### Bug Fixes
+
+* fix dnd subblocks duplicate html5 ([01d92cf](https://github.com/RedTurtle/design-volto-theme/commit/01d92cfb4c369d98ba828a5c2cf65b43cbe25fab))
+* fix import ([e53b510](https://github.com/RedTurtle/design-volto-theme/commit/e53b510a5760574eafd6ba2ea3c1bf68273b6416))
+* removed unused moment/min/locale import ([bde0119](https://github.com/RedTurtle/design-volto-theme/commit/bde01196385220022b7a13cd30299e365d9083fd))
+* removed unusefull lib ([58e4859](https://github.com/RedTurtle/design-volto-theme/commit/58e48598193f6f6614f555f55dd5b72df05b6844))
+
+
+### Maintenance
+
+* added lazy loading rrule ([9d60cc1](https://github.com/RedTurtle/design-volto-theme/commit/9d60cc1a455f82d7e7a88290b5b409e2d5efd26b))
+* lazy loading of some libraries ([6c30217](https://github.com/RedTurtle/design-volto-theme/commit/6c30217ab0d2b6b2edde90182ebd6d692b1e1c01))
+* lazyloading react-dnd ([5f8f429](https://github.com/RedTurtle/design-volto-theme/commit/5f8f4296c5dc64ed2f8ebc73f0ee62e36624fafe))
+* lazyloading slick ([eff9a3e](https://github.com/RedTurtle/design-volto-theme/commit/eff9a3ecee8208102ac45cc512735a197f961566))
+* removed unuseful babel-plugin-transform-immport ([4606b9a](https://github.com/RedTurtle/design-volto-theme/commit/4606b9aad6739a8636b8e3685fd82eb995c2fcde))
+* updated volto-subblocks in mrs developer ([3467627](https://github.com/RedTurtle/design-volto-theme/commit/34676278a8979abfc9f8e060975b0d7f3a729311))
+* updated volto-subblockss ([42855fc](https://github.com/RedTurtle/design-volto-theme/commit/42855fcea30d6761f1feb8738cf1116a065368f6))
+
+### [5.26.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.2...v5.26.3) (2022-06-22)
+
+
+### Maintenance
+
+* updated volto to fix imageObject url ([8519889](https://github.com/RedTurtle/design-volto-theme/commit/8519889eb32ddfff1eb2ac80732424c23919ad94))
+
+### [5.26.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.1...v5.26.2) (2022-06-22)
+
+
+### Bug Fixes
+
+* fix import for SearchResultItem ([1bae94d](https://github.com/RedTurtle/design-volto-theme/commit/1bae94de124fdd236d159bec80ae81aa236400d7))
+
+### [5.26.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.0...v5.26.1) (2022-06-22)
+
+
+### Maintenance
+
+* moved search ResultItem into a component ([2e6c403](https://github.com/RedTurtle/design-volto-theme/commit/2e6c4032e1b14088b862afc2a738dd22d3bcc2f9))
+
+## [5.26.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.25.0...v5.26.0) (2022-06-22)
+
+
+### Features
+
+* added footerNavigationDepth property to avoid customizations ([b814d1d](https://github.com/RedTurtle/design-volto-theme/commit/b814d1d755f8cab40100fab24a89c1818d979688))
+
+## [5.25.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.24.0...v5.25.0) (2022-06-21)
+
+
+### Features
+
+* background on embed block started ([8674daf](https://github.com/RedTurtle/design-volto-theme/commit/8674daf81d9ef151183561653f8d24c7c6480bd3))
+
+
+### Bug Fixes
+
+* block style fixed ([e80cf6b](https://github.com/RedTurtle/design-volto-theme/commit/e80cf6b86d269fb456daf0de1b21d4ab26b161b5))
+* class public-ui moved ([f35ad16](https://github.com/RedTurtle/design-volto-theme/commit/f35ad164f8eca6bee38a868e13c5531b8a339bc7))
+* condicional fixed ([f46b381](https://github.com/RedTurtle/design-volto-theme/commit/f46b381c4d8aa9f39a6d56ca320cfd78871bade2))
+* cx on className added ([c5d2c37](https://github.com/RedTurtle/design-volto-theme/commit/c5d2c37413ef769488ceeebb0c6451dd8d331f46))
+* fix import for italia icons ([1a0f064](https://github.com/RedTurtle/design-volto-theme/commit/1a0f064c8133d2daecb8ff0e0bfddf534ef241fb))
+* fix svg loader bootstrap italia ([0a321d2](https://github.com/RedTurtle/design-volto-theme/commit/0a321d2564092318f7c40426e37d4d89bb73f1da))
+* full-width ([96fdf7d](https://github.com/RedTurtle/design-volto-theme/commit/96fdf7d519d72bfccfaf972feb5dba1a581c56a3))
+* isPreview with container class ([586a859](https://github.com/RedTurtle/design-volto-theme/commit/586a85932bd9e8bf69222e16b3acbaed576a9fc4))
+* revert ([a9d5ab7](https://github.com/RedTurtle/design-volto-theme/commit/a9d5ab75b257bfb2354632ecb732f45773e87d17))
+* view and sidebar ok ([7e1eabc](https://github.com/RedTurtle/design-volto-theme/commit/7e1eabcfe37a8bb157da1905c92911a920442ad9))
+
+
+### Maintenance
+
+* added conditionalEmbed to html block view customization ([b5bcb37](https://github.com/RedTurtle/design-volto-theme/commit/b5bcb37e4aae78f3aac438a618179126f2e04576))
+
+## [5.24.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.4...v5.24.0) (2022-06-17)
+
+
+### Features
+
+* inject HTML in volto-dropdownmenu item title ([35a72fb](https://github.com/RedTurtle/design-volto-theme/commit/35a72fb1a10c763ba08461177d0a5cd0905d9bae))
+
+### [5.23.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.3...v5.23.4) (2022-06-17)
+
+
+### Bug Fixes
+
+* fixed subsite header menu styles ([30d262f](https://github.com/RedTurtle/design-volto-theme/commit/30d262f6d6fb10c0dee12be4eca0eeffca528153))
+
+### [5.23.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.2...v5.23.3) (2022-06-17)
+
+
+### Features
+
+* lobo mobile subsite - headerCenter + Navigation ([9b96030](https://github.com/RedTurtle/design-volto-theme/commit/9b96030cb37da732fc85b1752eee529b785f01a1))
+
+
+### Bug Fixes
+
+* fixed vertical alignment logo ([28ae12a](https://github.com/RedTurtle/design-volto-theme/commit/28ae12a3b80f5574249c5dba9a6c27e7ee97ac06))
+* logo on menu mobile on subsite fixed ([2f32971](https://github.com/RedTurtle/design-volto-theme/commit/2f32971d7774827cfb522e1453b026274b60f0ee))
+* new solution to logo menu mobile subsite ([fab5d34](https://github.com/RedTurtle/design-volto-theme/commit/fab5d34784c21b7aaf043deb1888abe4a06a1c5b))
+
+### [5.23.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.1...v5.23.2) (2022-06-16)
+
+
+### Bug Fixes
+
+* fix video view ([38d23df](https://github.com/RedTurtle/design-volto-theme/commit/38d23dfe17307978bd315fa7fa8571a653cb74ba))
+* small changes on logo sizes, footer links and title ([0e21e7f](https://github.com/RedTurtle/design-volto-theme/commit/0e21e7ff4211c54b2e1eac94f95bcefdcd4261bd))
+
+### [5.23.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.0...v5.23.1) (2022-06-15)
+
+
+### Bug Fixes
+
+* conditional fixed ([0799ca6](https://github.com/RedTurtle/design-volto-theme/commit/0799ca64b0afe730fe3ede29fae703e9b2aacdd2))
+* iconBlock background image path fixed, scales.huge added to components edit/view ([ed2bbba](https://github.com/RedTurtle/design-volto-theme/commit/ed2bbba6d5002e705009c76810ed541ca270a239))
+
+## [5.23.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.13...v5.23.0) (2022-06-15)
+
+
+### Features
+
+* new background option on searchBlock ([9cdc917](https://github.com/RedTurtle/design-volto-theme/commit/9cdc91799f85791238c3e66f05cf3be9adc44f14))
+* new component for background image ([162699e](https://github.com/RedTurtle/design-volto-theme/commit/162699e8dbaaafce653b390e65bd27405c01ac04))
+* searchSections block with image background selection ([9e3e0c1](https://github.com/RedTurtle/design-volto-theme/commit/9e3e0c144e381ee2c03c2b68916ea8f7551d35c9))
+
+
+### Bug Fixes
+
+* ay11 styles ([d6f25e5](https://github.com/RedTurtle/design-volto-theme/commit/d6f25e52722d864ce61d728c83d838f2ab26d504))
+* fix ay11 search ([3098ac3](https://github.com/RedTurtle/design-volto-theme/commit/3098ac32bb8e19e9e41498b0bc1931c6c71141a9))
+* fix searchSeactions bg ([2d9cec6](https://github.com/RedTurtle/design-volto-theme/commit/2d9cec6c8270d83c140e0510f2fd2f25ee5912f2))
+
 ### [5.22.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.12...v5.22.13) (2022-06-01)
 
 
