@@ -1,4 +1,14 @@
+/*
+ * This is the mocked config registry loader for tests.
+ * It uses some of the default (real) configuration,
+ * (mainly) DraftJS one, to not differ too much from reality
+ * Ideally, we should mock this ones as well at some point.
+ * Views, Widgets and Blocks are mocked already, to keep
+ * snapshot consistency and readability.
+ */
+
 import config from '@plone/volto/registry';
+import { loadables } from '@italia/config/loadables';
 
 config.set('settings', {
   ...config.settings,
@@ -6,6 +16,7 @@ config.set('settings', {
   italiaThemeViewsConfig: {
     imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
   },
+  loadables: { ...config.settings.loadables, ...loadables },
   imageScales: {
     listing: 16,
     icon: 32,
@@ -21,3 +32,4 @@ config.set('settings', {
     huge: 1600,
   },
 });
+

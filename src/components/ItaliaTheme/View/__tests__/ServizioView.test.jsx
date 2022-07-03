@@ -13,6 +13,12 @@ const mockStore = configureStore(middlewares);
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
 jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+// loadables.push('rrule');
+jest.mock('@plone/volto/helpers/Loadable/Loadable');
+beforeAll(
+  async () =>
+    await require('@plone/volto/helpers/Loadable/Loadable').__setLoadables(),
+);
 
 const mock_mandatory = {
   '@id': 'http://loremipsum.com/autocertificazione',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitForElement } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import PaginaArgomentoView from '../PaginaArgomentoView/PaginaArgomentoView';
 import configureStore from 'redux-mock-store';
@@ -11,6 +11,12 @@ import thunk from 'redux-thunk';
 // When testing, code that causes React state updates should be wrapped into act(...):
 jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
 
+jest.mock('@plone/volto/helpers/Loadable/Loadable');
+beforeAll(
+  async () =>
+    await require('@plone/volto/helpers/Loadable/Loadable').__setLoadables(),
+);
+
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
@@ -18,6 +24,9 @@ const mock_mandatory = {
   '@id': 'http://loremipsum.it/cultura',
   '@type': 'Pagina Argomento',
   UID: 'e2552caeca3b42daaa55d983b96dfdea',
+  title: 'Cultura e spettacolo',
+  description:
+    'Lorem descrizione ipsum dolor sit amet, consectetur adipiscing elit.',
   area_appartenenza: [
     {
       '@id': 'http://loremipsum.it/siet',
@@ -41,9 +50,6 @@ const mock_mandatory = {
     data: '<p>BoxUlterioriInfo, viverra dignissim nibh vestibulum nisi. </p>',
     encoding: 'utf-8',
   },
-  description:
-    'Lorem descrizione ipsum dolor sit amet, consectetur adipiscing elit.',
-  title: 'Cultura e spettacolo',
   related_uo: [
     {
       '@id': 'http://loremipsum.it/lorem_uo',
@@ -290,7 +296,7 @@ test('expect to have all mandatory fields in page', async () => {
     </Provider>,
   );
   // title
-  expect(getByText(/Cultura e spettacolo/i)).toBeInTheDocument();
+  expect(getByText('Cultura e spettacolo')).toBeInTheDocument();
   // description
   expect(getByText(/Lorem descrizione ipsum/i)).toBeInTheDocument();
   expect(getByText(/BoxUlterioriInfo/i)).toBeInTheDocument();
