@@ -24,7 +24,8 @@ const mockStore = configureStore(middlewares);
 const mock_mandatory = {
   '@id': 'http://loremipsum.com/events/altro-eventone',
   '@type': 'Event',
-  title: 'SubEvento',
+  title: 'Altro eventone',
+  description: 'Eventone di inaugurazione',
   start: '2020-05-25T12:00:00+00:00',
   end: '2020-05-27T16:00:00+00:00',
   UID: 'ce4e5d4f2c3a45f1b541e80ea71da3fc',
@@ -52,7 +53,6 @@ const mock_mandatory = {
     data: '<p>poche</p>',
     encoding: 'utf-8',
   },
-  description: '',
   a_chi_si_rivolge: {
     'content-type': 'text/html',
     data: '<p>no</p>',
@@ -352,12 +352,11 @@ it('expect to have all mandatory fields in page', async () => {
     </Provider>,
   );
   // title
-  expect(getByText(/Altro eventone/i)).toBeInTheDocument();
+  expect(getByText('Altro eventone')).toBeInTheDocument();
   // description
-  // expect(getByText(/Introduzione/i)).toBeInTheDocument();
-
-  // expect(getByText(/Date e orari/i)).toBeInTheDocument();
-  // expect(getByText(/Costi/i)).toBeInTheDocument();
+  expect(getByText('Eventone di inaugurazione')).toBeInTheDocument();
+  // expect(getByText('Date e orari')).toBeInTheDocument();
+  // expect(getByText('Costi')).toBeInTheDocument();
   // contatti: <span> + <h4>
   expect(getAllByText('Contatti')).toHaveLength(2);
   // contatti: <span> + <h4>
