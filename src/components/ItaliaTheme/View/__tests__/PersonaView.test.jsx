@@ -13,6 +13,11 @@ const mockStore = configureStore(middlewares);
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
 jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+jest.mock('@plone/volto/helpers/Loadable/Loadable');
+beforeAll(
+  async () =>
+    await require('@plone/volto/helpers/Loadable/Loadable').__setLoadables(),
+);
 
 const mock_mandatory = {
   '@type': 'Persona',
@@ -52,6 +57,11 @@ const mock_mandatory = {
       title: 'Unità organizzativa di secondo livello',
     },
   ],
+  ulteriori_informazioni: {
+    'content-type': 'text/html',
+    data: '<p>Ulteriori informazioni text</p>',
+    encoding: 'utf-8',
+  },
 };
 const mock_allfields = {
   ...mock_mandatory,
@@ -161,11 +171,6 @@ const mock_allfields = {
     },
   ],
   telefono: ['3459988767'],
-  ulteriori_informazioni: {
-    'content-type': 'text/html',
-    data: '<p>Ulteriori informazioni text</p>',
-    encoding: 'utf-8',
-  },
   items: [
     {
       '@id':

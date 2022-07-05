@@ -26,6 +26,9 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { resetSubsite } from '@italia/addons/volto-subsites';
+
 import {
   Pagination,
   SearchSections,
@@ -266,6 +269,18 @@ const Search = () => {
     setOptions(parseFetchedOptions({}, location));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchFilters, subsite]);
+
+  useEffect(() => {
+    if (
+      subsite &&
+      !location.pathname.startsWith(flattenToAppURL(subsite['@id']))
+    ) {
+      /*la ricerca è stata fatta dal sito padre,
+      poi dai risultati si è passato a un subsite,
+      poi è stato fatto back dal browser per tornare ai risultati di ricerca del sito padre*/
+      dispatch(resetSubsite());
+    }
+  }, [subsite, dispatch, location.pathname]);
 
   const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(

@@ -36,17 +36,18 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({ content, show_image, moment }) => {
+const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   const intl = useIntl();
+  const moment = momentlib.default;
+  moment.locale(intl.locale);
 
-  const Moment = moment.default;
-  Moment.locale(intl.locale);
+  const rrulestr = rrule.rrulestr;
 
   let rruleSet = null;
   let recurrenceText = null;
 
   if (content.recurrence) {
-    const RRULE_LANGUAGE = rrulei18n(intl, Moment);
+    const RRULE_LANGUAGE = rrulei18n(intl, moment);
     rruleSet = rrulestr(content.recurrence, {
       compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
       forceset: true,

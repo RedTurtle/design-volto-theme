@@ -13,6 +13,12 @@ const mockStore = configureStore(middlewares);
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
 jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+// loadables.push('rrule');
+jest.mock('@plone/volto/helpers/Loadable/Loadable');
+beforeAll(
+  async () =>
+    await require('@plone/volto/helpers/Loadable/Loadable').__setLoadables(),
+);
 
 const mock_mandatory = {
   '@id': 'http://loremipsum.com/autocertificazione',
@@ -114,7 +120,12 @@ const mock_other_fields = {
     data: "<p>Indicazioni d'uso del servizio</p>",
     encoding: 'utf-8',
   },
-  canale_digitale: 'https://www.loremipsum.com/canale_digitale',
+  canale_digitale: {
+    'content-type': 'text/html',
+    data:
+      "<p><a href='https://www.loremipsum.com/canale_digitale'>https://www.loremipsum.com/canale_digitale</a></p>",
+    encoding: 'utf-8',
+  },
   canale_fisico_prenotazione: 'Canale fisicio di prenotazione del servizio',
   casi_particolari: {
     'content-type': 'text/html',
@@ -304,7 +315,7 @@ const store = mockStore({
 });
 
 test('expect to have all mandatory fields in page', async () => {
-  const { getByText, queryAllByText } = render(
+  const { getByText /*, queryAllByText*/ } = render(
     <Provider store={store}>
       <MemoryRouter>
         <ServizioView content={mock_mandatory} />
@@ -425,19 +436,19 @@ test('expect to have all fields in page', async () => {
   ).toBeInTheDocument();
 });
 
-test('Check parts loaded from child folders', async () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <MemoryRouter>
-        <ServizioView content={mock_other_fields} />
-      </MemoryRouter>
-    </Provider>,
-  );
-  // const modulistica = await waitForElement(() => getByText(/Modulistica/i));
-  // expect(modulistica).toBeInTheDocument();
-  // const allegati = await waitForElement(() => getByText(/Allegati/i));
-  // expect(allegati).toBeInTheDocument();
-});
+// test('Check parts loaded from child folders', async () => {
+//   const { getByText } = render(
+//     <Provider store={store}>
+//       <MemoryRouter>
+//         <ServizioView content={mock_other_fields} />
+//       </MemoryRouter>
+//     </Provider>,
+//   );
+//   // const modulistica = await waitForElement(() => getByText(/Modulistica/i));
+//   // expect(modulistica).toBeInTheDocument();
+//   // const allegati = await waitForElement(() => getByText(/Allegati/i));
+//   // expect(allegati).toBeInTheDocument();
+// });
 
 test('Check servizio sospeso', async () => {
   const { getByText } = render(
