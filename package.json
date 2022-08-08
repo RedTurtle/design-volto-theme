@@ -220,7 +220,8 @@
     "volto-subblocks": "collective/volto-subblocks#v1.2.3",
     "volto-subfooter": "collective/volto-subfooter#v1.0.3",
     "volto-subsites": "collective/volto-subsites#v2.1.0",
-    "volto-venue": "collective/volto-venue#v3.2.0"
+    "volto-venue": "collective/volto-venue#v3.2.0",
+    "webpack-image-resize-loader": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
@@ -240,8 +241,7 @@
     "stylelint-config-prettier": "8.0.1",
     "stylelint-prettier": "1.1.2",
     "svg-inline-loader": "0.8.0",
-    "svg-inline-react": "3.2.0",
-    "webpack-image-resize-loader": "^5.0.0"
+    "svg-inline-react": "3.2.0"
   },
   "volta": {
     "node": "12.22.1",
