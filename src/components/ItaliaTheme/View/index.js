@@ -104,6 +104,8 @@ export FaqFolderSearchBar from '@italia/components/ItaliaTheme/View/FAQ/FaqFolde
 export FaqFolderTree from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree';
 export FaqPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqView/Placeholder/AfterContent';
 export FaqPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/FAQ/FaqView/Placeholder/AfterRelatedItems';
+export FileViewPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/FileView/Placeholder/AfterRelatedItems';
+export FileViewPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FileView/Placeholder/AfterContent';
 export ModuloPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ModuloView/Placeholder/AfterContent';
 export ModuloPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ModuloView/Placeholder/AfterRelatedItems';
 export ModuloFilePrincipale from '@italia/components/ItaliaTheme/View/ModuloView/ModuloFilePrincipale';

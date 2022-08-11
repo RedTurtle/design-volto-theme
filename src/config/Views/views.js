@@ -16,6 +16,7 @@ import FaqView from '@italia/components/ItaliaTheme/View/FAQ/FaqView/FaqView';
 
 import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
 import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
+import FileView from '@italia/components/ItaliaTheme/View/FileView/FileView';
 
 /*  CONTENT TYPES VIEWS */
 const italiaContentTypesViews = {
@@ -33,6 +34,7 @@ const italiaContentTypesViews = {
   Bando: BandoView,
   FaqFolder: FaqFolderView,
   Faq: FaqView,
+  File: FileView,
 };
 
 /* LAYOUT VIEWS */
