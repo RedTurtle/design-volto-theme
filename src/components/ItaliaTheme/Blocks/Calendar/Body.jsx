@@ -69,10 +69,10 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const dispatch = useDispatch();
 
   const getMonth = useCallback(() => {
-    const startIndex = activePage * (data.b_size || 4);
+    const startIndex = activePage;
 
     const months = calendarResults[block]?.items
-      ?.slice(activePage, startIndex + (+data.b_size || 4))
+      ?.slice(startIndex, startIndex + 4)
       .reduce((total, date) => {
         const month = viewDate(intl.locale, date, 'MMMM');
 
@@ -85,7 +85,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
     return months
       ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
       .join(' / ');
-  }, [activePage, block, calendarResults, data.b_size, intl.locale]);
+  }, [activePage, block, calendarResults, intl.locale]);
 
   const [monthName, setMonthName] = useState(getMonth);
 

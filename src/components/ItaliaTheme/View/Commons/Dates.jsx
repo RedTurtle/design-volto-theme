@@ -60,8 +60,8 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
     );
   }
 
-  const start = viewDate(intl.locale, moment, content.start);
-  const end = viewDate(intl.locale, moment, content.end);
+  const start = viewDate(intl.locale, content.start);
+  const end = viewDate(intl.locale, content.end);
 
   return content ? (
     <>

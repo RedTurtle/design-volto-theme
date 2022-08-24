@@ -62,7 +62,10 @@ const Item = ({ day, path, query, inEditMode }) => {
     <div>
       <div className="pl-3">
         <div className={cx('day', { 'mb-3': inEditMode })}>
-          {_day.format('DD')}
+          {_day.format('DD')}{' '}
+          <span className={cx('month', { 'ml-1': inEditMode })}>
+            {_day.format('MMMM')}
+          </span>
         </div>
         <div className="day-week">{_day.format('ddd')}</div>
       </div>
