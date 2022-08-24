@@ -184,6 +184,8 @@ const DateFilter = (props) => {
     reactDates,
     startLabel,
     endLabel,
+    defaultStart,
+    defaultEnd,
     ...rest
   } = props;
   const { DateRangePicker } = reactDates;
@@ -225,19 +227,19 @@ const DateFilter = (props) => {
     <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
       <DateRangePicker
         {...rest}
-        startDate={value?.startDate || props.defaultStart}
+        startDate={value?.startDate || defaultStart}
         startDateId="start-date-filter"
         startDatePlaceholderText={
           startLabel ?? intl.formatMessage(messages.eventSearchStartDate)
         }
-        endDate={value?.endDate || props.defaultEnd}
+        endDate={value?.endDate || defaultEnd}
         endDateId="end-date-filter"
         endDatePlaceholderText={
           endLabel ?? intl.formatMessage(messages.eventSearchEndDate)
         }
         onDatesChange={({ startDate, endDate }) => {
-          let start = startDate || props.defaultStart;
-          let end = endDate || props.defaultEnd;
+          let start = startDate || defaultStart;
+          let end = endDate || defaultEnd;
           onChange(id, { start, end });
         }}
         noBorder={true}
