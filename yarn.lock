@@ -18010,36 +18010,41 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-volto-blocks-widget@collective/volto-blocks-widget#v2.1.0:
+volto-blocks-widget@^2.1.0:
   version "2.1.0"
-  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/494b57296dd4073c93a986c8c2b1a45648ecbf6f"
+  resolved "https://registry.yarnpkg.com/volto-blocks-widget/-/volto-blocks-widget-2.1.0.tgz#06e9cbddf03f8455f2bc96e3e744ce8b765fa246"
+  integrity sha512-vKp2839xT50PQLIRL7D5CgcVYS8N6fwfQmW3euue0x6+CCFAcyBU92gYgT6a6gk78FhaEYCk1NlsZ0MvChsWZA==
   dependencies:
     "@plone/scripts" "*"
 
-volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.11:
+volto-customer-satisfaction@^0.2.11:
   version "0.2.11"
-  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/f47bf0e68097be07f61555d9f83f8bdad572eda1"
+  resolved "https://registry.yarnpkg.com/volto-customer-satisfaction/-/volto-customer-satisfaction-0.2.11.tgz#cc9c827cbeade0dc89a61ff105c37339088ae394"
+  integrity sha512-lREBtDzCULU4oie+SU/siFMdLXtdX83T8FxR2nMQIyYFHhd1g44FQPE+EwfBRlXPCEOsIxlOAn4rmwqu8eDSwg==
   dependencies:
     "@plone/scripts" "*"
     react-google-recaptcha-v3 "1.9.5"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v2.3.0:
+volto-dropdownmenu@2.3.0:
   version "2.3.0"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/5f785c58cee5351c8b6996b9f2c715a07c2bd04d"
+  resolved "https://registry.yarnpkg.com/volto-dropdownmenu/-/volto-dropdownmenu-2.3.0.tgz#cba0aa1f7fe0067c06c10bcfb131f6059f6708ce"
+  integrity sha512-DIWCg/FowZJUbDOA1ZGJAsd+UdhN5+KC1F0bXwo5G2yQyD47H6U6V1ebhj1sPA67Ljz5obkscwVR7B/mzJDkDA==
   dependencies:
     "@plone/scripts" "*"
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v4.1.1:
+volto-editablefooter@4.1.1:
   version "4.1.1"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/88b82241565e5174495badc0a89ab9154af533ae"
+  resolved "https://registry.yarnpkg.com/volto-editablefooter/-/volto-editablefooter-4.1.1.tgz#40b34bd318308cd501dabf908d6be4231a7b047f"
+  integrity sha512-5O7A4abKVlRQlo4cTtia7ZoXb4H0wDstTDawyllzfd22HhSE4KTrBJ4IpkqUyQg3j50GSCCa50Q8Np17BbwzEw==
   dependencies:
     "@plone/scripts" "^1.0.3"
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v2.3.6:
+volto-form-block@2.3.6:
   version "2.3.6"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/2fb44ee2de12d1aba24cb2e9302e42d9b9128076"
+  resolved "https://registry.yarnpkg.com/volto-form-block/-/volto-form-block-2.3.6.tgz#309159ca6fa15b134cc73435650db8d550660a9b"
+  integrity sha512-+xD18Y7BNjBIHHI3BwidZojr1MdIkuo9jzgdXtbWRS7CZ9x3p6dihsRxIU9iJhG8FpQxTZnxfOlzxOo+xz5SBQ==
   dependencies:
     "@hcaptcha/react-hcaptcha" "^0.3.6"
     "@plone/scripts" "^1.0.3"
@@ -18047,45 +18052,51 @@ volto-form-block@collective/volto-form-block#v2.3.6:
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.2.3
 
-volto-gdpr-privacy@collective/volto-gdpr-privacy#v1.3.11:
+volto-gdpr-privacy@1.3.11:
   version "1.3.11"
-  resolved "https://codeload.github.com/collective/volto-gdpr-privacy/tar.gz/e0b607564004f3221cf71ed8f7017362124745d0"
+  resolved "https://registry.yarnpkg.com/volto-gdpr-privacy/-/volto-gdpr-privacy-1.3.11.tgz#2496c3271e6f34515843b7c8cdc606067c7d4888"
+  integrity sha512-ku8pOu3TwF6H420wl71jqLeKv4l9al26GJ5alrzavjmmeNGrF+cZNbPMWECTViR+/9feBQOhR5JAlRJMWamTWg==
   dependencies:
     "@plone/scripts" "*"
 
-volto-google-analytics@collective/volto-google-analytics#v1.2.5:
+volto-google-analytics@1.2.5:
   version "1.2.5"
-  resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/ee7979c08a0e14e55f23c28ffe0b703d6d5d3db3"
+  resolved "https://registry.yarnpkg.com/volto-google-analytics/-/volto-google-analytics-1.2.5.tgz#dcaea29435db139b01efe5b4f9ac8aaa695ee274"
+  integrity sha512-Svn0NC+4ynRsCMNw5PXpTqjoaZ5wJoQCH8ghhxnupTObVJOW3vEc3w/xEFaEyUHIuIGY+zXIapSxilEL3gCjrw==
   dependencies:
     "@plone/scripts" "*"
     react-ga "2.7.0"
 
-volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.4:
+volto-multilingual-widget@2.2.4:
   version "2.2.4"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/b36b32fb36060757c7083546a453d09f0139f5a2"
+  resolved "https://registry.yarnpkg.com/volto-multilingual-widget/-/volto-multilingual-widget-2.2.4.tgz#97b7aa65f6b9fee86ceac845cb5d2fdeb78c4c42"
+  integrity sha512-HNIIhEc634FdSZ5Ae2BWRtcJfo0l8uE1MJTkZ9UBo4T+m/d0/H38lwJTenxSkm0UFMK4Vlgpia9m+t251INDKw==
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-rss-block@redturtle/volto-rss-block#v2.3.2:
+volto-rss-block@2.3.2:
   version "2.3.2"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/162d11bcb85089468ea55e1f85769dbef628c1a7"
+  resolved "https://registry.yarnpkg.com/volto-rss-block/-/volto-rss-block-2.3.2.tgz#f0f739228b3cb64deebf3c556bdf09206e5b20c1"
+  integrity sha512-OlZUhDxPHG9ekgbIKbPtbDmsQItqcokg6jhaSWmZu9vBBdTE3nLOD2voNZFpvilhXPEMuUJJOPQzubR4Aghkhw==
   dependencies:
     "@plone/scripts" "*"
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v2.2.0:
+volto-secondarymenu@2.2.0:
   version "2.2.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/a942b8e61890973bf0f3ef6f0908ada65ea01d3d"
+  resolved "https://registry.yarnpkg.com/volto-secondarymenu/-/volto-secondarymenu-2.2.0.tgz#3e50dce95970233f4ffdb228cc0c22a16290cafd"
+  integrity sha512-vPLU4+KnQs+uzNGhW3kdZKJTOLjrWGUDCQrCUAtFeoxuRs6dzI9AXLz6ATKyesyqO1gWK04i89dxlgVfRK0y8w==
   dependencies:
     "@plone/scripts" "*"
 
-volto-social-settings@collective/volto-social-settings#v2.2.0:
+volto-social-settings@2.2.0:
   version "2.2.0"
-  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/c0a1ac2f653302fb3e6161ecd93ecf0ceff26769"
+  resolved "https://registry.yarnpkg.com/volto-social-settings/-/volto-social-settings-2.2.0.tgz#5d89f2f57b24a44c40b5c815d680e164f4a2dd81"
+  integrity sha512-MzvqCjOF891iLE5+ALApj9NnXaz9gt9Hmh6f1AQdq38PljQ6LVnRjhWI5y+1p5Ir6ZBtfCSEaihjZ+BPJhQ+FA==
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-subblocks@collective/volto-subblocks#v1.2.3:
+volto-subblocks@1.2.3, "volto-subblocks@github:collective/volto-subblocks#v1.2.3":
   version "1.2.3"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/a57c83c54678ee6423945a5247dfa5cc9e53ca3d"
   dependencies:
@@ -18093,21 +18104,24 @@ volto-subblocks@collective/volto-subblocks#v1.2.3:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
 
-volto-subfooter@collective/volto-subfooter#v1.0.3:
+volto-subfooter@1.0.3:
   version "1.0.3"
-  resolved "https://codeload.github.com/collective/volto-subfooter/tar.gz/ea75adaf278b26d5e0f2add38d8b94c4376dc90c"
+  resolved "https://registry.yarnpkg.com/volto-subfooter/-/volto-subfooter-1.0.3.tgz#9c85b3e2a183b93fe4e7dd3f2043179635d87424"
+  integrity sha512-x1DWFgCtDXtmMn2/gthTwdHAEbtF+x0Txun+1TJVavBq9R/OB/APRm+1gwrNEZsvlIXXo/wiAILcAyc08PBHaA==
   dependencies:
     "@plone/scripts" "*"
 
-volto-subsites@collective/volto-subsites#v3.0.1:
-  version "3.0.1"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/97e9c24221ee2b78fa358128fa832e485b3e20fb"
+volto-subsites@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/volto-subsites/-/volto-subsites-3.0.3.tgz#322b7dd72eea5df1eac8b4e4e40aa1a65614309e"
+  integrity sha512-Ixut+chE+RlQKrCd23zrdfhRWou05K9JW8KLsRBVYtPObZSXvUGtQatMARsjgab+lQTzOxF3xGe5HdfwYr5npQ==
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-venue@collective/volto-venue#v3.2.0:
+volto-venue@3.2.0:
   version "3.2.0"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/f54c581cd24e61d86e5062a1414c7846592b67f7"
+  resolved "https://registry.yarnpkg.com/volto-venue/-/volto-venue-3.2.0.tgz#bc7f3063ba679af93f68f95bc168c158b70fbc78"
+  integrity sha512-vG81Vh+hiS1yo7LEXkmE2pG/9JcCHAXki73WIG5MC5SG8QTUGNkrvg+Y1fpAmZVBNJFpbveKQ563/xt5uM+Ekw==
   dependencies:
     "@plone/scripts" "*"
     leaflet "1.6.0"
