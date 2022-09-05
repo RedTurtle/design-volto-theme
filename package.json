@@ -57,7 +57,6 @@
       "@plone/volto/src/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@package/config": "<rootDir>/jest-addons-loader.js",
-      "volto-subfooter/(.*)$": "<rootDir>/src/addons/volto-subfooter/src/$1",
       "@italia/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
       "~/(.*)$": "<rootDir>/src/$1",
       "@root/(.*)$": "<rootDir>/src/$1",
