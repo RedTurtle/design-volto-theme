@@ -167,7 +167,11 @@
     "node": "^12 || ^14 || ^16"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@plone/volto": "15.16.0",
+=======
+    "@plone/volto": "^15",
+>>>>>>> 5afebae5 (chore: remove volto branch)
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",
