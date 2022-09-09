@@ -15,9 +15,9 @@ import {
   submitCustomerSatisfaction,
   resetSubmitCustomerSatisfaction,
   GoogleReCaptchaWidget,
+  HoneypotWidget,
 } from 'volto-customer-satisfaction';
 import { isCmsUi } from '@plone/volto/helpers';
-import HoneypotWidget from '@italia/components/ItaliaTheme/CustomerSatisfaction/HoneypotWidget/HoneypotWidget';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
