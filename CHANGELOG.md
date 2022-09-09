@@ -1,3 +1,17 @@
+### [6.1.6](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.5...v6.1.6) (2022-09-07)
+
+
+### Bug Fixes
+
+* fixed mrs.developer version of volto-subsites addon ([c30f7b0](https://github.com/RedTurtle/design-volto-theme/commit/c30f7b00fd4aa9570da6346019aeaed8e059e4c1))
+
+### [6.1.5](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.4...v6.1.5) (2022-09-07)
+
+
+### Maintenance
+
+* updated volto-subsites v3.0.3 ([3cff4c0](https://github.com/RedTurtle/design-volto-theme/commit/3cff4c07355f09d1484268a213c69af3888e88c5))
+
 ### [6.1.4](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.3...v6.1.4) (2022-09-02)
 
 
