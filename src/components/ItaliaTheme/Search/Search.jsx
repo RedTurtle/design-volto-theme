@@ -25,7 +25,7 @@ import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
 import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
-import { resetSubsite } from '@italia/addons/volto-subsites';
+import { resetSubsite } from 'volto-subsites';
 
 import {
   Pagination,

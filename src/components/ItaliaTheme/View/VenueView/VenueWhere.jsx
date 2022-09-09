@@ -13,7 +13,7 @@ import {
   RichText,
   RichTextArticle,
 } from '@italia/components/ItaliaTheme/View';
-import { OSMMap } from '@italia/addons/volto-venue';
+import { OSMMap } from 'volto-venue';
 
 const messages = defineMessages({
   dove: {

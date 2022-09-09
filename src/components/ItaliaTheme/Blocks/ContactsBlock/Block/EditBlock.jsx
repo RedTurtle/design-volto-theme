@@ -7,11 +7,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
 
-import {
-  injectDNDSubblocks,
-  SubblockEdit,
-  Subblock,
-} from '@italia/addons/volto-subblocks';
+import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';

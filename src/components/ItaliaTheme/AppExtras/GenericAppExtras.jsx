@@ -6,7 +6,7 @@ import { Helmet, BodyClass } from '@plone/volto/helpers';
 import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import { getSiteProperty } from '@italia/helpers';
 import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
-import { SubsiteLoader } from '@italia/addons/volto-subsites';
+import { SubsiteLoader } from 'volto-subsites';
 import config from '@plone/volto/registry';
 
 const GenericAppExtras = (props) => {

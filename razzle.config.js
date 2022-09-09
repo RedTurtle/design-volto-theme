@@ -97,6 +97,9 @@ module.exports = Object.assign({}, volto_config, {
     // console.log(JSON.stringify(base_config.module.rules, null, 2))
 
     webpackConfig.resolve.alias = {
+      // new modules
+      '@plone/volto/components/theme/Image/Image': path.resolve(`${projectRootPath}/src/customizations/volto/components/theme/Image/Image.jsx`), 
+      '@plone/volto/helpers/Image/Image': path.resolve(`${projectRootPath}/src/customizations/volto/helpers/Image/Image.jsx`), 
       ...webpackConfig.resolve.alias,
       ...base_config.resolve.alias,
       '../../theme.config$': `${projectRootPath}/theme/theme.config`,

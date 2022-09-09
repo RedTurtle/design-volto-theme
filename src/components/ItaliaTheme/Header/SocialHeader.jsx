@@ -10,7 +10,7 @@ import { isEmpty } from 'lodash';
 
 import { HeaderSocialsZone } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
-import { getSocialSettings } from '@italia/addons/volto-social-settings';
+import { getSocialSettings } from 'volto-social-settings';
 
 const messages = defineMessages({
   followUs: {

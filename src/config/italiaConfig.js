@@ -13,7 +13,7 @@ import getItaliaBlocks from '@italia/config/Blocks/blocks.js';
 import getItaliaViews from '@italia/config/Views/views';
 import getItaliaWidgets from '@italia/config/Widgets/widgets';
 
-import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
+import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';

@@ -7,11 +7,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
-import {
-  injectDNDSubblocks,
-  SubblockEdit,
-  Subblock,
-} from '@italia/addons/volto-subblocks';
+import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
 
 import {
   Card,

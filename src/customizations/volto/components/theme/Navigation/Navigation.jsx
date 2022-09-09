@@ -29,10 +29,7 @@ import {
   BrandText,
 } from '@italia/components/ItaliaTheme';
 
-import {
-  getDropdownMenuNavitems,
-  getItemsByPath,
-} from '@italia/addons/volto-dropdownmenu';
+import { getDropdownMenuNavitems, getItemsByPath } from 'volto-dropdownmenu';
 
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);

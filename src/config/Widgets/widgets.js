@@ -2,7 +2,7 @@ import React from 'react';
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { ArrayWidget } from '@plone/volto/components';
-import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
+import { MultilingualWidget } from 'volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 import SubsiteSocialLinksWidget from '@italia/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
 import SearchSectionsConfigurationWidget from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';

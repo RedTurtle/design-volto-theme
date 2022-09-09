@@ -1,11 +1,11 @@
-import _ from 'lodash';
+import { map, range } from 'lodash';
 import {
   createInnerPrefix,
   createInnerSuffix,
 } from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/suffixFactories';
 
 export const createSimpleRange = (start, end, pageFactory) =>
-  _.map(_.range(start, end + 1), pageFactory);
+  map(range(start, end + 1), pageFactory);
 
 export const createComplexRange = (options, pageFactory) => {
   const {

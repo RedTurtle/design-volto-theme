@@ -4,7 +4,7 @@ import { Button, Modal, List } from 'semantic-ui-react';
 
 import { FormFieldWrapper } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
-import { SocialLinksWidget } from '@italia/addons/volto-social-settings';
+import { SocialLinksWidget } from 'volto-social-settings';
 
 const messages = defineMessages({
   edit_social_links: {

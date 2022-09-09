@@ -7,7 +7,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { isSubsiteRoot } from '@italia/addons/volto-subsites';
+import { isSubsiteRoot } from 'volto-subsites';
 import {
   richTextHasContent,
   RichText,

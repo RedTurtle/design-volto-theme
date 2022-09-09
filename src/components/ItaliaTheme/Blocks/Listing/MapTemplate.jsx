@@ -5,7 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
 import moment from 'moment';
 import cx from 'classnames';
-import { OSMMap } from '@italia/addons/volto-venue';
+import { OSMMap } from 'volto-venue';
 import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 

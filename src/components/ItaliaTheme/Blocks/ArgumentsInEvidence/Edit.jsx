@@ -7,7 +7,7 @@ import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
-} from '@italia/addons/volto-subblocks';
+} from 'volto-subblocks';
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar.jsx';
 import { ArgumentsInEvidenceBackground } from '@italia/components/ItaliaTheme';
