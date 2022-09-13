@@ -62,10 +62,7 @@ module.exports = Object.assign({}, volto_config, {
     base_config.module.rules.push(SVG_LOADER);
 
     const urlLoader = base_config.module.rules.find(urlLoaderFinder);
-    urlLoader.exclude = [
-      /\.(png|jpe?g|webp)$/i,
-      ...(urlLoader.exclude || []),
-    ];
+    urlLoader.exclude = [/\.(png|jpe?g|webp)$/i, ...(urlLoader.exclude || [])];
     // see: node_modules/razzle/config/createConfig.js
     const IMG_LOADER = {
       test: /\.(png|jpe?g|webp)$/i,
@@ -98,8 +95,12 @@ module.exports = Object.assign({}, volto_config, {
 
     webpackConfig.resolve.alias = {
       // new modules
-      '@plone/volto/components/theme/Image/Image': path.resolve(`${projectRootPath}/src/customizations/volto/components/theme/Image/Image.jsx`), 
-      '@plone/volto/helpers/Image/Image': path.resolve(`${projectRootPath}/src/customizations/volto/helpers/Image/Image.jsx`), 
+      '@plone/volto/components/theme/Image/Image': path.resolve(
+        `${projectRootPath}/src/customizations/volto/components/theme/Image/Image.jsx`,
+      ),
+      '@plone/volto/helpers/Image/Image': path.resolve(
+        `${projectRootPath}/src/customizations/volto/helpers/Image/Image.jsx`,
+      ),
       ...webpackConfig.resolve.alias,
       ...base_config.resolve.alias,
       '../../theme.config$': `${projectRootPath}/theme/theme.config`,

@@ -53,7 +53,10 @@
     },
     "transformIgnorePatterns": [],
     "moduleNameMapper": {
+      "@plone/volto/(components/theme/Image/.*)$": "<rootDir>/src/customizations/volto/$1",
+      "@plone/volto/(helpers/Image/.*)$": "<rootDir>/src/customizations/volto/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
+      "volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
       "@plone/volto/src/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@package/config": "<rootDir>/jest-addons-loader.js",
