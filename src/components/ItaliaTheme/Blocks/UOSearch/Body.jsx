@@ -6,14 +6,12 @@ import {
   Button,
   Spinner,
 } from 'design-react-kit/dist/design-react-kit';
-import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from '@italia/components/ItaliaTheme';
-
 import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/UOSearch/FiltersConfig';
 
 const messages = defineMessages({
@@ -39,7 +37,6 @@ const messages = defineMessages({
 const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
-  moment.locale(intl.locale);
 
   const [currentPage, setCurrentPage] = useState(1);
   const subsite = useSelector((state) => state.subsite?.data);

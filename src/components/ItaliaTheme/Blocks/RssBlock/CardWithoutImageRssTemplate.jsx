@@ -28,7 +28,12 @@ const messages = defineMessages({
   },
 });
 
-const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
+const CardWithoutImageRssTemplate = ({
+  items = [],
+  isEditMode,
+  data = {},
+  moment: Moment,
+}) => {
   const intl = useIntl();
 
   return (
@@ -105,5 +110,4 @@ const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
 CardWithoutImageRssTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
 };
-
 export default CardWithoutImageRssTemplate;

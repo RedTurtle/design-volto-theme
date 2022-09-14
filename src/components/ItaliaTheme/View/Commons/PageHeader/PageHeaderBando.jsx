@@ -1,6 +1,5 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -38,7 +37,6 @@ const messages = defineMessages({
 
 const PageHeaderBando = ({ content }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return content['@type'] === 'Bando' ? (
     <>
@@ -74,6 +72,7 @@ const PageHeaderBando = ({ content }) => {
     </>
   ) : null;
 };
+
 export default PageHeaderBando;
 
 PageHeaderBando.propTypes = {

@@ -6,8 +6,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import Slider from 'react-slick';
+
 import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import {
   Icon,
@@ -45,11 +46,13 @@ const SliderTemplate = ({
   show_dots = true,
   autoplay = false,
   autoplay_speed = 2, //seconds
+  reactSlick,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [userAutoplay, setUserAutoplay] = useState(autoplay);
   const nSlidesToShow = parseInt(slidesToShow);
+  const Slider = reactSlick.default;
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -66,7 +69,7 @@ const SliderTemplate = ({
     const { className, style, onClick } = props;
     return (
       <div className={className} style={{ ...style }} onClick={onClick}>
-        <Icon icon="chevron-right" />
+        <Icon icon="chevron-right" key="chevron-right" />
       </div>
     );
   };
@@ -75,7 +78,7 @@ const SliderTemplate = ({
     const { className, style, onClick } = props;
     return (
       <div className={className} style={{ ...style }} onClick={onClick}>
-        <Icon icon="chevron-left" />
+        <Icon icon="chevron-left" key="chevron-left-prev" />
       </div>
     );
   };
@@ -140,7 +143,10 @@ const SliderTemplate = ({
                       : intl.formatMessage(messages.play)
                   }
                 >
-                  <Icon icon={userAutoplay ? 'pause' : 'play'} />
+                  <Icon
+                    key={userAutoplay ? 'pause' : 'play'}
+                    icon={userAutoplay ? 'pause' : 'play'}
+                  />
                   <span>{userAutoplay ? 'pause' : 'play'}</span>
                 </button>
               </div>
@@ -150,7 +156,7 @@ const SliderTemplate = ({
               {items.map((item, index) => {
                 const image = ListingImage({
                   item,
-                  loading: 'lazy',
+                  loading: index === 0 ? 'eager' : 'lazy',
                   maxSize: 1600,
                   critical: true,
                 });
@@ -174,11 +180,13 @@ const SliderTemplate = ({
                           <div className="slide-title">
                             {full_width ? (
                               <Container>
-                                {item.title} <Icon icon="arrow-right" />
+                                {item.title}{' '}
+                                <Icon icon="arrow-right" key="arrow-right-fw" />
                               </Container>
                             ) : (
                               <>
-                                {item.title} <Icon icon="arrow-right" />
+                                {item.title}{' '}
+                                <Icon icon="arrow-right" key="arrow-right" />
                               </>
                             )}
                           </div>
@@ -205,4 +213,4 @@ SliderTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default SliderTemplate;
+export default injectLazyLibs(['reactSlick'])(SliderTemplate);

@@ -6,7 +6,7 @@ import {
   Button,
   Spinner,
 } from 'design-react-kit/dist/design-react-kit';
-import moment from 'moment/min/moment-with-locales';
+import moment from 'moment';
 import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';
@@ -39,6 +39,7 @@ const messages = defineMessages({
 const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
+
   moment.locale(intl.locale);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -135,7 +136,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     return newState;
   };
 
-  const filtersConfig = FiltersConfig();
+  const filtersConfig = FiltersConfig(null);
   const getInitialState = () => {
     return {
       filterOne: filtersConfig[data?.filter_one],
@@ -244,4 +245,5 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     </Container>
   ) : null;
 };
+
 export default Body;

@@ -11,8 +11,10 @@ import {
   Chip,
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
+
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
   ListingCategory,

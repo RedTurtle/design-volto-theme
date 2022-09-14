@@ -19,7 +19,7 @@ import {
   flattenToAppURL,
 } from '@plone/volto/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 /**
@@ -42,7 +42,7 @@ const Body = ({ data, isEditMode }) => {
   let videoID = null;
   let listID = null;
 
-  if (!placeholder && data.url) {
+  if (data.url) {
     if (data.url.match('youtu')) {
       //load video preview image from youtube
       if (data.url.match('list')) {
@@ -55,11 +55,15 @@ const Body = ({ data, isEditMode }) => {
           ? data.url.match(/^.*\.be\/(.*)/)[1]
           : data.url.match(/^.*\?v=(.*)$/)[1];
       }
-
-      placeholder = 'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
+      if (!placeholder) {
+        placeholder =
+          'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
+      }
     } else if (data.url.match('vimeo')) {
       videoID = data.url.match(/^.*\.com\/(.*)/)[1];
-      placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
+      if (!placeholder) {
+        placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
+      }
     }
   }
 
@@ -126,7 +130,11 @@ const Body = ({ data, isEditMode }) => {
                               '',
                             ),
                           )
-                            ? `${data.url}/@@download/file`
+                            ? `${data.url}${
+                                data.url.indexOf('@@download/file') < 0
+                                  ? '/@@download/file'
+                                  : ''
+                              }`
                             : data.url
                         }
                         controls

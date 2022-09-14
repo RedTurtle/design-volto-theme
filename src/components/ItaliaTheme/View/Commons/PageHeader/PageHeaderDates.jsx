@@ -1,7 +1,7 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-
 import PropTypes from 'prop-types';
+
 import { viewDate } from '@italia/helpers';
 
 /**
@@ -54,6 +54,7 @@ const PageHeaderDates = ({ content }) => {
     </>
   );
 };
+
 export default PageHeaderDates;
 
 PageHeaderDates.propTypes = {

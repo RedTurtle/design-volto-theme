@@ -1,6 +1,5 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-
 import {
   Card,
   CardTitle,

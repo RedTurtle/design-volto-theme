@@ -8,7 +8,7 @@ import DefaultFilters from '@italia/components/ItaliaTheme/Blocks/UOSearch/Defau
  */
 const FiltersConfig = (dispatchFilter) => {
   // const subsite = useSelector((state) => state.subsite?.data);
-  const defaultFilters = DefaultFilters(dispatchFilter);
+  const defaultFilters = DefaultFilters();
 
   return {
     ...defaultFilters,

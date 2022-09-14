@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import {
@@ -85,7 +86,7 @@ const Sidebar = (props) => {
     setActiveAccIndex(newIndex);
   }
 
-  let filtersConfig = FiltersConfig();
+  let filtersConfig = FiltersConfig(null);
 
   const filters = Object.keys(filtersConfig).map((k) => [
     k,

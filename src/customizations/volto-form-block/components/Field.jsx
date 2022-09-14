@@ -1,6 +1,9 @@
 /**
  * Field
  * @module components/manage/Blocks/IconsBlocks/View
+ *
+ * CUSTOMIZATIONS:
+ * - customized to use design-react-kit elements instead semantic-ui elements
  */
 
 import React from 'react';
@@ -11,8 +14,9 @@ import {
   FormGroup,
   Label,
 } from 'design-react-kit/dist/design-react-kit';
-import Select from 'react-select';
+
 import FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import WysiwygWidget from '@plone/volto/components/manage/Widgets/WysiwygWidget';
 
 import config from '@plone/volto/registry';
@@ -42,8 +46,10 @@ const Field = ({
   valid,
   disabled = false,
   formHasErrors = false,
+  reactSelect,
 }) => {
   const intl = useIntl();
+  const Select = reactSelect.default;
 
   const getLabel = () => {
     return required ? label + ' *' : label;
@@ -330,4 +336,4 @@ Field.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default Field;
+export default injectLazyLibs('reactSelect')(Field);

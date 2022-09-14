@@ -7,6 +7,7 @@ import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
@@ -38,7 +39,9 @@ const Body = ({ block, sections }) => {
   };
 
   const intl = useIntl();
+
   moment.locale(intl.locale);
+
   return (
     <div className="public-ui searchSections">
       <SearchSectionsBackground />

@@ -13,8 +13,10 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
+
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
   CardCalendar,
@@ -26,7 +28,6 @@ import {
   CardCategory,
   CardPersona,
 } from '@italia/components/ItaliaTheme';
-
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const InEvidenceTemplate = (props) => {

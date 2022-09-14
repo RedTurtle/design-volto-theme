@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { UniversalLink } from '@plone/volto/components';
-import PropTypes from 'prop-types';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { Icon } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { viewDate } from '@italia/helpers';
@@ -77,6 +79,7 @@ const Evento = ({ event, show_image }) => {
  */
 const Events = ({ content, title, show_image, folder_name, isChild }) => {
   const intl = useIntl();
+
   const path = isChild ? content.parent['@id'] : content['@id'];
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
@@ -133,6 +136,7 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
     </>
   );
 };
+
 export default Events;
 
 Events.propTypes = {

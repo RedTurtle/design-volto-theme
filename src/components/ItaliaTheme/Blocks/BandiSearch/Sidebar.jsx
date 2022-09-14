@@ -80,7 +80,7 @@ const Sidebar = (props) => {
     setActiveAccIndex(newIndex);
   }
 
-  let filtersConfig = FiltersConfig();
+  let filtersConfig = FiltersConfig(null);
 
   const filters = Object.keys(filtersConfig).map((k) => [
     k,

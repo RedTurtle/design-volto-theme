@@ -12,8 +12,10 @@ import { viewDate } from '@italia/helpers';
  * @returns {string} Markup of the component.
  */
 const NewsCard = ({ title, typology, effective, description, id }) => {
-  let date = effective ? new Date(effective) : false;
   const intl = useIntl();
+
+  let date = effective ? new Date(effective) : false;
+
   return (
     <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded">
       <div className="card-body">

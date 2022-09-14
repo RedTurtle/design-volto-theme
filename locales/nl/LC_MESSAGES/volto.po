@@ -316,6 +316,11 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
+#: components/ItaliaTheme/AppExtras/PageLoader
+# defaultMessage: Sto caricando la pagina richiesta...
+msgid "Loading page..."
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
 msgid "Luogo location filter"
@@ -928,6 +933,11 @@ msgstr ""
 msgid "backgroundImage"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Sfondo del blocco
+msgid "background_section"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
 msgid "bandi_search_no_filters"
@@ -996,6 +1006,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 # defaultMessage: Vedi
 msgid "bando_vedi"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
@@ -1847,6 +1862,16 @@ msgstr ""
 msgid "hide_dates"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"
@@ -1860,6 +1885,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Immagine per lo sfondo
+msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
@@ -3226,6 +3256,21 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 # defaultMessage: Vedi tutti
 msgid "view_all"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Apple Maps
+msgid "view_on_applemaps"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Bing Maps
+msgid "view_on_bingmaps"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Google Maps
+msgid "view_on_googlemaps"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli

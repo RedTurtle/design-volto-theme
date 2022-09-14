@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import moment from 'moment/min/moment-with-locales';
 import { useIntl, defineMessages } from 'react-intl';
+import moment from 'moment';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   TextFilter,

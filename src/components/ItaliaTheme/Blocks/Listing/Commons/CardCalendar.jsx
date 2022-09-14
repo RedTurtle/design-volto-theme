@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { useIntl, defineMessages } from 'react-intl';
+
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({

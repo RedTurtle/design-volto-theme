@@ -1,5 +1,7 @@
 import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import { defineMessages, useIntl } from 'react-intl';
 import {
   Container,
   Row,
@@ -10,9 +12,8 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
+
 import { ListingText, ListingLinkMore } from '@italia/components/ItaliaTheme';
-import cx from 'classnames';
-import { defineMessages, useIntl } from 'react-intl';
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({

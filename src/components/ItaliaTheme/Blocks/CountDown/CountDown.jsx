@@ -89,7 +89,7 @@ const CountDown = ({
       return;
     }
     timerComponents.push(
-      <div className={'interval ' + interval}>
+      <div className={'interval ' + interval} key={'interval ' + interval}>
         <div className="number">
           {(interval === 'minutes' || interval === 'seconds') &&
           timeLeft[interval].value < 10
@@ -115,4 +115,5 @@ const CountDown = ({
     </div>
   );
 };
+
 export default CountDown;

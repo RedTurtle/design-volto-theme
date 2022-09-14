@@ -1,6 +1,5 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
 import PropTypes from 'prop-types';
 
 /**
@@ -23,7 +22,6 @@ const messages = defineMessages({
 
 const PageHeaderPersona = ({ content }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return content['@type'] === 'Persona' ? (
     <>
@@ -43,6 +41,7 @@ const PageHeaderPersona = ({ content }) => {
     </>
   ) : null;
 };
+
 export default PageHeaderPersona;
 
 PageHeaderPersona.propTypes = {

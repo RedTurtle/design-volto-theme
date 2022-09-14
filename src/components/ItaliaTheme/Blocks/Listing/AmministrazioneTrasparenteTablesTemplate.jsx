@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { flatMapDeep } from 'lodash';
 import moment from 'moment';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+
 import { UniversalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { getTableRowData } from '@italia/helpers';
@@ -20,7 +21,9 @@ const AmministrazioneTrasparenteTablesTemplate = ({
   show_block_bg,
 }) => {
   const intl = useIntl();
+
   moment.locale(intl.locale);
+
   const location = useLocation();
 
   const getColumn = (item) => {

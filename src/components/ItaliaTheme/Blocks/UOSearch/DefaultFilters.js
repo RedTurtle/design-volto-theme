@@ -1,5 +1,5 @@
-import moment from 'moment/min/moment-with-locales';
 import { useIntl, defineMessages } from 'react-intl';
+import moment from 'moment';
 import {
   TextFilter,
   SelectFilter,

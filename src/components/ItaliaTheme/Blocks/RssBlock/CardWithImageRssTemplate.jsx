@@ -14,6 +14,7 @@ import {
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+
 import { getViewDate } from '@italia/components/ItaliaTheme/Blocks/RssBlock/utils';
 
 const messages = defineMessages({
@@ -28,7 +29,12 @@ const messages = defineMessages({
   },
 });
 
-const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
+const CardWithImageRssTemplate = ({
+  items = [],
+  isEditMode,
+  data = {},
+  moment: Moment,
+}) => {
   const intl = useIntl();
 
   return (

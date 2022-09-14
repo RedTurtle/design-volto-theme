@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
-import { useIntl } from 'react-intl';
-import moment from 'moment';
-import 'moment/min/locales';
+
 import {
   Container,
   Row,
@@ -16,6 +13,8 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory, ListingLinkMore } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
@@ -31,9 +30,6 @@ import {
 } from '@italia/components/ItaliaTheme';
 
 const CardWithImageTemplate = (props) => {
-  const intl = useIntl();
-  moment.locale(intl.locale);
-
   const {
     items,
     isEditMode,

@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+
+import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 import { getCalendarDate } from '@italia/helpers';
 import {
   Icon,
@@ -12,7 +15,6 @@ import {
   getItemIcon,
   ListingCategory,
 } from '@italia/components/ItaliaTheme';
-import Image from '@plone/volto/components/theme/Image/Image';
 
 /**
  * GenericCard view component class.

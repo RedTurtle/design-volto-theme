@@ -1,7 +1,7 @@
-import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-
+import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
+
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -19,6 +19,7 @@ const messages = defineMessages({
  */
 const PageMetadata = ({ content, children }) => {
   const intl = useIntl();
+
   return (
     <article id="metadata" className="bottom-metadata">
       <span className="text-serif mb-0 mt-4">
@@ -29,6 +30,7 @@ const PageMetadata = ({ content, children }) => {
     </article>
   );
 };
+
 export default PageMetadata;
 
 PageMetadata.propTypes = {

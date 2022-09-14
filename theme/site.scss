@@ -32,6 +32,7 @@
 @import 'ItaliaTheme/Components/venue';
 @import 'ItaliaTheme/Components/metadata';
 @import 'ItaliaTheme/Components/galleryPreview';
+@import 'ItaliaTheme/Components/locationsMap';
 @import 'ItaliaTheme/Blocks/subblocks-edit';
 @import 'ItaliaTheme/Blocks/listing';
 @import 'ItaliaTheme/Blocks/tableOfContents';
@@ -77,6 +78,7 @@
 @import 'ItaliaTheme/Blocks/numbers';
 @import 'ItaliaTheme/Blocks/countdown';
 @import 'ItaliaTheme/Blocks/video';
+@import 'ItaliaTheme/Blocks/HTML';
 
 @import 'ItaliaTheme/Views/uo';
 @import 'ItaliaTheme/Views/evento';
@@ -103,6 +105,7 @@
 @import 'ItaliaTheme/Components/logo';
 @import 'ItaliaTheme/Components/mobileMenu';
 @import 'ItaliaTheme/Components/relatedItemInEvidence';
+@import 'ItaliaTheme/Components/pageLoader';
 
 @import 'ItaliaTheme/Print/all_pages';
 @import 'ItaliaTheme/Print/news_items';
@@ -111,5 +114,3 @@
 @import 'ItaliaTheme/Print/event';
 @import 'ItaliaTheme/Print/servizio';
 @import 'ItaliaTheme/Print/blocks';
-
-@import 'ItaliaTheme/Subsites/templates';

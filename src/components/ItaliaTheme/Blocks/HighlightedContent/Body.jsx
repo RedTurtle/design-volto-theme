@@ -13,10 +13,11 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import Image from '@plone/volto/components/theme/Image/Image';
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
+import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import { CardCategory, getItemIcon } from '@italia/components/ItaliaTheme';
 import { viewDate } from '@italia/helpers';
 

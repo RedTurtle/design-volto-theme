@@ -28,6 +28,7 @@ const messages = defineMessages({
 
 const SearchSectionForm = ({ content }) => {
   const intl = useIntl();
+
   const subsite = useSelector((state) => state.subsite?.data);
   const [searchableText, setSearchableText] = useState('');
   const doSearch = (e) => {
@@ -46,6 +47,7 @@ const SearchSectionForm = ({ content }) => {
             null,
             subsite,
             intl.locale,
+            false,
           ) +
           '&custom_path=' +
           flattenToAppURL(content['@id']);
@@ -84,6 +86,7 @@ const SearchSectionForm = ({ content }) => {
     </div>
   );
 };
+
 export default SearchSectionForm;
 
 SearchSectionForm.propTypes = {

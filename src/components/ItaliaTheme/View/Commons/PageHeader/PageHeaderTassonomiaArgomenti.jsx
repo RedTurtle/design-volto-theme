@@ -1,9 +1,8 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
 import PropTypes from 'prop-types';
-
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 /**
@@ -22,7 +21,6 @@ const messages = defineMessages({
 
 const PageHeaderTassonomiaArgomenti = ({ content }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return content?.tassonomia_argomenti?.length > 0 ? (
     <div className="mt-4 mb-4 page-arguments">
@@ -44,6 +42,7 @@ const PageHeaderTassonomiaArgomenti = ({ content }) => {
     </div>
   ) : null;
 };
+
 export default PageHeaderTassonomiaArgomenti;
 
 PageHeaderTassonomiaArgomenti.propTypes = {
