@@ -314,6 +314,11 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
+#: components/ItaliaTheme/AppExtras/PageLoader
+# defaultMessage: Sto caricando la pagina richiesta...
+msgid "Loading page..."
+msgstr "Chargement des pages..."
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
 msgid "Luogo location filter"
@@ -1000,6 +1005,11 @@ msgstr ""
 # defaultMessage: Vedi
 msgid "bando_vedi"
 msgstr "Voir"
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
@@ -1848,6 +1858,16 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconWidget
@@ -3235,6 +3255,21 @@ msgstr "Lieux"
 # defaultMessage: Vedi tutti
 msgid "view_all"
 msgstr "Voir tous"
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Apple Maps
+msgid "view_on_applemaps"
+msgstr "Voir sur Apple Maps"
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Bing Maps
+msgid "view_on_bingmaps"
+msgstr "Voir sur Bing Maps"
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Google Maps
+msgid "view_on_googlemaps"
+msgstr "Voir sur Google Maps"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Vincoli

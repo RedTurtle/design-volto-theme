@@ -1,13 +1,14 @@
+/*
+ * CUSTOMIZATIONS:
+ * - customized to use design-react-kit elements instead semantic-ui elements
+ */
 import React from 'react';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Container as DesignContainer } from 'design-react-kit/dist/design-react-kit';
 
 /*This component facilitates the customization of Container*/
 
 const Container = (props) => {
-  const { Container: DesignContainer } = props.designReactKit;
-
   return <DesignContainer {...props} />;
 };
 
-export default injectLazyLibs(['designReactKit'])(Container);
+export default Container;

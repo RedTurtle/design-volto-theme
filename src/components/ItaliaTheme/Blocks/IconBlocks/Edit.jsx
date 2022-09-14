@@ -5,8 +5,8 @@
 
 import React from 'react';
 import { defineMessages } from 'react-intl';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
@@ -55,8 +55,6 @@ class Edit extends SubblocksEdit {
       return <div />;
     }
 
-    const { Container, Row, Col } = this.props.designReactKit;
-
     return (
       <div className="public-ui">
         <div className="full-width section py-5">
@@ -65,7 +63,8 @@ class Edit extends SubblocksEdit {
               className="background-image"
               style={{
                 backgroundImage: `url(${
-                  this.props.data.background[0]?.image?.download ??
+                  this.props.data.background[0]?.image?.scales?.huge
+                    ?.download ??
                   addAppURL(this.props.data.background[0]?.['@id'])
                 })`,
               }}
@@ -170,6 +169,4 @@ class Edit extends SubblocksEdit {
   }
 }
 
-export default React.memo(
-  injectLazyLibs(['designReactKit'])(withDNDContext(Edit)),
-);
+export default React.memo(withDNDContext(Edit));

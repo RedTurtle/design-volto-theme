@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardReadMore,
+  Row,
+  Col,
+} from 'design-react-kit/dist/design-react-kit';
 
-const CardWithImageRssTemplateSkeleton = ({
-  isEditMode,
-  data = {},
-  designReactKit,
-}) => {
-  const { Card, CardBody, CardTitle, CardReadMore, Row, Col } = designReactKit;
+const CardWithImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
       <div className="skeleton-template">
@@ -46,7 +48,7 @@ const CardWithImageRssTemplateSkeleton = ({
           ))}
         </Row>
         {data.linkMore && data.linkMoreTitle && (
-          <div className="link-morre text-center my-4"></div>
+          <div className="link-button text-center my-4"></div>
         )}
       </div>
     </div>
@@ -57,6 +59,4 @@ CardWithImageRssTemplateSkeleton.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default injectLazyLibs(['designReactKit'])(
-  CardWithImageRssTemplateSkeleton,
-);
+export default CardWithImageRssTemplateSkeleton;

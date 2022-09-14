@@ -1,6 +1,18 @@
+/*Customizatinos:
+- usati i componenti di design-react-kit
+- disabilitato il captcha se nelle siteProperties del config è stato disabilitato.
+*/
 import React, { useCallback, useRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-
+import {
+  Card,
+  CardBody,
+  Row,
+  Col,
+  Button,
+  Alert,
+  Progress,
+} from 'design-react-kit/dist/design-react-kit';
 // eslint-disable-next-line import/no-unresolved
 import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved
@@ -9,7 +21,6 @@ import Field from 'volto-form-block/components/Field';
 import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
 // eslint-disable-next-line import/no-unresolved
 import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -43,7 +54,6 @@ const FormView = ({
   data,
   onSubmit,
   resetFormState,
-  designReactKit,
 }) => {
   const intl = useIntl();
   const alertTransition = {
@@ -64,6 +74,9 @@ const FormView = ({
     : process.env.RAZZLE_RECAPTCHA_KEY
     ? 'GoogleReCaptcha'
     : null;
+
+  const enableCaptcha =
+    config.settings.siteProperties.enableVoltoFormBlockCaptcha;
 
   let validToken = useRef(null);
   const onVerifyCaptcha = useCallback(
@@ -86,7 +99,6 @@ const FormView = ({
     }
   }
 
-  const { Card, CardBody, Row, Col, Button, Alert, Progress } = designReactKit;
   return (
     <div className="block form">
       <div className="public-ui">
@@ -194,11 +206,11 @@ const FormView = ({
                     );
                   })}
 
-                  {captcha === 'GoogleReCaptcha' && (
+                  {enableCaptcha && captcha === 'GoogleReCaptcha' && (
                     <GoogleReCaptchaWidget onVerify={onVerifyCaptcha} />
                   )}
 
-                  {captcha === 'HCaptcha' && (
+                  {enableCaptcha && captcha === 'HCaptcha' && (
                     <HCaptchaWidget
                       sitekey={process.env.RAZZLE_HCAPTCHA_KEY}
                       onVerify={onVerifyCaptcha}
@@ -225,10 +237,11 @@ const FormView = ({
                         color="primary"
                         type="submit"
                         disabled={
-                          (!validToken?.current &&
+                          enableCaptcha &&
+                          ((!validToken?.current &&
                             (!!process.env.RAZZLE_RECAPTCHA_KEY ||
                               !!process.env.RAZZLE_HCAPTCHA_KEY)) ||
-                          formState.loading
+                            formState.loading)
                         }
                       >
                         {data.submit_label ||
@@ -256,4 +269,4 @@ const FormView = ({
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(FormView);
+export default FormView;

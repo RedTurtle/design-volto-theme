@@ -2,7 +2,11 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  Card,
+  CardTitle,
+  CardBody,
+} from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 import { viewDate } from '@italia/helpers';
 
@@ -31,21 +35,12 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({
-  content,
-  show_image,
-  moment: Moment,
-  rrule,
-  designReactKit,
-}) => {
+const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   const intl = useIntl();
-
-  const moment = Moment.default;
+  const moment = momentlib.default;
   moment.locale(intl.locale);
 
   const rrulestr = rrule.rrulestr;
-
-  const { Card, CardTitle, CardBody } = designReactKit;
 
   let rruleSet = null;
   let recurrenceText = null;
@@ -65,8 +60,8 @@ const Dates = ({
     );
   }
 
-  const start = viewDate(intl.locale, moment, content.start);
-  const end = viewDate(intl.locale, moment, content.end);
+  const start = viewDate(intl.locale, content.start);
+  const end = viewDate(intl.locale, content.end);
 
   return content ? (
     <>
@@ -128,12 +123,7 @@ const Dates = ({
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
             <div className="text-serif">
-              {viewDate(
-                intl.locale,
-                moment,
-                additionalDate,
-                'dddd DD MMMM YYYY',
-              )}
+              {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -143,7 +133,7 @@ const Dates = ({
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
             <div className="text-serif">
-              {viewDate(intl.locale, moment, exDate, 'dddd DD MMMM YYYY')}
+              {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -152,7 +142,7 @@ const Dates = ({
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'rrule', 'designReactKit'])(Dates);
+export default injectLazyLibs(['moment', 'rrule'])(Dates);
 
 Dates.propTypes = {
   content: PropTypes.object.isRequired,

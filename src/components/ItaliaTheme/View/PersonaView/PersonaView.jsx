@@ -84,6 +84,7 @@ const PersonaView = ({ content }) => {
   );
 };
 
+// TODO: items
 PersonaView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
@@ -94,8 +95,8 @@ PersonaView.propTypes = {
     biografia: PropTypes.shape({
       data: PropTypes.string,
     }),
-    collegamenti_organizzazione_l1: PropTypes.array.isRequired,
-    collegamenti_organizzazione_l2: PropTypes.array.isRequired,
+    collegamenti_organizzazione_l1: PropTypes.array,
+    collegamenti_organizzazione_l2: PropTypes.array,
     competenze: PropTypes.shape({
       data: PropTypes.string,
     }),
@@ -109,7 +110,7 @@ PersonaView.propTypes = {
       data: PropTypes.string,
     }),
     description: PropTypes.string,
-    email: PropTypes.string,
+    email: PropTypes.array,
     foto_persona: PropTypes.shape({
       scales: PropTypes.shape({
         preview: PropTypes.shape({

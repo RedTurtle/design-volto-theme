@@ -1,10 +1,14 @@
 import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-
+import {
+  Container,
+  Button,
+  Spinner,
+} from 'design-react-kit/dist/design-react-kit';
+import moment from 'moment';
 import cx from 'classnames';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
@@ -32,17 +36,10 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({
-  data,
-  inEditMode,
-  path,
-  onChangeBlock,
-  moment: Moment,
-  designReactKit,
-}) => {
+const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
-  const moment = Moment.default;
+
   moment.locale(intl.locale);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -139,7 +136,7 @@ const Body = ({
     return newState;
   };
 
-  const filtersConfig = FiltersConfig(null, moment);
+  const filtersConfig = FiltersConfig(null);
   const getInitialState = () => {
     return {
       filterOne: filtersConfig[data?.filter_one],
@@ -159,8 +156,6 @@ const Body = ({
     setCurrentPage(current);
     doRequest(current);
   }
-
-  const { Container, Button, Spinner } = designReactKit;
 
   return filterOne || filterTwo || filterThree ? (
     <Container>
@@ -251,4 +246,4 @@ const Body = ({
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Body);
+export default Body;

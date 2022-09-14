@@ -3,8 +3,17 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
+import {
+  Row,
+  Col,
+  Chip,
+  Card,
+  CardBody,
+  CardText,
+  CardTitle,
+  CardReadMore,
+} from 'design-react-kit/dist/design-react-kit';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -15,23 +24,10 @@ import { viewDate } from '@italia/helpers';
 const Body = (props) => {
   const { content, block } = props;
   const intl = useIntl();
-  const moment = props.moment.default;
-  moment.locale(intl.locale);
   const icon = getItemIcon(content);
 
   const { show_type = true, show_section } = block;
   const category = getCategory(content, show_type, show_section, props);
-
-  const {
-    Row,
-    Col,
-    Chip,
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
-    CardReadMore,
-  } = props.designReactKit;
 
   return (
     <div className={`${block.bg_color ? 'bg-' + block.bg_color : ''}`}>
@@ -54,7 +50,7 @@ const Body = (props) => {
               <CardCategory
                 date={
                   content.effective &&
-                  viewDate(intl.locale, moment, content.effective, 'll')
+                  viewDate(intl.locale, content.effective, 'll')
                 }
                 iconName={icon}
               >
@@ -115,4 +111,4 @@ Body.propTypes = {
   pathname: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Body);
+export default Body;

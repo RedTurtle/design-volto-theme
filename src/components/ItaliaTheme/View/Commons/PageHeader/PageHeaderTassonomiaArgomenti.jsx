@@ -1,7 +1,8 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 /**
@@ -18,16 +19,8 @@ const messages = defineMessages({
   },
 });
 
-const PageHeaderTassonomiaArgomenti = ({
-  content,
-  moment: Moment,
-  designReactKit,
-}) => {
+const PageHeaderTassonomiaArgomenti = ({ content }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
-
-  const { Chip, ChipLabel } = designReactKit;
 
   return content?.tassonomia_argomenti?.length > 0 ? (
     <div className="mt-4 mb-4 page-arguments">
@@ -50,9 +43,7 @@ const PageHeaderTassonomiaArgomenti = ({
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(
-  PageHeaderTassonomiaArgomenti,
-);
+export default PageHeaderTassonomiaArgomenti;
 
 PageHeaderTassonomiaArgomenti.propTypes = {
   params: PropTypes.shape({

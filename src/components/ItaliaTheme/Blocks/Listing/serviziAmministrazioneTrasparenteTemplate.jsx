@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import moment from 'moment';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
@@ -30,14 +30,9 @@ const GridGalleryTemplate = ({
   linkTitle,
   linkHref,
   show_block_bg,
-  moment: Moment,
-  designReactKit,
 }) => {
   const intl = useIntl();
-  const moment = Moment.default;
   moment.locale(intl.locale);
-
-  const { Container, Row, Col } = designReactKit;
 
   return (
     <div className="persone-amministrazione-trasparente">
@@ -110,6 +105,4 @@ GridGalleryTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(
-  GridGalleryTemplate,
-);
+export default GridGalleryTemplate;

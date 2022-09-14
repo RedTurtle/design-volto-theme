@@ -1,13 +1,17 @@
-import React from 'react';
+import {
+  Alert,
+  Col,
+  Container,
+  Row,
+} from 'design-react-kit/dist/design-react-kit';
+import { ListingImage, ListingLinkMore } from '@italia/components/ItaliaTheme';
+import { defineMessages, useIntl } from 'react-intl';
+
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { useIntl, defineMessages } from 'react-intl';
-
+import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
+import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
-import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   maxItemsExceeded: {
@@ -24,11 +28,9 @@ const GridGalleryTemplate = ({
   linkTitle,
   linkHref,
   show_block_bg,
-  designReactKit,
+  critical = false,
 }) => {
   const intl = useIntl();
-
-  const { Container, Row, Col, Alert } = designReactKit;
 
   return (
     <div className="grid-gallery-template">
@@ -65,21 +67,18 @@ const GridGalleryTemplate = ({
               scale = 'large';
             }
 
-            if (scale) {
+            if (scale && item.image.scales[scale]) {
               image = (
                 <picture class="volto-image responsive">
                   <img
-                    src={flattenToAppURL(
-                      item['@id'] +
-                        '/@@images/' +
-                        (item.image_field ?? 'image') +
-                        '/' +
-                        scale,
-                    )}
+                    src={flattenToAppURL(item.image.scales[scale].download)}
+                    width={item.image.scales[scale].width}
+                    height={item.image.scales[scale].height}
                     alt={item.title}
                     role="presentation"
                     aria-hidden="true"
                     title={item.title}
+                    loading={critical ? 'eager' : 'lazy'}
                   />
                 </picture>
               );
@@ -113,6 +112,7 @@ GridGalleryTemplate.propTypes = {
   linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
+  critical: PropTypes.bool,
 };
 
-export default injectLazyLibs(['designReactKit'])(GridGalleryTemplate);
+export default GridGalleryTemplate;

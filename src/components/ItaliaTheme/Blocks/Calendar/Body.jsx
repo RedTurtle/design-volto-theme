@@ -2,7 +2,14 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
-
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import {
+  Card,
+  Row,
+  Col,
+  Container,
+  Button,
+} from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -10,7 +17,6 @@ import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getCalendarResults, setOriginalQuery } from '@italia/actions';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { viewDate } from '@italia/helpers';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   insert_filter: {
@@ -34,21 +40,10 @@ const messages = defineMessages({
 
 const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
 
-const Body = ({
-  data,
-  block,
-  inEditMode,
-  path,
-  onChangeBlock,
-  moment: Moment,
-  reactSlick,
-  designReactKit,
-}) => {
+const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const intl = useIntl();
-  const moment = Moment.default;
 
   const Slider = reactSlick.default;
-  const { Card, Row, Col, Container, Button } = designReactKit;
 
   const [activePage, setActivePage] = useState(0);
   const [additionalFilters, setAdditionalFilters] = useState([]);
@@ -74,12 +69,12 @@ const Body = ({
   const dispatch = useDispatch();
 
   const getMonth = useCallback(() => {
-    const startIndex = activePage * (data.b_size || 4);
+    const startIndex = activePage;
 
     const months = calendarResults[block]?.items
-      ?.slice(activePage, startIndex + (+data.b_size || 4))
+      ?.slice(startIndex, startIndex + 4)
       .reduce((total, date) => {
-        const month = viewDate(intl.locale, moment, date, 'MMMM');
+        const month = viewDate(intl.locale, date, 'MMMM');
 
         if (!total.includes(month)) {
           total.push(month);
@@ -90,7 +85,7 @@ const Body = ({
     return months
       ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
       .join(' / ');
-  }, [activePage, block, calendarResults, data.b_size, intl.locale, moment]);
+  }, [activePage, block, calendarResults, intl.locale]);
 
   const [monthName, setMonthName] = useState(getMonth);
 
@@ -336,4 +331,4 @@ const Body = ({
     </div>
   );
 };
-export default injectLazyLibs(['moment', 'reactSlick', 'designReactKit'])(Body);
+export default injectLazyLibs(['reactSlick'])(Body);

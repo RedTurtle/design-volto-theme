@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
@@ -42,14 +43,12 @@ const PhotogalleryTemplate = ({
   linkTitle,
   linkHref,
   reactSlick,
-  designReactKit,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
   const [viewImageIndex, setViewImageIndex] = useState(null);
   const Slider = reactSlick.default;
-  const { Container, Row, Col } = designReactKit;
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -65,6 +64,7 @@ const PhotogalleryTemplate = ({
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: autoplay,
     speed: 500,
     slidesToShow: items.length < 3 ? items.length : 3,
     slidesToScroll: 1,
@@ -114,7 +114,10 @@ const PhotogalleryTemplate = ({
                 : intl.formatMessage(messages.play)
             }
           >
-            <Icon icon={autoplay ? 'pause' : 'play'} />
+            <Icon
+              key={autoplay ? 'pause' : 'play'}
+              icon={autoplay ? 'pause' : 'play'}
+            />
           </button>
         </div>
         <ul style={{ margin: '0px' }}> {dots} </ul>
@@ -217,6 +220,4 @@ PhotogalleryTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['reactSlick', 'designReactKit'])(
-  PhotogalleryTemplate,
-);
+export default injectLazyLibs(['reactSlick'])(PhotogalleryTemplate);

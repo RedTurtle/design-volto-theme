@@ -7,7 +7,13 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import {
+  Header,
+  HeaderContent,
+  HeaderToggler,
+  Nav,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -28,10 +34,19 @@ import {
   getItemsByPath,
 } from '@italia/addons/volto-dropdownmenu';
 
-const Navigation = ({ pathname, designReactKit }) => {
+const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
+
   const subsite = useSelector((state) => state.subsite?.data);
+  const logoSubsite = subsite?.subsite_logo && (
+    <figure className="icon">
+      <img
+        src={flattenToAppURL(subsite.subsite_logo.scales?.mini?.download)}
+        alt="Logo"
+      />
+    </figure>
+  );
 
   const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {
@@ -74,8 +89,6 @@ const Navigation = ({ pathname, designReactKit }) => {
       document.body.removeEventListener('click', blocksClickListener);
   }, []);
 
-  const { Header, HeaderContent, HeaderToggler, Nav } = designReactKit;
-
   return (
     <Header theme="" type="navbar">
       {menu?.length > 0 ? (
@@ -103,7 +116,7 @@ const Navigation = ({ pathname, designReactKit }) => {
                   }
                   onClick={() => setCollapseOpen(false)}
                 >
-                  <Logo />
+                  {subsite?.subsite_logo ? logoSubsite : <Logo />}
                   <BrandText mobile={true} subsite={subsite} />
                 </UniversalLink>
               </div>
@@ -143,4 +156,4 @@ Navigation.propTypes = {
   pathname: PropTypes.string.isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(Navigation);
+export default Navigation;

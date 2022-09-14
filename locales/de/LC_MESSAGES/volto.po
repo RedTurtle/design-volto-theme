@@ -312,6 +312,11 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
+#: components/ItaliaTheme/AppExtras/PageLoader
+# defaultMessage: Sto caricando la pagina richiesta...
+msgid "Loading page..."
+msgstr "Seite wird geladen..."
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
 msgid "Luogo location filter"
@@ -326,7 +331,7 @@ msgstr ""
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
-msgstr ""
+msgstr "Ausgewähltes Menü"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
@@ -356,12 +361,12 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Nessun risultato ottenuto
 msgid "Nessun risultato ottenuto"
-msgstr ""
+msgstr "Keine Ergebnisse erhalten"
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina successiva
 msgid "Next page"
-msgstr ""
+msgstr "Nächste Seite"
 
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 # defaultMessage: Non ci sono punti da mostrare sulla mappa
@@ -393,7 +398,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Metti in pausa
 msgid "Pause slider"
-msgstr ""
+msgstr "Pause"
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
@@ -415,7 +420,7 @@ msgstr ""
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"
-msgstr ""
+msgstr "Vorherige Seite"
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -997,6 +1002,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 # defaultMessage: Vedi
 msgid "bando_vedi"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
@@ -1846,6 +1856,16 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconWidget
@@ -3232,6 +3252,21 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 # defaultMessage: Vedi tutti
 msgid "view_all"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Apple Maps
+msgid "view_on_applemaps"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Bing Maps
+msgid "view_on_bingmaps"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Google Maps
+msgid "view_on_googlemaps"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli

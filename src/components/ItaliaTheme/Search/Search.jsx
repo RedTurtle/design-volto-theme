@@ -9,12 +9,23 @@ import { useIntl, defineMessages } from 'react-intl';
 import { values } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
-
+import moment from 'moment';
+import {
+  Container,
+  Row,
+  Col,
+  Collapse,
+  CardCategory,
+  Button,
+  Toggle,
+  Alert,
+  Spinner,
+} from 'design-react-kit/dist/design-react-kit';
+import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
-import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
+import { resetSubsite } from '@italia/addons/volto-subsites';
 
 import {
   Pagination,
@@ -23,6 +34,7 @@ import {
   SearchCTs,
   Icon,
   RemoveBodyClass,
+  SearchResultItem,
 } from '@italia/components/ItaliaTheme';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
@@ -145,29 +157,11 @@ const searchOrderDict = {
   },
 };
 
-const Search = ({ moment: Moment, designReactKit }) => {
+const Search = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const location = useLocation();
   const history = useHistory();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
-
-  const {
-    Container,
-    Row,
-    Col,
-    Collapse,
-    Card,
-    CardBody,
-    CardCategory,
-    Button,
-    Toggle,
-    Alert,
-    Spinner,
-    Skiplink,
-    SkiplinkItem,
-  } = designReactKit;
 
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
@@ -274,6 +268,18 @@ const Search = ({ moment: Moment, designReactKit }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchFilters, subsite]);
 
+  useEffect(() => {
+    if (
+      subsite &&
+      !location.pathname.startsWith(flattenToAppURL(subsite['@id']))
+    ) {
+      /*la ricerca è stata fatta dal sito padre,
+      poi dai risultati si è passato a un subsite,
+      poi è stato fatto back dal browser per tornare ai risultati di ricerca del sito padre*/
+      dispatch(resetSubsite());
+    }
+  }, [subsite, dispatch, location.pathname]);
+
   const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(
     () => {
@@ -306,7 +312,6 @@ const Search = ({ moment: Moment, designReactKit }) => {
       subsite,
       intl.locale,
       true,
-      moment,
     );
 
     searchResults.result &&
@@ -323,7 +328,6 @@ const Search = ({ moment: Moment, designReactKit }) => {
           subsite,
           intl.locale,
           false,
-          moment,
         ),
       );
 
@@ -632,23 +636,13 @@ const Search = ({ moment: Moment, designReactKit }) => {
                     </Row>
                   </div>
                   <Row>
-                    {searchResults?.result?.items?.map((i) => (
-                      <Col md={6} key={i['@id']}>
-                        <Card
-                          teaser
-                          noWrapper={true}
-                          className={cx('mt-3 mb-2 border-bottom-half', {
-                            'border-right border-light': i % 3 !== 2,
-                          })}
-                        >
-                          <CardBody>
-                            {i['@type'] && getSectionFromId(i['@id'])}
-                            <h4 className="card-title">
-                              <UniversalLink item={i}>{i.title}</UniversalLink>
-                            </h4>
-                            <p className="card-text">{i.description}</p>
-                          </CardBody>
-                        </Card>
+                    {searchResults?.result?.items?.map((item, index) => (
+                      <Col md={6} key={item['@id']}>
+                        <SearchResultItem
+                          item={item}
+                          index={index}
+                          section={getSectionFromId(item['@id'])}
+                        />
                       </Col>
                     ))}
                   </Row>
@@ -681,4 +675,4 @@ const Search = ({ moment: Moment, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Search);
+export default Search;

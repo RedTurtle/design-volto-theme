@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useIntl, defineMessages } from 'react-intl';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
-import { useIntl, defineMessages } from 'react-intl';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
-import Background from './Background';
+import {
+  Icon,
+  BackgroundUser,
+  SearchSectionsBackground,
+} from '@italia/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
   window.location.href =
@@ -23,7 +25,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ block, sections, designReactKit }) => {
+const Body = ({ block, sections }) => {
   const history = useHistory();
   const intl = useIntl();
 
@@ -40,11 +42,13 @@ const Body = ({ block, sections, designReactKit }) => {
     history.push(flattenToAppURL(link['@id']));
   };
 
-  const { Button } = designReactKit;
-
   return (
     <div className="public-ui searchSections">
-      <Background image={block.image} />
+      {block?.image ? (
+        <BackgroundUser image={block.image} />
+      ) : (
+        <SearchSectionsBackground />
+      )}
       <div className="container">
         <div className="searchContainer d-flex w-100">
           <h2 className="text-secondary mb-4">{block.title}</h2>
@@ -97,4 +101,4 @@ Body.propTypes = {
   block: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(Body);
+export default Body;

@@ -11,9 +11,9 @@ import {
   getSecondaryMenu,
   getItemsByPath,
 } from '@italia/addons/volto-secondarymenu';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   menu_selected: {
@@ -22,7 +22,7 @@ const messages = defineMessages({
   },
 });
 
-const MenuSecondary = ({ pathname, designReactKit }) => {
+const MenuSecondary = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
@@ -45,8 +45,6 @@ const MenuSecondary = ({ pathname, designReactKit }) => {
     );
   };
 
-  const { Nav, NavItem, NavLink } = designReactKit;
-
   return (
     items?.length > 0 && (
       <Nav navbar className="navbar-secondary" role="navigation">
@@ -60,9 +58,10 @@ const MenuSecondary = ({ pathname, designReactKit }) => {
                 tag={UniversalLink}
                 active={isMenuActive(url)}
               >
-                <span className={item.inEvidence ? 'font-weight-bold' : ''}>
-                  {item.title}
-                </span>
+                <span
+                  className={item.inEvidence ? 'font-weight-bold' : ''}
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                ></span>
                 {isMenuActive(url) && (
                   <span className="sr-only">
                     {intl.formatMessage(messages.menu_selected)}
@@ -79,4 +78,4 @@ const MenuSecondary = ({ pathname, designReactKit }) => {
 
 MenuSecondary.propTypes = {};
 
-export default injectLazyLibs(['designReactKit'])(MenuSecondary);
+export default MenuSecondary;

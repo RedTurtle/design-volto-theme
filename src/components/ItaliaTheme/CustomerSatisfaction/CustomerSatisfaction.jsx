@@ -3,6 +3,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
+import {
+  Button,
+  Input,
+  Progress,
+  Alert,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import {
@@ -10,8 +16,8 @@ import {
   resetSubmitCustomerSatisfaction,
   GoogleReCaptchaWidget,
 } from 'volto-customer-satisfaction';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { isCmsUi } from '@plone/volto/helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   title: {
@@ -57,7 +63,7 @@ const hashFnv32a = (str, seed) => {
   return ('0000000' + (hval >>> 0).toString(16)).substr(-8);
 };
 
-const CustomerSatisfaction = ({ designReactKit }) => {
+const CustomerSatisfaction = () => {
   const intl = useIntl();
   const location = useLocation();
   const path = location.pathname ?? '/';
@@ -97,12 +103,14 @@ const CustomerSatisfaction = ({ designReactKit }) => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [satisfaction]);
+  // eslint-disable-next-line no-console
   console.log(
     'process.env.RAZZLE_RECAPTCHA_KEY',
     process.env.RAZZLE_RECAPTCHA_KEY,
   );
   const onVerifyCaptcha = useCallback(
     (token) => {
+      // eslint-disable-next-line no-console
       console.log('onVerifyCaptcha', satisfaction, validToken, token);
       if (satisfaction != null && !validToken) {
         setValidToken(token);
@@ -112,12 +120,11 @@ const CustomerSatisfaction = ({ designReactKit }) => {
   );
 
   const sendFormData = () => {
-    dispatch(
-      submitCustomerSatisfaction(path, {
-        ...formData,
-        'g-recaptcha-response': validToken,
-      }),
-    );
+    const data = { ...formData };
+    if (config.settings.siteProperties.enableCustomerSatisfactionCaptcha) {
+      data['g-recaptcha-response'] = validToken;
+    }
+    dispatch(submitCustomerSatisfaction(path, data));
   };
 
   let action = path?.length > 1 ? path.replace(/\//g, '') : path;
@@ -146,7 +153,6 @@ const CustomerSatisfaction = ({ designReactKit }) => {
     unmountOnExit: true,
   };
 
-  const { Button, Input, Progress, Alert } = designReactKit;
   return (
     <div className="customer-satisfaction">
       <h2 id="cs-radiogroup-label">{intl.formatMessage(messages.title)}</h2>
@@ -219,14 +225,23 @@ const CustomerSatisfaction = ({ designReactKit }) => {
                 />
               </div>
 
-              <GoogleReCaptchaWidget
-                key={action}
-                onVerify={onVerifyCaptcha}
-                action={action}
-              />
-              {validToken}
+              {config.settings.siteProperties
+                .enableCustomerSatisfactionCaptcha && (
+                <GoogleReCaptchaWidget
+                  key={action}
+                  onVerify={onVerifyCaptcha}
+                  action={action}
+                />
+              )}
               <div className="submit-wrapper">
-                <Button type="submit" color="primary" disabled={!validToken}>
+                <Button
+                  type="submit"
+                  color="primary"
+                  disabled={
+                    config.settings.siteProperties
+                      .enableCustomerSatisfactionCaptcha && !validToken
+                  }
+                >
                   {intl.formatMessage(messages.submit)}
                 </Button>
               </div>
@@ -257,4 +272,4 @@ const CustomerSatisfaction = ({ designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(CustomerSatisfaction);
+export default CustomerSatisfaction;
