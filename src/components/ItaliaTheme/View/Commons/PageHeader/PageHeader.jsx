@@ -112,12 +112,7 @@ const PageHeader = (props) => {
           </div>
         ) : null}
 
-        <div
-          className={cx('page-header-right py-lg-4', {
-            'col-lg-4': props.imageinheader,
-            'col-lg-3 offset-lg-1': !props.imageinheader,
-          })}
-        >
+        <div className={'page-header-right py-lg-4 col-lg-3 offset-lg-1'}>
           <div className="row">
             <Sharing url={props.content['@id']} title={props.content.title} />
             <Actions url={props.content['@id']} title={props.content.title} />
