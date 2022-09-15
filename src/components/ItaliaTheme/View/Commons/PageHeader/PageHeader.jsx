@@ -46,12 +46,18 @@ const PageHeader = (props) => {
           className={cx('py-lg-2 page-header-left', {
             'col-lg-6': props.imageinheader,
             'col-lg-8': !props.imageinheader,
+            'd-flex align-items-center':
+              props.content.icon || props.content.icona,
           })}
         >
           {(props.content.icon || props.content.icona) && (
             <ArgumentIcon icon={props.content.icon || props.content.icona} />
           )}
-          <h1>
+          <h1
+            className={cx('', {
+              'ml-4': props.content.icon || props.content.icona,
+            })}
+          >
             {props.content.title}
             {props.content.subtitle && ` - ${props.content.subtitle}`}
             {props.content.sottotitolo && ` - ${props.content.sottotitolo}`}
@@ -106,9 +112,16 @@ const PageHeader = (props) => {
           </div>
         ) : null}
 
-        <div className="col-lg-3 page-header-right offset-lg-1">
-          <Sharing url={props.content['@id']} title={props.content.title} />
-          <Actions url={props.content['@id']} title={props.content.title} />
+        <div
+          className={cx('page-header-right py-lg-4', {
+            'col-lg-4': props.imageinheader,
+            'col-lg-3 offset-lg-1': !props.imageinheader,
+          })}
+        >
+          <div className="row">
+            <Sharing url={props.content['@id']} title={props.content.title} />
+            <Actions url={props.content['@id']} title={props.content.title} />
+          </div>
 
           {props.showtassonomiaargomenti && (
             <PageHeaderTassonomiaArgomenti content={props.content} />
