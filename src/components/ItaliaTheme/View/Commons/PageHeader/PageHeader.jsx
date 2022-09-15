@@ -46,18 +46,12 @@ const PageHeader = (props) => {
           className={cx('py-lg-2 page-header-left', {
             'col-lg-6': props.imageinheader,
             'col-lg-8': !props.imageinheader,
-            'd-flex align-items-center':
-              props.content.icon || props.content.icona,
           })}
         >
           {(props.content.icon || props.content.icona) && (
             <ArgumentIcon icon={props.content.icon || props.content.icona} />
           )}
-          <h1
-            className={cx('', {
-              'ml-4': props.content.icon || props.content.icona,
-            })}
-          >
+          <h1>
             {props.content.title}
             {props.content.subtitle && ` - ${props.content.subtitle}`}
             {props.content.sottotitolo && ` - ${props.content.sottotitolo}`}
