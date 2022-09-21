@@ -95,8 +95,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-customer-satisfaction.git",
     "url": "git@github.com:collective/volto-customer-satisfaction.git",
-    "branch": "honeypot",
-    "develop": true
+    "tag": "v0.3.0"
   },
   "volto-gdpr-privacy": {
     "package": "@italia/addons/volto-gdpr-privacy",
