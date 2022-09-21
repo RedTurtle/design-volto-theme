@@ -1,3 +1,25 @@
+### [6.1.9](https://github.com/redturtle/design-volto-theme/compare/v6.1.8...v6.1.9) (2022-09-19)
+
+
+### Bug Fixes
+
+* layout alignment in pages ([#585](https://github.com/redturtle/design-volto-theme/issues/585)) ([7d7aafd](https://github.com/redturtle/design-volto-theme/commit/7d7aafd973cf8093c15dd02e15d9ce0d8bcd0649))
+* rendering logic of  ulteriori_informazioni section in every content type that has it ([#584](https://github.com/redturtle/design-volto-theme/issues/584)) ([8eb806e](https://github.com/redturtle/design-volto-theme/commit/8eb806e9474b10df7569a059a654e7ccbe6084c2))
+
+### [6.1.8](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.7...v6.1.8) (2022-09-14)
+
+
+### Bug Fixes
+
+* fixed description alignment of photogallery listing template ([#583](https://github.com/RedTurtle/design-volto-theme/issues/583)) ([b16e314](https://github.com/RedTurtle/design-volto-theme/commit/b16e3141406d84bc622e24f701e4bf00c3575a92))
+
+### [6.1.7](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.6...v6.1.7) (2022-09-12)
+
+
+### Bug Fixes
+
+* fixed change grid-gallery listing template ([#582](https://github.com/RedTurtle/design-volto-theme/issues/582)) ([f4882e1](https://github.com/RedTurtle/design-volto-theme/commit/f4882e15ef2ccf2e0754bd813775026d6f058154))
+
 ### [6.1.6](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.5...v6.1.6) (2022-09-07)
 
 
