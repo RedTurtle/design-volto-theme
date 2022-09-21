@@ -15,6 +15,7 @@ import {
   submitCustomerSatisfaction,
   resetSubmitCustomerSatisfaction,
   GoogleReCaptchaWidget,
+  HoneypotWidget,
 } from 'volto-customer-satisfaction';
 import { isCmsUi } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
@@ -86,6 +87,12 @@ const CustomerSatisfaction = () => {
       setSatisfaction(s);
     }
   };
+  const updateFormData = (field, value) => {
+    setFormData({
+      ...formData,
+      [field]: value,
+    });
+  };
 
   useEffect(() => {
     setSatisfaction(null);
@@ -96,11 +103,11 @@ const CustomerSatisfaction = () => {
   }, [path]);
 
   useEffect(() => {
-    setFormData({
-      ...formData,
-      vote:
-        satisfaction === true ? 'ok' : satisfaction === false ? 'nok' : null,
-    });
+    updateFormData(
+      'vote',
+      satisfaction === true ? 'ok' : satisfaction === false ? 'nok' : null,
+    );
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [satisfaction]);
   // eslint-disable-next-line no-console
@@ -218,13 +225,13 @@ const CustomerSatisfaction = () => {
                   id="cs-comment"
                   label={intl.formatMessage(messages.suggestions_placeholder)}
                   onChange={(e) => {
-                    setFormData({ ...formData, comment: e.target.value });
+                    updateFormData('comment', e.target.value);
                   }}
                   rows="3"
                   type="textarea"
                 />
               </div>
-
+              <HoneypotWidget updateFormData={updateFormData} />
               {config.settings.siteProperties
                 .enableCustomerSatisfactionCaptcha && (
                 <GoogleReCaptchaWidget
@@ -233,6 +240,7 @@ const CustomerSatisfaction = () => {
                   action={action}
                 />
               )}
+
               <div className="submit-wrapper">
                 <Button
                   type="submit"
