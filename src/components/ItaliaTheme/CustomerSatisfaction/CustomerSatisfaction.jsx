@@ -76,6 +76,8 @@ const CustomerSatisfaction = () => {
     (state) => state.submitCustomerSatisfaction,
   );
   const [validToken, setValidToken] = useState(null);
+  const fieldHoney =
+    process?.env?.RAZZLE_HONEYPOT_FIELD ?? window?.env?.RAZZLE_HONEYPOT_FIELD;
 
   const changeSatisfaction = (e, s) => {
     e.stopPropagation();
@@ -110,15 +112,14 @@ const CustomerSatisfaction = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [satisfaction]);
-  // eslint-disable-next-line no-console
-  console.log(
-    'process.env.RAZZLE_RECAPTCHA_KEY',
-    process.env.RAZZLE_RECAPTCHA_KEY,
-  );
+
+  // initialized honeypot field
+  useEffect(() => {
+    updateFormData(fieldHoney, '');
+  }, [fieldHoney]);
+
   const onVerifyCaptcha = useCallback(
     (token) => {
-      // eslint-disable-next-line no-console
-      console.log('onVerifyCaptcha', satisfaction, validToken, token);
       if (satisfaction != null && !validToken) {
         setValidToken(token);
       }
@@ -231,7 +232,10 @@ const CustomerSatisfaction = () => {
                   type="textarea"
                 />
               </div>
-              <HoneypotWidget updateFormData={updateFormData} />
+              <HoneypotWidget
+                updateFormData={updateFormData}
+                field={fieldHoney}
+              />
               {config.settings.siteProperties
                 .enableCustomerSatisfactionCaptcha && (
                 <GoogleReCaptchaWidget
