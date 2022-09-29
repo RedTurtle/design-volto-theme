@@ -18015,10 +18015,10 @@ volto-blocks-widget@^2.1.0:
   dependencies:
     "@plone/scripts" "*"
 
-volto-customer-satisfaction@^0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/volto-customer-satisfaction/-/volto-customer-satisfaction-0.2.11.tgz#cc9c827cbeade0dc89a61ff105c37339088ae394"
-  integrity sha512-lREBtDzCULU4oie+SU/siFMdLXtdX83T8FxR2nMQIyYFHhd1g44FQPE+EwfBRlXPCEOsIxlOAn4rmwqu8eDSwg==
+volto-customer-satisfaction@^0.3.1:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/volto-customer-satisfaction/-/volto-customer-satisfaction-0.3.3.tgz#1051c017d2213d1b5554fcb8d4eaba640d76fb44"
+  integrity sha512-rJLWFYxr08n9w3tKFJeESl32gA2KnccILlBmu6jLduoT6x0LJtxcE8irMF32ejbHHRPCqra5Jx9oJsdSs9mLQg==
   dependencies:
     "@plone/scripts" "*"
     react-google-recaptcha-v3 "1.9.5"
