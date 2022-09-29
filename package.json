@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "6.1.9",
+  "version": "6.2.0",
   "private": true,
   "workspaces": [
     "src/addons/volto-multilingual-widget",
@@ -175,10 +175,10 @@
       "yarn i18n",
       "git add ."
     ],
-    "theme/**/*.{css,less,scss}": [
+    "theme/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
-    "src/**/*.{css,less,scss}": [
+    "src/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
     "theme/**/*.overrides": [
@@ -208,7 +208,7 @@
     "typeface-titillium-web": "0.0.72",
     "webpack-image-resize-loader": "^5.0.0",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.1.0",
-    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.3.1",
+    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.3.2",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.3.0",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v4.1.1",
     "volto-form-block": "collective/volto-form-block#v2.6.1",
