@@ -18015,7 +18015,7 @@ volto-blocks-widget@^2.1.0:
   dependencies:
     "@plone/scripts" "*"
 
-volto-customer-satisfaction@^0.3.2:
+volto-customer-satisfaction@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/volto-customer-satisfaction/-/volto-customer-satisfaction-0.3.3.tgz#1051c017d2213d1b5554fcb8d4eaba640d76fb44"
   integrity sha512-rJLWFYxr08n9w3tKFJeESl32gA2KnccILlBmu6jLduoT6x0LJtxcE8irMF32ejbHHRPCqra5Jx9oJsdSs9mLQg==
@@ -18094,7 +18094,7 @@ volto-social-settings@2.2.0:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-subblocks@1.2.3, "volto-subblocks@github:collective/volto-subblocks#v1.2.3":
+volto-subblocks@1.2.3, volto-subblocks@collective/volto-subblocks#v1.2.3:
   version "1.2.3"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/a57c83c54678ee6423945a5247dfa5cc9e53ca3d"
   dependencies:
