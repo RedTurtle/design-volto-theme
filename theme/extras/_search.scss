@@ -54,6 +54,10 @@ body.search-modal-opened {
 
     .card-body {
       max-width: 100%;
+
+      .highlighted-text {
+        background-color: #f9f0c4;
+      }
     }
   }
 
