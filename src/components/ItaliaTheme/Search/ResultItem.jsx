@@ -10,7 +10,7 @@ const ResultItem = ({ item, index, section, searchableText }) => {
     <Card
       teaser
       noWrapper={true}
-      className={'mt-3 mb-2 border-bottom-half border-right border-light'}
+      className={'mt-3 mb-2 border-bottom border-right border-light'}
     >
       <CardBody>
         {section}
