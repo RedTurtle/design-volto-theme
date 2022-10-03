@@ -7,11 +7,7 @@ const ResultItem = ({ item, index, section, searchableText }) => {
   const filteredWords = searchableText.split(' ');
 
   return (
-    <Card
-      teaser
-      noWrapper={true}
-      className={'mt-3 mb-2 border-bottom border-right border-light'}
-    >
+    <Card teaser noWrapper={true} className="mt-3 mb-2">
       <CardBody>
         {section}
         <h4 className="card-title">
