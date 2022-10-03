@@ -637,7 +637,11 @@ const Search = () => {
                   </div>
                   <Row>
                     {searchResults?.result?.items?.map((item, index) => (
-                      <Col md={12} key={item['@id']}>
+                      <Col
+                        md={12}
+                        key={item['@id']}
+                        className="border-bottom border-right border-light"
+                      >
                         <SearchResultItem
                           item={item}
                           index={index}
