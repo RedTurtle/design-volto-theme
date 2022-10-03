@@ -3,11 +3,12 @@
  * @module components/theme/View/DocRow
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
 import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import { Icon } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
 
 /**
@@ -49,34 +50,72 @@ const Downloads = ({ item, titleDoc }) => {
 };
 
 const DocRow = ({ doc }) => {
+  const [itemOpen, setItemOpen] = useState(false);
+
   return (
-    <div
-      className={cx('doc-row', {
-        'has-children': doc.items?.length > 1,
-      })}
-      key={doc['@id']}
-    >
-      <div className="doc">
-        <div className="title">
-          <UniversalLink href={flattenToAppURL(doc['@id'])}>
-            {doc.title}
-            {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
-          </UniversalLink>
-        </div>
-        {doc.items?.length === 1 && (
-          <Downloads item={doc.items[0]} titleDoc={doc.title} />
+    <>
+      <div
+        className={cx('doc-row accordion-item', {
+          'has-children': doc.items?.length > 1,
+        })}
+      >
+        {doc.items?.length === 1 ? (
+          <div className="doc">
+            <div className="title">
+              <UniversalLink href={flattenToAppURL(doc['@id'])}>
+                {doc.title}
+                {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`}
+              </UniversalLink>
+            </div>
+            {doc.items?.length === 1 && (
+              <Downloads item={doc.items[0]} titleDoc={doc.title} />
+            )}
+          </div>
+        ) : (
+          <>
+            <h3 className="accordion-header">
+              <div className="doc">
+                <div className="title">
+                  <UniversalLink href={flattenToAppURL(doc['@id'])}>
+                    {doc.title}
+                  </UniversalLink>
+                </div>
+              </div>
+              <button
+                onClick={() => {
+                  setItemOpen(itemOpen ? false : true);
+                }}
+                aria-expanded={itemOpen}
+                aria-controls={`content`}
+                id={`teste`}
+              >
+                <Icon
+                  color="primary"
+                  icon={itemOpen ? 'it-minus' : 'it-plus'}
+                  padding={false}
+                />
+              </button>
+            </h3>
+            <div
+              className={cx('accordion-content', { open: itemOpen })}
+              id={`content-`}
+              role="region"
+              aria-labelledby={`label`}
+            >
+              <div className="accordion-inner">
+                <>
+                  {doc.items.map((modulo) => (
+                    <div className="doc modulo" key={modulo['@id']}>
+                      <Downloads item={modulo} titleDoc={null} />
+                    </div>
+                  ))}
+                </>
+              </div>
+            </div>
+          </>
         )}
       </div>
-      {doc.items?.length > 1 && (
-        <>
-          {doc.items.map((modulo) => (
-            <div className="doc modulo" key={modulo['@id']}>
-              <Downloads item={modulo} titleDoc={null} />
-            </div>
-          ))}
-        </>
-      )}
-    </div>
+    </>
   );
 };
 

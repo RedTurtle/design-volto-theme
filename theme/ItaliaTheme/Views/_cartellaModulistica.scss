@@ -34,6 +34,63 @@ $docs-section-margin: 3em;
         padding: 1em 0;
         border-bottom: 1px solid $neutral-1-a2;
 
+        &.accordion-item {
+          margin-top: 0.5em;
+
+          .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5em 0;
+            color: $secondary;
+            font-size: 1rem;
+
+            p {
+              margin: 0;
+              text-align: left;
+            }
+
+            button {
+              padding: 0 0.4em;
+              border: none;
+              background: none;
+
+              .icon {
+                width: 1.2rem;
+                fill: $accordion-icon-color;
+              }
+            }
+          }
+          .accordion-content {
+            overflow: hidden;
+            height: auto;
+            max-height: 0;
+            padding: 0;
+
+            transition: max-height 0.3s ease-in-out;
+
+            &.open {
+              max-height: 1000vh;
+            }
+
+            .accordion-inner {
+              padding: 1em 0;
+            }
+
+            .link-more {
+              text-align: right;
+
+              a {
+                font-weight: bold;
+
+                svg {
+                  width: 1.2em;
+                  fill: $link-color;
+                }
+              }
+            }
+          }
+        }
+
         &.has-children {
           padding-bottom: 1em;
         }
