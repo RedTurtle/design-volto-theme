@@ -49,12 +49,8 @@ body.search-modal-opened {
 }
 
 .search-results-wrapper {
-  .card.card-teaser {
-    height: 100%;
-
-    .card-body {
-      max-width: 100%;
-    }
+  mark.highlighted-text {
+    background-color: $highlight-search;
   }
 
   .ordering-widget {
