@@ -30,7 +30,7 @@ const ResultItem = ({ item, index, section, searchableText }) => {
         <p className="card-text">
           <Highlighter
             highlightClassName="highlighted-text"
-            searchWords={searchableText.split(' ')}
+            searchWords={filteredWords}
             autoEscape={true}
             textToHighlight={item.description}
           />
