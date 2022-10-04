@@ -6,6 +6,7 @@
  * - support external sources for preview image
  * - added ConditionalEmbed
  * - changed icon for preview with FontAwesome icon
+ * - overhauled url checking, it would break on correct links and allow incorrect ones
  */
 
 import React from 'react';

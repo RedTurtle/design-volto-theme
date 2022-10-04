@@ -1,6 +1,8 @@
 /**
  * Edit video block.
  * @module components/manage/Blocks/Title/Edit
+ * CUSTOMIZATIONS:
+ * - handle url validation and show users errors
  */
 
 import React, { Component } from 'react';
