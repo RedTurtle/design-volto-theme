@@ -3020,17 +3020,17 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Data di apertura
 msgid "sort_apertura_bando"
-msgstr ""
+msgstr "Date d'ouverture"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Chiusura procedimento bando
 msgid "sort_chiusura_procedimento_bando"
-msgstr ""
+msgstr "Date de clôture"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Ordina per
 msgid "sort_on"
-msgstr ""
+msgstr "Trier par"
 
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Data (prima i più recenti)
@@ -3050,12 +3050,12 @@ msgstr "Alphabétiquement"
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Ordine inverso
 msgid "sort_order"
-msgstr ""
+msgstr "Ordre inverse"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Scadenza termini partecipazione
 msgid "sort_scadenza_bando"
-msgstr ""
+msgstr "Date limite d'appel"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Spese elettorali
