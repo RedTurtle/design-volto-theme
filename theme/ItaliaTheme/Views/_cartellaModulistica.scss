@@ -66,10 +66,10 @@ $docs-section-margin: 3em;
             max-height: 0;
             padding: 0;
 
-            transition: max-height 0.3s ease-in-out;
+            transition: max-height 0.3s ease;
 
             &.open {
-              max-height: 1000vh;
+              max-height: 100vh;
             }
 
             .accordion-inner {
