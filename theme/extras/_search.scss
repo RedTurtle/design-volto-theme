@@ -54,6 +54,9 @@ body.search-modal-opened {
   }
 
   .card {
+    &::after{
+      content: none;
+    }
     .card-body {
       .category-top {
         .data:before {
