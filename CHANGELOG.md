@@ -1,3 +1,38 @@
+## [6.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.2...v6.3.0) (2022-10-05)
+
+
+### Features
+
+* added sorting of bandi search results ([#593](https://github.com/RedTurtle/design-volto-theme/issues/593)) ([76f621c](https://github.com/RedTurtle/design-volto-theme/commit/76f621cc0da7c2514add8e2fcb396475dfb2eb8d))
+
+
+### Bug Fixes
+
+* overhaul url checking system of Video Block, added tests, added error message in edit ([#592](https://github.com/RedTurtle/design-volto-theme/issues/592)) ([83bdb0e](https://github.com/RedTurtle/design-volto-theme/commit/83bdb0eed076fa91e2cb0f1712fe26db644a02d0))
+
+### [6.2.2](https://github.com/redturtle/design-volto-theme/compare/v6.2.1...v6.2.2) (2022-10-04)
+
+
+### Bug Fixes
+
+* reverted header height change ([cd6eec6](https://github.com/redturtle/design-volto-theme/commit/cd6eec6ce275c39a9cfd49e006bedd85417ac366))
+
+### [6.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.0...v6.2.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* fixed dates of cardCalendar component ([#590](https://github.com/RedTurtle/design-volto-theme/issues/590)) ([eebaef0](https://github.com/RedTurtle/design-volto-theme/commit/eebaef07fc78e47180b3a197e21a9edde614dbd7))
+* fixed window.env of customer satisfaction addon ([#591](https://github.com/RedTurtle/design-volto-theme/issues/591)) ([7e892a1](https://github.com/RedTurtle/design-volto-theme/commit/7e892a14268b91a0ac38d079368c9541a611bc3a))
+* various ui fixes ([#586](https://github.com/RedTurtle/design-volto-theme/issues/586)) ([4ef3426](https://github.com/RedTurtle/design-volto-theme/commit/4ef3426242105469f28b677451eed28d31f0c261))
+
+## [6.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.9...v6.2.0) (2022-09-29)
+
+
+### Maintenance
+
+* updated volto-customer-satisfaction v0.3.2 ([13d418a](https://github.com/RedTurtle/design-volto-theme/commit/13d418a2961946b2dd2b4590474ab942ebfda370))
+
 ### [6.1.9](https://github.com/redturtle/design-volto-theme/compare/v6.1.8...v6.1.9) (2022-09-19)
 
 
