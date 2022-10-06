@@ -73,9 +73,9 @@ const DocRow = ({ doc }) => {
           </div>
         ) : (
           <>
-            <h3 className="accordion-header">
+            <h3 id="headingAccordion" className="accordion-header">
               <div className="doc">
-                <div className="title">
+                <div id={`title-${doc.id}`} className="title">
                   <UniversalLink href={flattenToAppURL(doc['@id'])}>
                     {doc.title}
                   </UniversalLink>
@@ -86,8 +86,8 @@ const DocRow = ({ doc }) => {
                   setItemOpen(itemOpen ? false : true);
                 }}
                 aria-expanded={itemOpen}
-                aria-controls={`content`}
-                id={`teste`}
+                aria-controls="collapsedContent"
+                aria-labelledby={`title-${doc.id}`}
               >
                 <Icon
                   color="primary"
@@ -97,19 +97,17 @@ const DocRow = ({ doc }) => {
               </button>
             </h3>
             <div
+              id="collapsedContent"
               className={cx('accordion-content', { open: itemOpen })}
-              id={`content-`}
               role="region"
-              aria-labelledby={`label`}
+              aria-labelledby="headingAccordion"
             >
               <div className="accordion-inner">
-                <>
-                  {doc.items.map((modulo) => (
-                    <div className="doc modulo" key={modulo['@id']}>
-                      <Downloads item={modulo} titleDoc={null} />
-                    </div>
-                  ))}
-                </>
+                {doc.items.map((modulo) => (
+                  <div className="doc modulo" key={modulo['@id']}>
+                    <Downloads item={modulo} titleDoc={null} />
+                  </div>
+                ))}
               </div>
             </div>
           </>
