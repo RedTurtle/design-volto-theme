@@ -18109,10 +18109,10 @@ volto-subfooter@1.0.3:
   dependencies:
     "@plone/scripts" "*"
 
-volto-subsites@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/volto-subsites/-/volto-subsites-3.0.3.tgz#322b7dd72eea5df1eac8b4e4e40aa1a65614309e"
-  integrity sha512-Ixut+chE+RlQKrCd23zrdfhRWou05K9JW8KLsRBVYtPObZSXvUGtQatMARsjgab+lQTzOxF3xGe5HdfwYr5npQ==
+volto-subsites@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/volto-subsites/-/volto-subsites-3.0.4.tgz#0c9108cb936fa5d8f6b511a71a0df09ab04b691c"
+  integrity sha512-6t6AQVRPs3epyi8Nnr5yPHpSiQf5COyazm3vzGZpx89EZeOGkoVURw1xauqAzSTff8slrHP+YVC+XJAspWNsyw==
   dependencies:
     "@plone/scripts" "^1.0.3"
 
