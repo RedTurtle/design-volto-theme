@@ -37,7 +37,9 @@ $docs-section-margin: 3em;
         &.has-children {
           padding-bottom: 1em;
         }
-
+        .description{
+          font-size: 0.8rem;
+        }
         .doc {
           display: flex;
           align-items: center;

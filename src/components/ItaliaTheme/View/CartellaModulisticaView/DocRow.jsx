@@ -67,6 +67,7 @@ const DocRow = ({ doc }) => {
           <Downloads item={doc.items[0]} titleDoc={doc.title} />
         )}
       </div>
+      <div className="description text-muted">{doc.description}</div>
       {doc.items?.length > 1 && (
         <>
           {doc.items.map((modulo) => (
