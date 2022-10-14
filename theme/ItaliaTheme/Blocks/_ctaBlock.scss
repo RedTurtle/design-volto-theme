@@ -10,7 +10,8 @@
     color: $secondary-text;
 
     &.full-width {
-      padding: 0;
+      height: auto;
+      padding: 70px 0;
     }
 
     .cta-tile-text {
