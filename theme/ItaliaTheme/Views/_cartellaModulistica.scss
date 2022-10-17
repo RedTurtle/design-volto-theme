@@ -49,7 +49,7 @@ $docs-section-margin: 3em;
 
           .title-wrap {
             flex: 1;
-            &.single-row{
+            &.single-row {
               max-width: 70%;
             }
             .title {
@@ -118,7 +118,11 @@ $docs-section-margin: 3em;
             flex-wrap: wrap;
             align-items: unset;
             justify-content: unset;
-
+            .title-wrap {
+              &.single-row {
+                max-width: none;
+              }
+            }
             .title,
             .downloads {
               flex: 1 1 100%;
@@ -127,9 +131,6 @@ $docs-section-margin: 3em;
               a {
                 width: 2em;
               }
-            }
-            .item-row {
-              flex-wrap: wrap;
             }
           }
         }
