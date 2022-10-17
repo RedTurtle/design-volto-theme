@@ -260,3 +260,12 @@ iframe {
     line-height: 1;
   }
 }
+
+//table overflow mobile
+@media (max-width: #{map-get($grid-breakpoints, md)}) {
+  table.ui.table.celled {
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
