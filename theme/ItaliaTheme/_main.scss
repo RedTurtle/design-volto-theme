@@ -262,10 +262,10 @@ iframe {
 }
 
 //table overflow mobile
-@media (max-width: #{map-get($grid-breakpoints, md)}) {
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
   table.ui.table.celled {
     display: block;
-    overflow: auto;
+    overflow-x: auto;
     white-space: nowrap;
   }
 }
