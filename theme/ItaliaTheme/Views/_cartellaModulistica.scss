@@ -43,24 +43,19 @@ $docs-section-margin: 3em;
 
         .doc {
           display: flex;
-          flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
           padding: 0.4em 0;
 
-          .item-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            .description.single-row {
-              max-width: 50%;
+          .title-wrap {
+            flex: 1;
+            &.single-row{
+              max-width: 70%;
             }
-          }
-
-          & > .title {
-            font-size: 1.2em;
-            font-weight: 500;
+            .title {
+              font-size: 1.2em;
+              font-weight: 500;
+            }
           }
 
           &.modulo {
@@ -117,7 +112,7 @@ $docs-section-margin: 3em;
       .document-row-section {
         .doc-row {
           .description {
-            max-width: none!important;
+            max-width: none !important;
           }
           .doc {
             flex-wrap: wrap;
