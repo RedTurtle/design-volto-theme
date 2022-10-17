@@ -81,13 +81,9 @@
   }
 
   .it-footer-small-prints {
-    a {    
-      &[href^='mailto'],
-      &[target='_blank'],
-      &[rel='noopener noreferreer'] {
+    a {
         word-break: normal;
       }
-    }
     a,
     button,
     a:hover:not(.disabled),
