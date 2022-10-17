@@ -17,7 +17,7 @@ import cx from 'classnames';
  * @returns {string} Markup of the component.
  */
 
-const Downloads = ({ item, titleDoc }) => {
+const Downloads = ({ item, titleDoc, doc }) => {
   return item['@type'] === 'Modulo' ? (
     <React.Fragment>
       {!titleDoc ? (
@@ -64,17 +64,28 @@ const DocRow = ({ doc }) => {
           </UniversalLink>
         </div>
         {doc.items?.length === 1 && (
-          <Downloads item={doc.items[0]} titleDoc={doc.title} />
+          <div className="item-row">
+            {doc?.description && (
+              <div className="description single-row text-muted">
+                {doc.description}
+              </div>
+            )}
+            <Downloads item={doc.items[0]} titleDoc={doc.title} />
+          </div>
         )}
       </div>
-      <div className="description text-muted">{doc.description}</div>
       {doc.items?.length > 1 && (
         <>
-          {doc.items.map((modulo) => (
-            <div className="doc modulo" key={modulo['@id']}>
-              <Downloads item={modulo} titleDoc={null} />
-            </div>
-          ))}
+          {doc?.description && (
+            <div className="description text-muted">{doc.description}</div>
+          )}
+          <>
+            {doc.items.map((modulo) => (
+              <div className="doc modulo" key={modulo['@id']}>
+                <Downloads item={modulo} titleDoc={null} doc={doc} />
+              </div>
+            ))}
+          </>
         </>
       )}
     </div>

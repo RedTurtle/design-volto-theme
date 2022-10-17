@@ -37,16 +37,31 @@ $docs-section-margin: 3em;
         &.has-children {
           padding-bottom: 1em;
         }
-        .description{
-          font-size: 0.8rem;
+        .description {
+          font-size: 0.9rem;
         }
+        & > .description {
+          max-width: 50%;
+        }
+
         .doc {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
           padding: 0.4em 0;
 
-          .title {
+          .item-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .description {
+              max-width: 50%;
+            }
+          }
+
+          & > .title {
             font-size: 1.2em;
             font-weight: 500;
           }
@@ -86,8 +101,28 @@ $docs-section-margin: 3em;
               font-size: 1.2em;
             }
           }
+        }
+      }
+    }
 
-          @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .document-row-section + .documents-section {
+      margin-top: $docs-section-margin;
+    }
+  }
+
+  #metadata {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    section.modulistica {
+      .documents-section,
+      .document-row-section {
+        .doc-row {
+          .description {
+            max-width: none!important;
+          }
+          .doc {
             flex-wrap: wrap;
             align-items: unset;
             justify-content: unset;
@@ -101,17 +136,12 @@ $docs-section-margin: 3em;
                 width: 2em;
               }
             }
+            .item-row {
+              flex-wrap: wrap;
+            }
           }
         }
       }
     }
-
-    .document-row-section + .documents-section {
-      margin-top: $docs-section-margin;
-    }
-  }
-
-  #metadata {
-    margin-top: 3rem;
   }
 }
