@@ -40,9 +40,6 @@ $docs-section-margin: 3em;
         .description {
           font-size: 0.9rem;
         }
-        & > .description {
-          max-width: 50%;
-        }
 
         .doc {
           display: flex;
@@ -56,7 +53,7 @@ $docs-section-margin: 3em;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            .description {
+            .description.single-row {
               max-width: 50%;
             }
           }
