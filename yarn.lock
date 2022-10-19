@@ -18039,10 +18039,10 @@ volto-editablefooter@4.1.1:
     "@plone/scripts" "^1.0.3"
     react-outside-click-handler "1.3.0"
 
-volto-form-block@2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/volto-form-block/-/volto-form-block-2.6.1.tgz#9d4b15a385272ec42e9fa4a96d491a0b06688d93"
-  integrity sha512-RTy/A7YnF9LF+cwf9sWzMw9gIFtquoYs0F7m+LkEXlyxArAM8SHrWy5nfKJad7r+ejkdhSQWgTryQtQ0JZj66g==
+volto-form-block@2.8.1:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/volto-form-block/-/volto-form-block-2.8.1.tgz#f797d1b40c4e40dd9d671f88c37c083b260fe11b"
+  integrity sha512-i2VBw0rNwCAvum69FFkk+KPA62S/zBebvxSLefND9WBwNHGAjo0KJqkJr11dmJdG7Lcok6KQXC16u1Z9UcAWEA==
   dependencies:
     "@hcaptcha/react-hcaptcha" "^0.3.6"
     "@plone/scripts" "^1.0.3"
@@ -18094,7 +18094,7 @@ volto-social-settings@2.2.0:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-subblocks@1.2.3, volto-subblocks@collective/volto-subblocks#v1.2.3:
+volto-subblocks@1.2.3, "volto-subblocks@github:collective/volto-subblocks#v1.2.3":
   version "1.2.3"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/a57c83c54678ee6423945a5247dfa5cc9e53ca3d"
   dependencies:
