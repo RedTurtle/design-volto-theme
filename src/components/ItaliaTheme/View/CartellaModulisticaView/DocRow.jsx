@@ -59,7 +59,7 @@ const DocRow = ({ doc }) => {
           'has-children': doc.items?.length > 1,
         })}
       >
-        {doc.items?.length === 1 ? (
+        {doc.items?.length === 1 && (
           <div className="doc">
             <div className="title">
               <UniversalLink href={flattenToAppURL(doc['@id'])}>
@@ -71,7 +71,8 @@ const DocRow = ({ doc }) => {
               <Downloads item={doc.items[0]} titleDoc={doc.title} />
             )}
           </div>
-        ) : (
+        )}
+        {doc.items?.length > 1 && (
           <>
             <h3 id="headingAccordion" className="accordion-header">
               <div className="doc">
