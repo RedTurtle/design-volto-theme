@@ -263,13 +263,11 @@ iframe {
 
 //table overflow mobile
 @media (max-width: #{map-get($grid-breakpoints, lg)}) {
-  :not(#customer-satisfaction-comments-modal, #page-customer-satisfaction, .persone-amministrazione-trasparente, .contents-table-wrapper, .dropzone, .types-control-panel, #database-page, #page-moderate-comments, #users-control-panel, #page-diff, #page-history, #page-manage-translations, #page-sharing, .folder-contents) {
-    table.ui.table {
-      display: block;
-      overflow: auto;
-      p {
-        width: 200px;
-      }
+  .public-ui table.ui.table {
+    display: block;
+    overflow: auto;
+    th {
+      white-space: nowrap;
     }
   }
 }
