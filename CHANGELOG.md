@@ -1,3 +1,17 @@
+### [6.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.2...v6.3.3) (2022-10-19)
+
+
+### Bug Fixes
+
+* fixed imports volto-form-block customization ([a39879b](https://github.com/RedTurtle/design-volto-theme/commit/a39879bc1f187ae651537bb975cb7b3221f58c9e))
+
+### [6.3.2](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.1...v6.3.2) (2022-10-19)
+
+
+### Maintenance
+
+* updated volto-form-block#v2.8.1 ([122b9f8](https://github.com/RedTurtle/design-volto-theme/commit/122b9f8bbb368ad0688661bb59e90ffed0fc2ef8)), closes [volto-form-block#v2](https://github.com/RedTurtle/volto-form-block/issues/v2)
+
 ### [6.3.1](https://github.com/redturtle/design-volto-theme/compare/v6.3.0...v6.3.1) (2022-10-07)
 
 
