@@ -82,7 +82,7 @@ const DocRow = ({ doc }) => {
         <>
           {doc.items.map((modulo) => (
             <div className="doc modulo" key={modulo['@id']}>
-              <Downloads item={modulo} titleDoc={null} doc={doc} />
+              <Downloads item={modulo} titleDoc={null} />
             </div>
           ))}
         </>
