@@ -17,7 +17,7 @@ import cx from 'classnames';
  * @returns {string} Markup of the component.
  */
 
-const Downloads = ({ item, titleDoc, doc }) => {
+const Downloads = ({ item, titleDoc }) => {
   return item['@type'] === 'Modulo' ? (
     <React.Fragment>
       {!titleDoc ? (
