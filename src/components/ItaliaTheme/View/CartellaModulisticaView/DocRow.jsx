@@ -55,10 +55,29 @@ const DocRow = ({ doc }) => {
   return (
     <>
       <div
-        className={cx('doc-row accordion-item', {
+        className={cx('doc-row', {
           'has-children': doc.items?.length > 1,
         })}
+        key={doc['@id']}
       >
+        <div className="doc">
+          <div
+            className={cx('title-wrap', {
+              'single-row': doc.items?.length === 1,
+            })}
+          >
+            <div className="title">
+              <UniversalLink href={flattenToAppURL(doc['@id'])}>
+                {doc.title}
+              </UniversalLink>
+            </div>
+            {doc?.description && (
+              <div className="description single-row text-muted">
+                {doc.description}
+              </div>
+            )}
+          </div>
+        </div>
         {doc.items?.length === 1 && (
           <div className="doc">
             <div className="title">
