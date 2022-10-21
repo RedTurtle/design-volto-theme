@@ -34,63 +34,6 @@ $docs-section-margin: 3em;
         padding: 1em 0;
         border-bottom: 1px solid $neutral-1-a2;
 
-        &.accordion-item {
-          margin-top: 0.5em;
-
-          .accordion-header {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5em 0;
-            color: $secondary;
-            font-size: 1rem;
-
-            p {
-              margin: 0;
-              text-align: left;
-            }
-
-            button {
-              padding: 0 0.4em;
-              border: none;
-              background: none;
-
-              .icon {
-                width: 1.2rem;
-                fill: $accordion-icon-color;
-              }
-            }
-          }
-          .accordion-content {
-            overflow: hidden;
-            height: auto;
-            max-height: 0;
-            padding: 0;
-
-            transition: max-height 0.3s ease;
-
-            &.open {
-              max-height: 100vh;
-            }
-
-            .accordion-inner {
-              padding: 1em 0;
-            }
-
-            .link-more {
-              text-align: right;
-
-              a {
-                font-weight: bold;
-
-                svg {
-                  width: 1.2em;
-                  fill: $link-color;
-                }
-              }
-            }
-          }
-        }
-
         &.has-children {
           padding-bottom: 1em;
         }
@@ -106,6 +49,7 @@ $docs-section-margin: 3em;
 
           .title-wrap {
             flex: 1;
+
             &.single-row {
               max-width: 70%;
             }
@@ -148,6 +92,65 @@ $docs-section-margin: 3em;
             svg {
               width: 2em;
               font-size: 1.2em;
+            }
+          }
+        }
+
+        .accordion-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .accordion-header {
+            padding: 0.5em 0;
+            color: $secondary;
+            font-size: 1rem;
+            .title-wrap {
+              max-width: 90%;
+            }
+
+            p {
+              margin: 0;
+              text-align: left;
+            }
+          }
+          button {
+            padding: 0 0.4em;
+            border: none;
+            background: none;
+
+            .icon {
+              width: 1.2rem;
+              fill: $accordion-icon-color;
+            }
+          }
+        }
+        .accordion-content {
+          overflow: hidden;
+          height: auto;
+          max-height: 0;
+          padding: 0;
+
+          transition: max-height 0.3s ease;
+
+          &.open {
+            max-height: 100vh;
+          }
+
+          .accordion-inner {
+            padding: 1em 0;
+          }
+
+          .link-more {
+            text-align: right;
+
+            a {
+              font-weight: bold;
+
+              svg {
+                width: 1.2em;
+                fill: $link-color;
+              }
             }
           }
         }

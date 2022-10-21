@@ -60,45 +60,72 @@ const DocRow = ({ doc }) => {
         })}
         key={doc['@id']}
       >
-        <div className="doc">
-          <div
-            className={cx('title-wrap', {
-              'single-row': doc.items?.length === 1,
-            })}
-          >
-            <div className="title">
-              <UniversalLink href={flattenToAppURL(doc['@id'])}>
-                {doc.title}
-              </UniversalLink>
-            </div>
-            {doc?.description && (
-              <div className="description single-row text-muted">
-                {doc.description}
+        {/*No files, only title and description */}
+        {!doc.items && (
+          <div className="doc">
+            <div
+              className={cx('title-wrap', {
+                'single-row': doc.items?.length === 1,
+              })}
+            >
+              <div className="title">
+                <UniversalLink href={flattenToAppURL(doc['@id'])}>
+                  {doc.title}
+                </UniversalLink>
               </div>
-            )}
+              {doc?.description && (
+                <div className="description text-muted">{doc.description}</div>
+              )}
+            </div>
           </div>
-        </div>
+        )}
+
+        {/*Single file*/}
         {doc.items?.length === 1 && (
           <div className="doc">
-            <div className="title">
-              <UniversalLink href={flattenToAppURL(doc['@id'])}>
-                {doc.title}
-                {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`}
-              </UniversalLink>
+            <div
+              className={cx('title-wrap', {
+                'single-row': doc.items?.length === 1,
+              })}
+            >
+              <div className="title">
+                <UniversalLink href={flattenToAppURL(doc['@id'])}>
+                  {doc.title}
+                  {/* doc.items?.length > 1 && ` - ${doc.items[0]?.title}` */}
+                </UniversalLink>
+                {doc?.description && (
+                  <div className="description description-single-file text-muted">
+                    {doc.description}
+                  </div>
+                )}
+              </div>
             </div>
             {doc.items?.length === 1 && (
               <Downloads item={doc.items[0]} titleDoc={doc.title} />
             )}
           </div>
         )}
+
+        {/*Accordion*/}
         {doc.items?.length > 1 && (
           <>
-            <h3 id="headingAccordion" className="accordion-header">
-              <div className="doc">
-                <div id={`title-${doc.id}`} className="title">
-                  <UniversalLink href={flattenToAppURL(doc['@id'])}>
-                    {doc.title}
-                  </UniversalLink>
+            <div className="accordion-wrapper">
+              <div id="headingAccordion" className="accordion-header doc">
+                <div
+                  className={cx('title-wrap', {
+                    'single-row': doc.items?.length === 1,
+                  })}
+                >
+                  <div id={`title-${doc.id}`} className="title">
+                    <UniversalLink href={flattenToAppURL(doc['@id'])}>
+                      {doc.title}
+                    </UniversalLink>
+                    {doc?.description && (
+                      <div className="description description-accordio text-muted">
+                        {doc.description}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
               <button
@@ -115,7 +142,7 @@ const DocRow = ({ doc }) => {
                   padding={false}
                 />
               </button>
-            </h3>
+            </div>
             <div
               id="collapsedContent"
               className={cx('accordion-content', { open: itemOpen })}
