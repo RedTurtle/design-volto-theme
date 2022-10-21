@@ -1,3 +1,43 @@
+### [6.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.2...v6.3.3) (2022-10-19)
+
+
+### Bug Fixes
+
+* fixed imports volto-form-block customization ([a39879b](https://github.com/RedTurtle/design-volto-theme/commit/a39879bc1f187ae651537bb975cb7b3221f58c9e))
+
+### [6.3.2](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.1...v6.3.2) (2022-10-19)
+
+
+### Maintenance
+
+* updated volto-form-block#v2.8.1 ([122b9f8](https://github.com/RedTurtle/design-volto-theme/commit/122b9f8bbb368ad0688661bb59e90ffed0fc2ef8)), closes [volto-form-block#v2](https://github.com/RedTurtle/volto-form-block/issues/v2)
+
+### [6.3.1](https://github.com/redturtle/design-volto-theme/compare/v6.3.0...v6.3.1) (2022-10-07)
+
+
+### Maintenance
+
+* updated volto-subsites v3.0.4 ([eb23f5f](https://github.com/redturtle/design-volto-theme/commit/eb23f5f79929039d2b85158e461bdb393dee5679))
+
+## [6.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.2...v6.3.0) (2022-10-05)
+
+
+### Features
+
+* added sorting of bandi search results ([#593](https://github.com/RedTurtle/design-volto-theme/issues/593)) ([76f621c](https://github.com/RedTurtle/design-volto-theme/commit/76f621cc0da7c2514add8e2fcb396475dfb2eb8d))
+
+
+### Bug Fixes
+
+* overhaul url checking system of Video Block, added tests, added error message in edit ([#592](https://github.com/RedTurtle/design-volto-theme/issues/592)) ([83bdb0e](https://github.com/RedTurtle/design-volto-theme/commit/83bdb0eed076fa91e2cb0f1712fe26db644a02d0))
+
+### [6.2.2](https://github.com/redturtle/design-volto-theme/compare/v6.2.1...v6.2.2) (2022-10-04)
+
+
+### Bug Fixes
+
+* reverted header height change ([cd6eec6](https://github.com/redturtle/design-volto-theme/commit/cd6eec6ce275c39a9cfd49e006bedd85417ac366))
+
 ### [6.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.0...v6.2.1) (2022-09-30)
 
 
