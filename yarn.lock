@@ -1964,10 +1964,10 @@
     pofile "1.0.10"
     razzle "3.4.5"
 
-"@plone/volto@^15":
-  version "15.15.0"
-  resolved "https://registry.yarnpkg.com/@plone/volto/-/volto-15.15.0.tgz#0059d396eac39e459df95b723c4d6f1142a4064c"
-  integrity sha512-bLmIsEI3hE95h3mcwt0rdbGEkCxJTXwJ5YOgz2ttQ/8ZYQbnPqDYVa+aEGzVAl5nIvC72Qnj9OK38s+MNVUYDw==
+"@plone/volto@15.16.0":
+  version "15.16.0"
+  resolved "https://registry.yarnpkg.com/@plone/volto/-/volto-15.16.0.tgz#aa40784525c88e118cee2986f979f389efbe93dd"
+  integrity sha512-9pPKzag2vevC1LB19DitCBLQKahzdu3JhRCXAQlFzyw8HdZYYaGRIrKFcgVudj5zWup/wJvM8uvAzuz4AFt6yg==
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -18094,7 +18094,7 @@ volto-social-settings@2.2.0:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-subblocks@1.2.3, "volto-subblocks@github:collective/volto-subblocks#v1.2.3":
+volto-subblocks@1.2.3, volto-subblocks@collective/volto-subblocks#v1.2.3:
   version "1.2.3"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/a57c83c54678ee6423945a5247dfa5cc9e53ca3d"
   dependencies:
