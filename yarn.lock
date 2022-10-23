@@ -1964,17 +1964,10 @@
     pofile "1.0.10"
     razzle "3.4.5"
 
-<<<<<<< HEAD
 "@plone/volto@15.16.0":
   version "15.16.0"
   resolved "https://registry.yarnpkg.com/@plone/volto/-/volto-15.16.0.tgz#aa40784525c88e118cee2986f979f389efbe93dd"
   integrity sha512-9pPKzag2vevC1LB19DitCBLQKahzdu3JhRCXAQlFzyw8HdZYYaGRIrKFcgVudj5zWup/wJvM8uvAzuz4AFt6yg==
-=======
-"@plone/volto@^15":
-  version "15.15.0"
-  resolved "https://registry.yarnpkg.com/@plone/volto/-/volto-15.15.0.tgz#0059d396eac39e459df95b723c4d6f1142a4064c"
-  integrity sha512-bLmIsEI3hE95h3mcwt0rdbGEkCxJTXwJ5YOgz2ttQ/8ZYQbnPqDYVa+aEGzVAl5nIvC72Qnj9OK38s+MNVUYDw==
->>>>>>> 5afebae5 (chore: remove volto branch)
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
