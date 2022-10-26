@@ -19,7 +19,8 @@
     "src/addons/volto-form-block",
     "src/addons/volto-subfooter",
     "src/addons/volto-customer-satisfaction",
-    "src/addons/volto-gdpr-privacy"
+    "src/addons/volto-gdpr-privacy",
+    "src/addons/volto-io-cittadino"
   ],
   "addons": [
     "volto-multilingual-widget",
@@ -36,7 +37,8 @@
     "volto-form-block",
     "volto-subfooter",
     "volto-customer-satisfaction",
-    "volto-gdpr-privacy"
+    "volto-gdpr-privacy",
+    "volto-io-cittadino"
   ],
   "scripts": {
     "start": "razzle start",

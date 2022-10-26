@@ -45,6 +45,9 @@
             ],
             "@italia/addons/volto-gdpr-privacy": [
                 "addons/volto-gdpr-privacy/src"
+            ],
+            "volto-io-cittadino": [
+                "addons/volto-io-cittadino/src"
             ]
         },
         "baseUrl": "src"

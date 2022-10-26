@@ -83,6 +83,12 @@
     "url": "git@github.com:collective/volto-form-block.git",
     "tag": "v2.8.1"
   },
+  "volto-io-cittadino": {
+    "package": "volto-io-cittadino",
+    "url": "git@gitlab.com:redturtle/io-comune/volto-io-cittadino.git",
+    "path": "src",
+    "branch": "backend_integration"
+  },
   "volto-subfooter": {
     "package": "@italia/addons/volto-subfooter",
     "path": "src",
