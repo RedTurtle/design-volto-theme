@@ -74,10 +74,12 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
             closeAriaLabel={intl.formatMessage(messages.close_preview)}
             toggle={closeModal}
           >
-            <h4>{items[viewIndex].title}</h4>
-            <p>{items[viewIndex].description}</p>
+            {items[viewIndex].title}
           </ModalHeader>
           <ModalBody>
+            {items[viewIndex].description && (
+              <p className="pb-3">{items[viewIndex].description}</p>
+            )}
             <div className="item-preview">
               {items.length > 1 && (
                 <Button
