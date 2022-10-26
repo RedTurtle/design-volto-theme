@@ -63,7 +63,7 @@ const DocRow = ({ doc }) => {
           {doc.title}
         </UniversalLink>
         {doc?.description && (
-          <div className="description text-muted">{doc.description}</div>
+          <p className="description text-muted">{doc.description}</p>
         )}
       </div>
     </div>
