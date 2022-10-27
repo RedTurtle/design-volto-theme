@@ -140,6 +140,7 @@ export default function applyConfig(voltoConfig) {
       'bandi-settings': bookSVG,
       'social-settings': shareSVG,
     },
+    defaultBlockType: 'text',
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
@@ -321,6 +322,14 @@ export default function applyConfig(voltoConfig) {
       sidebarTab: 1,
     },
     rssBlock,
+    table: {
+      ...config.blocks.blocksConfig.table,
+      restricted: false,
+    },
+    slateTable: {
+      ...config.blocks.blocksConfig.slateTable,
+      restricted: true,
+    },
   };
 
   config.blocks = {
