@@ -1,3 +1,5 @@
+import { defineMessages } from 'react-intl';
+
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
 import UOView from '@italia/components/ItaliaTheme/View/UOView/UOView';
@@ -16,6 +18,17 @@ import FaqView from '@italia/components/ItaliaTheme/View/FAQ/FaqView/FaqView';
 
 import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
 import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
+
+defineMessages({
+  trasparenza_view: {
+    id: 'Trasparenza',
+    defaultMessage: 'Trasparenza',
+  },
+  dettagli_procedimenti_view: {
+    id: 'Dettagli procedimento',
+    defaultMessage: 'Dettagli procedimento',
+  },
+});
 
 /*  CONTENT TYPES VIEWS */
 const italiaContentTypesViews = {
@@ -42,6 +55,11 @@ const italiaLayoutViews = {
   dettagli_procedimenti_view: DettagliProcedimentiView,
 };
 
+const layoutViewsNamesMapping = {
+  trasparenza_view: 'Trasparenza',
+  dettagli_procedimenti_view: 'Dettagli procedimento',
+};
+
 const getItaliaViews = (config) => {
   return {
     contentTypesViews: {
@@ -51,6 +69,10 @@ const getItaliaViews = (config) => {
     layoutViews: {
       ...config.views.layoutViews,
       ...italiaLayoutViews,
+    },
+    layoutViewsNamesMapping: {
+      ...config.view.layoutViewsNamesMapping,
+      ...layoutViewsNamesMapping,
     },
   };
 };
