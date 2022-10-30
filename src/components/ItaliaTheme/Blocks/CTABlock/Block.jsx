@@ -6,7 +6,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import cx from 'classnames';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 

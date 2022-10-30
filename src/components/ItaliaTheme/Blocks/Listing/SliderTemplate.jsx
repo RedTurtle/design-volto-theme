@@ -14,7 +14,7 @@ import {
   Icon,
   ListingLinkMore,
   ListingImage,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 

@@ -12,8 +12,8 @@ import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
 
-import { GalleryPreview } from '@italia/components/ItaliaTheme';
-import { contentFolderHasItems } from '@italia/helpers';
+import { GalleryPreview } from 'design-volto-theme/components/ItaliaTheme';
+import { contentFolderHasItems } from 'design-volto-theme/helpers';
 import EmbeddedVideo from './EmbeddedVideo';
 
 const messages = defineMessages({

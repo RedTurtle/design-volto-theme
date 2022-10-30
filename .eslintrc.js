@@ -7,6 +7,7 @@ const addonsAliases = [];
 if (packageJson.addons) {
   const addons = packageJson.addons;
   addons.forEach((addon) => {
+    // TODO deprecated: remove in version 8
     const addonPath = `@italia/addons/${addon}/src`;
     addonsAliases.push([`@italia/addons/${addon}`, addonPath]);
   });
@@ -20,7 +21,8 @@ module.exports = {
         map: [
           ['@plone/volto', '@plone/volto/src'],
           ['@package', './src'],
-          ['@italia', './src'],
+          ['@italia', './src'], // TODO deprecated: remove in version 8
+          ['design-volto-theme', './src'],
           ...addonsAliases,
         ],
         extensions: ['.js', '.jsx', '.json'],

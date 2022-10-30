@@ -11,7 +11,7 @@ import {
   RichTextArticle,
   richTextHasContent,
   Gallery,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   cos_e: {

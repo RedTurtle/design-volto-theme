@@ -8,46 +8,46 @@ import shareSVG from '@plone/volto/icons/share.svg';
 import {
   getItaliaListingVariations,
   removeListingVariation,
-} from '@italia/config/Blocks/listingVariations.js';
-import getItaliaBlocks from '@italia/config/Blocks/blocks.js';
-import getItaliaViews from '@italia/config/Views/views';
-import getItaliaWidgets from '@italia/config/Widgets/widgets';
+} from 'design-volto-theme/config/Blocks/listingVariations.js';
+import getItaliaBlocks from 'design-volto-theme/config/Blocks/blocks.js';
+import getItaliaViews from 'design-volto-theme/config/Views/views';
+import getItaliaWidgets from 'design-volto-theme/config/Widgets/widgets';
 
-import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
-import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
-import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
-import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
-import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
+import { rssBlock as customRssBlock } from 'volto-rss-block';
+import CardWithImageRssTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithImageRssTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
+import CardWithoutImageRssTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import CardWithoutImageRssTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 
-import HandleAnchor from '@italia/components/ItaliaTheme/AppExtras/HandleAnchor';
-import GenericAppExtras from '@italia/components/ItaliaTheme/AppExtras/GenericAppExtras';
-import PageLoader from '@italia/components/ItaliaTheme/AppExtras/PageLoader';
+import HandleAnchor from 'design-volto-theme/components/ItaliaTheme/AppExtras/HandleAnchor';
+import GenericAppExtras from 'design-volto-theme/components/ItaliaTheme/AppExtras/GenericAppExtras';
+import PageLoader from 'design-volto-theme/components/ItaliaTheme/AppExtras/PageLoader';
 
-import { loadables as ItaliaLoadables } from '@italia/config/loadables';
+import { loadables as ItaliaLoadables } from 'design-volto-theme/config/loadables';
 
 // CTs icons
-import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
-import faFolderOpenSVG from '@italia/icons/folder-open.svg';
-import faImageSVG from '@italia/icons/image.svg';
-import faFileSVG from '@italia/icons/file.svg';
-import faLinkSVG from '@italia/icons/link.svg';
-import faBoxOpenSVG from '@italia/icons/box-open.svg';
-import faArchiveSVG from '@italia/icons/archive.svg';
-import faFileAltSVG from '@italia/icons/file-alt.svg';
-import faCalendarAltSVG from '@italia/icons/calendar-alt.svg';
-import faMapMarkedAltSVG from '@italia/icons/map-marked-alt.svg';
-import faNewspaperSVG from '@italia/icons/newspaper.svg';
-import faUserSVG from '@italia/icons/user.svg';
-import faCogSVG from '@italia/icons/cog.svg';
-import faSitemapSVG from '@italia/icons/sitemap.svg';
-import faBuildingSVG from '@italia/icons/building.svg';
-import faFileDownloadSVG from '@italia/icons/file-download.svg';
-import faQuestionSVG from '@italia/icons/question-solid.svg';
-import bandoSVG from '@italia/icons/bando.svg';
+import faFileInvoiceSVG from 'design-volto-theme/icons/file-invoice.svg';
+import faFolderOpenSVG from 'design-volto-theme/icons/folder-open.svg';
+import faImageSVG from 'design-volto-theme/icons/image.svg';
+import faFileSVG from 'design-volto-theme/icons/file.svg';
+import faLinkSVG from 'design-volto-theme/icons/link.svg';
+import faBoxOpenSVG from 'design-volto-theme/icons/box-open.svg';
+import faArchiveSVG from 'design-volto-theme/icons/archive.svg';
+import faFileAltSVG from 'design-volto-theme/icons/file-alt.svg';
+import faCalendarAltSVG from 'design-volto-theme/icons/calendar-alt.svg';
+import faMapMarkedAltSVG from 'design-volto-theme/icons/map-marked-alt.svg';
+import faNewspaperSVG from 'design-volto-theme/icons/newspaper.svg';
+import faUserSVG from 'design-volto-theme/icons/user.svg';
+import faCogSVG from 'design-volto-theme/icons/cog.svg';
+import faSitemapSVG from 'design-volto-theme/icons/sitemap.svg';
+import faBuildingSVG from 'design-volto-theme/icons/building.svg';
+import faFileDownloadSVG from 'design-volto-theme/icons/file-download.svg';
+import faQuestionSVG from 'design-volto-theme/icons/question-solid.svg';
+import bandoSVG from 'design-volto-theme/icons/bando.svg';
 
-import applyRichTextConfig from '@italia/config/RichTextEditor/config';
+import applyRichTextConfig from 'design-volto-theme/config/RichTextEditor/config';
 
-import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
+import gdprPrivacyPanelConfig from 'design-volto-theme/config/volto-gdpr-privacy-defaultPanelConfig.js';
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);

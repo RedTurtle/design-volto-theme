@@ -104,7 +104,8 @@ module.exports = Object.assign({}, volto_config, {
       // to be able to reference path uncustomized by webpack
       '@plone/volto-original': `${voltoPath}/src`,
       // be able to reference current package from customized package
-      '@italia': `${projectRootPath}/src`,
+      '@italia': `${projectRootPath}/src`, // TODO deprecated: remove in version 8
+      'design-volto-theme': `${projectRootPath}/src`,
     };
 
     return base_config;
@@ -119,11 +120,17 @@ module.exports = Object.assign({}, volto_config, {
             outputStyle: 'expanded',
             sourceMap: true,
             includePaths: ['node_modules'],
+            sassOptions: {
+              quietDeps: true,
+            },
           },
           prod: {
             outputStyle: 'expanded',
             sourceMap: true,
             includePaths: ['node_modules'],
+            sassOptions: {
+              quietDeps: true,
+            },
           },
         },
       },

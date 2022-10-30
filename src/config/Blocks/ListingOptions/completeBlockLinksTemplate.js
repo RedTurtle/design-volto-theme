@@ -1,4 +1,4 @@
-import { templatesOptions } from '@italia/config/Blocks/ListingOptions';
+import { templatesOptions } from 'design-volto-theme/config/Blocks/ListingOptions';
 
 export const addCompleteBlockLinksTemplateOptions = (
   schema,

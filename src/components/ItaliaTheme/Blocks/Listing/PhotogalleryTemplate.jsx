@@ -7,10 +7,13 @@ import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
-import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
-import { Icon } from '@italia/components/ItaliaTheme';
+import {
+  ListingLinkMore,
+  ListingImage,
+} from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { GalleryPreview } from '@italia/components/ItaliaTheme';
+import { GalleryPreview } from 'design-volto-theme/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
