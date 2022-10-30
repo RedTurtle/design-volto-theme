@@ -245,12 +245,6 @@ export default function applyConfig(voltoConfig) {
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
-    // TO DO: DA RIMUOVERE QUANDO AGGIORNIAMO A VOLTO16
-    nonContentRoutes: [
-      ...config.settings.nonContentRoutes,
-      /\/passwordreset\/.*$/,
-      '/passwordreset',
-    ],
   };
 
   /******************************************************************************
