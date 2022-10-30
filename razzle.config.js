@@ -26,11 +26,13 @@ module.exports = Object.assign({}, volto_config, {
     env: { target, dev },
     webpackConfig,
     webpackObject,
+    options,
   }) => {
     const base_config = volto_config.modifyWebpackConfig({
       env: { target, dev },
       webpackConfig,
       webpackObject,
+      options,
     });
 
     const fileLoader = base_config.module.rules.find(fileLoaderFinder);
@@ -62,10 +64,7 @@ module.exports = Object.assign({}, volto_config, {
     base_config.module.rules.push(SVG_LOADER);
 
     const urlLoader = base_config.module.rules.find(urlLoaderFinder);
-    urlLoader.exclude = [
-      /\.(png|jpe?g|webp)$/i,
-      ...(urlLoader.exclude || []),
-    ];
+    urlLoader.exclude = [/\.(png|jpe?g|webp)$/i, ...(urlLoader.exclude || [])];
     // see: node_modules/razzle/config/createConfig.js
     const IMG_LOADER = {
       test: /\.(png|jpe?g|webp)$/i,
