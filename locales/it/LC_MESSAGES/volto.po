@@ -230,6 +230,12 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: ID Lighthouse
+msgid "ID Lighthouse"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
@@ -2088,6 +2094,16 @@ msgstr "Formati alternativi"
 msgid "natural_image_size"
 msgstr "Non alterare le dimensioni naturali dell'immagine"
 
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+# defaultMessage: newEntry2
+msgid "newEntry2"
+msgstr ""
+
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+# defaultMessage: newEntry3
+msgid "newEntry3"
+msgstr ""
+
 #: components/ItaliaTheme/View/NewsItemView/NewsItemText
 # defaultMessage: Contenuto
 msgid "news_item_contenuto"
@@ -2869,6 +2885,11 @@ msgstr ""
 # defaultMessage: Disponi su 4 colonne
 msgid "set_four_columns"
 msgstr "Disponi su 4 colonne"
+
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+# defaultMessage: sevice_category_link
+msgid "sevice_category_link"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi

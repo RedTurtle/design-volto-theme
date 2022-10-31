@@ -49,6 +49,10 @@ const messages = defineMessages({
     id: 'Path filter filtro',
     defaultMessage: 'Filtro',
   },
+  id_lighthouse: {
+    id: 'ID Lighthouse',
+    defineMessages: 'ID Lighthouse',
+  },
 });
 
 export const addSchemaField = (
