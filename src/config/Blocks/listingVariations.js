@@ -114,8 +114,7 @@ const italiaListingVariations = [
     template: RibbonCardTemplate,
     skeleton: RibbonCardTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addRibbonCardTemplateOptions(schema, formData, intl, pos);
+      addRibbonCardTemplateOptions(schema, formData, intl);
       return schema;
     },
   },

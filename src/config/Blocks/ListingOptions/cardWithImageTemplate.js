@@ -4,6 +4,7 @@ import {
   templatesOptions,
   addDefaultOptions,
 } from '@italia/config/Blocks/ListingOptions';
+
 import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
