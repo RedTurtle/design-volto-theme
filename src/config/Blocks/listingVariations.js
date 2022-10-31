@@ -89,8 +89,7 @@ const italiaListingVariations = [
     template: InEvidenceTemplate,
     skeleton: InEvidenceTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addInEvidenceTemplateOptions(schema, formData, intl, pos);
+      addInEvidenceTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
