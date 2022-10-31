@@ -78,8 +78,7 @@ const italiaListingVariations = [
     template: CardWithImageTemplate,
     skeleton: CardWithImageTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addCardWithImageTemplateOptions(schema, formData, intl, pos);
+      addCardWithImageTemplateOptions(schema, formData, intl);
       return schema;
     },
   },

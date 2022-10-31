@@ -49,9 +49,21 @@ const messages = defineMessages({
     id: 'Path filter filtro',
     defaultMessage: 'Filtro',
   },
+  service_category_link: {
+    id: 'service_category_link',
+    defaultMessage: 'service_category_link',
+  },
+  newEntry2: {
+    id: 'newEntry2',
+    defaultMessage: 'newEntry2',
+  },
+  newEntry3: {
+    id: 'newEntry3',
+    defaultMessage: 'newEntry3',
+  },
   id_lighthouse: {
     id: 'ID Lighthouse',
-    defineMessages: 'ID Lighthouse',
+    defaultMessage: 'ID Lighthouse',
   },
 });
 
@@ -132,6 +144,32 @@ export const templatesOptions = (
     }
     pos++;
   });
+
+  return pos;
+};
+
+export const addLighthouseField = (schema, intl, position = 0) => {
+  let pos = position;
+
+  addSchemaField(
+    schema,
+    'id_lighthouse',
+    intl.formatMessage(messages.id_lighthouse),
+    null,
+    {
+      choices: [
+        [
+          'service_category_link',
+          intl.formatMessage(messages.service_category_link),
+        ],
+        ['newEntry2', intl.formatMessage(messages.newEntry2)],
+        ['newEntry3', intl.formatMessage(messages.newEntry3)],
+      ],
+      /* default: 'medium', */
+    },
+    pos,
+  );
+  pos++;
 
   return pos;
 };

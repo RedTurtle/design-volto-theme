@@ -1,7 +1,10 @@
 import { defineMessages } from 'react-intl';
 
-import { templatesOptions } from '@italia/config/Blocks/ListingOptions';
-import { addSchemaField } from '@italia/config/Blocks/ListingOptions';
+import {
+  templatesOptions,
+  addDefaultOptions,
+} from '@italia/config/Blocks/ListingOptions';
+import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   always_show_image: {
@@ -20,22 +23,6 @@ const messages = defineMessages({
     id: 'set_four_columns',
     defaultMessage: 'Disponi su 4 colonne',
   },
-  sevice_category_link: {
-    id: 'sevice_category_link',
-    defaultMessage: 'sevice_category_link',
-  },
-  newEntry2: {
-    id: 'newEntry2',
-    defaultMessage: 'newEntry2',
-  },
-  newEntry3: {
-    id: 'newEntry3',
-    defaultMessage: 'newEntry3',
-  },
-  id_lighthouse: {
-    id: 'ID Lighthouse',
-    defaultMessage: 'ID Lighthouse',
-  },
 });
 
 export const addCardWithImageTemplateOptions = (
@@ -46,12 +33,15 @@ export const addCardWithImageTemplateOptions = (
 ) => {
   let pos = position;
 
+  pos = addLighthouseField(schema, intl, pos);
+
+  pos = addDefaultOptions(schema, formData, intl, pos);
+
   pos = templatesOptions(
     schema,
     formData,
     intl,
     [
-      'id_lighthouse',
       'always_show_image',
       'natural_image_size',
       'set_four_columns',
@@ -78,25 +68,6 @@ export const addCardWithImageTemplateOptions = (
       show_section: { default: false },
       hide_dates: { default: false },
       show_topics: { label: intl.formatMessage(messages.show_topics) },
-    },
-    pos,
-  );
-
-  addSchemaField(
-    schema,
-    'id_lighthouse',
-    intl.formatMessage(messages.id_lighthouse),
-    null,
-    {
-      choices: [
-        [
-          'sevice_category_link',
-          intl.formatMessage(messages.sevice_category_link),
-        ],
-        ['newEntry2', intl.formatMessage(messages.newEntry2)],
-        ['newEntry3', intl.formatMessage(messages.newEntry3)],
-      ],
-      /* default: 'medium', */
     },
     pos,
   );
