@@ -171,8 +171,7 @@ const italiaListingVariations = [
     template: CompleteBlockLinksTemplate,
     skeleton: CompleteBlockLinksTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addCompleteBlockLinksTemplateOptions(schema, formData, intl, pos);
+      addCompleteBlockLinksTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
