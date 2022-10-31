@@ -247,7 +247,6 @@ msgstr "Masquer tous les types de contenu"
 msgid "Home"
 msgstr ""
 
-#: config/Blocks/ListingOptions/cardWithImageTemplate
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: ID Lighthouse
 msgid "ID Lighthouse"
@@ -2111,12 +2110,12 @@ msgstr "Formats alternatifs"
 msgid "natural_image_size"
 msgstr ""
 
-#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: newEntry2
 msgid "newEntry2"
 msgstr ""
 
-#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: newEntry3
 msgid "newEntry3"
 msgstr ""
@@ -2867,6 +2866,11 @@ msgstr ""
 msgid "select_risultato"
 msgstr ""
 
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: service_category_link
+msgid "service_category_link"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioCosE
 # defaultMessage: Cos'è
 msgid "service_cos_e"
@@ -2902,11 +2906,6 @@ msgstr "Aller à d'autres options de recherche"
 # defaultMessage: Disponi su 4 colonne
 msgid "set_four_columns"
 msgstr "Disposer sur 4 colonnes"
-
-#: config/Blocks/ListingOptions/cardWithImageTemplate
-# defaultMessage: sevice_category_link
-msgid "sevice_category_link"
-msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
