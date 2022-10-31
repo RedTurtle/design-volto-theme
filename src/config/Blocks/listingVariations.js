@@ -136,7 +136,8 @@ const italiaListingVariations = [
     template: SquaresImageTemplate,
     skeleton: SquaresImageTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addLighthouseField(schema, intl);
+      addDefaultOptions(schema, formData, intl, pos);
       return schema;
     },
   },
