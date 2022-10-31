@@ -125,8 +125,7 @@ const italiaListingVariations = [
     template: CardWithSlideUpTextTemplate,
     skeleton: CardWithSlideUpTextTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addCardWithSlideUpTextTemplateOptions(schema, formData, intl, pos);
+      addCardWithSlideUpTextTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
