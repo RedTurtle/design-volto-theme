@@ -60,6 +60,8 @@ import {
   addPhotogalleryTemplateOptions,
 } from '@italia/config/Blocks/ListingOptions';
 
+import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
+
 const italiaListingVariations = [
   {
     id: 'simpleCard',
@@ -100,7 +102,8 @@ const italiaListingVariations = [
     template: ContentInEvidenceTemplate,
     skeleton: ContentInEvidenceTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addLighthouseField(schema, intl);
+      addDefaultOptions(schema, formData, intl, pos);
       return schema;
     },
   },
