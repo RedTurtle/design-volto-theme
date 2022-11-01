@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-10-05T10:57:53.086Z\n"
+"POT-Creation-Date: 2022-11-01T22:46:30.561Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -173,6 +173,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 # defaultMessage: Descrizione...
 msgid "Description placeholder"
+msgstr ""
+
+#: config/Views/views
+# defaultMessage: Dettagli procedimento
+msgid "Dettagli procedimento"
 msgstr ""
 
 #: config/Blocks/ListingOptions/mapTemplate
@@ -550,6 +555,11 @@ msgstr ""
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per sostituire quello esistente
 msgid "Trascina qui un file per sostituire quello esistente"
+msgstr ""
+
+#: config/Views/views
+# defaultMessage: Trasparenza
+msgid "Trasparenza"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
