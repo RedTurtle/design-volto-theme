@@ -54,21 +54,19 @@ const EventoCosE = ({ content }) => {
         <>
           <h5>{intl.formatMessage(messages.parteciperanno)}</h5>
           {content.persone_amministrazione.map((item, i) => (
-            <Chip
-              color="primary"
-              disabled={false}
-              large={false}
-              simple
-              tag="div"
-              key={item['@id']}
-              className="mr-2"
-            >
-              <ChipLabel tag="span">
-                <UniversalLink href={flattenToAppURL(item['@id'])}>
-                  {item.title}
-                </UniversalLink>
-              </ChipLabel>
-            </Chip>
+            <UniversalLink href={flattenToAppURL(item['@id'])}>
+              <Chip
+                color="primary"
+                disabled={false}
+                large={false}
+                simple
+                tag="div"
+                key={item['@id']}
+                className="mr-2"
+              >
+                <ChipLabel tag="span">{item.title}</ChipLabel>
+              </Chip>
+            </UniversalLink>
           ))}
         </>
       )}

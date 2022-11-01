@@ -140,11 +140,17 @@
       "yarn i18n",
       "git add ."
     ],
-    "theme/**/*.{css,less,scss}": [
+    "theme/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
-    "src/**/*.{css,less,scss}": [
+    "src/**/*.{css,less}": [
       "npx stylelint --fix"
+    ],
+    "theme/**/*.scss": [
+      "npx stylelint --fix --customSyntax postcss-scss"
+    ],
+    "src/**/*.scss": [
+      "npx stylelint --fix --customSyntax postcss-scss"
     ],
     "theme/**/*.overrides": [
       "npx stylelint --fix --syntax less"
