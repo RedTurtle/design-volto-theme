@@ -125,18 +125,20 @@ module.exports = Object.assign({}, volto_config, {
       options: {
         sass: {
           dev: {
-            outputStyle: 'expanded',
-            sourceMap: true,
-            includePaths: ['node_modules'],
             sassOptions: {
+              includePaths: ['node_modules'],
+              outputStyle: 'expanded',
+              sourceMap: true,
+              quiet: true,
               quietDeps: true,
             },
           },
           prod: {
-            outputStyle: 'expanded',
-            sourceMap: true,
-            includePaths: ['node_modules'],
             sassOptions: {
+              includePaths: ['node_modules'],
+              outputStyle: 'expanded',
+              sourceMap: true,
+              quiet: true,
               quietDeps: true,
             },
           },

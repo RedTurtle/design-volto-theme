@@ -222,7 +222,6 @@
   },
   "resolutions": {
     "moment": "2.29.3",
-    "lodash": "4.17.21",
-    "sass": "~1.32"
+    "lodash": "4.17.21"
   }
 }

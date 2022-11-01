@@ -71,7 +71,7 @@ const getItaliaViews = (config) => {
       ...italiaLayoutViews,
     },
     layoutViewsNamesMapping: {
-      ...config.view.layoutViewsNamesMapping,
+      ...config.views.layoutViewsNamesMapping,
       ...layoutViewsNamesMapping,
     },
   };

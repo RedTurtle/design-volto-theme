@@ -55,11 +55,12 @@ export default function applyConfig(voltoConfig) {
   /******************************************************************************
    * SETTINGS
    ******************************************************************************/
+  const voltoSentryOptions = voltoConfig.settings.sentryOptions;
 
   config.settings = {
     ...config.settings,
-    sentryOptions: {
-      ...(config.settings.sentryOptions ?? {}),
+    sentryOptions: (libraries) => ({
+      ...voltoSentryOptions(libraries),
       ignoreErrors: [
         'ChunkLoadError',
         'Loading CSS chunk',
@@ -74,7 +75,7 @@ export default function applyConfig(voltoConfig) {
       //   // }
       //  return event;
       // },
-    },
+    }),
     isMultilingual: false,
     supportedLanguages: ['it'],
     defaultLanguage: 'it',
