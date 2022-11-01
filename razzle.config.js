@@ -96,6 +96,14 @@ module.exports = Object.assign({}, volto_config, {
     // console.log(JSON.stringify(base_config.module.rules, null, 2))
 
     webpackConfig.resolve.alias = {
+      // TODO remove the next two when implemented in core
+      '@plone/volto/components/theme/Image/Image': path.resolve(
+        `${projectRootPath}/src/components/Image/Image.jsx`,
+      ),
+      '@plone/volto/helpers/Image/Image': path.resolve(
+        `${projectRootPath}/src/components/Image/helpers.js`,
+      ),
+
       ...webpackConfig.resolve.alias,
       ...base_config.resolve.alias,
       '../../theme.config$': `${projectRootPath}/theme/theme.config`,
