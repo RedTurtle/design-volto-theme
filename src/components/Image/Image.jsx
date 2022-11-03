@@ -131,7 +131,7 @@ const Image = ({
           //loading={critical ? 'eager' : 'lazy'} //removed because this is for the placeholder.Lazy loading is made from intersectionObserver
           width={width}
           height={height}
-          style={aspectRatio ? { 'aspect-ratio': `${aspectRatio}` } : null}
+          style={aspectRatio ? { aspectRatio } : null}
           {...imageProps}
           ref={imageRef}
         />

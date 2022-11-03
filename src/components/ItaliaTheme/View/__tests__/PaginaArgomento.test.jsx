@@ -211,8 +211,7 @@ const with_blocks = {
               },
             ],
             key: '1vnli',
-            text:
-              'Eventi ambiente ed educazione \nParchi e Boschi urbani\nContabilit\u00e0 ambientale e Open Data ambientali',
+            text: 'Eventi ambiente ed educazione \nParchi e Boschi urbani\nContabilit\u00e0 ambientale e Open Data ambientali',
             type: 'unstyled',
           },
         ],

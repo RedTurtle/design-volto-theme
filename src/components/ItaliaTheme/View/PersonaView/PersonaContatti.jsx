@@ -38,10 +38,10 @@ const PersonaContatti = ({ content }) => {
       {content?.email?.length > 0 && (
         <p>
           <strong>{intl.formatMessage(messages.email_label)}: </strong>
-          {content.email.map((email) => (
-            <>
+          {content.email.map((email, index) => (
+            <React.Fragment key={index}>
               <ContactLink email={email} label={false} />{' '}
-            </>
+            </React.Fragment>
           ))}
         </p>
       )}

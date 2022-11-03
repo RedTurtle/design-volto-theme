@@ -54,7 +54,10 @@ const EventoCosE = ({ content }) => {
         <>
           <h5>{intl.formatMessage(messages.parteciperanno)}</h5>
           {content.persone_amministrazione.map((item, i) => (
-            <UniversalLink href={flattenToAppURL(item['@id'])}>
+            <UniversalLink
+              href={flattenToAppURL(item['@id'])}
+              key={item['@id']}
+            >
               <Chip
                 color="primary"
                 disabled={false}

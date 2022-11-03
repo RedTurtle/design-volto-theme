@@ -26,10 +26,10 @@ const PersonaTelephones = ({ content }) => {
     <p>
       <strong>{intl.formatMessage(messages.telefono)}: </strong>
       {content.telefono.map((tel, index) => (
-        <>
+        <React.Fragment key={index}>
           <ContactLink tel={tel} label={false} />
           {index !== nItems - 1 && ', '}
-        </>
+        </React.Fragment>
       ))}
     </p>
   ) : null;
