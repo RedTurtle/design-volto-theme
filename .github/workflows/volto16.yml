@@ -46,7 +46,7 @@ jobs:
     # Will be run if pull request is approved
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # - name: Merge branch in develop
       #   uses: devmasx/merge-branch@v1.3.1
@@ -63,10 +63,10 @@ jobs:
 
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v2
 
       - name: Cache Docker layers
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-buildx-${{ github.sha }}
@@ -74,7 +74,7 @@ jobs:
             ${{ runner.os }}-buildx-
 
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -82,7 +82,7 @@ jobs:
       - name: Build and push Docker images
         # You may pin to the exact commit or the version.
         # uses: docker/build-push-action@4a531fa5a603bab87dfa56578bd82b28508c9547
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           # List of tags
           tags: redturtletech/io-comune-base:volto16
