@@ -32,7 +32,8 @@
   // mixins
   @import 'bootstrap/scss/root';
   @import 'bootstrap/scss/print';
-  @import 'bootstrap/scss/reboot';
+  // moved to './bootstrap/reboot'
+  // @import 'bootstrap/scss/reboot';
 }
 
 @import './bootstrap/reboot';
