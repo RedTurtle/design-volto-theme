@@ -20,6 +20,9 @@
     "volto-customer-satisfaction",
     "volto-gdpr-privacy"
   ],
+  "customizationPaths": [
+    "src/customizations/"
+  ],
   "scripts": {
     "start": "razzle start",
     "postinstall": "yarn omelette",
