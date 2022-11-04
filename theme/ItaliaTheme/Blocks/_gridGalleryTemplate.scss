@@ -124,6 +124,11 @@
         }
       }
 
+      picture.responsive img {
+        width:100%;
+        height:auto
+      }
+
       h3 {
         position: relative;
         z-index: 1;
