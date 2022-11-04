@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-unresolved
 import { getImageAttributes } from '@plone/volto/helpers/Image/Image';
@@ -45,9 +46,10 @@ const Image = ({
     },
   );
   const imageRef = useRef();
-  const [srcset, setSrcset] = useState(
+  const [actualSrcSet, setActualSrcSet] = useState(
     critical && srcSet ? srcSet.join(', ') : null,
   );
+  // TODO: serve a qualcuno questo?
   const imageHasLoaded = imageRef?.current?.complete;
 
   //picture classname
@@ -65,16 +67,16 @@ const Image = ({
     pictureClassName = `${pictureClassName} responsive`;
   }
 
-  //apply srcset
-  const applySrcSet = useCallback(() => {
-    setSrcset(
-      srcSet
+  //intersection observer
+  useEffect(() => {
+    const applySrcSet = () => {
+      const newSrcSet = srcSet
         .filter((s, index) => {
           let addable = (ss) => {
-            let devicePixelRatio = window.devicePixelRatio;
-
-            let w = ss ? parseInt(ss.split(' ')[1].replace('w', ''), 10) : null;
-
+            const devicePixelRatio = window.devicePixelRatio;
+            const w = ss
+              ? parseInt(ss.split(' ')[1].replace('w', ''), 10)
+              : null;
             return w
               ? w <=
                   (imageRef?.current?.width * devicePixelRatio ?? Infinity) ||
@@ -82,53 +84,46 @@ const Image = ({
                     (imageRef?.current?.height * devicePixelRatio ?? Infinity)
               : false;
           };
-
           let add = addable(s);
-
           if (!add && addable(srcSet[index - 1])) {
             add = true; //add the next item grather then imageRef width, to avoid less quality
           }
-
           return add;
         })
-        .join(', '),
-    );
-  }, [srcSet]);
+        .join(', ');
+      setActualSrcSet(newSrcSet);
+    };
 
-  //intersection observer
-  useEffect(() => {
-    if ('IntersectionObserver' in window && !srcset) {
+    if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
         (entries) => {
-          setTimeout(() => {
-            if (
-              entries[0].isIntersecting === true &&
-              //imageRef?.current?.complete && //removed to load images on top of the page.
-              (!srcset || srcset?.split(', ')?.length < 2) &&
-              srcSet?.length > 0
-            ) {
-              applySrcSet();
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !actualSrcSet) {
+              srcSet && applySrcSet();
+              observer.unobserve(imageRef.current);
             }
-          }, 10);
+          });
         },
         { threshold: [0], rootMargin: '100px' },
       );
       observer.observe(imageRef.current);
-    } else if (srcSet?.length > 0) {
+    } else if (srcSet) {
       applySrcSet();
     }
-  }, [imageRef, applySrcSet, imageHasLoaded, srcSet, srcset]);
+  }, [imageRef, imageHasLoaded, srcSet, actualSrcSet]);
 
   return (
     <>
       <picture className={pictureClassName}>
-        {srcset?.length > 0 && <source srcSet={srcset} sizes={sizes} />}
+        {actualSrcSet?.length > 0 && (
+          <source srcSet={actualSrcSet} sizes={sizes} />
+        )}
         <img
           src={src}
           alt={alt}
           className={className}
           role={role}
-          //loading={critical ? 'eager' : 'lazy'} //removed because this is for the placeholder.Lazy loading is made from intersectionObserver
+          // loading={critical ? 'eager' : 'lazy'} //removed because this is for the placeholder.Lazy loading is made from intersectionObserver
           width={width}
           height={height}
           style={aspectRatio ? { aspectRatio } : null}
