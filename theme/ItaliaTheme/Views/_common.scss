@@ -26,6 +26,11 @@ picture.volto-image {
   width: 100%;
 }
 
+picture.volto-image.responsive img {
+  width:100%;
+  height:auto
+}
+
 .full-width,
 .ui.image img.full-width,
 picture.volto-image.responsive.full-width img,
