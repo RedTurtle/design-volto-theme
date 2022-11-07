@@ -53,6 +53,19 @@ body.search-modal-opened {
     background-color: $highlight-search;
   }
 
+  .card {
+    &::after {
+      content: none;
+    }
+    .card-body {
+      .category-top {
+        .data:before {
+          content: none;
+        }
+      }
+    }
+  }
+
   .ordering-widget {
     @media (max-width: 991px) {
       .bootstrap-select-wrapper {
