@@ -53,9 +53,11 @@ const CardWithSlideUpTextTemplate = (props) => {
               <UniversalLink
                 item={!isEditMode ? item : null}
                 href={isEditMode ? '#' : null}
-                style={{
-                  backgroundImage: `url(${image})`,
-                }}
+                style={
+                  image && {
+                    backgroundImage: `url(${image})`,
+                  }
+                }
                 className="listing-item box bg-img"
                 key={index}
                 data-element={id_lighthouse}
