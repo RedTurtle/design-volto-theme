@@ -111,7 +111,7 @@ const RibbonCardTemplate = (props) => {
                       <UniversalLink
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}
-                        data-element={id_lighthouse && id_lighthouse}
+                        data-element={id_lighthouse}
                       >
                         {itemTitle}
                       </UniversalLink>

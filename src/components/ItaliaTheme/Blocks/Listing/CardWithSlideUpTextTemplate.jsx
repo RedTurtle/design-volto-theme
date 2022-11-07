@@ -58,7 +58,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                 }}
                 className="listing-item box bg-img"
                 key={index}
-                data-element={id_lighthouse && id_lighthouse}
+                data-element={id_lighthouse}
               >
                 <div className="bg-gradient"></div>
                 {(category || date) && (

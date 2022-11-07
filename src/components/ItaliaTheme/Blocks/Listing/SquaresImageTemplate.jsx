@@ -34,7 +34,7 @@ const SquaresImageTemplate = ({
                 }}
                 className="listing-item box bg-img"
                 key={index}
-                data-element={id_lighthouse && id_lighthouse}
+                data-element={id_lighthouse}
               >
                 <span className="title font-weight-bold">{item?.title}</span>
               </UniversalLink>

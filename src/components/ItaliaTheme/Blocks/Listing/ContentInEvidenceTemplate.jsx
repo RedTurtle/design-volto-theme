@@ -73,7 +73,7 @@ const ContentInEvidenceTemplate = ({
                     <CardTitle tag="h2">
                       <UniversalLink
                         href={flattenToAppURL(item['@id'])}
-                        data-element={id_lighthouse && id_lighthouse}
+                        data-element={id_lighthouse}
                       >
                         {item.title}
                       </UniversalLink>

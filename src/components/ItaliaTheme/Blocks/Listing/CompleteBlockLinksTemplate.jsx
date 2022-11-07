@@ -47,7 +47,7 @@ const CompleteBlockLinksTemplate = ({
                   <UniversalLink
                     item={!isEditMode ? item : null}
                     href={isEditMode ? '#' : null}
-                    data-element={id_lighthouse && id_lighthouse}
+                    data-element={id_lighthouse}
                   >
                     <div className="d-flex">
                       {image && <div className="image-container">{image}</div>}
