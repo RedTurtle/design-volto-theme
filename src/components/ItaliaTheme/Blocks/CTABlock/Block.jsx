@@ -1,16 +1,17 @@
+import { Button, Container } from 'design-react-kit/dist/design-react-kit';
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useRef } from 'react';
-import { Container, Button } from 'design-react-kit/dist/design-react-kit';
+import React, { useRef, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+
+// monkey/customization attualmente in DVT
+import Image from '@plone/volto/components/theme/Image/Image';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
-import cx from 'classnames';
 import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
-import Image from '@plone/volto/components/theme/Image/Image';
-
 import config from '@plone/volto/registry';
+import cx from 'classnames';
+import redraft from 'redraft';
 
 const messages = defineMessages({
   cta_title: {

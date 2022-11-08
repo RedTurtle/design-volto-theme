@@ -70,9 +70,10 @@ const Image = ({
   //intersection observer
   useEffect(() => {
     const applySrcSet = () => {
+      // TODO: documentation
       const newSrcSet = srcSet
         .filter((s, index) => {
-          let addable = (ss) => {
+          const addable = (ss) => {
             const devicePixelRatio = window.devicePixelRatio;
             const w = ss
               ? parseInt(ss.split(' ')[1].replace('w', ''), 10)
@@ -84,33 +85,32 @@ const Image = ({
                     (imageRef?.current?.height * devicePixelRatio ?? Infinity)
               : false;
           };
-          let add = addable(s);
-          if (!add && addable(srcSet[index - 1])) {
-            add = true; //add the next item grather then imageRef width, to avoid less quality
-          }
-          return add;
+          //add the next item grather then imageRef width, to avoid less quality
+          return addable(s) || addable(srcSet[index - 1]);
         })
         .join(', ');
       setActualSrcSet(newSrcSet);
     };
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && !actualSrcSet) {
-              srcSet && applySrcSet();
-              observer.unobserve(imageRef.current);
-            }
-          });
-        },
-        { threshold: [0], rootMargin: '100px' },
-      );
-      observer.observe(imageRef.current);
-    } else if (srcSet) {
-      applySrcSet();
+    if (srcSet && !critical) {
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !actualSrcSet) {
+                srcSet && applySrcSet();
+                observer.unobserve(imageRef.current);
+              }
+            });
+          },
+          { threshold: [0], rootMargin: '100px' },
+        );
+        observer.observe(imageRef.current);
+      } else {
+        applySrcSet();
+      }
     }
-  }, [imageRef, imageHasLoaded, srcSet, actualSrcSet]);
+  }, [imageRef, imageHasLoaded, srcSet, actualSrcSet, critical]);
 
   return (
     <>
@@ -123,7 +123,8 @@ const Image = ({
           alt={alt}
           className={className}
           role={role}
-          // loading={critical ? 'eager' : 'lazy'} //removed because this is for the placeholder.Lazy loading is made from intersectionObserver
+          // removed because this is for the placeholder.Lazy loading is made from intersectionObserver
+          // loading={critical ? 'eager' : 'lazy'}
           width={width}
           height={height}
           style={aspectRatio ? { aspectRatio } : null}
