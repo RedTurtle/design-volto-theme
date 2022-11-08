@@ -49,22 +49,6 @@ const messages = defineMessages({
     id: 'Path filter filtro',
     defaultMessage: 'Filtro',
   },
-  service_category_link: {
-    id: 'service-category-link',
-    defaultMessage: 'service-category-link',
-  },
-  topic_element: {
-    id: 'topic-element',
-    defaultMessage: 'topic-element',
-  },
-  service_link: {
-    id: 'service-link',
-    defaultMessage: 'service-link',
-  },
-  administration_element: {
-    id: 'administration-element',
-    defaultMessage: 'administration-element',
-  },
   id_lighthouse: {
     id: 'ID Lighthouse',
     defaultMessage: 'ID Lighthouse',
@@ -167,16 +151,10 @@ export const addLighthouseField = (schema, intl, position = 0) => {
     intl.formatMessage(messages.id_lighthouse_description),
     {
       choices: [
-        [
-          'service-category-link',
-          intl.formatMessage(messages.service_category_link),
-        ],
-        ['topic-element', intl.formatMessage(messages.topic_element)],
-        ['service-link', intl.formatMessage(messages.service_link)],
-        [
-          'administration-element',
-          intl.formatMessage(messages.administration_element),
-        ],
+        ['service-category-link', 'service-category-link'],
+        ['topic-element', 'topic-element'],
+        ['service-link', 'service-link'],
+        ['administration-element', 'administration-element'],
       ],
       /* default: 'medium', */
     },
