@@ -35,6 +35,7 @@ const ContentInEvidenceTemplate = ({
   show_block_bg,
   linkTitle,
   linkHref,
+  id_lighthouse,
 }) => {
   return (
     <div className="contentInEvidenceTemplate">
@@ -73,7 +74,10 @@ const ContentInEvidenceTemplate = ({
                       />
                     </CardCategory>
                     <CardTitle tag="h2">
-                      <UniversalLink href={flattenToAppURL(item['@id'])}>
+                      <UniversalLink
+                        href={flattenToAppURL(item['@id'])}
+                        data-element={id_lighthouse}
+                      >
                         {item.title}
                       </UniversalLink>
                     </CardTitle>

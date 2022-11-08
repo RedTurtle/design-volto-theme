@@ -56,6 +56,7 @@ const SimpleCardTemplateDefault = (props) => {
     show_path_filters,
     addFilters,
     additionalFilters = [],
+    id_lighthouse,
   } = props;
 
   let currentPathFilter = additionalFilters
@@ -193,6 +194,7 @@ const SimpleCardTemplateDefault = (props) => {
                   <UniversalLink
                     item={!isEditMode ? item : null}
                     href={isEditMode ? '#' : null}
+                    data-element={id_lighthouse}
                   >
                     {itemTitle}
                   </UniversalLink>

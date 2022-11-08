@@ -254,6 +254,16 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: ID Lighthouse
+msgid "ID Lighthouse"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.
+msgid "ID Lighthouse Help Description"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"

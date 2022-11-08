@@ -54,6 +54,7 @@ const RibbonCardTemplate = (props) => {
     show_description = true,
     show_type,
     hide_dates,
+    id_lighthouse,
   } = props;
 
   return (
@@ -113,6 +114,7 @@ const RibbonCardTemplate = (props) => {
                       <UniversalLink
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}
+                        data-element={id_lighthouse}
                       >
                         {itemTitle}
                       </UniversalLink>
