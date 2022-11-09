@@ -250,7 +250,6 @@ const MegaMenu = ({ item, pathname }) => {
             color="secondary"
             nav
             data-element={item.id_lighthouse}
-            className="teste"
           >
             <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
             <Icon
