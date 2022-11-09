@@ -75,7 +75,6 @@ const MegaMenu = ({ item, pathname }) => {
   const blocksFieldname = getBlocksFieldname(item);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(item);
   const isItemActive = isActive(item, pathname);
-
   const [menuStatus, setMenuStatus] = useState(false);
 
   const getAnchorTarget = (nodeElement) => {
@@ -118,6 +117,7 @@ const MegaMenu = ({ item, pathname }) => {
           item={item.linkUrl[0]?.['@id'] ? item.linkUrl[0] : '#'}
           tag={UniversalLink}
           active={isItemActive}
+          data-element={item.id_lighthouse}
         >
           <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
           {isItemActive && (
@@ -245,7 +245,13 @@ const MegaMenu = ({ item, pathname }) => {
           tag="div"
           toggle={() => setMenuStatus(!menuStatus)}
         >
-          <DropdownToggle aria-haspopup color="secondary" nav>
+          <DropdownToggle
+            aria-haspopup
+            color="secondary"
+            nav
+            data-element={item.id_lighthouse}
+            className="teste"
+          >
             <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
             <Icon
               icon="it-expand"
