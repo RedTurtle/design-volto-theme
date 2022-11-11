@@ -1,4 +1,4 @@
-FROM node:14-buster-slim as build
+FROM node:16-buster-slim as build
 
 WORKDIR /home/node/app
 USER root
@@ -11,17 +11,19 @@ ENV RAZZLE_RECAPTCHA_KEY=VOLTO_RECAPTCHA_KEY
 # ENV RAZZLE_GA_CODE=VOLTO_GA_CODE
 # ENV SENTRY_DSN=VOLTO_SENTRY_DSN
 
-RUN buildDeps="build-essential ca-certificates git-core openssl python-dev" && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends $buildDeps && \
-    yarn --frozen-lockfile && \
-    yarn build && \
-    rm -rf /home/node/.cache && \
-    apt-get purge $buildDeps -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+#RUN buildDeps="build-essential ca-certificates git-core openssl" && \
+#    apt-get update && \
+#    apt-get install -y --no-install-recommends $buildDeps
 
-FROM node:14-buster-slim
+RUN yarn --frozen-lockfile && \
+    yarn build && \
+    rm -rf /home/node/.cache
+
+# RUN apt-get purge $buildDeps -y && \
+#    apt-get clean && \
+#    rm -rf /var/lib/apt/lists/*
+
+FROM node:16-buster-slim
 
 WORKDIR /home/node/app
 COPY --chown=node --from=build /home/node/app /home/node/app
