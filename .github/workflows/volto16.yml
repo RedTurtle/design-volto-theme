@@ -1,43 +1,11 @@
 name: Docker build for new volto 16 version
-
-############################################################
-#                                                          #
-#         TODO: When we can achieve our dreams             #
-#                                                          #
-#                                                          #
-#   1. on pull request review                              #
-#   on:                                                    #
-#     pull_request_review:                                 #
-#       types: [submitted]                                 #
-#       branches: [master]                                 #
-#                                                          #
-#   2. runs if pull request is approved                    #
-#   build_develop:                                         #
-#     if: github.event.review.state == 'approved'          #
-#     steps:                                               #
-#       ...                                                #
-#                                                          #
-############################################################
-
-# Controls when the action will run.
 on:
-  # Triggers the workflow when a pull request is approved
-  # pull_request_review:
-  #   types: [submitted]
-  #   branches: [master]
   push:
     branches: [upgrade_to_volto16]
-
-  # Allows you to run this workflow manually from the Actions tab
-  #workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    # Runs only if pull request is approved
-    # if: github.event.review.state == 'approved'
-
     steps:
       - uses: actions/checkout@v3
 

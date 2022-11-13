@@ -16,7 +16,8 @@ RUN buildDeps="make" && \
     apt-get update && \
     apt-get install -y --no-install-recommends $buildDeps
 
-RUN yarn --immutable && \
+RUN yarn set version 3.2.3 && \
+    yarn --immutable && \
     yarn build && \
     rm -rf /home/node/.cache
 
@@ -24,12 +25,12 @@ RUN yarn --immutable && \
 #    apt-get clean && \
 #    rm -rf /var/lib/apt/lists/*
 
-FROM node:16-buster-slim
-
-WORKDIR /home/node/app
-COPY --chown=node --from=build /home/node/app /home/node/app
-
-EXPOSE 3000 3001 4000 4001
-ENTRYPOINT ["/home/node/app/entrypoint.sh"]
+#FROM node:16-buster-slim
+#
+#WORKDIR /home/node/app
+#COPY --chown=node --from=build /home/node/app /home/node/app
+#
+#EXPOSE 3000 3001 4000 4001
+#ENTRYPOINT ["/home/node/app/entrypoint.sh"]
 CMD ["yarn", "start:prod"]
 
