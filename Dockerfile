@@ -16,7 +16,7 @@ RUN buildDeps="make" && \
     apt-get update && \
     apt-get install -y --no-install-recommends $buildDeps
 
-RUN yarn --frozen-lockfile && \
+RUN yarn --immutable && \
     yarn build && \
     rm -rf /home/node/.cache
 
