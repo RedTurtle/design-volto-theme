@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       ## node install
-      - run: yarn --frozen-lockfile
+      - run: yarn --immutable
 
       - name: Jest tests
         run: yarn test
