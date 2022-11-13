@@ -21,9 +21,9 @@ RUN yarn set version 3.2.3 && \
     yarn build && \
     rm -rf /home/node/.cache
 
-RUN apt-get purge $buildDeps -y && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+#RUN apt-get purge $buildDeps -y && \
+#    apt-get clean && \
+#    rm -rf /var/lib/apt/lists/*
 
 FROM node:16-buster-slim
 
