@@ -12,8 +12,9 @@ ENV RAZZLE_RECAPTCHA_KEY=VOLTO_RECAPTCHA_KEY
 # ENV SENTRY_DSN=VOLTO_SENTRY_DSN
 
 #RUN buildDeps="build-essential ca-certificates git-core openssl" && \
-#    apt-get update && \
-#    apt-get install -y --no-install-recommends $buildDeps
+RUN buildDeps="make" && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends $buildDeps
 
 RUN yarn --frozen-lockfile && \
     yarn build && \
