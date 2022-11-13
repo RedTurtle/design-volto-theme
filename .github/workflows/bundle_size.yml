@@ -18,7 +18,7 @@ jobs:
         node-version: 16
 
     - name: Install dependencies
-      run: yarn --immutable
+      run: yarn set version 3.2.3 && yarn --immutable
       env:
         NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
 
@@ -50,7 +50,7 @@ jobs:
       with:
         node-version: 16
     - name: Install dependencies
-      run: yarn --immutable
+      run: yarn set version 3.2.3 && yarn --immutable
       env:
         NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
 
