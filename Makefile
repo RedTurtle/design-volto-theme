@@ -56,3 +56,11 @@ demo: docker-compose.test.yml
 	docker compose -f docker-compose.test.yml pull
 	docker compose -f docker-compose.test.yml build
 	docker compose -f docker-compose.test.yml up
+
+.PHONY: preinstall
+preinstall:
+	if [ -f $$(pwd)/mrs.developer.json ]; then if [ -f $$(pwd)/node_modules/.bin/missdev ]; then yarn develop; else yarn develop:npx; fi; fi
+
+.PHONY: omelette
+omelette:
+	if [ ! -d omelette ]; then ln -sf node_modules/@plone/volto omelette; fi
