@@ -68,7 +68,11 @@ const FooterSmall = () => {
                   })}
                   key={url + index}
                 >
-                  <UniversalLink href={url} title={item.title}>
+                  <UniversalLink
+                    data-element={item.id_lighthouse}
+                    href={url}
+                    title={item.title}
+                  >
                     {item.title}
                   </UniversalLink>
                 </li>
@@ -83,16 +87,18 @@ const FooterSmall = () => {
               </li>
             ))}
           <li className="list-inline-item">
-            <button
+            <UniversalLink
               className="footer-gdpr-privacy-show-banner"
+              href="#"
               onClick={(e) => {
                 e.preventDefault();
                 dispatch(displayBanner(true, true));
               }}
               title={intl.formatMessage(messages.cookieSettings)}
+              data-element="privacy-policy-link"
             >
               {intl.formatMessage(messages.cookieSettings)}
-            </button>
+            </UniversalLink>
           </li>
         </ul>
       </Container>
