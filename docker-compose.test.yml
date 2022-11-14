@@ -2,7 +2,7 @@ version: '3'
 
 services:
   backend:
-    image: ghcr.io/redturtle/dist.design.plone:merge
+    image: ghcr.io/redturtle/dist.design.plone:latest
     ports:
       - "8080:8080"
     environment:
@@ -21,7 +21,7 @@ services:
       - traefik.http.routers.backend.rule=Host(`localhost`) && PathPrefix(`/++api++`)
       - traefik.http.routers.backend.service=plone-backend
       - "traefik.http.middlewares.backend.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
-      - "traefik.http.middlewares.backend.replacepathregex.replacement=/VirtualHostBase/http/plone.localhost/Plone/++api++/VirtualHostRoot/$$1"
+      - "traefik.http.middlewares.backend.replacepathregex.replacement=/VirtualHostBase/http/localhost/Plone/++api++/VirtualHostRoot/$$1"
       - traefik.http.routers.backend.middlewares=gzip,backend
 
   frontend:
