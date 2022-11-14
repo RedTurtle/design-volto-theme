@@ -140,3 +140,25 @@ export const templatesOptions = (
 
   return pos;
 };
+
+export const addLighthouseField = (schema, intl, position = 0) => {
+  let pos = position;
+
+  addSchemaField(
+    schema,
+    'id_lighthouse',
+    intl.formatMessage(messages.id_lighthouse),
+    intl.formatMessage(messages.id_lighthouse_description),
+    {
+      choices: [
+        ['service-category-link', 'service-category-link'],
+        ['topic-element', 'topic-element'],
+        ['service-link', 'service-link'],
+        ['administration-element', 'administration-element'],
+      ],
+      /* default: 'medium', */
+    },
+    pos,
+  );
+  pos++;
+};
