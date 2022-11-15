@@ -87,18 +87,16 @@ const FooterSmall = () => {
               </li>
             ))}
           <li className="list-inline-item">
-            <UniversalLink
+            <button
               className="footer-gdpr-privacy-show-banner"
-              href="#"
               onClick={(e) => {
                 e.preventDefault();
                 dispatch(displayBanner(true, true));
               }}
               title={intl.formatMessage(messages.cookieSettings)}
-              data-element="privacy-policy-link"
             >
               {intl.formatMessage(messages.cookieSettings)}
-            </UniversalLink>
+            </button>
           </li>
         </ul>
       </Container>
