@@ -74,9 +74,10 @@ const SecondaryMenuConfigurationForm = ({
     });
 
     return () => {
-      document
-        .querySelector('form.ui.form')
-        .removeEventListener('click', preventClick);
+      document.querySelector('form.ui.form') &&
+        document
+          .querySelector('form.ui.form')
+          .removeEventListener('click', preventClick);
       document.querySelectorAll('form.ui.form input').forEach((item) => {
         item.removeEventListener('keypress', preventEnter);
       });

@@ -71,9 +71,10 @@ const SubFooterConfigurationForm = ({
   };
 
   useEffect(() => {
-    document
-      .querySelector('form.ui.form')
-      .addEventListener('click', preventClick);
+    document.querySelector('form.ui.form') &&
+      document
+        .querySelector('form.ui.form')
+        .addEventListener('click', preventClick);
 
     document.querySelectorAll('form.ui.form input').forEach((item) => {
       item.addEventListener('keypress', preventEnter);
