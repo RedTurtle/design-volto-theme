@@ -41,8 +41,6 @@ const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
     UnderlineButton(props),
     TextSizeButton(props),
     Separator,
-    Lighthouse,
-    Separator,
     HeadingsButton(props),
     linkPlugin.LinkButton,
     ButtonsButton(props),
@@ -51,6 +49,8 @@ const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
     OrderedListButton,
     BlockquoteButton,
     CalloutsButton(props),
+    Separator,
+    Lighthouse,
   ];
 };
 
