@@ -77,10 +77,13 @@ const renderHTMLBlock = (child) => {
 };
 const renderDataElement = (element) => {
   if (typeof document !== 'undefined') {
-    document.querySelector(`.lighthouse_${element} a`) &&
-      document
-        .querySelector(`.lighthouse_${element} a`)
-        .setAttribute('data-element', element);
+    const lighthhouseElements = document.querySelectorAll(
+      `.lighthouse_${element} a`,
+    );
+    lighthhouseElements &&
+      lighthhouseElements.forEach((e) => {
+        return e.setAttribute('data-element', element);
+      });
   }
 };
 
