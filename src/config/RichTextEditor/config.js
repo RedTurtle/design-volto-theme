@@ -75,15 +75,11 @@ const renderHTMLBlock = (child) => {
     }
   });
 };
-const renderDataElement = (element) => {
+const renderDataElement = (element, id) => {
   if (typeof document !== 'undefined') {
-    const lighthhouseElements = document.querySelectorAll(
-      `.lighthouse_${element} a`,
-    );
-    lighthhouseElements &&
-      lighthhouseElements.forEach((e) => {
-        return e.setAttribute('data-element', element);
-      });
+    const lighthouseElements = document.querySelector(`[id='${id}'] a`);
+    lighthouseElements &&
+      lighthouseElements.setAttribute('data-element', element);
   }
 };
 
@@ -102,35 +98,35 @@ const ItaliaBlocksHtmlRenderers = {
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="lighthouse_appointment-booking">
         {renderHTMLBlock(child)}
-        {renderDataElement('appointment-booking')}
+        {renderDataElement('appointment-booking', keys[i])}
       </p>
     )),
   lighthouse_faq: (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="lighthouse_faq">
         {renderHTMLBlock(child)}
-        {renderDataElement('faq')}
+        {renderDataElement('faq', keys[i])}
       </p>
     )),
   'lighthouse_report-inefficency': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="lighthouse_report-inefficency">
         {renderHTMLBlock(child)}
-        {renderDataElement('report-inefficency')}
+        {renderDataElement('report-inefficency', keys[i])}
       </p>
     )),
   'lighthouse_accessibility-link': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="lighthouse_accessibility-link">
         {renderHTMLBlock(child)}
-        {renderDataElement('accessibility-link')}
+        {renderDataElement('accessibility-link', keys[i])}
       </p>
     )),
   'lighthouse_privacy-policy-link': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="lighthouse_privacy-policy-link">
         {renderHTMLBlock(child)}
-        {renderDataElement('privacy-policy-link')}
+        {renderDataElement('privacy-policy-link', keys[i])}
       </p>
     )),
   'align-right': (children, { keys }) =>
