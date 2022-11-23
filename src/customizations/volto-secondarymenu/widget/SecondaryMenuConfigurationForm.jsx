@@ -1,3 +1,9 @@
+/**
+ * SecondaryMenuConfigurationForm
+ * @module components/src/widget/SecondaryMenuConfigurationForm.jsx
+ * added new select field with lighthouse options
+ */
+
 import React, { useEffect } from 'react';
 import { compose } from 'redux';
 import { defineMessages, useIntl } from 'react-intl';
