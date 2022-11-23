@@ -11,6 +11,7 @@ import Blocks from '@plone/volto/config/RichTextEditor/Blocks';
 import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
+import Lighthouse from '@italia/config/RichTextEditor/ToolbarButtons/Lighthouse';
 import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/CalloutsButton';
 import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
 import TextSizeButton from '@italia/config/RichTextEditor/ToolbarButtons/TextSizeButton';
@@ -48,6 +49,8 @@ const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
     OrderedListButton,
     BlockquoteButton,
     CalloutsButton(props),
+    Separator,
+    Lighthouse,
   ];
 };
 
@@ -72,6 +75,14 @@ const renderHTMLBlock = (child) => {
     }
   });
 };
+const renderDataElement = (element, id) => {
+  if (typeof document !== 'undefined') {
+    const lighthouseElements = document.querySelector(`[id='${id}'] a`);
+    lighthouseElements &&
+      lighthouseElements.setAttribute('data-element', element);
+  }
+};
+
 const ItaliaBlocksHtmlRenderers = {
   blockquote: (children, { keys }) =>
     children.map((child, i) => (
@@ -81,6 +92,41 @@ const ItaliaBlocksHtmlRenderers = {
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="text-center">
         {renderHTMLBlock(child)}
+      </p>
+    )),
+  'lighthouse_appointment-booking': (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="lighthouse_appointment-booking">
+        {renderHTMLBlock(child)}
+        {renderDataElement('appointment-booking', keys[i])}
+      </p>
+    )),
+  lighthouse_faq: (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="lighthouse_faq">
+        {renderHTMLBlock(child)}
+        {renderDataElement('faq', keys[i])}
+      </p>
+    )),
+  'lighthouse_report-inefficency': (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="lighthouse_report-inefficency">
+        {renderHTMLBlock(child)}
+        {renderDataElement('report-inefficency', keys[i])}
+      </p>
+    )),
+  'lighthouse_accessibility-link': (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="lighthouse_accessibility-link">
+        {renderHTMLBlock(child)}
+        {renderDataElement('accessibility-link', keys[i])}
+      </p>
+    )),
+  'lighthouse_privacy-policy-link': (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="lighthouse_privacy-policy-link">
+        {renderHTMLBlock(child)}
+        {renderDataElement('privacy-policy-link', keys[i])}
       </p>
     )),
   'align-right': (children, { keys }) =>
