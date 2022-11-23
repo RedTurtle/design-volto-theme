@@ -27,6 +27,7 @@
     "start": "razzle start",
     "preinstall": "make preinstall",
     "postinstall": "yarn omelette && yarn patches",
+    "prepare": "husky install",
     "omelette": "make omelette",
     "patches": "/bin/bash patches/patchit.sh > /dev/null 2>&1 ||true",
     "build": "razzle build --noninteractive",
@@ -138,12 +139,6 @@
     "not ie 11",
     "not dead"
   ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "npx eslint --max-warnings=0 --fix",
@@ -214,7 +209,9 @@
     "@release-it/conventional-changelog": "^2.0.1",
     "bundlewatch": "^0.3.3",
     "eslint-plugin-prettier": "^3.4.1",
+    "husky": "8.0.2",
     "jest-environment-jsdom": "^26.0.1",
+    "lint-staged": "13.0.3",
     "prettier": "^2.7.1",
     "razzle": "4.2.17",
     "razzle-plugin-scss": "4.2.17",
